@@ -1,0 +1,92 @@
+---
+import Base from '../layouts/Base.astro';
+import KuendigungsfristRechner from '../components/KuendigungsfristRechner.astro';
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "ticket-rechner.de",
+    "url": "https://ticket-rechner.de",
+    "inLanguage": "de"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Deutschlandticket Kündigungsfrist-Rechner",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Web",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+    "url": "https://ticket-rechner.de/#kfr"
+  }
+];
+
+// Route finder seed — replaced later by GTFS-generated pages.
+const routes = [
+  { slug: 'berlin-hamburg', label: 'Berlin → Hamburg' },
+  { slug: 'muenchen-nuernberg', label: 'München → Nürnberg' },
+  { slug: 'koeln-duesseldorf', label: 'Köln → Düsseldorf' },
+  { slug: 'frankfurt-mainz', label: 'Frankfurt → Mainz' },
+  { slug: 'stuttgart-ulm', label: 'Stuttgart → Ulm' },
+  { slug: 'hannover-bremen', label: 'Hannover → Bremen' },
+  { slug: 'leipzig-dresden', label: 'Leipzig → Dresden' },
+  { slug: 'dortmund-essen', label: 'Dortmund → Essen' }
+];
+---
+<Base
+  title="Deutschlandticket Kündigungsfrist-Rechner 2026 | ticket-rechner.de"
+  description="Berechne in 5 Sekunden, bis wann du dein Deutschlandticket kündigen musst. Plus: Lohnt-sich-Rechner, Kündigungsschreiben-Generator und Streckenauskunft."
+  schema={schema}
+>
+  <div class="container" style="padding:2rem 0 0">
+    <p style="color:var(--brand);font-weight:800;letter-spacing:.06em;text-transform:uppercase;font-size:.8rem;margin:0">
+      58 € / Monat · monatlich kündbar · bundesweit
+    </p>
+    <h1>Deutschlandticket kündigen — aber rechtzeitig.</h1>
+    <p style="color:var(--ink-soft);max-width:44rem;margin-top:0">
+      Die meisten Anbieter verlangen die Kündigung <strong>bis zum 10. des Monats</strong>.
+      Der Rechner sagt dir sofort, ob du noch in der Frist bist und wann dein Ticket endet.
+    </p>
+  </div>
+
+  <div class="container--narrow" style="padding:1rem 0 0">
+    <KuendigungsfristRechner />
+  </div>
+
+  <div class="container" style="padding-top:2rem">
+    <h2>Weitere Rechner</h2>
+    <div class="grid grid--3">
+      <a class="card" href="/lohnt-sich-rechner" style="text-decoration:none;color:inherit">
+        <h3 style="margin:0 0 .3rem">Lohnt-sich-Rechner</h3>
+        <p style="margin:0;color:var(--ink-soft);font-size:.92rem">Vergleiche 58 € mit deinen aktuellen Fahrtkosten — Pendler, Gelegenheitsfahrer, Studenten.</p>
+      </a>
+      <a class="card" href="/kuendigungsschreiben" style="text-decoration:none;color:inherit">
+        <h3 style="margin:0 0 .3rem">Kündigungsschreiben-Generator</h3>
+        <p style="margin:0;color:var(--ink-soft);font-size:.92rem">Fertiges Kündigungsschreiben in 30 Sekunden — für DB, HVV, RMV, MVV und mehr.</p>
+      </a>
+      <a class="card" href="/ratgeber" style="text-decoration:none;color:inherit">
+        <h3 style="margin:0 0 .3rem">Ratgeber</h3>
+        <p style="margin:0;color:var(--ink-soft);font-size:.92rem">Gilt das Ticket im ICE? Jobticket, Semesterticket, Mitnahmeregeln — alle Antworten.</p>
+      </a>
+    </div>
+
+    <h2>Streckenauskunft: Gilt mein Deutschlandticket hier?</h2>
+    <div class="card container--narrow" style="margin-inline:0">
+      <label for="route-select">Strecke wählen</label>
+      <select id="route-select">
+        <option value="">— Strecke auswählen —</option>
+        {routes.map(r => <option value={`/strecke/${r.slug}`}>{r.label}</option>)}
+      </select>
+      <div style="margin-top:1rem">
+        <button class="btn" id="route-btn" type="button">Strecke prüfen</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('route-btn').addEventListener('click', () => {
+      const v = document.getElementById('route-select').value;
+      if (v) location.href = v;
+    });
+  </script>
+</Base>

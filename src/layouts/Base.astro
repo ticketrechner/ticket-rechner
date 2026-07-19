@@ -1,0 +1,53 @@
+---
+import '../styles/global.css';
+interface Props {
+  title: string;
+  description: string;
+  schema?: object | object[];
+}
+const { title, description, schema } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+---
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonical} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="de_DE" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  {schema && <script type="application/ld+json" set:html={JSON.stringify(schema)} />}
+  <!-- AdSense: paste your script tag here after approval -->
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="/">ticket-rechner<span class="tld">.de</span><span class="logo-badge">D-Ticket</span></a>
+      <nav class="main-nav" aria-label="Hauptnavigation">
+        <a href="/kuendigungsfrist-rechner">Kündigungsfrist</a>
+        <a href="/lohnt-sich-rechner">Lohnt es sich?</a>
+        <a href="/kuendigungsschreiben">Kündigungsschreiben</a>
+        <a href="/ratgeber">Ratgeber</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <slot />
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span>© {new Date().getFullYear()} ticket-rechner.de — Unabhängiges Informationsportal. Keine offizielle Seite der Deutschen Bahn oder eines Verkehrsverbunds.</span>
+      <span>
+        <a href="/impressum">Impressum</a> · <a href="/datenschutz">Datenschutz</a>
+      </span>
+    </div>
+  </footer>
+</body>
+</html>
