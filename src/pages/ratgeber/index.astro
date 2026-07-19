@@ -1,0 +1,30 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const articles = [
+  {
+    slug: 'deutschlandticket-kuendigen',
+    title: 'Deutschlandticket kündigen 2026: Frist, Anleitung & Vorlage',
+    teaser: 'Bis zum 10. des Monats kündigen — sonst kostet es 63 € extra. Alle Wege, Fristen und die Pause-Strategie.'
+  }
+];
+---
+<Base
+  title="Deutschlandticket Ratgeber 2026 | ticket-rechner.de"
+  description="Alle Ratgeber rund ums Deutschlandticket: kündigen, Gültigkeit, ICE, Studenten, Jobticket und mehr — aktuell für 2026."
+>
+  <div class="container--narrow" style="padding:2rem 0 1rem">
+    <h1>Ratgeber</h1>
+    <p style="color:var(--ink-soft)">
+      Antworten auf die häufigsten Fragen rund ums Deutschlandticket — kompakt,
+      aktuell und ohne Fachchinesisch. Diese Sammlung wächst laufend.
+    </p>
+
+    {articles.map(a => (
+      <a class="card" href={`/ratgeber/${a.slug}`} style="display:block;text-decoration:none;color:inherit;margin-top:1rem">
+        <h2 style="margin:0 0 .3rem;font-size:1.15rem">{a.title}</h2>
+        <p style="margin:0;color:var(--ink-soft);font-size:.95rem">{a.teaser}</p>
+      </a>
+    ))}
+  </div>
+</Base>

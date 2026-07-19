@@ -1,0 +1,87 @@
+---
+import Base from '../layouts/Base.astro';
+import KuendigungsfristRechner from '../components/KuendigungsfristRechner.astro';
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Deutschlandticket Kündigungsfrist-Rechner",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Web",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+    "url": "https://ticket-rechner.de/kuendigungsfrist-rechner"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Bis wann muss ich das Deutschlandticket kündigen?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Bei den meisten Anbietern muss die Kündigung bis zum 10. des Monats eingehen, damit das Deutschlandticket zum Ende desselben Monats endet. Geht die Kündigung später ein, läuft das Abo einen Monat länger und du zahlst weitere 63 €." }
+      },
+      {
+        "@type": "Question",
+        "name": "Was passiert, wenn ich die Kündigungsfrist verpasse?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Die Kündigung wirkt dann automatisch zum Ende des Folgemonats. Kündige trotzdem sofort — 'zum nächstmöglichen Termin' — dann kannst du die nächste Frist nicht mehr verpassen." }
+      },
+      {
+        "@type": "Question",
+        "name": "Gilt die 10.-des-Monats-Frist bei allen Anbietern?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Nein, die Frist zum 10. ist der verbreitete Standard (z. B. bei der Deutschen Bahn), aber einzelne Verbünde nutzen den 15. des Monats oder erlauben die Kündigung bis Monatsende. Prüfe die Bedingungen deines Anbieters in der App oder im Abo-Portal." }
+      }
+    ]
+  }
+];
+---
+<Base
+  title="Deutschlandticket Kündigungsfrist-Rechner 2026 — bis wann kündigen?"
+  description="Bis wann musst du das Deutschlandticket kündigen? Der Rechner zeigt deine Frist und das Vertragsende sofort — für DB, HVV, RMV, MVV und alle Verbünde."
+  schema={schema}
+>
+  <div class="container--narrow" style="padding:2rem 0 0">
+    <p style="color:var(--brand);font-weight:800;letter-spacing:.06em;text-transform:uppercase;font-size:.8rem;margin:0">
+      Kündigungsfrist-Rechner · Stand 2026
+    </p>
+    <h1>Bis wann musst du das Deutschland&shy;ticket kündigen?</h1>
+    <p style="color:var(--ink-soft);margin-top:0">
+      Die Regel bei den meisten Anbietern: Kündigung <strong>bis zum 10. des Monats</strong>,
+      dann endet das Ticket zum Monatsende. Verpasst du die Frist, zahlst du einen Monat
+      länger — bei 63 € pro Monat ein teurer Fehler. Der Rechner zeigt dir sofort, wo du stehst.
+    </p>
+  </div>
+
+  <div class="container--narrow" style="padding:1rem 0 0">
+    <KuendigungsfristRechner />
+  </div>
+
+  <div class="container--narrow" style="padding-bottom:1rem">
+    <h2>Warum der 10. des Monats?</h2>
+    <p>
+      Das Deutschlandticket ist ein Abo, das sich automatisch verlängert. Damit die
+      Verkehrsunternehmen die Chipkarten und Handytickets rechtzeitig fürs Folgemonat
+      deaktivieren können, brauchen sie Vorlauf — daher die Frist am 10. Einzelne Verbünde
+      handhaben das anders: Manche akzeptieren Kündigungen bis zum 15., wenige sogar bis
+      zum Monatsende. Verbindlich ist immer die Regelung in deinen Vertragsbedingungen.
+    </p>
+
+    <h2>Frist verpasst — was jetzt?</h2>
+    <p>
+      Kündige trotzdem sofort, und zwar <strong>„zum nächstmöglichen Termin"</strong>. Die
+      Kündigung wird dann automatisch zum Ende des Folgemonats wirksam, und du kannst die
+      nächste Frist nicht mehr verpassen. Unser
+      <a href="/kuendigungsschreiben">Kündigungsschreiben-Generator</a> erstellt dir das
+      passende Schreiben in 30 Sekunden.
+    </p>
+
+    <h2>Der schnellste Kündigungsweg</h2>
+    <p>
+      Bei fast allen Anbietern kündigst du am schnellsten dort, wo du das Ticket gekauft
+      hast: in der App (z. B. DB Navigator) oder im Abo-Portal deines Verbunds. Entscheidend
+      ist der <strong>Eingang</strong> der Kündigung beim Anbieter — nicht der Poststempel.
+      Eine Kündigung am 10. um 23:59 Uhr über die App ist rechtzeitig; ein Brief, der am
+      12. ankommt, nicht.
+    </p>
+  </div>
+</Base>

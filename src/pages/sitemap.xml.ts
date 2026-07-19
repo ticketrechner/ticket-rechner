@@ -5,8 +5,11 @@ const SITE = 'https://ticket-rechner.de';
 
 const pages = [
   { path: '/', priority: '1.0' },
+  { path: '/kuendigungsfrist-rechner', priority: '0.9' },
   { path: '/lohnt-sich-rechner', priority: '0.9' },
   { path: '/kuendigungsschreiben', priority: '0.9' },
+  { path: '/ratgeber', priority: '0.7' },
+  { path: '/ratgeber/deutschlandticket-kuendigen', priority: '0.8' },
   { path: '/impressum', priority: '0.3' },
   { path: '/datenschutz', priority: '0.3' }
 ];
