@@ -1,0 +1,121 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Wo gilt das Deutschlandticket? Der komplette Überblick 2026",
+    "datePublished": "2026-07-19",
+    "dateModified": "2026-07-19",
+    "inLanguage": "de",
+    "author": { "@type": "Organization", "name": "Redaktion ticket-rechner.de" },
+    "publisher": { "@type": "Organization", "name": "ticket-rechner.de" },
+    "mainEntityOfPage": "https://ticket-rechner.de/ratgeber/deutschlandticket-gueltigkeit"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Wo gilt das Deutschlandticket?", "acceptedAnswer": { "@type": "Answer", "text": "Bundesweit im gesamten öffentlichen Nah- und Regionalverkehr: Regionalzüge (RE, RB), S-Bahnen, U-Bahnen, Straßenbahnen und Busse aller teilnehmenden Verkehrsunternehmen — unabhängig von Bundesland und Verbund. Teils gilt es auch auf Fähren des ÖPNV." } },
+      { "@type": "Question", "name": "Wo gilt das Deutschlandticket nicht?", "acceptedAnswer": { "@type": "Answer", "text": "Nicht im Fernverkehr (ICE, IC, EC), nicht bei privaten Fernanbietern wie FlixTrain und FlixBus, nicht in der 1. Klasse und grundsätzlich nicht im Ausland — mit einzelnen grenznahen Ausnahmen." } },
+      { "@type": "Question", "name": "Gilt das Deutschlandticket im Ausland?", "acceptedAnswer": { "@type": "Answer", "text": "Grundsätzlich nein, aber es gibt grenznahe Ausnahmen. Aktuell gilt es z. B. vom 1. Juli bis 31. August 2026 in der französischen Région Grand Est in TER-Regionalzügen und Regionalbussen — nur mit Ausweis, teils mit Reservierungspflicht, nicht im TGV und nicht im Stadtverkehr." } },
+      { "@type": "Question", "name": "Kann ich mein Fahrrad mit dem Deutschlandticket mitnehmen?", "acceptedAnswer": { "@type": "Answer", "text": "Nein, die Fahrradmitnahme ist nicht enthalten. Du brauchst je nach Verbund ein separates Fahrradticket. Auch Hunde-Regeln sind regional unterschiedlich — in NRW fahren Hunde z. B. kostenlos mit, anderswo nicht." } }
+    ]
+  }
+];
+---
+<Base
+  title="Wo gilt das Deutschlandticket? Kompletter Überblick 2026"
+  description="Deutschlandticket-Gültigkeit 2026: welche Züge, Busse & Fähren — und was nicht gilt (ICE, 1. Klasse, FlixTrain, Ausland). Plus Fahrrad- & Hunde-Regeln."
+  schema={schema}
+>
+  <article class="container--narrow" style="padding:2rem 0 1rem">
+    <p style="color:var(--brand);font-weight:800;letter-spacing:.06em;text-transform:uppercase;font-size:.8rem;margin:0">
+      Ratgeber · Aktualisiert am 19.07.2026
+    </p>
+    <h1>Wo gilt das Deutschlandticket? Der komplette Überblick</h1>
+    <p style="color:var(--ink-soft)">
+      Ein Ticket, ganz Deutschland: Das Deutschlandticket gilt bundesweit im gesamten
+      Nah- und Regionalverkehr — egal in welchem Bundesland, Verbund oder Tarifgebiet.
+      Hier ist die vollständige Übersicht, was drin ist, was nicht, und welche
+      Sonderfälle du kennen solltest.
+    </p>
+
+    <h2>✅ Hier gilt dein Deutschlandticket</h2>
+    <p>
+      <strong>Regionalzüge</strong> (RE, RB) und <strong>S-Bahnen</strong> in ganz
+      Deutschland, dazu <strong>U-Bahnen, Straßenbahnen und Busse</strong> aller
+      teilnehmenden Verkehrsunternehmen — auch im „verbundfreien Raum" zwischen den
+      Tarifgebieten. Teils sind sogar <strong>Fähren</strong> enthalten, wenn sie Teil
+      des ÖPNV sind (etwa bestimmte Hafenfähren), sowie einzelne Sonderfälle wie die
+      Wuppertaler Schwebebahn. Die Grenze verläuft immer entlang einer Frage:
+      Ist es Nahverkehr? Dann gilt das Ticket.
+    </p>
+
+    <h2>❌ Hier gilt es nicht</h2>
+    <p>
+      <strong>Fernverkehr</strong> — ICE, IC, EC — ist ausgeschlossen (die wenigen
+      offiziellen Ausnahmestrecken erklärt unser
+      <a href="/ratgeber/deutschlandticket-ice">ICE-Ratgeber</a>). Ebenfalls draußen:
+      <strong>FlixTrain und FlixBus</strong>, alle Fahrten in der
+      <strong>1. Klasse</strong> (auch im Regionalzug!), touristische Sonderbahnen
+      und in der Regel Ruf- und On-Demand-Verkehre, sofern der Verbund sie nicht
+      ausdrücklich einbezieht.
+    </p>
+
+    <h2>🌍 Ausland: grundsätzlich nein — mit Grenz-Ausnahmen</h2>
+    <p>
+      Das Deutschlandticket ist ein deutsches Nahverkehrsticket. Auf einigen
+      grenzüberschreitenden Strecken gilt es aber bis zum ersten Halt im Nachbarland
+      oder dank Sondervereinbarungen weiter. Das aktuell spannendste Beispiel:
+      Vom <strong>1. Juli bis 31. August 2026</strong> gilt das Deutschlandticket in der
+      französischen <strong>Région Grand Est</strong> — in TER-Regionalzügen und
+      Regionalbussen. Die Bedingungen: nur zusammen mit Personalausweis oder Reisepass,
+      auf einigen Strecken mit kostenloser, aber pflichtiger Sitzplatzreservierung
+      (bis 30 Tage im Voraus). Nicht enthalten: TGV, Stadtverkehr (Bus/Tram in
+      französischen Städten) und die Straßenbahn Kehl–Straßburg.
+    </p>
+
+    <h2>🚲 Fahrrad und 🐕 Hund: nicht automatisch dabei</h2>
+    <p>
+      Die <strong>Fahrradmitnahme ist nicht enthalten</strong> — du brauchst je nach
+      Verbund ein separates Fahrradticket oder eine Fahrrad-Monatskarte. Auch bei
+      Hunden entscheidet der jeweilige Verbund: In NRW etwa fahren Hunde kostenlos
+      mit, in anderen Regionen brauchst du ein Ticket für den Vierbeiner. Vor der
+      ersten Fahrt kurz die Regeln deines Verbunds prüfen — das erspart Ärger bei
+      der Kontrolle.
+    </p>
+
+    <h2>👤 Persönlich und nicht übertragbar</h2>
+    <p>
+      Das Deutschlandticket ist <strong>personengebunden</strong>: Es gilt nur für
+      dich, mit Namen hinterlegt, und du musst dich bei Kontrollen ausweisen können.
+      Weitergeben an Familie oder Freunde ist nicht erlaubt — auch nicht „nur mal
+      kurz". Eine kostenlose Mitnahme weiterer Personen ist im Basisticket nicht
+      vorgesehen; einzelne Verbünde bieten regionale Extras.
+    </p>
+
+    <h2>Verspätung: kaum Entschädigung</h2>
+    <p>
+      Ein wichtiger, oft übersehener Punkt: Das Deutschlandticket gilt rechtlich als
+      erheblich ermäßigtes Ticket. Die üblichen Fahrgastrechte-Entschädigungen bei
+      Verspätung fallen deshalb praktisch weg — kalkuliere das ein, wenn du auf
+      pünktliche Ankunft angewiesen bist.
+    </p>
+
+    <h2>Lohnt sich das für dich?</h2>
+    <p>
+      63 € im Monat für unbegrenzten Nahverkehr — ob sich das bei deinem Fahrverhalten
+      rechnet, beantwortet dir unser <a href="/lohnt-sich-rechner">Lohnt-sich-Rechner</a>
+      in zehn Sekunden. Und falls du schon ein Ticket hast, das du nicht mehr brauchst:
+      <a href="/ratgeber/deutschlandticket-kuendigen">So kündigst du es richtig</a>.
+    </p>
+
+    <p style="color:var(--ink-soft);font-size:.9rem;margin-top:2.5rem">
+      Redaktion ticket-rechner.de · Quellen: Bundesregierung, Verbraucherzentrale,
+      Verkehrsministerium Baden-Württemberg. Alle Angaben ohne Gewähr.
+      Preisstand: 63 €/Monat seit 01.01.2026.
+    </p>
+  </article>
+</Base>
