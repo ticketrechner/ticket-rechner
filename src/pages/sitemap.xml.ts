@@ -10,6 +10,11 @@ const pages = [
   { path: '/kuendigungsschreiben', priority: '0.9' },
   { path: '/ratgeber', priority: '0.7' },
   { path: '/ratgeber/deutschlandticket-kuendigen', priority: '0.8' },
+  { path: '/kuendigen/db', priority: '0.7' },
+  { path: '/kuendigen/hvv', priority: '0.7' },
+  { path: '/kuendigen/rmv', priority: '0.7' },
+  { path: '/kuendigen/mvv', priority: '0.7' },
+  { path: '/kuendigen/bvg', priority: '0.7' },
   { path: '/impressum', priority: '0.3' },
   { path: '/datenschutz', priority: '0.3' }
 ];
