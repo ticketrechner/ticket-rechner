@@ -1,0 +1,232 @@
+---
+import Base from '../layouts/Base.astro';
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Deutschlandticket Kündigungsschreiben-Generator",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Web",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+    "url": "https://ticket-rechner.de/kuendigungsschreiben"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Wie kündige ich das Deutschlandticket schriftlich?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Die meisten Anbieter akzeptieren die Kündigung direkt in der App oder im Abo-Portal. Ein schriftliches Kündigungsschreiben per E-Mail oder Post ist zusätzlich möglich und sinnvoll, wenn du einen Nachweis brauchst. Wichtig: Kündigung muss bis zum 10. des Monats beim Anbieter eingehen." }
+      },
+      {
+        "@type": "Question",
+        "name": "Was muss im Kündigungsschreiben für das Deutschlandticket stehen?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Vollständiger Name, Adresse, Vertrags- oder Abonummer, das Kündigungsdatum (zum nächstmöglichen Termin oder zum Monatsende), die Bitte um schriftliche Bestätigung sowie Ort, Datum und Unterschrift." }
+      },
+      {
+        "@type": "Question",
+        "name": "Kann ich das Deutschlandticket per E-Mail kündigen?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Ja, bei den meisten Verkehrsverbünden reicht eine E-Mail in Textform. Prüfe die Vertragsbedingungen deines Anbieters — einige verlangen die Kündigung über das Kundenportal oder die App." }
+      }
+    ]
+  }
+];
+
+const anbieter = [
+  { id: "db", name: "DB / Deutsche Bahn (Navigator)" },
+  { id: "hvv", name: "HVV (Hamburg)" },
+  { id: "rmv", name: "RMV (Frankfurt / Rhein-Main)" },
+  { id: "mvv", name: "MVG / MVV (München)" },
+  { id: "bvg", name: "BVG (Berlin)" },
+  { id: "vrr", name: "VRR (Ruhrgebiet)" },
+  { id: "vrs", name: "VRS (Köln/Bonn)" },
+  { id: "vvs", name: "VVS (Stuttgart)" },
+  { id: "andere", name: "Anderer Anbieter" }
+];
+---
+<Base
+  title="Deutschlandticket Kündigungsschreiben-Generator 2026 (Vorlage)"
+  description="Erstelle dein fertiges Kündigungsschreiben für das Deutschlandticket in 30 Sekunden. Kostenlos, ohne Anmeldung — zum Kopieren oder als E-Mail."
+  schema={schema}
+>
+  <section class="ksg-hero">
+    <div class="container">
+      <p class="ksg-eyebrow">Kündigungsschreiben-Generator · Vorlage 2026</p>
+      <h1>Kündigungsschreiben fürs Deutschland&shy;ticket — in 30 Sekunden fertig</h1>
+      <p class="ksg-sub">Formular ausfüllen, Text erscheint sofort. Kopieren, per E-Mail senden oder ausdrucken. Keine Anmeldung, keine Datenspeicherung — alles bleibt in deinem Browser.</p>
+    </div>
+  </section>
+
+  <div class="container ksg-wrap">
+    <!-- FORM -->
+    <section class="card" aria-label="Deine Angaben">
+      <h2 class="ksg-h2">Deine Angaben</h2>
+
+      <label for="k-name">Vor- und Nachname</label>
+      <input type="text" id="k-name" placeholder="Max Mustermann" autocomplete="name" />
+
+      <label for="k-street">Straße und Hausnummer</label>
+      <input type="text" id="k-street" placeholder="Musterstraße 12" autocomplete="street-address" />
+
+      <label for="k-city">PLZ und Ort</label>
+      <input type="text" id="k-city" placeholder="10115 Berlin" />
+
+      <label for="k-anbieter">Dein Anbieter</label>
+      <select id="k-anbieter">
+        {anbieter.map(a => <option value={a.name}>{a.name}</option>)}
+      </select>
+
+      <label for="k-nummer">Vertrags- / Abonummer <span class="ksg-hint">(steht in der App oder auf der Rechnung)</span></label>
+      <input type="text" id="k-nummer" placeholder="z. B. AB-1234567" />
+
+      <label for="k-termin">Kündigung zum</label>
+      <select id="k-termin">
+        <option value="next" selected>Nächstmöglichen Termin (empfohlen)</option>
+        <option value="eom">Ende dieses Monats</option>
+      </select>
+
+      <p class="ksg-privacy">🔒 Deine Daten werden nicht gespeichert oder übertragen — der Text entsteht nur lokal in deinem Browser.</p>
+    </section>
+
+    <!-- LETTER -->
+    <section class="ksg-letter-wrap" aria-live="polite">
+      <div class="ksg-letter card" id="letter"></div>
+      <div class="ksg-actions">
+        <button class="btn" id="copy-btn" type="button">Text kopieren</button>
+        <button class="btn btn--ghost" id="print-btn" type="button">Drucken / PDF</button>
+      </div>
+      <p class="ksg-reminder">⏰ Denk dran: Die Kündigung muss bei den meisten Anbietern <strong>bis zum 10. des Monats</strong> eingehen. <a href="/kuendigungsfrist-rechner">Frist prüfen →</a></p>
+    </section>
+  </div>
+
+  <div class="container--narrow ksg-content">
+    <h2>Brauche ich überhaupt ein Kündigungsschreiben?</h2>
+    <p>
+      Meistens nicht: Die schnellste Kündigung läuft über die App oder das Abo-Portal deines
+      Anbieters — dort genügen wenige Klicks. Ein schriftliches Kündigungsschreiben ist trotzdem
+      sinnvoll, wenn dein Anbieter kein Online-Portal hat, das Portal nicht funktioniert, oder du
+      einen <strong>schriftlichen Nachweis</strong> mit Eingangsbestätigung möchtest. Sende das
+      Schreiben per E-Mail an den Kundenservice deines Verbunds und bewahre eine Kopie auf.
+    </p>
+  </div>
+
+  <style>
+    .ksg-hero {
+      background: linear-gradient(135deg, #4c1d95 0%, #5b21b6 55%, #7c3aed 100%);
+      color: #fff; padding: 2.6rem 0 3rem;
+      clip-path: ellipse(140% 100% at 50% 0%);
+    }
+    .ksg-eyebrow { font-size: .78rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; opacity: .85; margin: 0 0 .4rem; }
+    .ksg-hero h1 { color: #fff; max-width: 44rem; }
+    .ksg-sub { max-width: 40rem; opacity: .92; margin-top: .3rem; }
+
+    .ksg-wrap { display: grid; gap: 1.25rem; margin-top: 1rem; position: relative; z-index: 1; }
+    @media (min-width: 880px) { .ksg-wrap { grid-template-columns: .9fr 1.1fr; align-items: start; margin-top: -1.5rem; } }
+
+    .ksg-h2 { margin: 0 0 .25rem; font-size: 1.2rem; }
+    .ksg-hint { font-weight: 400; color: var(--ink-soft); font-size: .82rem; }
+    .ksg-privacy { font-size: .85rem; color: var(--ink-soft); margin: 1.1rem 0 0; }
+
+    .ksg-letter {
+      font-family: Georgia, 'Times New Roman', serif;
+      white-space: pre-wrap; line-height: 1.65; font-size: .98rem;
+      min-height: 24rem;
+    }
+    .ksg-letter .ph { background: #fef3c7; border-radius: 3px; padding: 0 .15em; }
+    .ksg-actions { display: flex; gap: .75rem; margin-top: 1rem; flex-wrap: wrap; }
+    .btn--ghost { background: #fff; color: var(--brand); border: 2px solid var(--brand); }
+    .ksg-reminder { font-size: .9rem; color: var(--ink-soft); margin-top: 1rem; }
+
+    @media print {
+      .site-header, .site-footer, .ksg-hero, .card:not(.ksg-letter), .ksg-actions, .ksg-reminder, .ksg-content { display: none !important; }
+      .ksg-letter { border: 0; box-shadow: none; }
+      .ksg-letter .ph { background: none; }
+    }
+  </style>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const MONTHS = ['Januar','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember'];
+
+    function deDate(d) {
+      return `${String(d.getDate()).padStart(2,'0')}.${String(d.getMonth()+1).padStart(2,'0')}.${d.getFullYear()}`;
+    }
+
+    function ph(text, filled) {
+      return filled ? esc(filled) : `<span class="ph">[${text}]</span>`;
+    }
+    function esc(s) {
+      return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    }
+
+    function build() {
+      const name = $('k-name').value.trim();
+      const street = $('k-street').value.trim();
+      const city = $('k-city').value.trim();
+      const anbieter = $('k-anbieter').value;
+      const nummer = $('k-nummer').value.trim();
+      const termin = $('k-termin').value;
+
+      const today = new Date();
+      const lastOfMonth = new Date(today.getFullYear(), today.getMonth() + 1, 0);
+      const ort = city ? city.replace(/^\d{5}\s*/, '') : '';
+
+      const terminText = termin === 'eom'
+        ? `zum ${deDate(lastOfMonth)}`
+        : 'zum nächstmöglichen Termin';
+
+      $('letter').innerHTML =
+`${ph('Vor- und Nachname', name)}
+${ph('Straße und Hausnummer', street)}
+${ph('PLZ und Ort', city)}
+
+An
+${esc(anbieter)}
+Kundenservice / Abo-Center
+
+${ph('Ort', ort)}, den ${deDate(today)}
+
+<strong>Kündigung meines Deutschlandticket-Abonnements${nummer ? ' — Vertragsnummer ' + esc(nummer) : ''}</strong>
+
+Sehr geehrte Damen und Herren,
+
+hiermit kündige ich mein Abonnement für das Deutschlandticket${nummer ? ` (Vertrags-/Abonummer: ${esc(nummer)})` : ''} fristgerecht ${terminText}.
+
+Bitte bestätigen Sie mir den Eingang dieser Kündigung sowie das Vertragsende schriftlich per E-Mail oder Post.
+
+Sofern ein SEPA-Lastschriftmandat besteht, widerrufe ich dieses zum Vertragsende. Bitte ziehen Sie nach Vertragsende keine weiteren Beträge mehr ein.
+
+Mit freundlichen Grüßen
+
+${ph('Unterschrift / Name', name)}`;
+    }
+
+    ['k-name','k-street','k-city','k-anbieter','k-nummer','k-termin'].forEach(id => {
+      $(id).addEventListener('input', build);
+      $(id).addEventListener('change', build);
+    });
+
+    $('copy-btn').addEventListener('click', async () => {
+      const text = $('letter').innerText;
+      try {
+        await navigator.clipboard.writeText(text);
+        $('copy-btn').textContent = 'Kopiert ✓';
+        setTimeout(() => $('copy-btn').textContent = 'Text kopieren', 2000);
+      } catch {
+        // Fallback: select the text for manual copy
+        const range = document.createRange();
+        range.selectNodeContents($('letter'));
+        const sel = window.getSelection();
+        sel.removeAllRanges();
+        sel.addRange(range);
+        $('copy-btn').textContent = 'Markiert — Strg+C drücken';
+      }
+    });
+
+    $('print-btn').addEventListener('click', () => window.print());
+
+    build();
+  </script>
+</Base>
