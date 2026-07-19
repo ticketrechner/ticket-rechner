@@ -18,12 +18,12 @@ const schema = [
       {
         "@type": "Question",
         "name": "Ab wann lohnt sich das Deutschlandticket?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Das Deutschlandticket lohnt sich, sobald deine monatlichen Fahrtkosten über 58 € liegen. Bei einem Einzelticketpreis von 3,50 € sind das bereits 17 Fahrten pro Monat — also etwa 9 Pendeltage." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Das Deutschlandticket lohnt sich, sobald deine monatlichen Fahrtkosten über 63 € liegen. Bei einem Einzelticketpreis von 3,50 € sind das 18 Fahrten pro Monat — also etwa 9 Pendeltage." }
       },
       {
         "@type": "Question",
         "name": "Was kostet das Deutschlandticket 2026?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Das Deutschlandticket kostet 58 € pro Monat im Abo. Es ist monatlich kündbar und gilt bundesweit im Nah- und Regionalverkehr." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Das Deutschlandticket kostet seit dem 1. Januar 2026 genau 63 € pro Monat im Abo. Es ist monatlich kündbar und gilt bundesweit im Nah- und Regionalverkehr." }
       },
       {
         "@type": "Question",
@@ -35,7 +35,7 @@ const schema = [
 ];
 ---
 <Base
-  title="Lohnt sich das Deutschlandticket? Rechner 2026 (58 €)"
+  title="Lohnt sich das Deutschlandticket? Rechner 2026 (63 €)"
   description="Rechne in 10 Sekunden aus, ob sich das Deutschlandticket für dich lohnt. Pendler, Gelegenheitsfahrer, Autofahrer — mit Ersparnis pro Jahr."
   schema={schema}
 >
@@ -45,7 +45,7 @@ const schema = [
       <p class="lsr-eyebrow">Lohnt-sich-Rechner · Stand 2026</p>
       <h1>Lohnt sich das Deutschland&shy;ticket für dich?</h1>
       <p class="lsr-sub">
-        58 € im Monat klingen viel — oder wenig, je nachdem, wie du fährst.
+        63 € im Monat klingen viel — oder wenig, je nachdem, wie du fährst.
         Beweg die Regler und die Antwort erscheint sofort.
       </p>
     </div>
@@ -93,21 +93,21 @@ const schema = [
     <section class="lsr-ticket" id="ticket" aria-live="polite">
       <div class="lsr-ticket-head">
         <span class="lsr-ticket-brand">D-Ticket</span>
-        <span class="lsr-ticket-price">58 € / Monat</span>
+        <span class="lsr-ticket-price">63 € / Monat</span>
       </div>
       <div class="lsr-ticket-body">
         <p class="lsr-verdict" id="verdict">Lohnt sich für dich ✓</p>
-        <p class="lsr-line">Deine aktuellen Kosten: <strong id="cost-now">119,00&nbsp;€</strong> / Monat</p>
+        <p class="lsr-line">Deine aktuellen Kosten: <strong id="cost-now">142,24&nbsp;€</strong> / Monat</p>
         <div class="lsr-bar">
           <div class="lsr-bar-fill" id="bar-fill"></div>
-          <div class="lsr-bar-mark"><span>58&nbsp;€</span></div>
+          <div class="lsr-bar-mark"><span>63&nbsp;€</span></div>
         </div>
         <p class="lsr-line lsr-save" id="save-line">Du sparst <strong id="save-month">61,00&nbsp;€</strong> im Monat — <strong id="save-year">732&nbsp;€</strong> im Jahr.</p>
         <p class="lsr-note" id="note"></p>
       </div>
       <div class="lsr-ticket-perf" aria-hidden="true"></div>
       <div class="lsr-ticket-foot">
-        <span id="breakeven">Break-even: 17 Fahrten / Monat</span>
+        <span id="breakeven">Break-even: 18 Fahrten / Monat</span>
       </div>
     </section>
   </div>
@@ -117,7 +117,7 @@ const schema = [
     <h2>So rechnet der Rechner</h2>
     <p>
       Der Rechner vergleicht deine monatlichen Fahrtkosten mit dem Festpreis von
-      <strong>58 €</strong> für das Deutschlandticket. Pendeltage zählen als zwei Fahrten
+      <strong>63 €</strong> für das Deutschlandticket. Pendeltage zählen als zwei Fahrten
       (hin und zurück), gerechnet mit <strong>4,33 Wochen pro Monat</strong> — dem
       Durchschnitt eines Kalenderjahres. Hast du bereits ein Monatsabo, ersetzt das
       Deutschlandticket dieses vollständig, solange du nur Nah- und Regionalverkehr nutzt.
@@ -126,7 +126,7 @@ const schema = [
     <h2>Die schnelle Faustregel</h2>
     <p>
       Bei einem Einzelticketpreis von 3,50 € lohnt sich das Deutschlandticket ab
-      <strong>17 Fahrten im Monat</strong> — das sind rund 9 Pendeltage. Wer nur am
+      <strong>18 Fahrten im Monat</strong> — das sind rund 9 Pendeltage. Wer nur am
       Wochenende fährt, kommt selten über die Schwelle. Wer 3+ Tage pro Woche pendelt,
       spart fast immer.
     </p>
@@ -207,7 +207,7 @@ const schema = [
     }
     .lsr-bar-fill.over { background: linear-gradient(90deg, #16a34a, #0e7a3c); }
     .lsr-bar-mark {
-      position: absolute; top: -6px; bottom: -6px; left: 38.6%;
+      position: absolute; top: -6px; bottom: -6px; left: 42%;
       border-left: 2px dashed #16181d;
     }
     .lsr-bar-mark span {
@@ -236,7 +236,7 @@ const schema = [
     const eur = (n, dec = 2) =>
       n.toLocaleString('de-DE', { minimumFractionDigits: dec, maximumFractionDigits: dec }) + '\u00A0€';
 
-    const TICKET = 58;
+    const TICKET = 63;
     const WEEKS = 4.33;
 
     function update() {
