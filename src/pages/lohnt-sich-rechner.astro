@@ -141,7 +141,7 @@ const schema = [
     .lsr-hero {
       background: linear-gradient(135deg, #4c1d95 0%, #5b21b6 55%, #7c3aed 100%);
       color: #fff;
-      padding: 2.6rem 0 4.5rem;
+      padding: 2.6rem 0 3rem;
       clip-path: ellipse(140% 100% at 50% 0%);
     }
     .lsr-eyebrow {
@@ -152,8 +152,8 @@ const schema = [
     .lsr-sub { max-width: 38rem; opacity: .92; margin-top: .3rem; }
 
     /* LAYOUT */
-    .lsr-wrap { display: grid; gap: 1.25rem; margin-top: -2.5rem; }
-    @media (min-width: 820px) { .lsr-wrap { grid-template-columns: 1.15fr .85fr; align-items: start; } }
+    .lsr-wrap { display: grid; gap: 1.25rem; margin-top: 1rem; position: relative; z-index: 1; }
+    @media (min-width: 820px) { .lsr-wrap { grid-template-columns: 1.15fr .85fr; align-items: start; margin-top: -2.5rem; } }
 
     .lsr-h2 { margin: 0 0 .5rem; font-size: 1.2rem; }
     .lsr-field { margin-top: 1.15rem; }
