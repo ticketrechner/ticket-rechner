@@ -1,0 +1,290 @@
+---
+import Base from '../layouts/Base.astro';
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Deutschlandticket Lohnt-sich-Rechner",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Web",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+    "url": "https://ticket-rechner.de/lohnt-sich-rechner"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Ab wann lohnt sich das Deutschlandticket?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Das Deutschlandticket lohnt sich, sobald deine monatlichen Fahrtkosten über 58 € liegen. Bei einem Einzelticketpreis von 3,50 € sind das bereits 17 Fahrten pro Monat — also etwa 9 Pendeltage." }
+      },
+      {
+        "@type": "Question",
+        "name": "Was kostet das Deutschlandticket 2026?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Das Deutschlandticket kostet 58 € pro Monat im Abo. Es ist monatlich kündbar und gilt bundesweit im Nah- und Regionalverkehr." }
+      },
+      {
+        "@type": "Question",
+        "name": "Lohnt sich das Deutschlandticket für Gelegenheitsfahrer?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Für reine Gelegenheitsfahrer mit weniger als 15 Einzelfahrten pro Monat lohnt sich das Ticket meist nicht — außer, gelegentliche Ausflüge mit Regionalzügen ersetzen teurere Fernverkehrs- oder Autofahrten." }
+      }
+    ]
+  }
+];
+---
+<Base
+  title="Lohnt sich das Deutschlandticket? Rechner 2026 (58 €)"
+  description="Rechne in 10 Sekunden aus, ob sich das Deutschlandticket für dich lohnt. Pendler, Gelegenheitsfahrer, Autofahrer — mit Ersparnis pro Jahr."
+  schema={schema}
+>
+  <!-- HERO -->
+  <section class="lsr-hero">
+    <div class="container">
+      <p class="lsr-eyebrow">Lohnt-sich-Rechner · Stand 2026</p>
+      <h1>Lohnt sich das Deutschland&shy;ticket für dich?</h1>
+      <p class="lsr-sub">
+        58 € im Monat klingen viel — oder wenig, je nachdem, wie du fährst.
+        Beweg die Regler und die Antwort erscheint sofort.
+      </p>
+    </div>
+  </section>
+
+  <div class="container lsr-wrap">
+    <!-- INPUTS -->
+    <section class="card lsr-inputs" aria-label="Deine Fahrgewohnheiten">
+      <h2 class="lsr-h2">Deine Fahrten</h2>
+
+      <div class="lsr-field">
+        <div class="lsr-labelrow">
+          <label for="days">Pendeltage pro Woche <span class="lsr-hint">(Hin- und Rückfahrt)</span></label>
+          <output id="days-out" for="days">4</output>
+        </div>
+        <input type="range" id="days" min="0" max="7" step="1" value="4" />
+      </div>
+
+      <div class="lsr-field">
+        <div class="lsr-labelrow">
+          <label for="single">Preis einer Einzelfahrt <span class="lsr-hint">(dein Tarif)</span></label>
+          <output id="single-out" for="single">3,50&nbsp;€</output>
+        </div>
+        <input type="range" id="single" min="1.5" max="8" step="0.10" value="3.5" />
+      </div>
+
+      <div class="lsr-field">
+        <div class="lsr-labelrow">
+          <label for="extra">Zusätzliche Fahrten pro Monat <span class="lsr-hint">(Freizeit, Einkäufe, Ausflüge)</span></label>
+          <output id="extra-out" for="extra">6</output>
+        </div>
+        <input type="range" id="extra" min="0" max="40" step="1" value="6" />
+      </div>
+
+      <div class="lsr-field">
+        <div class="lsr-labelrow">
+          <label for="abo">Dein bisheriges Monatsabo <span class="lsr-hint">(0 €, falls keins)</span></label>
+          <output id="abo-out" for="abo">0&nbsp;€</output>
+        </div>
+        <input type="range" id="abo" min="0" max="250" step="5" value="0" />
+      </div>
+    </section>
+
+    <!-- RESULT TICKET -->
+    <section class="lsr-ticket" id="ticket" aria-live="polite">
+      <div class="lsr-ticket-head">
+        <span class="lsr-ticket-brand">D-Ticket</span>
+        <span class="lsr-ticket-price">58 € / Monat</span>
+      </div>
+      <div class="lsr-ticket-body">
+        <p class="lsr-verdict" id="verdict">Lohnt sich für dich ✓</p>
+        <p class="lsr-line">Deine aktuellen Kosten: <strong id="cost-now">119,00&nbsp;€</strong> / Monat</p>
+        <div class="lsr-bar">
+          <div class="lsr-bar-fill" id="bar-fill"></div>
+          <div class="lsr-bar-mark"><span>58&nbsp;€</span></div>
+        </div>
+        <p class="lsr-line lsr-save" id="save-line">Du sparst <strong id="save-month">61,00&nbsp;€</strong> im Monat — <strong id="save-year">732&nbsp;€</strong> im Jahr.</p>
+        <p class="lsr-note" id="note"></p>
+      </div>
+      <div class="lsr-ticket-perf" aria-hidden="true"></div>
+      <div class="lsr-ticket-foot">
+        <span id="breakeven">Break-even: 17 Fahrten / Monat</span>
+      </div>
+    </section>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="container--narrow lsr-content">
+    <h2>So rechnet der Rechner</h2>
+    <p>
+      Der Rechner vergleicht deine monatlichen Fahrtkosten mit dem Festpreis von
+      <strong>58 €</strong> für das Deutschlandticket. Pendeltage zählen als zwei Fahrten
+      (hin und zurück), gerechnet mit <strong>4,33 Wochen pro Monat</strong> — dem
+      Durchschnitt eines Kalenderjahres. Hast du bereits ein Monatsabo, ersetzt das
+      Deutschlandticket dieses vollständig, solange du nur Nah- und Regionalverkehr nutzt.
+    </p>
+
+    <h2>Die schnelle Faustregel</h2>
+    <p>
+      Bei einem Einzelticketpreis von 3,50 € lohnt sich das Deutschlandticket ab
+      <strong>17 Fahrten im Monat</strong> — das sind rund 9 Pendeltage. Wer nur am
+      Wochenende fährt, kommt selten über die Schwelle. Wer 3+ Tage pro Woche pendelt,
+      spart fast immer.
+    </p>
+
+    <p style="margin-top:2rem">
+      <a href="/kuendigungsfrist-rechner">→ Ticket schon gekauft und du willst kündigen? Zum Kündigungsfrist-Rechner</a>
+    </p>
+  </div>
+
+  <style>
+    /* HERO */
+    .lsr-hero {
+      background: linear-gradient(135deg, #4c1d95 0%, #5b21b6 55%, #7c3aed 100%);
+      color: #fff;
+      padding: 2.6rem 0 4.5rem;
+      clip-path: ellipse(140% 100% at 50% 0%);
+    }
+    .lsr-eyebrow {
+      font-size: .78rem; font-weight: 800; letter-spacing: .1em;
+      text-transform: uppercase; opacity: .85; margin: 0 0 .4rem;
+    }
+    .lsr-hero h1 { color: #fff; max-width: 40rem; }
+    .lsr-sub { max-width: 38rem; opacity: .92; margin-top: .3rem; }
+
+    /* LAYOUT */
+    .lsr-wrap { display: grid; gap: 1.25rem; margin-top: -2.5rem; }
+    @media (min-width: 820px) { .lsr-wrap { grid-template-columns: 1.15fr .85fr; align-items: start; } }
+
+    .lsr-h2 { margin: 0 0 .5rem; font-size: 1.2rem; }
+    .lsr-field { margin-top: 1.15rem; }
+    .lsr-labelrow { display: flex; justify-content: space-between; align-items: baseline; gap: .75rem; }
+    .lsr-labelrow label { margin: 0; }
+    .lsr-hint { font-weight: 400; color: var(--ink-soft); font-size: .82rem; }
+    output { font-weight: 800; font-variant-numeric: tabular-nums; color: var(--brand); white-space: nowrap; }
+
+    input[type="range"] {
+      -webkit-appearance: none; appearance: none; width: 100%; height: 6px;
+      border-radius: 99px; background: var(--line); border: 0; padding: 0; margin-top: .6rem;
+      accent-color: var(--brand);
+    }
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none; width: 26px; height: 26px; border-radius: 50%;
+      background: var(--brand); border: 3px solid #fff;
+      box-shadow: 0 1px 4px rgb(0 0 0 / .25); cursor: pointer;
+    }
+    input[type="range"]::-moz-range-thumb {
+      width: 22px; height: 22px; border-radius: 50%;
+      background: var(--brand); border: 3px solid #fff;
+      box-shadow: 0 1px 4px rgb(0 0 0 / .25); cursor: pointer;
+    }
+
+    /* TICKET CARD */
+    .lsr-ticket {
+      background: #fff; border-radius: 18px; box-shadow: var(--shadow);
+      overflow: hidden; border: 1px solid var(--line);
+      position: sticky; top: 1rem;
+    }
+    .lsr-ticket-head {
+      background: #16181d; color: #fff; display: flex;
+      justify-content: space-between; align-items: center; padding: .8rem 1.2rem;
+    }
+    .lsr-ticket-brand { font-weight: 900; letter-spacing: .02em; }
+    .lsr-ticket-brand::before { content: "◧ "; color: #a78bfa; }
+    .lsr-ticket-price { font-weight: 700; font-size: .92rem; opacity: .9; }
+    .lsr-ticket-body { padding: 1.2rem; }
+    .lsr-verdict { font-size: 1.35rem; font-weight: 900; margin: 0 0 .6rem; transition: color .25s; }
+    .lsr-verdict.ok { color: var(--ok); }
+    .lsr-verdict.no { color: var(--accent); }
+    .lsr-line { margin: .3rem 0; }
+    .lsr-save strong { font-variant-numeric: tabular-nums; }
+    .lsr-note { color: var(--ink-soft); font-size: .88rem; margin-top: .6rem; }
+
+    .lsr-bar { position: relative; height: 14px; border-radius: 99px; background: var(--line); margin: .9rem 0 1.4rem; }
+    .lsr-bar-fill {
+      height: 100%; border-radius: 99px; width: 50%;
+      background: linear-gradient(90deg, #7c3aed, #5b21b6);
+      transition: width .35s ease, background .35s;
+    }
+    .lsr-bar-fill.over { background: linear-gradient(90deg, #16a34a, #0e7a3c); }
+    .lsr-bar-mark {
+      position: absolute; top: -6px; bottom: -6px; left: 38.6%;
+      border-left: 2px dashed #16181d;
+    }
+    .lsr-bar-mark span {
+      position: absolute; top: 100%; left: -1.2rem; font-size: .72rem;
+      font-weight: 700; color: var(--ink-soft); white-space: nowrap;
+    }
+
+    .lsr-ticket-perf {
+      height: 0; border-top: 2px dashed var(--line); margin: 0 1.2rem; position: relative;
+    }
+    .lsr-ticket-perf::before, .lsr-ticket-perf::after {
+      content: ""; position: absolute; top: -11px; width: 22px; height: 22px;
+      border-radius: 50%; background: var(--bg); border: 1px solid var(--line);
+    }
+    .lsr-ticket-perf::before { left: -32px; }
+    .lsr-ticket-perf::after { right: -32px; }
+    .lsr-ticket-foot {
+      padding: .8rem 1.2rem; font-size: .85rem; color: var(--ink-soft); font-weight: 600;
+    }
+
+    .lsr-content { padding-bottom: 1rem; }
+  </style>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const eur = (n, dec = 2) =>
+      n.toLocaleString('de-DE', { minimumFractionDigits: dec, maximumFractionDigits: dec }) + '\u00A0€';
+
+    const TICKET = 58;
+    const WEEKS = 4.33;
+
+    function update() {
+      const days = +$('days').value;
+      const single = +$('single').value;
+      const extra = +$('extra').value;
+      const abo = +$('abo').value;
+
+      $('days-out').textContent = days;
+      $('single-out').textContent = eur(single);
+      $('extra-out').textContent = extra;
+      $('abo-out').textContent = eur(abo, 0);
+
+      // If they have an Abo, it replaces per-trip commute costs.
+      const trips = days * 2 * WEEKS + extra;
+      const costNow = abo > 0 ? abo + extra * single : trips * single;
+
+      $('cost-now').textContent = eur(costNow);
+
+      const diff = costNow - TICKET;
+      const verdict = $('verdict');
+      const fill = $('bar-fill');
+      const scaleMax = 150; // € scale for the bar
+      fill.style.width = Math.min(100, (costNow / scaleMax) * 100) + '%';
+      fill.classList.toggle('over', costNow >= TICKET);
+
+      if (diff >= 1) {
+        verdict.textContent = 'Lohnt sich für dich ✓';
+        verdict.className = 'lsr-verdict ok';
+        $('save-line').innerHTML = `Du sparst <strong>${eur(diff)}</strong> im Monat — <strong>${eur(diff * 12, 0)}</strong> im Jahr.`;
+        $('note').textContent = '';
+      } else if (diff > -8) {
+        verdict.textContent = 'Knapp — fast gleich teuer';
+        verdict.className = 'lsr-verdict';
+        $('save-line').innerHTML = `Unterschied: <strong>${eur(Math.abs(diff))}</strong> im Monat.`;
+        $('note').textContent = 'Tipp: Rechne den Flexibilitäts-Bonus mit ein — mit dem D-Ticket fährst du spontan bundesweit, ohne je ein Ticket zu kaufen.';
+      } else {
+        verdict.textContent = 'Lohnt sich (noch) nicht ✗';
+        verdict.className = 'lsr-verdict no';
+        $('save-line').innerHTML = `Das Ticket wäre <strong>${eur(Math.abs(diff))}</strong> teurer pro Monat.`;
+        $('note').textContent = 'Das kann sich schnell ändern: Schon 1–2 Pendeltage mehr pro Woche kippen die Rechnung. Und: Das Abo ist monatlich kündbar — ein Testmonat kostet wenig Risiko.';
+      }
+
+      const be = Math.ceil(TICKET / single);
+      $('breakeven').textContent = `Break-even: ${be} Fahrten / Monat bei ${eur(single)} pro Fahrt`;
+    }
+
+    ['days', 'single', 'extra', 'abo'].forEach((id) => $(id).addEventListener('input', update));
+    update();
+  </script>
+</Base>
