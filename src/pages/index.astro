@@ -1,7 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
 import KuendigungsfristRechner from '../components/KuendigungsfristRechner.astro';
-
 const schema = [
   {
     "@context": "https://schema.org",
@@ -20,22 +19,10 @@ const schema = [
     "url": "https://ticket-rechner.de/#kfr"
   }
 ];
-
-// Route finder seed — replaced later by GTFS-generated pages.
-const routes = [
-  { slug: 'berlin-hamburg', label: 'Berlin → Hamburg' },
-  { slug: 'muenchen-nuernberg', label: 'München → Nürnberg' },
-  { slug: 'koeln-duesseldorf', label: 'Köln → Düsseldorf' },
-  { slug: 'frankfurt-mainz', label: 'Frankfurt → Mainz' },
-  { slug: 'stuttgart-ulm', label: 'Stuttgart → Ulm' },
-  { slug: 'hannover-bremen', label: 'Hannover → Bremen' },
-  { slug: 'leipzig-dresden', label: 'Leipzig → Dresden' },
-  { slug: 'dortmund-essen', label: 'Dortmund → Essen' }
-];
 ---
 <Base
   title="Deutschlandticket Kündigungsfrist-Rechner 2026 | ticket-rechner.de"
-  description="Berechne in 5 Sekunden, bis wann du dein Deutschlandticket kündigen musst. Plus: Lohnt-sich-Rechner, Kündigungsschreiben-Generator und Streckenauskunft."
+  description="Berechne in 5 Sekunden, bis wann du dein Deutschlandticket kündigen musst. Plus: Lohnt-sich-Rechner, Kündigungsschreiben-Generator und Ratgeber."
   schema={schema}
 >
   <div class="container" style="padding:2rem 0 0">
@@ -48,11 +35,9 @@ const routes = [
       Der Rechner sagt dir sofort, ob du noch in der Frist bist und wann dein Ticket endet.
     </p>
   </div>
-
   <div class="container--narrow" style="padding:1rem 0 0">
     <KuendigungsfristRechner />
   </div>
-
   <div class="container" style="padding-top:2rem">
     <h2>Weitere Rechner</h2>
     <div class="grid grid--3">
@@ -69,24 +54,22 @@ const routes = [
         <p style="margin:0;color:var(--ink-soft);font-size:.92rem">Gilt das Ticket im ICE? Jobticket, Semesterticket, Mitnahmeregeln — alle Antworten.</p>
       </a>
     </div>
-
-    <h2>Streckenauskunft: Gilt mein Deutschlandticket hier?</h2>
-    <div class="card container--narrow" style="margin-inline:0">
-      <label for="route-select">Strecke wählen</label>
-      <select id="route-select">
-        <option value="">— Strecke auswählen —</option>
-        {routes.map(r => <option value={`/strecke/${r.slug}`}>{r.label}</option>)}
-      </select>
-      <div style="margin-top:1rem">
-        <button class="btn" id="route-btn" type="button">Strecke prüfen</button>
-      </div>
-    </div>
+    <section class="card container--narrow" style="margin-inline:0;background:var(--surface-alt, #faf5ff)">
+      <h2 style="margin-top:0;">Gilt mein Deutschlandticket auf meiner Strecke?</h2>
+      <p>
+        Das Deutschlandticket gilt in <strong>allen Zügen des Nahverkehrs</strong>
+        (RE, RB, S-Bahn) sowie in Bussen, Straßenbahnen und U-Bahnen — bundesweit,
+        ohne Zonengrenzen.
+      </p>
+      <p>
+        <strong>Nicht enthalten</strong> sind Fernverkehrszüge (ICE, IC, EC) und
+        Angebote wie FlixTrain oder FlixBus.
+        <a href="/ratgeber/deutschlandticket-gueltigkeit">Alle Details zur Gültigkeit →</a>
+      </p>
+      <p style="margin-bottom:0;">
+        <strong>Tipp:</strong> Im DB Navigator kannst du den Filter
+        „Nur D-Ticket-Verbindungen" aktivieren, um passende Verbindungen zu finden.
+      </p>
+    </section>
   </div>
-
-  <script>
-    document.getElementById('route-btn').addEventListener('click', () => {
-      const v = document.getElementById('route-select').value;
-      if (v) location.href = v;
-    });
-  </script>
 </Base>
