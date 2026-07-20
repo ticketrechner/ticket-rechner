@@ -12,6 +12,8 @@ const pages = [
   { path: '/ratgeber/deutschlandticket-kuendigen', priority: '0.8' },
   { path: '/ratgeber/deutschlandticket-ice', priority: '0.8' },
   { path: '/ratgeber/deutschlandticket-gueltigkeit', priority: '0.8' },
+  { path: '/ratgeber/deutschlandticket-studenten', priority: '0.8' },
+  { path: '/ratgeber/deutschlandticket-jobticket', priority: '0.8' },
   { path: '/kuendigen/db', priority: '0.7' },
   { path: '/kuendigen/hvv', priority: '0.7' },
   { path: '/kuendigen/rmv', priority: '0.7' },
