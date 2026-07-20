@@ -1,0 +1,90 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Deutschlandticket pausieren: geht das? Die beste Alternative 2026",
+    "datePublished": "2026-07-19",
+    "dateModified": "2026-07-19",
+    "inLanguage": "de",
+    "author": { "@type": "Organization", "name": "Redaktion ticket-rechner.de" },
+    "publisher": { "@type": "Organization", "name": "ticket-rechner.de" },
+    "mainEntityOfPage": "https://ticket-rechner.de/ratgeber/deutschlandticket-pausieren"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Kann ich das Deutschlandticket pausieren?", "acceptedAnswer": { "@type": "Answer", "text": "Nein, eine offizielle Pause-Funktion gibt es nicht. Die Alternative: Du kündigst zum Monatsende und schließt das Abo später neu ab — ohne Wartezeit, Wiederanmeldegebühr oder Mindestlaufzeit." } },
+      { "@type": "Question", "name": "Muss ich bei einer Neubestellung wieder von vorne anfangen?", "acceptedAnswer": { "@type": "Answer", "text": "Ja, im Sinne eines neuen Abos, aber das ist unkompliziert: Du bestellst das Ticket einfach erneut bei deinem Anbieter. Alte Vertragsdaten (z. B. Chipkarten-Nummer) können sich ändern." } }
+    ]
+  }
+];
+---
+<Base
+  title="Deutschlandticket pausieren 2026: geht das? Die Alternative"
+  description="Das Deutschlandticket pausieren geht nicht — aber die monatliche Kündigung funktioniert genauso gut. So sparst du im Urlaubs- oder Homeoffice-Monat."
+  schema={schema}
+>
+  <article class="container--narrow" style="padding:2rem 0 1rem">
+    <p style="color:var(--brand);font-weight:800;letter-spacing:.06em;text-transform:uppercase;font-size:.8rem;margin:0">
+      Ratgeber · Aktualisiert am 19.07.2026
+    </p>
+    <h1>Deutschlandticket pausieren — geht das?</h1>
+    <p style="color:var(--ink-soft)">
+      Nein, eine Pause-Funktion gibt es nicht. Aber du brauchst sie auch nicht:
+      Das Deutschlandticket ist <strong>monatlich kündbar, ohne Mindestlaufzeit und
+      ohne Wiederanmeldegebühr</strong>. Kündigen und später neu abschließen ist
+      faktisch eine Pause — nur eben ohne Bürokratie.
+    </p>
+
+    <h2>Die „Kündigen-und-Wiederkommen"-Strategie</h2>
+    <p>
+      Du fährst im August in den Urlaub und brauchst das Ticket nicht? Dann kündige
+      <strong>bis zum 10. Juli</strong> — dein Ticket endet am 31. Juli. Sobald du
+      wieder pendeln willst, bestellst du einfach ein neues Deutschlandticket bei
+      deinem Anbieter. Es gibt keine Sperrfrist, kein Einmalentgelt, keinen „neuen
+      Startmonat". Jeder Monat, den du nicht brauchst, spart dir <strong>63 €</strong>.
+    </p>
+
+    <h2>Timing: wann du handeln musst</h2>
+    <p>
+      Die Frist ist dein einziger Feind: Kündige immer
+      <strong>vor dem 10. des Monats</strong>, der dem Pausenmonat vorausgeht. Willst du
+      im August pausieren, muss die Kündigung bis zum 10. Juli eingehen. Unser
+      <a href="/kuendigungsfrist-rechner">Kündigungsfrist-Rechner</a> sagt dir sofort,
+      ob du noch in der Frist bist. Für die Kündigung selbst:
+      <a href="/kuendigungsschreiben">Generator in 30 Sekunden</a>.
+    </p>
+
+    <h2>Und wenn ich nur ein paar Tage weg bin?</h2>
+    <p>
+      Dann lohnt sich Kündigen und Neu-Abschließen nicht — du würdest den ganzen Monat
+      verlieren, obwohl du ihn teilweise nutzt. Die Faustregel: Kündige nur, wenn du
+      <strong>mindestens drei volle Wochen</strong> im Monat nicht fährst. Für
+      einzelne Urlaubswochen behältst du das Ticket besser — die Kosten pro Fehltag
+      (rund 2 €) sind verschmerzbar, und du bist sofort wieder mobil, wenn du
+      zurückkommst.
+    </p>
+
+    <h2>Homeoffice-Monate: die gleiche Logik</h2>
+    <p>
+      Wenn dein Arbeitgeber einen reinen Homeoffice-Monat ansagt oder du in Elternzeit
+      gehst, gilt dasselbe: Kündigen spart 63 €, Neubestellung geht jederzeit. Prüfe
+      vorher mit dem <a href="/lohnt-sich-rechner">Lohnt-sich-Rechner</a>, ob sich das
+      Ticket bei reduzierter Fahrtenzahl trotzdem noch rechnet — manchmal reichen
+      schon ein paar Einkaufsfahrten, um über die Schwelle zu kommen.
+    </p>
+
+    <p style="margin-top:1.5rem">
+      <a href="/ratgeber/deutschlandticket-kuendigen">→ Deutschlandticket kündigen: der große Ratgeber</a>
+    </p>
+
+    <p style="color:var(--ink-soft);font-size:.9rem;margin-top:2.5rem">
+      Redaktion ticket-rechner.de · Alle Angaben ohne Gewähr.
+      Preisstand: 63 €/Monat seit 01.01.2026.
+    </p>
+  </article>
+</Base>

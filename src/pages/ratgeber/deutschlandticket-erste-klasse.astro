@@ -1,0 +1,93 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Deutschlandticket 1. Klasse: geht das? Upgrade-Regeln 2026",
+    "datePublished": "2026-07-19",
+    "dateModified": "2026-07-19",
+    "inLanguage": "de",
+    "author": { "@type": "Organization", "name": "Redaktion ticket-rechner.de" },
+    "publisher": { "@type": "Organization", "name": "ticket-rechner.de" },
+    "mainEntityOfPage": "https://ticket-rechner.de/ratgeber/deutschlandticket-erste-klasse"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Gilt das Deutschlandticket in der 1. Klasse?", "acceptedAnswer": { "@type": "Answer", "text": "Nein. Das Deutschlandticket gilt ausschließlich in der 2. Klasse — auch in Regionalzügen, S-Bahnen und allen anderen Verkehrsmitteln." } },
+      { "@type": "Question", "name": "Kann ich ein Upgrade auf die 1. Klasse kaufen?", "acceptedAnswer": { "@type": "Answer", "text": "Es gibt kein bundesweites 1.-Klasse-Upgrade. Einzelne Verkehrsverbünde bieten regionale Aufpreise an, die aber nur im jeweiligen Verbundgebiet gelten — nicht deutschlandweit." } },
+      { "@type": "Question", "name": "Was passiert, wenn ich mit dem Deutschlandticket in der 1. Klasse sitze?", "acceptedAnswer": { "@type": "Answer", "text": "Du giltst als Fahrgast ohne gültigen Fahrschein für die 1. Klasse. Je nach Kontrolleur wirst du aufgefordert, in die 2. Klasse zu wechseln, oder es wird ein erhöhtes Beförderungsentgelt erhoben." } }
+    ]
+  }
+];
+---
+<Base
+  title="Deutschlandticket 1. Klasse: geht das? Upgrade-Regeln 2026"
+  description="Deutschlandticket 1. Klasse: grundsätzlich nicht enthalten. Gibt es ein Upgrade? Was passiert bei der Kontrolle? Alle Regeln, Stand 2026."
+  schema={schema}
+>
+  <article class="container--narrow" style="padding:2rem 0 1rem">
+    <p style="color:var(--brand);font-weight:800;letter-spacing:.06em;text-transform:uppercase;font-size:.8rem;margin:0">
+      Ratgeber · Aktualisiert am 19.07.2026
+    </p>
+    <h1>Deutschlandticket 1. Klasse: geht das?</h1>
+    <p style="color:var(--ink-soft)">
+      Die kurze Antwort: <strong>Nein.</strong> Das Deutschlandticket gilt nur in der
+      2. Klasse. Kein Upgrade, keine Ausnahme — und auch nicht „kurz mal setzen, weil
+      die 2. Klasse voll ist". Hier steht, warum das so ist und welche Alternativen
+      du hast.
+    </p>
+
+    <h2>Die Regel: nur 2. Klasse, überall</h2>
+    <p>
+      Das Deutschlandticket berechtigt zur Fahrt in der <strong>2. Klasse</strong> aller
+      Verkehrsmittel, die es abdeckt: Regionalzüge, S-Bahnen, U-Bahnen, Straßenbahnen
+      und Busse. Das steht klar in den bundesweiten Tarifbestimmungen und ist einer
+      der wenigen Punkte, die bei allen Verbünden gleich sind. Die 1. Klasse ist
+      explizit ausgeschlossen — egal ob im RE, in der S-Bahn oder im ICE (der ja
+      ohnehin <a href="/ratgeber/deutschlandticket-ice">nicht gilt</a>).
+    </p>
+
+    <h2>Gibt es ein 1.-Klasse-Upgrade?</h2>
+    <p>
+      Ein <strong>bundesweites Upgrade</strong> gibt es nicht. Einzelne
+      Verkehrsverbünde bieten regional begrenzte 1.-Klasse-Aufpreise an — diese gelten
+      dann aber nur im jeweiligen Verbundgebiet und nicht deutschlandweit. Ob dein
+      Verbund so etwas anbietet, findest du auf dessen Website oder in der
+      Tarif-App. Stand heute ist das Angebot dünn und für die meisten Fahrgäste
+      nicht relevant.
+    </p>
+
+    <h2>Was passiert bei der Kontrolle?</h2>
+    <p>
+      Sitzt du mit dem Deutschlandticket in der 1. Klasse, giltst du dort als Fahrgast
+      ohne gültigen Fahrschein. Je nach Kontrolleur und Kulanz wirst du aufgefordert, in
+      die 2. Klasse zu wechseln — oder es wird ein <strong>erhöhtes
+      Beförderungsentgelt</strong> erhoben (üblicherweise 60 €). In überfüllten Zügen
+      verstehen manche Prüfer, dass du stehend in die 1. Klasse geraten bist — ein
+      Recht darauf hast du aber nicht.
+    </p>
+
+    <h2>Alternativen, wenn dir Komfort wichtig ist</h2>
+    <p>
+      Wenn du regelmäßig Komfort-Plätze brauchst, gibt es zwei Wege: Ein separates
+      <strong>1.-Klasse-Monatsabo deines Verbunds</strong> (sofern angeboten), das
+      unabhängig vom Deutschlandticket läuft. Oder für längere Strecken ein
+      <strong>Fernverkehrsticket (Sparpreis 1. Klasse)</strong>, kombiniert mit dem
+      Deutschlandticket als Zubringer — so deckst du ICE-Komfort und Nahverkehr ab,
+      ohne zwei Abos zu zahlen.
+    </p>
+
+    <p style="margin-top:1.5rem">
+      <a href="/ratgeber/deutschlandticket-gueltigkeit">→ Wo gilt das Deutschlandticket? Der komplette Überblick</a>
+    </p>
+
+    <p style="color:var(--ink-soft);font-size:.9rem;margin-top:2.5rem">
+      Redaktion ticket-rechner.de · Alle Angaben ohne Gewähr.
+      Preisstand: 63 €/Monat seit 01.01.2026.
+    </p>
+  </article>
+</Base>

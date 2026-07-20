@@ -1,0 +1,137 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Was kostet das Deutschlandticket 2026? Alle Preise im Überblick",
+    "datePublished": "2026-07-19",
+    "dateModified": "2026-07-19",
+    "inLanguage": "de",
+    "author": { "@type": "Organization", "name": "Redaktion ticket-rechner.de" },
+    "publisher": { "@type": "Organization", "name": "ticket-rechner.de" },
+    "mainEntityOfPage": "https://ticket-rechner.de/ratgeber/deutschlandticket-kosten"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Was kostet das Deutschlandticket 2026?", "acceptedAnswer": { "@type": "Answer", "text": "63 € pro Monat im regulären Abo. Als Jobticket maximal 44,10 € und als Semesterticket 37,80 € (ab Wintersemester 2026/27, davor 34,80 €). Einzelne Regionen bieten zusätzliche Sozialtickets an." } },
+      { "@type": "Question", "name": "Wird das Deutschlandticket 2027 teurer?", "acceptedAnswer": { "@type": "Answer", "text": "Möglich. Ab 2027 soll ein Preisindex die jährliche Anpassung regeln. Der neue Preis wird voraussichtlich Ende September 2026 bekanntgegeben." } },
+      { "@type": "Question", "name": "Gibt es ein Sozialticket für das Deutschlandticket?", "acceptedAnswer": { "@type": "Answer", "text": "Ein bundesweites Sozialticket gibt es nicht. Einzelne Bundesländer und rund 28 Kommunen bieten aber vergünstigte Varianten an." } }
+    ]
+  }
+];
+---
+<Base
+  title="Was kostet das Deutschlandticket 2026? Alle Preise & Varianten"
+  description="Deutschlandticket 2026: 63 € regulär, 44,10 € Jobticket, 37,80 € Semesterticket. Alle Varianten, Rabatte und regionale Extras im Überblick."
+  schema={schema}
+>
+  <article class="container--narrow" style="padding:2rem 0 1rem">
+    <p style="color:var(--brand);font-weight:800;letter-spacing:.06em;text-transform:uppercase;font-size:.8rem;margin:0">
+      Ratgeber · Aktualisiert am 19.07.2026
+    </p>
+    <h1>Was kostet das Deutschlandticket 2026?</h1>
+    <p style="color:var(--ink-soft)">
+      Seit dem 1. Januar 2026 kostet das Deutschlandticket <strong>63 € pro Monat</strong>.
+      Es gibt aber günstigere Varianten — je nachdem, ob du arbeitest, studierst oder in
+      einer Kommune mit Sozialticket lebst. Hier sind alle Preise auf einen Blick.
+    </p>
+
+    <h2>Alle Varianten und Preise</h2>
+    <div class="card" style="overflow-x:auto">
+      <table style="width:100%;border-collapse:collapse;font-size:.95rem">
+        <thead>
+          <tr style="border-bottom:2px solid var(--line);text-align:left">
+            <th style="padding:.5rem .75rem">Variante</th>
+            <th style="padding:.5rem .75rem">Preis / Monat</th>
+            <th style="padding:.5rem .75rem">Voraussetzung</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem"><strong>Regulär</strong></td>
+            <td style="padding:.5rem .75rem">63,00 €</td>
+            <td style="padding:.5rem .75rem">Keine — für alle</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem"><strong>Jobticket</strong></td>
+            <td style="padding:.5rem .75rem">max. 44,10 €</td>
+            <td style="padding:.5rem .75rem">Arbeitgeber zahlt mind. 25 %</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem"><strong>Semesterticket</strong></td>
+            <td style="padding:.5rem .75rem">34,80 – 37,80 €</td>
+            <td style="padding:.5rem .75rem">Immatrikulation; Preis steigt ab WS 2026/27</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem"><strong>Sozialticket</strong></td>
+            <td style="padding:.5rem .75rem">regional verschieden</td>
+            <td style="padding:.5rem .75rem">Wohnort in teilnehmender Kommune</td>
+          </tr>
+          <tr>
+            <td style="padding:.5rem .75rem"><strong>Kinder / Schüler</strong></td>
+            <td style="padding:.5rem .75rem">regional verschieden</td>
+            <td style="padding:.5rem .75rem">Je nach Bundesland</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Regulär: 63 € für alle</h2>
+    <p>
+      Das reguläre Deutschlandticket ist ein <strong>monatlich kündbares Abo</strong>
+      ohne Mindestlaufzeit. Du bestellst es bei deinem Verkehrsverbund, der DB oder
+      einem anderen zugelassenen Anbieter. Es ist digital (App oder Chipkarte),
+      personengebunden und gilt bundesweit im gesamten Nah- und Regionalverkehr.
+      Details zur <a href="/ratgeber/deutschlandticket-gueltigkeit">Gültigkeit hier</a>.
+    </p>
+
+    <h2>Jobticket: maximal 44,10 €</h2>
+    <p>
+      Der Arbeitgeber zahlt mindestens 25 % (15,75 €), dazu gibt es 5 % Rabatt (3,15 €).
+      Dein Eigenanteil: <strong>44,10 €</strong>. Steuerfrei nach § 3 Nr. 15 EStG —
+      für beide Seiten attraktiver als eine Gehaltserhöhung.
+      <a href="/ratgeber/deutschlandticket-jobticket">Alle Details zum Jobticket →</a>
+    </p>
+
+    <h2>Semesterticket: 60 % des Normalpreises</h2>
+    <p>
+      Bundesweit einheitlich 60 % — im Sommersemester 2026 noch <strong>34,80 €</strong>,
+      ab Wintersemester 2026/27 dann <strong>37,80 €</strong>. Je nach Hochschule als
+      Solidarmodell (automatisch im Semesterbeitrag) oder als freiwilliges Upgrade.
+      <a href="/ratgeber/deutschlandticket-studenten">Alle Details für Studierende →</a>
+    </p>
+
+    <h2>Sozialticket: regional, nicht bundesweit</h2>
+    <p>
+      Ein bundesweites Sozialticket gibt es bisher nicht — der Paritätische Wohlfahrtsverband
+      fordert eines für 25 €, politisch ist es offen. Aktuell bieten drei Bundesländer und
+      rund 28 Kommunen eigene Ermäßigungen an. Prüfe die Angebote deiner Stadt oder deines
+      Kreises — die Preisspanne reicht von rund 15 € bis knapp unter 49 €.
+    </p>
+
+    <h2>Preisentwicklung: was kommt 2027?</h2>
+    <p>
+      Der Preis stieg im Mai 2023 bei 49 € (Einführungspreis), ging im Januar 2025 auf
+      58 € und im Januar 2026 auf 63 €. Ab 2027 soll ein automatischer
+      <strong>Preisindex</strong> die jährliche Anpassung übernehmen — der neue Preis wird
+      voraussichtlich <strong>Ende September 2026</strong> bekanntgegeben. Die
+      <a href="/ratgeber/deutschlandticket-preiserhoehung">Preiserhöhung im Detail</a>.
+    </p>
+
+    <h2>Rechnet sich das für dich?</h2>
+    <p>
+      Die Antwort hängt von deinen Fahrten ab. Unser
+      <a href="/lohnt-sich-rechner">Lohnt-sich-Rechner</a> vergleicht deine aktuellen
+      Kosten mit dem Ticketpreis — in zehn Sekunden, ohne Anmeldung.
+    </p>
+
+    <p style="color:var(--ink-soft);font-size:.9rem;margin-top:2.5rem">
+      Redaktion ticket-rechner.de · Quellen: Bundesregierung, Finanztip,
+      Verkehrsministerkonferenz. Alle Angaben ohne Gewähr.
+    </p>
+  </article>
+</Base>
