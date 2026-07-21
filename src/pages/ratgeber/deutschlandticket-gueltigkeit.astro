@@ -7,7 +7,7 @@ const schema = [
     "@type": "Article",
     "headline": "Wo gilt das Deutschlandticket? Der komplette Überblick 2026",
     "datePublished": "2026-07-19",
-    "dateModified": "2026-07-19",
+    "dateModified": "2026-07-21",
     "inLanguage": "de",
     "author": { "@type": "Organization", "name": "Redaktion ticket-rechner.de" },
     "publisher": { "@type": "Organization", "name": "ticket-rechner.de" },
@@ -19,8 +19,11 @@ const schema = [
     "mainEntity": [
       { "@type": "Question", "name": "Wo gilt das Deutschlandticket?", "acceptedAnswer": { "@type": "Answer", "text": "Bundesweit im gesamten öffentlichen Nah- und Regionalverkehr: Regionalzüge (RE, RB), S-Bahnen, U-Bahnen, Straßenbahnen und Busse aller teilnehmenden Verkehrsunternehmen — unabhängig von Bundesland und Verbund. Teils gilt es auch auf Fähren des ÖPNV." } },
       { "@type": "Question", "name": "Wo gilt das Deutschlandticket nicht?", "acceptedAnswer": { "@type": "Answer", "text": "Nicht im Fernverkehr (ICE, IC, EC), nicht bei privaten Fernanbietern wie FlixTrain und FlixBus, nicht in der 1. Klasse und grundsätzlich nicht im Ausland — mit einzelnen grenznahen Ausnahmen." } },
+      { "@type": "Question", "name": "Gilt das Deutschlandticket im ICE?", "acceptedAnswer": { "@type": "Answer", "text": "Grundsätzlich nein. Es gibt aber einzelne offizielle IC/ICE-Ausnahmestrecken, auf denen das Ticket anerkannt wird — etwa Stuttgart–Singen–Konstanz oder Rostock–Stralsund." } },
       { "@type": "Question", "name": "Gilt das Deutschlandticket im Ausland?", "acceptedAnswer": { "@type": "Answer", "text": "Grundsätzlich nein, aber es gibt grenznahe Ausnahmen. Aktuell gilt es z. B. vom 1. Juli bis 31. August 2026 in der französischen Région Grand Est in TER-Regionalzügen und Regionalbussen — nur mit Ausweis, teils mit Reservierungspflicht, nicht im TGV und nicht im Stadtverkehr." } },
-      { "@type": "Question", "name": "Kann ich mein Fahrrad mit dem Deutschlandticket mitnehmen?", "acceptedAnswer": { "@type": "Answer", "text": "Nein, die Fahrradmitnahme ist nicht enthalten. Du brauchst je nach Verbund ein separates Fahrradticket. Auch Hunde-Regeln sind regional unterschiedlich — in NRW fahren Hunde z. B. kostenlos mit, anderswo nicht." } }
+      { "@type": "Question", "name": "Kann ich mein Fahrrad mit dem Deutschlandticket mitnehmen?", "acceptedAnswer": { "@type": "Answer", "text": "Nein, die Fahrradmitnahme ist nicht enthalten. Du brauchst je nach Verbund ein separates Fahrradticket. Auch Hunde-Regeln sind regional unterschiedlich — in NRW fahren Hunde z. B. kostenlos mit, anderswo nicht." } },
+      { "@type": "Question", "name": "Gilt das Deutschlandticket in der 1. Klasse?", "acceptedAnswer": { "@type": "Answer", "text": "Nein, das Deutschlandticket gilt nur in der 2. Klasse. Einige Verbünde bieten regionale 1.-Klasse-Upgrades als Zuschlag an." } },
+      { "@type": "Question", "name": "Was kostet das Deutschlandticket?", "acceptedAnswer": { "@type": "Answer", "text": "63 € pro Monat im regulären Abo. Als Jobticket maximal 44,10 €, als Semesterticket 34,80 bis 37,80 €." } }
     ]
   }
 ];
@@ -32,7 +35,7 @@ const schema = [
 >
   <article class="container--narrow" style="padding:2rem 0 1rem">
     <p style="color:var(--brand);font-weight:800;letter-spacing:.06em;text-transform:uppercase;font-size:.8rem;margin:0">
-      Ratgeber · Aktualisiert am 19.07.2026
+      Ratgeber · Aktualisiert am 21.07.2026
     </p>
     <h1>Wo gilt das Deutschlandticket? Der komplette Überblick</h1>
     <p style="color:var(--ink-soft)">
@@ -59,7 +62,8 @@ const schema = [
       offiziellen Ausnahmestrecken erklärt unser
       <a href="/ratgeber/deutschlandticket-ice">ICE-Ratgeber</a>). Ebenfalls draußen:
       <strong>FlixTrain und FlixBus</strong>, alle Fahrten in der
-      <strong>1. Klasse</strong> (auch im Regionalzug!), touristische Sonderbahnen
+      <a href="/ratgeber/deutschlandticket-erste-klasse"><strong>1. Klasse</strong></a>
+      (auch im Regionalzug!), touristische Sonderbahnen
       und in der Regel Ruf- und On-Demand-Verkehre, sofern der Verbund sie nicht
       ausdrücklich einbezieht.
     </p>
@@ -84,7 +88,8 @@ const schema = [
       Hunden entscheidet der jeweilige Verbund: In NRW etwa fahren Hunde kostenlos
       mit, in anderen Regionen brauchst du ein Ticket für den Vierbeiner. Vor der
       ersten Fahrt kurz die Regeln deines Verbunds prüfen — das erspart Ärger bei
-      der Kontrolle.
+      der Kontrolle. Ausführlich dazu:
+      <a href="/ratgeber/deutschlandticket-mitnahme">Alle Mitnahmeregeln im Detail →</a>
     </p>
 
     <h2>👤 Persönlich und nicht übertragbar</h2>
@@ -104,13 +109,37 @@ const schema = [
       pünktliche Ankunft angewiesen bist.
     </p>
 
-    <h2>Lohnt sich das für dich?</h2>
+    <h2>Was kostet das Ticket — und lohnt es sich?</h2>
     <p>
-      63 € im Monat für unbegrenzten Nahverkehr — ob sich das bei deinem Fahrverhalten
-      rechnet, beantwortet dir unser <a href="/lohnt-sich-rechner">Lohnt-sich-Rechner</a>
-      in zehn Sekunden. Und falls du schon ein Ticket hast, das du nicht mehr brauchst:
-      <a href="/ratgeber/deutschlandticket-kuendigen">So kündigst du es richtig</a>.
+      Das Deutschlandticket kostet <a href="/ratgeber/deutschlandticket-kosten">63 € pro
+      Monat</a> — als <a href="/ratgeber/deutschlandticket-jobticket">Jobticket</a>
+      maximal 44,10 €, als
+      <a href="/ratgeber/deutschlandticket-studenten">Semesterticket</a> 34,80–37,80 €.
+      Ob sich das bei deinem Fahrverhalten rechnet, beantwortet dir unser
+      <a href="/lohnt-sich-rechner">Lohnt-sich-Rechner</a> in zehn Sekunden.
     </p>
+    <p>
+      Falls du schon ein Ticket hast, das du nicht mehr brauchst:
+      <a href="/ratgeber/deutschlandticket-kuendigen">So kündigst du es richtig</a>.
+      Keine Lust, in einem bestimmten Monat zu zahlen?
+      <a href="/ratgeber/deutschlandticket-pausieren">So funktioniert die Pause-Strategie</a>.
+    </p>
+
+    <h2>Häufige Fragen (FAQ)</h2>
+    <h3>Wo gilt das Deutschlandticket?</h3>
+    <p>Bundesweit im gesamten Nah- und Regionalverkehr: RE, RB, S-Bahn, U-Bahn, Straßenbahn und Bus — unabhängig von Bundesland und Verbund. Teils auch auf Fähren des ÖPNV.</p>
+    <h3>Wo gilt das Deutschlandticket nicht?</h3>
+    <p>Nicht im Fernverkehr (ICE, IC, EC), nicht bei FlixTrain/FlixBus, nicht in der 1. Klasse und grundsätzlich nicht im Ausland — mit einzelnen grenznahen Ausnahmen.</p>
+    <h3>Gilt das Deutschlandticket im ICE?</h3>
+    <p>Grundsätzlich nein. Es gibt aber einzelne offizielle Ausnahmestrecken. <a href="/ratgeber/deutschlandticket-ice">Alle ICE-Ausnahmen hier →</a></p>
+    <h3>Gilt das Deutschlandticket im Ausland?</h3>
+    <p>Grundsätzlich nein. Aktuell gilt es vom 1. Juli bis 31. August 2026 in der französischen Région Grand Est in TER-Zügen und Regionalbussen — mit Ausweis und teils Reservierungspflicht.</p>
+    <h3>Kann ich mein Fahrrad mitnehmen?</h3>
+    <p>Nein, ein separates Fahrradticket ist nötig. <a href="/ratgeber/deutschlandticket-mitnahme">Alle Mitnahmeregeln →</a></p>
+    <h3>Gilt das Deutschlandticket in der 1. Klasse?</h3>
+    <p>Nein, nur 2. Klasse. Einige Verbünde bieten regionale Upgrades an. <a href="/ratgeber/deutschlandticket-erste-klasse">Details →</a></p>
+    <h3>Was kostet das Deutschlandticket?</h3>
+    <p>63 € regulär, 44,10 € als Jobticket, 34,80–37,80 € als Semesterticket. <a href="/ratgeber/deutschlandticket-kosten">Alle Preise →</a></p>
 
     <p style="color:var(--ink-soft);font-size:.9rem;margin-top:2.5rem">
       Redaktion ticket-rechner.de · Quellen: Bundesregierung, Verbraucherzentrale,
