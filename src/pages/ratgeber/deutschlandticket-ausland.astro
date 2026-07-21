@@ -1,288 +1,619 @@
-**SEO Title:** Deutschlandticket im Ausland 2026 – Alle Strecken, Länder & Regeln
-**Meta Description:** Mit dem Deutschlandticket ins Ausland fahren: Alle grenzüberschreitenden Strecken nach Österreich, Schweiz, Frankreich, Luxemburg, Niederlande, Dänemark, Polen & Tschechien (Stand 2026).
-**Slug:** /ratgeber/deutschlandticket-ausland
-**Focus Keyword:** Deutschlandticket Ausland
-
 ---
+import Base from '../../layouts/Base.astro';
 
-[H1] Deutschlandticket im Ausland: Wohin du 2026 ohne Zusatzticket fahren kannst
-
-Das Deutschlandticket gilt nicht nur in Deutschland. Auf bestimmten Nahverkehrsstrecken kommst du ohne Aufpreis über die Grenze – nach Österreich, in die Schweiz, nach Frankreich, Luxemburg, in die Niederlande, nach Dänemark, Polen und Tschechien. Entscheidend ist, ob die Strecke von einem deutschen Verkehrsunternehmen betrieben wird oder ein sogenannter Grenztarifpunkt im Ausland liegt.
-
-Dieser Ratgeber listet alle grenzüberschreitenden Strecken auf, erklärt die Regeln dahinter und zeigt dir, worauf du bei der Fahrkartenkontrolle achten musst.
-
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Deutschlandticket im Ausland 2026: Alle Strecken, Länder & Regeln",
+    "datePublished": "2026-07-21",
+    "dateModified": "2026-07-21",
+    "inLanguage": "de",
+    "author": { "@type": "Organization", "name": "Redaktion ticket-rechner.de" },
+    "publisher": { "@type": "Organization", "name": "ticket-rechner.de" },
+    "mainEntityOfPage": "https://ticket-rechner.de/ratgeber/deutschlandticket-ausland"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Kann ich mit dem Deutschlandticket ins Ausland fahren?", "acceptedAnswer": { "@type": "Answer", "text": "Ja, aber nur auf bestimmten grenzüberschreitenden Nahverkehrsstrecken. Das Ticket gilt bis zum jeweiligen Grenztarifpunkt — danach brauchst du ein Ticket des Ziellandes." } },
+      { "@type": "Question", "name": "Welche Länder kann ich mit dem Deutschlandticket erreichen?", "acceptedAnswer": { "@type": "Answer", "text": "Österreich, Schweiz, Frankreich, Luxemburg, Niederlande, Dänemark, Polen und Tschechien — jeweils auf ausgewählten grenzüberschreitenden Nahverkehrsstrecken." } },
+      { "@type": "Question", "name": "Gilt das Deutschlandticket bis Salzburg?", "acceptedAnswer": { "@type": "Answer", "text": "Ja. Der Salzburger Hauptbahnhof ist tariflich in den deutschen Nahverkehr integriert. Die Bayerische Regiobahn, DB RegioNetz und ÖBB akzeptieren das Deutschlandticket auf der Strecke Freilassing – Salzburg Hbf." } },
+      { "@type": "Question", "name": "Gilt das Deutschlandticket bis Basel?", "acceptedAnswer": { "@type": "Answer", "text": "Ja. Sowohl Basel Badischer Bahnhof als auch Basel SBB sind als Grenztarifpunkte anerkannt. Du erreichst beide mit DB Regio und SBB Deutschland aus dem Raum Lörrach und Weil am Rhein." } },
+      { "@type": "Question", "name": "Gilt das Deutschlandticket in Luxemburg?", "acceptedAnswer": { "@type": "Answer", "text": "Ja — auf der Schienenstrecke, in VRT-Bussen (410, 455, 460) und seit 2025 auf 14 RGTR-Buslinien (Pilotprojekt TicketDeLux, verlängert bis 31. Dezember 2026). Innerhalb Luxemburgs ist der ÖPNV ohnehin kostenlos." } },
+      { "@type": "Question", "name": "Gilt das Deutschlandticket im ICE oder TGV ins Ausland?", "acceptedAnswer": { "@type": "Answer", "text": "Nein. Das Deutschlandticket ist ausschließlich im Nahverkehr gültig. Fernverkehrszüge wie ICE, IC, EC, TGV und Railjet sind ausgeschlossen — auch auf grenzüberschreitenden Strecken." } },
+      { "@type": "Question", "name": "Gilt das Deutschlandticket in der Straßenbahn Kehl – Straßburg?", "acceptedAnswer": { "@type": "Answer", "text": "Nein. Die grenzüberschreitende Straßenbahnlinie D zwischen Kehl und Straßburg akzeptiert das Deutschlandticket nicht." } },
+      { "@type": "Question", "name": "Was passiert, wenn ich über den Grenztarifpunkt hinaus fahre?", "acceptedAnswer": { "@type": "Answer", "text": "Du fährst ohne gültiges Ticket und riskierst ein erhöhtes Beförderungsentgelt. In Österreich liegt das bei rund 60 €, in der Schweiz bei 100 CHF aufwärts." } },
+      { "@type": "Question", "name": "Was ist die Sommeraktion Grand Est 2026?", "acceptedAnswer": { "@type": "Answer", "text": "Vom 1. Juli bis 31. August 2026 können Deutschlandticket-Inhaber unter 28 Jahren mit Wohnsitz in Baden-Württemberg, Rheinland-Pfalz oder dem Saarland kostenlos den TER-Nahverkehr in der gesamten Région Grand Est nutzen — bis nach Paris Gare de l'Est." } },
+      { "@type": "Question", "name": "Kann ich mit dem Deutschlandticket nach Swinemünde fahren?", "acceptedAnswer": { "@type": "Answer", "text": "Ja. DB Regio fährt von Ahlbeck Grenze nach Świnoujście Centrum. Das Deutschlandticket gilt auf dieser Strecke." } },
+      { "@type": "Question", "name": "Gilt das Deutschlandticket auf der Fähre nach Dänemark?", "acceptedAnswer": { "@type": "Answer", "text": "Nein. Die Fährverbindung Puttgarden – Rødby ist kein Nahverkehr und vom Deutschlandticket ausgeschlossen. Nur die Bahnstrecke Niebüll – Tønder ist gültig." } }
+    ]
+  }
+];
 ---
-
-[H2] Warum das Deutschlandticket überhaupt im Ausland gilt
-
-Das Deutschlandticket für 63 € pro Monat (Stand 2026) ist ein reines Nahverkehrsticket für Deutschland. Trotzdem reicht seine Gültigkeit an vielen Stellen über die Staatsgrenze hinaus. Der Grund: Historisch gewachsene Streckenführungen und bilaterale Abkommen zwischen deutschen und ausländischen Eisenbahngesellschaften.
-
-Die Deutsche Bahn und andere deutsche Verkehrsunternehmen rechnen intern nach sogenannten **Grenztarifpunkten** ab. Das sind Abrechnungsgrenzen, die nicht immer mit der Staatsgrenze übereinstimmen. Liegt ein Grenztarifpunkt auf ausländischem Boden – etwa am Salzburger Hauptbahnhof oder in Basel – dann gilt der deutsche Tarif bis dorthin. Und damit auch das Deutschlandticket.
-
-Wichtig: Ab dem Grenztarifpunkt im Ausland brauchst du für jede Weiterfahrt ein Ticket des jeweiligen Landes. Das Deutschlandticket deckt keine Binnenfahrten im Ausland ab.
-
-→ *[Deutschlandticket Gültigkeit](/ratgeber/deutschlandticket-gueltigkeit) – Wo das Ticket in Deutschland gilt und wo nicht.*
-
----
-
-[H2] Alle grenzüberschreitenden Strecken im Überblick
-
-Die folgende Übersicht basiert auf den offiziellen Angaben von deutschlandticket.de, den zuständigen Verkehrsverbünden und den Betreibergesellschaften. Stand: Juli 2026.
-
----
-
-[H3] Österreich
-
-Österreich bietet die meisten grenzüberschreitenden Verbindungen mit dem Deutschlandticket – vor allem ab Bayern.
-
-**Salzburg:**
-Mit der Bayerischen Regiobahn (BRB), DB RegioNetz oder der ÖBB von Freilassing zum Salzburg Hauptbahnhof. Das Deutschlandticket gilt auf allen drei Betreibern bis Salzburg Hbf. Der Bahnhof ist tariflich in den deutschen Nahverkehr integriert.
-
-**Kufstein:**
-Die Bayerische Regiobahn fährt von Kiefersfelden nach Kufstein. Das Deutschlandticket gilt bis Kufstein.
-
-**Außerfernbahn (Reutte in Tirol):**
-Die Strecke Pfronten-Steinach – Vils – Reutte (Tirol) – Ehrwald – Griesen wird von DB Regio betrieben. Das Deutschlandticket gilt auf der gesamten Strecke, aber nur im Verkehr von und nach Deutschland. Für rein innerösterreichische Fahrten (z. B. Reutte → Ehrwald) ist es nicht gültig.
-
-| Strecke | Betreiber | Grenztarifpunkt |
-|---|---|---|
-| Freilassing → Salzburg Hbf | BRB, DB RegioNetz, ÖBB | Salzburg Hbf |
-| Kiefersfelden → Kufstein | BRB | Kufstein |
-| Pfronten-Steinach → Reutte → Griesen | DB Regio | Griesen (nur von/nach DE) |
-
-**Tipp:** Salzburg ist das beliebteste Auslandsziel mit dem Deutschlandticket. Von München brauchst du mit der Meridian/BRB rund 1,5 Stunden – komplett ohne Aufpreis.
-
----
-
-[H3] Schweiz
-
-Die Schweiz ist über mehrere Strecken erreichbar, vor allem rund um Basel und Schaffhausen.
-
-**Basel:**
-Basel hat zwei relevante Bahnhöfe: Basel Badischer Bahnhof (Basel Bad Bf) und Basel SBB. Beide sind tariflich integriert. Du erreichst sie mit DB Regio und der SBB Deutschland GmbH aus dem Raum Lörrach, Weil am Rhein und Zell im Wiesental.
-
-**Schaffhausen:**
-Von Erzingen (Baden) über Trasadingen nach Schaffhausen und weiter nach Thayngen und Bietingen. Betrieben von SBB Deutschland, DB Regio und Thurbo. Auch die Strecke Lottstetten – Jestetten – Schaffhausen ist eingeschlossen.
-
-| Strecke | Betreiber | Grenztarifpunkt |
-|---|---|---|
-| Weil am Rhein → Basel Bad Bf → Basel SBB | DB Regio | Basel SBB |
-| Zell im Wiesental → Lörrach → Basel SBB | SBB Deutschland | Basel SBB |
-| Herten (Baden) → Basel Bad Bf | DB Regio | Basel Bad Bf |
-| Erzingen → Schaffhausen → Bietingen | SBB Deutschland, DB Regio | Schaffhausen |
-| Lottstetten → Jestetten → Schaffhausen | SBB, Thurbo | Schaffhausen |
-
-**Achtung:** Für Weiterfahrten ab Basel SBB oder Schaffhausen in die Schweiz brauchst du ein Schweizer Ticket. Der Schweizer Nahverkehr ist deutlich teurer als der deutsche.
-
----
-
-[H3] Frankreich
-
-Im Elsass und in Lothringen gibt es mehrere Verbindungen.
-
-**Elsass (Pfalz/Baden):**
-Von Berg (Pfalz) nach Lauterbourg und von Schweighofen nach Wissembourg. Betreiber: DB Regio und vlexx.
-
-**Saarland → Lothringen:**
-Die Saarbahn S1 fährt von Saarbrücken nach Saargemünd (Sarreguemines). Das Deutschlandticket gilt innerhalb des saarVV auf dieser Strecke. Ebenso auf den Buslinien MS2 nach Creutzwald und 184 nach Carling.
-
-| Strecke | Betreiber | Grenztarifpunkt |
-|---|---|---|
-| Berg (Pfalz) → Lauterbourg | DB Regio | Lauterbourg |
-| Schweighofen → Wissembourg | DB Regio, vlexx | Wissembourg |
-| Saarbrücken → Saargemünd (S1) | Saarbahn (saarVV) | Saargemünd |
-| Saarland → Creutzwald (MS2) | saarVV | Creutzwald |
-| Saarland → Carling (Linie 184) | saarVV | Carling |
-
-**Wichtig:** Die Straßenbahn zwischen Kehl und Straßburg ist nicht mit dem Deutschlandticket nutzbar. Für Fahrten nach Straßburg die Regionalbahn RS 4 ab Offenburg nutzen – dort endet die Gültigkeit allerdings an der Grenze.
-
-**Sommeraktion 2026 für unter 28-Jährige:**
-Vom 1. Juli bis 31. August 2026 gilt das Deutschlandticket für alle unter 28 Jahren mit Wohnsitz in Baden-Württemberg, Rheinland-Pfalz oder dem Saarland in der gesamten französischen Région Grand Est – inklusive Elsass, Lothringen und Champagne-Ardenne. Sogar Fahrten mit TER-Regionalzügen bis Paris Gare de l'Est sind möglich. Diese Sonderaktion läuft 2026 bereits zum dritten Mal. Voraussetzungen: gültiges Deutschlandticket oder D-Ticket JugendBW, Personalausweis oder Reisepass, Wohnsitz in einem der drei Bundesländer.
-
-→ *[Deutschlandticket für Studenten](/ratgeber/deutschlandticket-studenten) – Vergünstigungen und Sonderregelungen für junge Menschen.*
-
----
-
-[H3] Luxemburg
-
-Luxemburg ist ein Sonderfall – und für Pendler besonders interessant.
-
-**Zugverkehr:**
-Das Deutschlandticket gilt auf der gesamten Schienenstrecke zwischen Deutschland und Luxemburg, auch in Zügen der luxemburgischen CFL (Société Nationale des Chemins de fer Luxembourgeois). Die VRT-Buslinien 410, 455 und 460 nach Luxemburg sind ebenfalls eingeschlossen.
-
-**RGTR-Buslinien (Projekt TicketDeLux):**
-Seit Januar 2025 gilt das Deutschlandticket auf 14 grenzüberschreitenden RGTR-Buslinien zwischen Rheinland-Pfalz, dem Saarland und Luxemburg. Die Pilotphase wurde im Mai 2026 bis zum 31. Dezember 2026 verlängert.
-
-Folgende RGTR-Linien sind eingeschlossen: 180, 301, 302, 303, 305, 306, 331, 332, 401, 402, 403, 404, 405, 407.
-
-**Nicht gültig:** Der Saarbrücken-Luxemburg-Express (CFL-Buslinie L40) ist eine Fernverkehrsverbindung und deshalb ausgeschlossen.
-
-**Gut zu wissen:** In Luxemburg ist der gesamte öffentliche Nahverkehr kostenlos. Wenn du mit dem Deutschlandticket in Luxemburg ankommst, kannst du dort kostenlos weiterfahren – Busse, Straßenbahn und Züge innerhalb Luxemburgs kosten nichts.
-
-→ *[Deutschlandticket Kosten](/ratgeber/deutschlandticket-kosten) – Was das Ticket 2026 kostet und wer weniger zahlt.*
-
----
-
-[H3] Niederlande
-
-Drei Strecken führen in die Niederlande:
-
-| Strecke | Betreiber | Grenztarifpunkt |
-|---|---|---|
-| Kaldenkirchen → Venlo | eurobahn | Venlo |
-| Bad Bentheim → Hengelo | eurobahn | Hengelo |
-| Gronau (Westf) → Enschede | DB Regio | Enschede |
-| Emmerich → Arnhem | VIA | Arnhem |
-
-Venlo und Arnhem sind attraktive Ziele für Tagesausflüge – Venlo ist bekannt für seinen Wochenmarkt, Arnhem für das Freilichtmuseum und die Kriegsgeschichte.
-
----
-
-[H3] Dänemark
-
-Eine einzige Verbindung: Die Niebüller Eisenbahn-Gesellschaft (NEG) fährt von Niebüll nach Tønder in Dänemark. Das Deutschlandticket gilt auf dieser Strecke.
-
-| Strecke | Betreiber | Grenztarifpunkt |
-|---|---|---|
-| Niebüll → Tønder | NEG | Tønder |
-
----
-
-[H3] Polen
-
-Drei Strecken an der Oder-Neiße-Grenze:
-
-| Strecke | Betreiber | Grenztarifpunkt |
-|---|---|---|
-| Ahlbeck Grenze → Świnoujście Centrum | DB Regio | Świnoujście |
-| Görlitz → Zgorzelec | trilex | Zgorzelec |
-| Hirschfelde → Krzewina Zgorzelecka → Hagenwerder | ODEG | Krzewina Zgorzelecka |
-
-**Tipp:** Die Usedomer Bäderbahn (UBB) über Ahlbeck nach Świnoujście (Swinemünde) ist eine der interessantesten Grenzstrecken. Von der Ostsee direkt in eine polnische Hafenstadt – perfekt für einen Tagesausflug.
-
----
-
-[H3] Tschechien
-
-Drei Verbindungen im sächsischen Grenzgebiet:
-
-| Strecke | Betreiber | Grenztarifpunkt |
-|---|---|---|
-| Zittau → Hrádek nad Nisou | trilex | Hrádek nad Nisou |
-| Bärenstein → Vejprty | – | Vejprty |
-| Seifhennersdorf → Varnsdorf → Zittau | – | Varnsdorf |
-
----
-
-[H2] Was bei der Fahrkartenkontrolle im Ausland passiert
-
-Im Grenzverkehr kontrollieren oft die Schaffner des jeweiligen Betreibers. Solange du auf einer der oben gelisteten Strecken unterwegs bist und am Grenztarifpunkt aussteigst (oder vorher), bist du mit dem Deutschlandticket korrekt unterwegs.
-
-Was du dabei haben solltest:
-- Dein gültiges Deutschlandticket (digital auf dem Handy oder als Chipkarte)
-- Einen gültigen Lichtbildausweis (Personalausweis oder Reisepass)
-- Bei der Sommeraktion Grand Est: das offizielle Informationsschreiben (als PDF auf bwegt.de verfügbar)
-
-Falls ein Kontrolleur im Ausland dein Deutschlandticket nicht kennt, bleib ruhig und zeig das Ticket vor. Auf den offiziell gelisteten Strecken hast du nichts zu befürchten. Im Zweifel hilft die Telefonnummer des zuständigen Verkehrsverbundes.
-
----
-
-[H2] Häufige Fehler bei Auslandsfahrten mit dem Deutschlandticket
-
-**1. Weiterfahrt über den Grenztarifpunkt hinaus**
-Das Deutschlandticket gilt nur bis zum Grenztarifpunkt. Wer in Salzburg in einen ÖBB-Zug nach Wien umsteigt, fährt ohne gültiges Ticket. Das kann in Österreich 60 € Strafe kosten, in der Schweiz deutlich mehr.
-
-**2. Fernverkehrszüge nutzen**
-Das Deutschlandticket gilt weder im ICE noch im IC, EC, TGV oder Railjet – auch nicht auf grenzüberschreitenden Strecken. Es gilt ausschließlich im Nahverkehr (RE, RB, S-Bahn, Straßenbahn, Bus).
-
-**3. Innerösterreichische Fahrten auf der Außerfernbahn**
-Die Strecke über Reutte in Tirol gilt nur für Fahrten von und nach Deutschland. Eine rein österreichische Fahrt (z. B. Reutte → Ehrwald) ist mit dem Deutschlandticket nicht erlaubt.
-
-**4. Straßenbahn Kehl – Straßburg verwechseln**
-Die grenzüberschreitende Straßenbahn zwischen Kehl und Straßburg akzeptiert das Deutschlandticket nicht. Für Straßburg die Regionalbahn nutzen – aber beachten: Die Gültigkeit endet an der deutschen Grenze.
-
-**5. RGTR-Linien mit Fernverkehr verwechseln**
-In Richtung Luxemburg gilt das Deutschlandticket auf den 14 RGTR-Nahverkehrs-Buslinien – nicht auf dem Saarbrücken-Express (L40).
-
-→ *[Deutschlandticket kündigen](/ratgeber/deutschlandticket-kuendigen) – Frist, Ablauf und Anbietervergleich.*
-
----
-
-[H2] Tipps für Auslandsfahrten mit dem Deutschlandticket
-
-**Vor der Fahrt den Betreiber prüfen.** Nicht jeder Zug auf einer Grenzstrecke wird von einem deutschen Unternehmen betrieben. Nur Züge, auf denen der deutsche Tarif gilt, akzeptieren das Deutschlandticket. Die DB-Navigator-App zeigt bei der Verbindungssuche an, ob das Deutschlandticket gültig ist.
-
-**Personalausweis immer mitnehmen.** Bei Grenzübertritten – auch innerhalb des Schengen-Raums – kann die Bundespolizei oder die ausländische Polizei kontrollieren. Das Deutschlandticket allein reicht als Identitätsnachweis nicht aus.
-
-**Luxemburg als Bonus nutzen.** Da der ÖPNV in Luxemburg komplett kostenlos ist, kannst du nach Ankunft mit dem Deutschlandticket in Luxemburg Stadt beliebig weiterfahren – Bus und Tram kosten nichts.
-
-**Anschlusstickets vorab kaufen.** Wenn du über den Grenztarifpunkt hinaus willst (z. B. von Basel nach Zürich oder von Salzburg nach Linz), kauf das Anschlussticket am besten vorher online. Am Automaten im Ausland gelten andere Tarife und Bezahlsysteme.
-
-**Die Google-Maps-Karte nutzen.** Auf deutschlandticket.de wird eine Community-gepflegte Google-Maps-Karte verlinkt, die alle bekannten grenzüberschreitenden Strecken zeigt. Hilfreich für die Planung.
-
-→ *[Lohnt sich das Deutschlandticket?](/lohnt-sich-rechner) – Rechner: Ab wann du mit dem 63-€-Ticket sparst.*
-
----
-
-[H2] Häufig gestellte Fragen (FAQ)
-
-**Kann ich mit dem Deutschlandticket ins Ausland fahren?**
-Ja, aber nur auf bestimmten grenzüberschreitenden Nahverkehrsstrecken. Das Ticket gilt bis zum jeweiligen Grenztarifpunkt – danach brauchst du ein Ticket des Ziellandes.
-
-**Welche Länder kann ich mit dem Deutschlandticket erreichen?**
-Österreich, Schweiz, Frankreich, Luxemburg, Niederlande, Dänemark, Polen und Tschechien – jeweils auf ausgewählten Strecken.
-
-**Gilt das Deutschlandticket bis Salzburg?**
-Ja. Der Salzburger Hauptbahnhof ist tariflich in den deutschen Nahverkehr integriert. Die Bayerische Regiobahn, DB RegioNetz und ÖBB akzeptieren das Deutschlandticket auf der Strecke Freilassing – Salzburg Hbf.
-
-**Gilt das Deutschlandticket bis Basel?**
-Ja. Sowohl Basel Badischer Bahnhof als auch Basel SBB sind als Grenztarifpunkte anerkannt.
-
-**Gilt das Deutschlandticket in Luxemburg?**
-Ja – auf der Schienenstrecke, in VRT-Bussen (410, 455, 460) und seit 2025 auf 14 RGTR-Buslinien (Pilotprojekt TicketDeLux, verlängert bis 31. Dezember 2026). Innerhalb Luxemburgs ist der ÖPNV ohnehin kostenlos.
-
-**Gilt das Deutschlandticket im ICE oder TGV ins Ausland?**
-Nein. Das Deutschlandticket ist ausschließlich im Nahverkehr gültig – Fernverkehrszüge wie ICE, IC, EC, TGV und Railjet sind ausgeschlossen.
-
-**Gilt das Deutschlandticket in der Straßenbahn Kehl – Straßburg?**
-Nein. Die grenzüberschreitende Straßenbahnlinie D akzeptiert das Deutschlandticket nicht.
-
-**Was passiert, wenn ich über den Grenztarifpunkt hinaus fahre?**
-Du fährst ohne gültiges Ticket und riskierst ein erhöhtes Beförderungsentgelt (Strafe). In Österreich liegt das bei rund 60 €, in der Schweiz bei 100 CHF aufwärts.
-
-**Brauche ich einen Reisepass für Grenzfahrten?**
-Innerhalb des Schengen-Raums reicht ein Personalausweis. Einen Reisepass brauchst du normalerweise nicht, aber ein Ausweisdokument solltest du immer dabei haben.
-
-**Was ist die Sommeraktion Grand Est 2026?**
-Vom 1. Juli bis 31. August 2026 können Deutschlandticket-Inhaber unter 28 Jahren mit Wohnsitz in Baden-Württemberg, Rheinland-Pfalz oder dem Saarland kostenlos den TER-Nahverkehr in der gesamten Région Grand Est nutzen – bis nach Paris Gare de l'Est.
-
-**Gilt das Deutschlandticket auf der Fähre nach Dänemark?**
-Nein. Die Fährverbindung Puttgarden – Rødby ist kein Nahverkehr und vom Deutschlandticket ausgeschlossen. Nur die Bahnstrecke Niebüll – Tønder ist gültig.
-
-**Kann ich mit dem Deutschlandticket nach Swinemünde (Świnoujście)?**
-Ja. DB Regio fährt von Ahlbeck Grenze nach Świnoujście Centrum. Das Deutschlandticket gilt auf dieser Strecke.
-
----
-
-[H2] Offizielle Quellen
-
-- deutschlandticket.de: [Fahrten ins benachbarte Ausland](https://wissen.deutschlandticket.de/grenzverkehr) – Offizielle Übersicht der grenzüberschreitenden Strecken
-- saarVV: [Deutschlandticket im grenzüberschreitenden Verkehr](https://saarvv.de/abo/d-ticket/) – Gültigkeit im Saarland und nach Frankreich/Luxemburg
-- Projekt TicketDeLux: [ticket-de-lux.de](https://www.ticket-de-lux.de/) – Deutschlandticket auf RGTR-Buslinien nach Luxemburg
-- bwegt (Baden-Württemberg): [Sommeraktion Frankreich 2026](https://www.bwegt.de/tickets/sommeraktion) – Details zur Grand-Est-Sonderregelung
-- VRT: [FAQ zum Deutschlandticket](https://www.vrt-info.de/tickets/63-Euro-Deutschlandticket/FAQ) – Luxemburg-Verbindungen aus Rheinland-Pfalz
-- Google-Maps-Karte: [Grenzüberschreitende Strecken](https://www.google.com/maps/d/viewer?mid=12hyfnAWv1yD3TTA1r3_4lSvRI9WArns) – Community-Karte mit allen bekannten Routen
-
----
-
-**Interne Verlinkungen für diesen Artikel:**
-
-- /ratgeber/deutschlandticket-gueltigkeit → bei Abschnitt Gültigkeit allgemein
-- /ratgeber/deutschlandticket-kosten → bei Preisnennung 63 €
-- /ratgeber/deutschlandticket-kuendigen → bei Fehler-Abschnitt oder Footer
-- /ratgeber/deutschlandticket-studenten → bei Sommeraktion / junge Menschen
-- /ratgeber/deutschlandticket-ice → bei Fernverkehr-Ausschluss
-- /ratgeber/deutschlandticket-erste-klasse → bei 2.-Klasse-Hinweis
-- /ratgeber/deutschlandticket-kaufen → bei allgemeiner Ticket-Erklärung
-- /lohnt-sich-rechner → bei Tipps
-- /ratgeber/deutschlandticket-jobticket → bei Luxemburg/Jobticket-Erwähnung
+<Base
+  title="Deutschlandticket im Ausland 2026: Alle Strecken, Länder & Regeln"
+  description="Mit dem Deutschlandticket ins Ausland fahren: Alle grenzüberschreitenden Strecken nach Österreich, Schweiz, Frankreich, Luxemburg, Niederlande, Dänemark, Polen & Tschechien (Stand 2026)."
+  schema={schema}
+>
+  <article class="container--narrow" style="padding:2rem 0 1rem">
+    <p style="color:var(--brand);font-weight:800;letter-spacing:.06em;text-transform:uppercase;font-size:.8rem;margin:0">
+      Ratgeber · Aktualisiert am 21.07.2026
+    </p>
+    <h1>Deutschlandticket im Ausland: Wohin du 2026 ohne Zusatzticket fahren kannst</h1>
+    <p style="color:var(--ink-soft)">
+      Das Deutschlandticket gilt nicht nur in Deutschland. Auf bestimmten
+      Nahverkehrsstrecken kommst du ohne Aufpreis über die Grenze — nach
+      Österreich, in die Schweiz, nach Frankreich, Luxemburg, in die
+      Niederlande, nach Dänemark, Polen und Tschechien. Entscheidend ist, ob
+      die Strecke von einem deutschen Verkehrsunternehmen betrieben wird oder
+      ein sogenannter Grenztarifpunkt im Ausland liegt.
+    </p>
+
+    <h2>Warum das Deutschlandticket überhaupt im Ausland gilt</h2>
+    <p>
+      Das Deutschlandticket für
+      <a href="/ratgeber/deutschlandticket-kosten">63 € pro Monat</a>
+      (Stand 2026) ist ein reines Nahverkehrsticket für Deutschland. Trotzdem
+      reicht seine Gültigkeit an vielen Stellen über die Staatsgrenze hinaus.
+      Der Grund: Historisch gewachsene Streckenführungen und bilaterale
+      Abkommen zwischen deutschen und ausländischen Eisenbahngesellschaften.
+    </p>
+    <p>
+      Die Deutsche Bahn und andere deutsche Verkehrsunternehmen rechnen intern
+      nach sogenannten <strong>Grenztarifpunkten</strong> ab. Das sind
+      Abrechnungsgrenzen, die nicht immer mit der Staatsgrenze
+      übereinstimmen. Liegt ein Grenztarifpunkt auf ausländischem Boden —
+      etwa am Salzburger Hauptbahnhof oder in Basel — dann gilt der deutsche
+      Tarif bis dorthin. Und damit auch das Deutschlandticket.
+    </p>
+    <p>
+      Ab dem Grenztarifpunkt im Ausland brauchst du für jede Weiterfahrt ein
+      Ticket des jeweiligen Landes. Das Deutschlandticket deckt keine
+      Binnenfahrten im Ausland ab.
+    </p>
+
+    <h2>Alle grenzüberschreitenden Strecken im Überblick</h2>
+    <p>
+      Die folgende Übersicht basiert auf den offiziellen Angaben von
+      deutschlandticket.de, den zuständigen Verkehrsverbünden und den
+      Betreibergesellschaften. Stand: Juli 2026.
+    </p>
+
+    <h3>Österreich</h3>
+    <p>
+      Österreich bietet die meisten grenzüberschreitenden Verbindungen — vor
+      allem ab Bayern.
+    </p>
+    <p>
+      <strong>Salzburg:</strong> Mit der Bayerischen Regiobahn (BRB), DB
+      RegioNetz oder der ÖBB von Freilassing zum Salzburg Hauptbahnhof. Das
+      Deutschlandticket gilt auf allen drei Betreibern bis Salzburg Hbf. Der
+      Bahnhof ist tariflich in den deutschen Nahverkehr integriert.
+    </p>
+    <p>
+      <strong>Kufstein:</strong> Die Bayerische Regiobahn fährt von
+      Kiefersfelden nach Kufstein. Das Deutschlandticket gilt bis Kufstein.
+    </p>
+    <p>
+      <strong>Außerfernbahn (Reutte in Tirol):</strong> Die Strecke
+      Pfronten-Steinach – Vils – Reutte (Tirol) – Ehrwald – Griesen wird von
+      DB Regio betrieben. Das Deutschlandticket gilt auf der gesamten Strecke,
+      aber nur im Verkehr von und nach Deutschland. Für rein
+      innerösterreichische Fahrten (z. B. Reutte → Ehrwald) ist es nicht
+      gültig.
+    </p>
+    <div class="card" style="overflow-x:auto">
+      <table style="width:100%;border-collapse:collapse;font-size:.95rem">
+        <thead>
+          <tr style="border-bottom:2px solid var(--line);text-align:left">
+            <th style="padding:.5rem .75rem">Strecke</th>
+            <th style="padding:.5rem .75rem">Betreiber</th>
+            <th style="padding:.5rem .75rem">Grenztarifpunkt</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem">Freilassing → Salzburg Hbf</td>
+            <td style="padding:.5rem .75rem">BRB, DB RegioNetz, ÖBB</td>
+            <td style="padding:.5rem .75rem">Salzburg Hbf</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem">Kiefersfelden → Kufstein</td>
+            <td style="padding:.5rem .75rem">BRB</td>
+            <td style="padding:.5rem .75rem">Kufstein</td>
+          </tr>
+          <tr>
+            <td style="padding:.5rem .75rem">Pfronten-Steinach → Reutte → Griesen</td>
+            <td style="padding:.5rem .75rem">DB Regio</td>
+            <td style="padding:.5rem .75rem">Griesen (nur von/nach DE)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>
+      <strong>Tipp:</strong> Salzburg ist das beliebteste Auslandsziel mit dem
+      Deutschlandticket. Von München brauchst du mit der BRB rund 1,5 Stunden
+      — komplett ohne Aufpreis.
+    </p>
+
+    <h3>Schweiz</h3>
+    <p>
+      Die Schweiz ist über mehrere Strecken erreichbar, vor allem rund um
+      Basel und Schaffhausen.
+    </p>
+    <p>
+      <strong>Basel:</strong> Basel hat zwei relevante Bahnhöfe: Basel
+      Badischer Bahnhof (Basel Bad Bf) und Basel SBB. Beide sind tariflich
+      integriert. Du erreichst sie mit DB Regio und der SBB Deutschland GmbH
+      aus dem Raum Lörrach, Weil am Rhein und Zell im Wiesental.
+    </p>
+    <p>
+      <strong>Schaffhausen:</strong> Von Erzingen (Baden) über Trasadingen
+      nach Schaffhausen und weiter nach Thayngen und Bietingen. Betrieben von
+      SBB Deutschland, DB Regio und Thurbo. Auch die Strecke Lottstetten –
+      Jestetten – Schaffhausen ist eingeschlossen.
+    </p>
+    <div class="card" style="overflow-x:auto">
+      <table style="width:100%;border-collapse:collapse;font-size:.95rem">
+        <thead>
+          <tr style="border-bottom:2px solid var(--line);text-align:left">
+            <th style="padding:.5rem .75rem">Strecke</th>
+            <th style="padding:.5rem .75rem">Betreiber</th>
+            <th style="padding:.5rem .75rem">Grenztarifpunkt</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem">Weil am Rhein → Basel Bad Bf → Basel SBB</td>
+            <td style="padding:.5rem .75rem">DB Regio</td>
+            <td style="padding:.5rem .75rem">Basel SBB</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem">Zell im Wiesental → Lörrach → Basel SBB</td>
+            <td style="padding:.5rem .75rem">SBB Deutschland</td>
+            <td style="padding:.5rem .75rem">Basel SBB</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem">Herten (Baden) → Basel Bad Bf</td>
+            <td style="padding:.5rem .75rem">DB Regio</td>
+            <td style="padding:.5rem .75rem">Basel Bad Bf</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem">Erzingen → Schaffhausen → Bietingen</td>
+            <td style="padding:.5rem .75rem">SBB Deutschland, DB Regio</td>
+            <td style="padding:.5rem .75rem">Schaffhausen</td>
+          </tr>
+          <tr>
+            <td style="padding:.5rem .75rem">Lottstetten → Jestetten → Schaffhausen</td>
+            <td style="padding:.5rem .75rem">SBB, Thurbo</td>
+            <td style="padding:.5rem .75rem">Schaffhausen</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>
+      <strong>Achtung:</strong> Für Weiterfahrten ab Basel SBB oder
+      Schaffhausen in die Schweiz brauchst du ein Schweizer Ticket. Der
+      Schweizer Nahverkehr ist deutlich teurer als der deutsche.
+    </p>
+
+    <h3>Frankreich</h3>
+    <p>
+      Im Elsass und in Lothringen gibt es mehrere Verbindungen.
+    </p>
+    <p>
+      <strong>Elsass (Pfalz/Baden):</strong> Von Berg (Pfalz) nach
+      Lauterbourg und von Schweighofen nach Wissembourg. Betreiber: DB Regio
+      und vlexx.
+    </p>
+    <p>
+      <strong>Saarland → Lothringen:</strong> Die Saarbahn S1 fährt von
+      Saarbrücken nach Saargemünd (Sarreguemines). Das Deutschlandticket gilt
+      innerhalb des saarVV auf dieser Strecke. Ebenso auf den Buslinien MS2
+      nach Creutzwald und 184 nach Carling.
+    </p>
+    <div class="card" style="overflow-x:auto">
+      <table style="width:100%;border-collapse:collapse;font-size:.95rem">
+        <thead>
+          <tr style="border-bottom:2px solid var(--line);text-align:left">
+            <th style="padding:.5rem .75rem">Strecke</th>
+            <th style="padding:.5rem .75rem">Betreiber</th>
+            <th style="padding:.5rem .75rem">Grenztarifpunkt</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem">Berg (Pfalz) → Lauterbourg</td>
+            <td style="padding:.5rem .75rem">DB Regio</td>
+            <td style="padding:.5rem .75rem">Lauterbourg</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem">Schweighofen → Wissembourg</td>
+            <td style="padding:.5rem .75rem">DB Regio, vlexx</td>
+            <td style="padding:.5rem .75rem">Wissembourg</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem">Saarbrücken → Saargemünd (S1)</td>
+            <td style="padding:.5rem .75rem">Saarbahn (saarVV)</td>
+            <td style="padding:.5rem .75rem">Saargemünd</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem">Saarland → Creutzwald (MS2)</td>
+            <td style="padding:.5rem .75rem">saarVV</td>
+            <td style="padding:.5rem .75rem">Creutzwald</td>
+          </tr>
+          <tr>
+            <td style="padding:.5rem .75rem">Saarland → Carling (Linie 184)</td>
+            <td style="padding:.5rem .75rem">saarVV</td>
+            <td style="padding:.5rem .75rem">Carling</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>
+      <strong>Wichtig:</strong> Die Straßenbahn zwischen Kehl und Straßburg
+      akzeptiert das Deutschlandticket nicht. Für Fahrten nach Straßburg die
+      Regionalbahn RS 4 ab Offenburg nutzen — dort endet die Gültigkeit
+      allerdings an der Grenze.
+    </p>
+
+    <h3>Sommeraktion 2026: Mit dem Deutschlandticket nach Frankreich (unter 28)</h3>
+    <p>
+      Vom 1. Juli bis 31. August 2026 gilt das Deutschlandticket für alle
+      unter 28 Jahren mit Wohnsitz in Baden-Württemberg, Rheinland-Pfalz oder
+      dem Saarland in der gesamten französischen Région Grand Est — inklusive
+      Elsass, Lothringen und Champagne-Ardenne. Sogar Fahrten mit
+      TER-Regionalzügen bis Paris Gare de l'Est sind möglich. Diese
+      Sonderaktion läuft 2026 bereits zum dritten Mal.
+    </p>
+    <p>
+      <strong>Voraussetzungen:</strong> Gültiges Deutschlandticket oder
+      D-Ticket JugendBW, Personalausweis oder Reisepass, Wohnsitz in einem
+      der drei Bundesländer, unter 28 Jahre alt.
+    </p>
+    <p>
+      <strong>Nicht enthalten:</strong> Fernverkehrszüge (TGV),
+      Stadtverkehr in französischen Städten (Busse, Straßenbahnen, U-Bahnen)
+      und die Straßenbahn Kehl – Straßburg.
+    </p>
+    <p>
+      Falls ein Kontrolleur in Frankreich die Aktion nicht kennt: Auf
+      <a href="https://www.bwegt.de/tickets/sommeraktion" target="_blank" rel="noopener">bwegt.de</a>
+      gibt es ein offizielles Informationsschreiben als PDF zum Vorzeigen.
+    </p>
+    <p>
+      <a href="/ratgeber/deutschlandticket-studenten">Mehr zu Vergünstigungen für junge Menschen →</a>
+    </p>
+
+    <h3>Luxemburg</h3>
+    <p>
+      Luxemburg ist ein Sonderfall — und für Pendler besonders interessant.
+    </p>
+    <p>
+      <strong>Zugverkehr:</strong> Das Deutschlandticket gilt auf der gesamten
+      Schienenstrecke zwischen Deutschland und Luxemburg, auch in Zügen der
+      luxemburgischen CFL. Die VRT-Buslinien 410, 455 und 460 nach Luxemburg
+      sind ebenfalls eingeschlossen.
+    </p>
+    <p>
+      <strong>RGTR-Buslinien (Projekt TicketDeLux):</strong> Seit Januar 2025
+      gilt das Deutschlandticket auf 14 grenzüberschreitenden RGTR-Buslinien
+      zwischen Rheinland-Pfalz, dem Saarland und Luxemburg. Die Pilotphase
+      wurde im Mai 2026 bis zum <strong>31. Dezember 2026</strong> verlängert.
+    </p>
+    <p>
+      Folgende RGTR-Linien sind eingeschlossen: 180, 301, 302, 303, 305,
+      306, 331, 332, 401, 402, 403, 404, 405, 407.
+    </p>
+    <p>
+      <strong>Nicht gültig:</strong> Der Saarbrücken-Luxemburg-Express
+      (CFL-Buslinie L40) ist eine Fernverkehrsverbindung und deshalb
+      ausgeschlossen.
+    </p>
+    <p>
+      <strong>Gut zu wissen:</strong> In Luxemburg ist der gesamte öffentliche
+      Nahverkehr kostenlos. Wenn du mit dem Deutschlandticket in Luxemburg
+      ankommst, kannst du dort kostenlos weiterfahren — Busse, Straßenbahn
+      und Züge innerhalb Luxemburgs kosten nichts.
+    </p>
+
+    <h3>Niederlande</h3>
+    <div class="card" style="overflow-x:auto">
+      <table style="width:100%;border-collapse:collapse;font-size:.95rem">
+        <thead>
+          <tr style="border-bottom:2px solid var(--line);text-align:left">
+            <th style="padding:.5rem .75rem">Strecke</th>
+            <th style="padding:.5rem .75rem">Betreiber</th>
+            <th style="padding:.5rem .75rem">Grenztarifpunkt</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem">Kaldenkirchen → Venlo</td>
+            <td style="padding:.5rem .75rem">eurobahn</td>
+            <td style="padding:.5rem .75rem">Venlo</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem">Bad Bentheim → Hengelo</td>
+            <td style="padding:.5rem .75rem">eurobahn</td>
+            <td style="padding:.5rem .75rem">Hengelo</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem">Gronau (Westf) → Enschede</td>
+            <td style="padding:.5rem .75rem">DB Regio</td>
+            <td style="padding:.5rem .75rem">Enschede</td>
+          </tr>
+          <tr>
+            <td style="padding:.5rem .75rem">Emmerich → Arnhem</td>
+            <td style="padding:.5rem .75rem">VIA</td>
+            <td style="padding:.5rem .75rem">Arnhem</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>
+      Venlo und Arnhem sind attraktive Ziele für Tagesausflüge — Venlo ist
+      bekannt für seinen Wochenmarkt, Arnhem für das Freilichtmuseum und die
+      Kriegsgeschichte.
+    </p>
+
+    <h3>Dänemark</h3>
+    <p>
+      Eine einzige Verbindung: Die Niebüller Eisenbahn-Gesellschaft (NEG)
+      fährt von Niebüll nach Tønder. Das Deutschlandticket gilt auf dieser
+      Strecke.
+    </p>
+    <div class="card" style="overflow-x:auto">
+      <table style="width:100%;border-collapse:collapse;font-size:.95rem">
+        <thead>
+          <tr style="border-bottom:2px solid var(--line);text-align:left">
+            <th style="padding:.5rem .75rem">Strecke</th>
+            <th style="padding:.5rem .75rem">Betreiber</th>
+            <th style="padding:.5rem .75rem">Grenztarifpunkt</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="padding:.5rem .75rem">Niebüll → Tønder</td>
+            <td style="padding:.5rem .75rem">NEG</td>
+            <td style="padding:.5rem .75rem">Tønder</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Polen</h3>
+    <div class="card" style="overflow-x:auto">
+      <table style="width:100%;border-collapse:collapse;font-size:.95rem">
+        <thead>
+          <tr style="border-bottom:2px solid var(--line);text-align:left">
+            <th style="padding:.5rem .75rem">Strecke</th>
+            <th style="padding:.5rem .75rem">Betreiber</th>
+            <th style="padding:.5rem .75rem">Grenztarifpunkt</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem">Ahlbeck Grenze → Świnoujście Centrum</td>
+            <td style="padding:.5rem .75rem">DB Regio</td>
+            <td style="padding:.5rem .75rem">Świnoujście</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem">Görlitz → Zgorzelec</td>
+            <td style="padding:.5rem .75rem">trilex</td>
+            <td style="padding:.5rem .75rem">Zgorzelec</td>
+          </tr>
+          <tr>
+            <td style="padding:.5rem .75rem">Hirschfelde → Krzewina Zgorzelecka → Hagenwerder</td>
+            <td style="padding:.5rem .75rem">ODEG</td>
+            <td style="padding:.5rem .75rem">Krzewina Zgorzelecka</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>
+      <strong>Tipp:</strong> Die Usedomer Bäderbahn über Ahlbeck nach
+      Świnoujście (Swinemünde) ist eine der interessantesten Grenzstrecken.
+      Von der Ostsee direkt in eine polnische Hafenstadt — perfekt für einen
+      Tagesausflug.
+    </p>
+
+    <h3>Tschechien</h3>
+    <div class="card" style="overflow-x:auto">
+      <table style="width:100%;border-collapse:collapse;font-size:.95rem">
+        <thead>
+          <tr style="border-bottom:2px solid var(--line);text-align:left">
+            <th style="padding:.5rem .75rem">Strecke</th>
+            <th style="padding:.5rem .75rem">Betreiber</th>
+            <th style="padding:.5rem .75rem">Grenztarifpunkt</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem">Zittau → Hrádek nad Nisou</td>
+            <td style="padding:.5rem .75rem">trilex</td>
+            <td style="padding:.5rem .75rem">Hrádek nad Nisou</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem">Bärenstein → Vejprty</td>
+            <td style="padding:.5rem .75rem">—</td>
+            <td style="padding:.5rem .75rem">Vejprty</td>
+          </tr>
+          <tr>
+            <td style="padding:.5rem .75rem">Seifhennersdorf → Varnsdorf → Zittau</td>
+            <td style="padding:.5rem .75rem">—</td>
+            <td style="padding:.5rem .75rem">Varnsdorf</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Was bei der Fahrkartenkontrolle im Ausland passiert</h2>
+    <p>
+      Im Grenzverkehr kontrollieren oft die Schaffner des jeweiligen
+      Betreibers. Solange du auf einer der oben gelisteten Strecken unterwegs
+      bist und am Grenztarifpunkt aussteigst (oder vorher), bist du mit dem
+      Deutschlandticket korrekt unterwegs.
+    </p>
+    <p>
+      <strong>Was du dabei haben solltest:</strong> Dein gültiges
+      Deutschlandticket (digital auf dem Handy oder als Chipkarte), einen
+      gültigen Lichtbildausweis (Personalausweis oder Reisepass) und bei der
+      Sommeraktion Grand Est das offizielle Informationsschreiben von bwegt.de.
+    </p>
+
+    <h2>Häufige Fehler bei Auslandsfahrten</h2>
+    <p>
+      <strong>Weiterfahrt über den Grenztarifpunkt hinaus.</strong>
+      Das Deutschlandticket gilt nur bis zum Grenztarifpunkt. Wer in Salzburg
+      in einen ÖBB-Zug nach Wien umsteigt, fährt ohne gültiges Ticket. Das
+      kann in Österreich 60 € Strafe kosten, in der Schweiz deutlich mehr.
+    </p>
+    <p>
+      <strong>Fernverkehrszüge nutzen.</strong>
+      Das Deutschlandticket gilt weder im
+      <a href="/ratgeber/deutschlandticket-ice">ICE noch im IC, EC</a>, TGV
+      oder Railjet — auch nicht auf grenzüberschreitenden Strecken.
+    </p>
+    <p>
+      <strong>Innerösterreichische Fahrten auf der Außerfernbahn.</strong>
+      Die Strecke über Reutte in Tirol gilt nur für Fahrten von und nach
+      Deutschland. Eine rein österreichische Fahrt (z. B. Reutte → Ehrwald)
+      ist mit dem Deutschlandticket nicht erlaubt.
+    </p>
+    <p>
+      <strong>Straßenbahn Kehl – Straßburg verwechseln.</strong>
+      Die grenzüberschreitende Straßenbahnlinie D akzeptiert das
+      Deutschlandticket nicht.
+    </p>
+    <p>
+      <strong>RGTR-Linien mit Fernverkehr verwechseln.</strong>
+      In Richtung Luxemburg gilt das Deutschlandticket auf den 14
+      RGTR-Nahverkehrs-Buslinien — nicht auf dem Saarbrücken-Express (L40).
+    </p>
+
+    <h2>Tipps für Auslandsfahrten mit dem Deutschlandticket</h2>
+    <p>
+      <strong>Vor der Fahrt den Betreiber prüfen.</strong> Nicht jeder Zug
+      auf einer Grenzstrecke wird von einem deutschen Unternehmen betrieben.
+      Die DB-Navigator-App zeigt bei der Verbindungssuche an, ob das
+      Deutschlandticket gültig ist.
+    </p>
+    <p>
+      <strong>Personalausweis immer mitnehmen.</strong> Bei Grenzübertritten
+      — auch innerhalb des Schengen-Raums — kann die Bundespolizei oder die
+      ausländische Polizei kontrollieren.
+    </p>
+    <p>
+      <strong>Luxemburg als Bonus nutzen.</strong> Da der ÖPNV in Luxemburg
+      komplett kostenlos ist, kannst du nach Ankunft beliebig weiterfahren.
+    </p>
+    <p>
+      <strong>Anschlusstickets vorab kaufen.</strong> Wenn du über den
+      Grenztarifpunkt hinaus willst (z. B. von Basel nach Zürich oder von
+      Salzburg nach Linz), kauf das Anschlussticket am besten vorher online.
+    </p>
+    <p>
+      <strong>Die Google-Maps-Karte nutzen.</strong> Auf deutschlandticket.de
+      wird eine
+      <a href="https://www.google.com/maps/d/viewer?mid=12hyfnAWv1yD3TTA1r3_4lSvRI9WArns" target="_blank" rel="noopener">Community-gepflegte Karte</a>
+      verlinkt, die alle bekannten grenzüberschreitenden Strecken zeigt.
+    </p>
+    <p>
+      Ob sich das Deutschlandticket für dein Fahrverhalten insgesamt lohnt,
+      zeigt dir unser <a href="/lohnt-sich-rechner">Lohnt-sich-Rechner</a>.
+      Falls du dich gegen das Abo entscheidest:
+      <a href="/ratgeber/deutschlandticket-kuendigen">So kündigst du richtig</a>.
+    </p>
+
+    <h2>Häufige Fragen (FAQ)</h2>
+
+    <h3>Kann ich mit dem Deutschlandticket ins Ausland fahren?</h3>
+    <p>
+      Ja, aber nur auf bestimmten grenzüberschreitenden Nahverkehrsstrecken.
+      Das Ticket gilt bis zum jeweiligen Grenztarifpunkt — danach brauchst du
+      ein Ticket des Ziellandes.
+    </p>
+
+    <h3>Welche Länder kann ich mit dem Deutschlandticket erreichen?</h3>
+    <p>
+      Österreich, Schweiz, Frankreich, Luxemburg, Niederlande, Dänemark,
+      Polen und Tschechien — jeweils auf ausgewählten Strecken.
+    </p>
+
+    <h3>Gilt das Deutschlandticket bis Salzburg?</h3>
+    <p>
+      Ja. Der Salzburger Hauptbahnhof ist tariflich in den deutschen
+      Nahverkehr integriert. BRB, DB RegioNetz und ÖBB akzeptieren das
+      Deutschlandticket auf der Strecke Freilassing – Salzburg Hbf.
+    </p>
+
+    <h3>Gilt das Deutschlandticket bis Basel?</h3>
+    <p>
+      Ja. Basel Bad Bf und Basel SBB sind als Grenztarifpunkte anerkannt.
+    </p>
+
+    <h3>Gilt das Deutschlandticket in Luxemburg?</h3>
+    <p>
+      Ja — auf der Schienenstrecke, in VRT-Bussen und seit 2025 auf 14
+      RGTR-Buslinien (Pilotprojekt TicketDeLux, verlängert bis 31. Dezember
+      2026). Innerhalb Luxemburgs ist der ÖPNV ohnehin kostenlos.
+    </p>
+
+    <h3>Gilt das Deutschlandticket im ICE oder TGV ins Ausland?</h3>
+    <p>
+      Nein. Ausschließlich im Nahverkehr.
+      <a href="/ratgeber/deutschlandticket-ice">Mehr zum Thema ICE →</a>
+    </p>
+
+    <h3>Gilt das Deutschlandticket in der Straßenbahn Kehl – Straßburg?</h3>
+    <p>Nein. Die Straßenbahnlinie D akzeptiert das Deutschlandticket nicht.</p>
+
+    <h3>Was passiert, wenn ich über den Grenztarifpunkt hinaus fahre?</h3>
+    <p>
+      Du fährst ohne gültiges Ticket und riskierst ein erhöhtes
+      Beförderungsentgelt. In Österreich rund 60 €, in der Schweiz 100 CHF
+      aufwärts.
+    </p>
+
+    <h3>Was ist die Sommeraktion Grand Est 2026?</h3>
+    <p>
+      Vom 1. Juli bis 31. August 2026 können Deutschlandticket-Inhaber unter
+      28 Jahren mit Wohnsitz in BW, RLP oder Saarland kostenlos den
+      TER-Nahverkehr in der Région Grand Est nutzen — bis nach Paris
+      Gare de l'Est. Infos:
+      <a href="https://www.bwegt.de/tickets/sommeraktion" target="_blank" rel="noopener">bwegt.de</a>.
+    </p>
+
+    <h3>Kann ich mit dem Deutschlandticket nach Swinemünde fahren?</h3>
+    <p>Ja. DB Regio fährt von Ahlbeck Grenze nach Świnoujście Centrum.</p>
+
+    <h3>Gilt das Deutschlandticket auf der Fähre nach Dänemark?</h3>
+    <p>
+      Nein. Die Fährverbindung Puttgarden – Rødby ist kein Nahverkehr. Nur
+      die Bahnstrecke Niebüll – Tønder ist gültig.
+    </p>
+
+    <h2>Offizielle Quellen</h2>
+    <p>
+      <a href="https://wissen.deutschlandticket.de/grenzverkehr" target="_blank" rel="noopener">deutschlandticket.de — Fahrten ins benachbarte Ausland</a> ·
+      <a href="https://saarvv.de/abo/d-ticket/" target="_blank" rel="noopener">saarVV — Grenzüberschreitender Verkehr</a> ·
+      <a href="https://www.ticket-de-lux.de/" target="_blank" rel="noopener">TicketDeLux — RGTR-Buslinien nach Luxemburg</a> ·
+      <a href="https://www.bwegt.de/tickets/sommeraktion" target="_blank" rel="noopener">bwegt — Sommeraktion Grand Est 2026</a> ·
+      <a href="https://www.vrt-info.de/tickets/63-Euro-Deutschlandticket/FAQ" target="_blank" rel="noopener">VRT — FAQ Deutschlandticket</a>
+    </p>
+
+    <p style="color:var(--ink-soft);font-size:.9rem;margin-top:2.5rem">
+      Redaktion ticket-rechner.de · Stand: Juli 2026. Alle Angaben basieren
+      auf den offiziellen Informationen der genannten Verkehrsunternehmen und
+      Verbünde. Tarifliche Regelungen können sich ändern — vor der Fahrt beim
+      zuständigen Verkehrsverbund prüfen.
+      <a href="/ratgeber/deutschlandticket-gueltigkeit">Gültigkeit im Detail</a> ·
+      <a href="/ratgeber/deutschlandticket-kaufen">Deutschlandticket kaufen</a> ·
+      <a href="/ratgeber/deutschlandticket-kosten">Kosten-Überblick</a> ·
+      <a href="/ratgeber/deutschlandticket-jobticket">Jobticket-Infos</a>
+    </p>
+  </article>
+</Base>
