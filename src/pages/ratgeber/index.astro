@@ -1,7 +1,11 @@
 ---
 import Base from '../../layouts/Base.astro';
-
 const articles = [
+  {
+    slug: 'deutschlandticket-kaufen',
+    title: 'Deutschlandticket kaufen: Wo, wie & welcher Anbieter?',
+    teaser: 'DB, deutschlandticket.de oder dein Verbund? Handyticket oder Chipkarte? Alle Kaufwege, Zahlungsmethoden und die 5 häufigsten Fehler.'
+  },
   {
     slug: 'deutschlandticket-jobticket',
     title: 'Deutschlandticket als Jobticket: nur 44,10 € statt 63 €',
@@ -30,12 +34,12 @@ const articles = [
   {
     slug: 'deutschlandticket-erste-klasse',
     title: 'Deutschlandticket 1. Klasse: geht das?',
-    teaser: 'Nein — nur 2. Klasse. Warum ein bundesweites Upgrade fehlt und was bei der Kontrolle passiert.'
+    teaser: 'Nein — nur 2. Klasse. Regionale Upgrades, was bei der Kontrolle passiert und welche Alternativen es gibt.'
   },
   {
     slug: 'deutschlandticket-pausieren',
     title: 'Deutschlandticket pausieren: geht das?',
-    teaser: 'Offizielle Pause? Nein. Aber Kündigen und Wiederkommen funktioniert genauso — so sparst du im Urlaubs- oder Homeoffice-Monat.'
+    teaser: 'Offizielle Pause? Nein. Aber Kündigen und Wiederkommen spart 63 € pro Monat — Schritt für Schritt erklärt.'
   },
   {
     slug: 'deutschlandticket-ice',
@@ -56,7 +60,7 @@ const articles = [
 ---
 <Base
   title="Deutschlandticket Ratgeber 2026 | ticket-rechner.de"
-  description="Alle Ratgeber rund ums Deutschlandticket: kündigen, Gültigkeit, ICE, Studenten, Jobticket und mehr — aktuell für 2026."
+  description="Alle Ratgeber rund ums Deutschlandticket: kaufen, kündigen, Gültigkeit, ICE, Studenten, Jobticket und mehr — aktuell für 2026."
 >
   <div class="container--narrow" style="padding:2rem 0 1rem">
     <h1>Ratgeber</h1>
@@ -64,7 +68,6 @@ const articles = [
       Antworten auf die häufigsten Fragen rund ums Deutschlandticket — kompakt,
       aktuell und ohne Fachchinesisch. Diese Sammlung wächst laufend.
     </p>
-
     {articles.map(a => (
       <a class="card" href={`/ratgeber/${a.slug}`} style="display:block;text-decoration:none;color:inherit;margin-top:1rem">
         <h2 style="margin:0 0 .3rem;font-size:1.15rem">{a.title}</h2>
