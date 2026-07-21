@@ -1,78 +1,65 @@
----
-import Base from '../../layouts/Base.astro';
-const articles = [
-  {
-    slug: 'deutschlandticket-kaufen',
-    title: 'Deutschlandticket kaufen: Wo, wie & welcher Anbieter?',
-    teaser: 'DB, deutschlandticket.de oder dein Verbund? Handyticket oder Chipkarte? Alle Kaufwege, Zahlungsmethoden und die 5 häufigsten Fehler.'
-  },
-  {
-    slug: 'deutschlandticket-jobticket',
-    title: 'Deutschlandticket als Jobticket: nur 44,10 € statt 63 €',
-    teaser: 'Arbeitgeber zahlt 25 %, dazu 5 % Rabatt — steuerfrei nach § 3 Nr. 15 EStG. So fragst du richtig nach.'
-  },
-  {
-    slug: 'deutschlandticket-studenten',
-    title: 'Deutschlandticket für Studenten: Das Semesterticket 2026',
-    teaser: '34,80 € im Sommersemester, 37,80 € ab WS 2026/27 — bundesweit gültig. Solidarmodell vs. Upgrade erklärt.'
-  },
-  {
-    slug: 'deutschlandticket-kosten',
-    title: 'Was kostet das Deutschlandticket 2026? Alle Preise & Varianten',
-    teaser: '63 € regulär, 44,10 € Jobticket, 37,80 € Semesterticket — plus Sozialticket-Überblick und Preisentwicklung.'
-  },
-  {
-    slug: 'deutschlandticket-preiserhoehung',
-    title: 'Deutschlandticket Preiserhöhung: von 58 auf 63 € — lohnt es sich noch?',
-    teaser: 'Warum der Preis stieg, wie es 2027 weitergeht (Preisindex!), und ob sich das Ticket bei deinem Fahrverhalten noch rechnet.'
-  },
-  {
-    slug: 'deutschlandticket-mitnahme',
-    title: 'Deutschlandticket Mitnahme: Fahrrad, Hund, Personen',
-    teaser: 'Fahrrad braucht Extra-Ticket, Hunde-Regeln sind regional, Personen mitnehmen geht nicht — alle Details.'
-  },
-  {
-    slug: 'deutschlandticket-erste-klasse',
-    title: 'Deutschlandticket 1. Klasse: geht das?',
-    teaser: 'Nein — nur 2. Klasse. Regionale Upgrades, was bei der Kontrolle passiert und welche Alternativen es gibt.'
-  },
-  {
-    slug: 'deutschlandticket-pausieren',
-    title: 'Deutschlandticket pausieren: geht das?',
-    teaser: 'Offizielle Pause? Nein. Aber Kündigen und Wiederkommen spart 63 € pro Monat — Schritt für Schritt erklärt.'
-  },
-  {
-    slug: 'deutschlandticket-ice',
-    title: 'Gilt das Deutschlandticket im ICE? Regeln & Ausnahmen 2026',
-    teaser: 'Grundsätzlich nein — aber es gibt offizielle Ausnahmestrecken und die Zugausfall-Regel. Und seit Dezember 2025 sind beliebte Ausnahmen weggefallen.'
-  },
-  {
-    slug: 'deutschlandticket-gueltigkeit',
-    title: 'Wo gilt das Deutschlandticket? Der komplette Überblick',
-    teaser: 'Welche Züge, Busse und Fähren enthalten sind, was nicht gilt (1. Klasse, FlixTrain, Ausland) — plus Fahrrad- und Hunde-Regeln.'
-  },
-  {
-    slug: 'deutschlandticket-kuendigen',
-    title: 'Deutschlandticket kündigen 2026: Frist, Anleitung & Vorlage',
-    teaser: 'Bis zum 10. des Monats kündigen — sonst kostet es 63 € extra. Alle Wege, Fristen und die Pause-Strategie.'
-  }
+/**
+ * Manual sitemap — lists only currently live pages.
+ * UPDATE this file every time a page is added or removed.
+ * Last updated: 2026-07-21
+ */
+const SITE = 'https://ticket-rechner.de';
+interface SitemapEntry {
+  url: string;
+  lastmod: string;
+  changefreq: 'daily' | 'weekly' | 'monthly';
+  priority: number;
+}
+const pages: SitemapEntry[] = [
+  // Homepage + calculators
+  { url: '/',                              lastmod: '2026-07-20', changefreq: 'weekly',  priority: 1.0 },
+  { url: '/kuendigungsfrist-rechner',      lastmod: '2026-07-19', changefreq: 'weekly',  priority: 0.9 },
+  { url: '/lohnt-sich-rechner',            lastmod: '2026-07-19', changefreq: 'weekly',  priority: 0.9 },
+  { url: '/kuendigungsschreiben',          lastmod: '2026-07-19', changefreq: 'weekly',  priority: 0.9 },
+  // Ratgeber hub
+  { url: '/ratgeber',                      lastmod: '2026-07-21', changefreq: 'weekly',  priority: 0.8 },
+  // Ratgeber articles
+  { url: '/ratgeber/deutschlandticket-kuendigen',        lastmod: '2026-07-21', changefreq: 'monthly', priority: 0.8 },
+  { url: '/ratgeber/deutschlandticket-kaufen',           lastmod: '2026-07-21', changefreq: 'monthly', priority: 0.7 },
+  { url: '/ratgeber/deutschlandticket-kosten',           lastmod: '2026-07-21', changefreq: 'monthly', priority: 0.7 },
+  { url: '/ratgeber/deutschlandticket-gueltigkeit',      lastmod: '2026-07-21', changefreq: 'monthly', priority: 0.7 },
+  { url: '/ratgeber/deutschlandticket-ice',              lastmod: '2026-07-19', changefreq: 'monthly', priority: 0.7 },
+  { url: '/ratgeber/deutschlandticket-studenten',        lastmod: '2026-07-19', changefreq: 'monthly', priority: 0.7 },
+  { url: '/ratgeber/deutschlandticket-jobticket',        lastmod: '2026-07-19', changefreq: 'monthly', priority: 0.7 },
+  { url: '/ratgeber/deutschlandticket-preiserhoehung',   lastmod: '2026-07-19', changefreq: 'monthly', priority: 0.6 },
+  { url: '/ratgeber/deutschlandticket-mitnahme',         lastmod: '2026-07-19', changefreq: 'monthly', priority: 0.6 },
+  { url: '/ratgeber/deutschlandticket-erste-klasse',     lastmod: '2026-07-21', changefreq: 'monthly', priority: 0.5 },
+  { url: '/ratgeber/deutschlandticket-pausieren',        lastmod: '2026-07-21', changefreq: 'monthly', priority: 0.5 },
+  // Provider cancellation guides
+  { url: '/kuendigen/db',   lastmod: '2026-07-21', changefreq: 'monthly', priority: 0.7 },
+  { url: '/kuendigen/hvv',  lastmod: '2026-07-21', changefreq: 'monthly', priority: 0.6 },
+  { url: '/kuendigen/rmv',  lastmod: '2026-07-21', changefreq: 'monthly', priority: 0.6 },
+  { url: '/kuendigen/mvv',  lastmod: '2026-07-21', changefreq: 'monthly', priority: 0.6 },
+  { url: '/kuendigen/bvg',  lastmod: '2026-07-21', changefreq: 'monthly', priority: 0.6 },
+  // Trust pages
+  { url: '/ueber-uns',     lastmod: '2026-07-21', changefreq: 'monthly', priority: 0.4 },
+  { url: '/kontakt',       lastmod: '2026-07-21', changefreq: 'monthly', priority: 0.4 },
+  // Legal pages
+  { url: '/impressum',     lastmod: '2026-07-19', changefreq: 'monthly', priority: 0.3 },
+  { url: '/datenschutz',   lastmod: '2026-07-21', changefreq: 'monthly', priority: 0.3 },
 ];
----
-<Base
-  title="Deutschlandticket Ratgeber 2026 | ticket-rechner.de"
-  description="Alle Ratgeber rund ums Deutschlandticket: kaufen, kündigen, Gültigkeit, ICE, Studenten, Jobticket und mehr — aktuell für 2026."
->
-  <div class="container--narrow" style="padding:2rem 0 1rem">
-    <h1>Ratgeber</h1>
-    <p style="color:var(--ink-soft)">
-      Antworten auf die häufigsten Fragen rund ums Deutschlandticket — kompakt,
-      aktuell und ohne Fachchinesisch. Diese Sammlung wächst laufend.
-    </p>
-    {articles.map(a => (
-      <a class="card" href={`/ratgeber/${a.slug}`} style="display:block;text-decoration:none;color:inherit;margin-top:1rem">
-        <h2 style="margin:0 0 .3rem;font-size:1.15rem">{a.title}</h2>
-        <p style="margin:0;color:var(--ink-soft);font-size:.95rem">{a.teaser}</p>
-      </a>
-    ))}
-  </div>
-</Base>
+export async function GET() {
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${pages
+  .map(
+    (p) => `  <url>
+    <loc>${SITE}${p.url}</loc>
+    <lastmod>${p.lastmod}</lastmod>
+    <changefreq>${p.changefreq}</changefreq>
+    <priority>${p.priority.toFixed(1)}</priority>
+  </url>`
+  )
+  .join('\n')}
+</urlset>`;
+  return new Response(xml, {
+    headers: {
+      'Content-Type': 'application/xml; charset=utf-8',
+    },
+  });
+}
