@@ -1,0 +1,327 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Deutschlandticket von der Steuer absetzen 2026: Pendlerpauschale oder Ticketkosten?",
+    "datePublished": "2026-07-21",
+    "dateModified": "2026-07-21",
+    "inLanguage": "de",
+    "author": { "@type": "Organization", "name": "Redaktion ticket-rechner.de" },
+    "publisher": { "@type": "Organization", "name": "ticket-rechner.de" },
+    "mainEntityOfPage": "https://ticket-rechner.de/ratgeber/deutschlandticket-steuer-absetzen"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Kann ich das Deutschlandticket von der Steuer absetzen?", "acceptedAnswer": { "@type": "Answer", "text": "Ja. Wenn du das Deutschlandticket für den Arbeitsweg nutzt, kannst du die Kosten von 756 € pro Jahr als Werbungskosten in der Steuererklärung angeben. Allerdings ist die Pendlerpauschale ab etwa 10 Kilometern Arbeitsweg bereits höher — und das Finanzamt setzt automatisch den günstigeren Betrag für dich an." } },
+      { "@type": "Question", "name": "Was ist besser: Pendlerpauschale oder Deutschlandticket absetzen?", "acceptedAnswer": { "@type": "Answer", "text": "Ab einem einfachen Arbeitsweg von etwa 10 Kilometern bringt die Pendlerpauschale (0,38 €/km ab 2026) bereits mehr als die 756 € Ticketkosten. Bei kürzerem Weg können die Ticketkosten höher sein. Das Finanzamt wählt automatisch den für dich günstigeren Betrag — gib einfach beides an." } },
+      { "@type": "Question", "name": "Darf ich das Deutschlandticket auch privat nutzen, wenn ich es absetze?", "acceptedAnswer": { "@type": "Answer", "text": "Ja. Die private Nutzung hat keine negativen steuerlichen Auswirkungen. Solange du das Ticket auch für den Arbeitsweg nutzt, darfst du die vollen Kosten als Werbungskosten ansetzen — egal wie oft du es privat nutzt." } },
+      { "@type": "Question", "name": "Mindert der Arbeitgeberzuschuss meinen Steuerabzug?", "acceptedAnswer": { "@type": "Answer", "text": "Ja. Steuerfreie Zuschüsse nach § 3 Nr. 15 EStG werden von der Entfernungspauschale abgezogen. Der Zuschuss steht auf deiner Lohnsteuerbescheinigung in Zeile 17. Das Finanzamt rechnet das automatisch gegen." } },
+      { "@type": "Question", "name": "Wie setze ich das Deutschlandticket in der Steuererklärung ab?", "acceptedAnswer": { "@type": "Answer", "text": "In der Anlage N deiner Einkommensteuererklärung: Entfernungskilometer, Arbeitstage und Ticketkosten eintragen. Das Finanzamt vergleicht automatisch und nimmt den höheren Betrag. Belege (Kontoauszüge, Abo-Bestätigung) aufbewahren." } },
+      { "@type": "Question", "name": "Kann ich Homeoffice-Pauschale und Pendlerpauschale kombinieren?", "acceptedAnswer": { "@type": "Answer", "text": "Ja, aber nicht für denselben Tag. An Bürotagen zählt die Pendlerpauschale, an Homeoffice-Tagen die Homeoffice-Pauschale (6 € pro Tag, max. 1.260 € im Jahr). Du darfst beides in der gleichen Steuererklärung angeben." } }
+    ]
+  }
+];
+---
+<Base
+  title="Deutschlandticket von der Steuer absetzen 2026: Pendlerpauschale oder Ticketkosten?"
+  description="Deutschlandticket absetzen: wann sich die Pendlerpauschale lohnt, wann die Ticketkosten — mit Rechenbeispielen, Jobticket-Regeln und Homeoffice-Sonderfall."
+  schema={schema}
+>
+  <article class="container--narrow" style="padding:2rem 0 1rem">
+    <p style="color:var(--brand);font-weight:800;letter-spacing:.06em;text-transform:uppercase;font-size:.8rem;margin:0">
+      Ratgeber · Aktualisiert am 21.07.2026
+    </p>
+    <h1>Deutschlandticket von der Steuer absetzen — lohnt sich das?</h1>
+    <p style="color:var(--ink-soft)">
+      Ja, du kannst das Deutschlandticket absetzen. Aber in den meisten Fällen
+      bringt dir die <strong>Pendlerpauschale mehr Geld zurück</strong> als die
+      reinen Ticketkosten. Der entscheidende Punkt: Das Finanzamt nimmt
+      automatisch den höheren Betrag. Du musst nur beides korrekt angeben.
+      Hier steht, wie das funktioniert — mit konkreten Zahlen für 2026.
+    </p>
+
+    <h2>Die Grundregel: Ticketkosten oder Pendlerpauschale — nie beides</h2>
+    <p>
+      Für deinen Arbeitsweg kannst du in der Steuererklärung entweder die
+      <strong>tatsächlichen Kosten</strong> für öffentliche Verkehrsmittel angeben
+      oder die <strong>Entfernungspauschale</strong> (umgangssprachlich
+      Pendlerpauschale). Beides gleichzeitig geht nicht. Aber: Du musst dich nicht
+      selbst entscheiden. Wenn du beides einträgst, rechnet das Finanzamt
+      automatisch mit dem höheren Betrag. Genau deshalb solltest du immer
+      beides angeben.
+    </p>
+
+    <h2>Die Zahlen für 2026</h2>
+    <p>
+      <strong>Deutschlandticket:</strong>
+      <a href="/ratgeber/deutschlandticket-kosten">63 € pro Monat</a> =
+      <strong>756 € pro Jahr</strong> (bei 12 Monaten Nutzung).
+    </p>
+    <p>
+      <strong>Pendlerpauschale:</strong> Seit dem 1. Januar 2026 einheitlich
+      <strong>0,38 € pro Entfernungskilometer</strong> — ab dem ersten Kilometer.
+      Das ist neu: Bis 2025 galten für die ersten 20 Kilometer nur 0,30 €.
+      Die Pauschale gilt für die einfache Strecke (nur Hinweg,
+      nicht Hin- und Rückweg) und nur für tatsächliche Arbeitstage.
+    </p>
+
+    <h2>Ab welcher Entfernung lohnt sich die Pendlerpauschale mehr?</h2>
+    <p>
+      Die Antwort hängt von deinem Arbeitsweg und deinen Arbeitstagen ab.
+      Hier die Rechnung mit dem üblichen Richtwert von 220 Arbeitstagen:
+    </p>
+    <div class="card" style="overflow-x:auto">
+      <table style="width:100%;border-collapse:collapse;font-size:.95rem">
+        <thead>
+          <tr style="border-bottom:2px solid var(--line);text-align:left">
+            <th style="padding:.5rem .75rem">Arbeitsweg (einfach)</th>
+            <th style="padding:.5rem .75rem">Pendlerpauschale / Jahr</th>
+            <th style="padding:.5rem .75rem">D-Ticket / Jahr</th>
+            <th style="padding:.5rem .75rem">Besser?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem">5 km</td>
+            <td style="padding:.5rem .75rem">418 €</td>
+            <td style="padding:.5rem .75rem">756 €</td>
+            <td style="padding:.5rem .75rem"><strong>Ticket</strong></td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem">8 km</td>
+            <td style="padding:.5rem .75rem">669 €</td>
+            <td style="padding:.5rem .75rem">756 €</td>
+            <td style="padding:.5rem .75rem"><strong>Ticket</strong></td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--line);background:var(--surface-alt, #faf5ff)">
+            <td style="padding:.5rem .75rem"><strong>≈ 10 km</strong></td>
+            <td style="padding:.5rem .75rem"><strong>836 €</strong></td>
+            <td style="padding:.5rem .75rem"><strong>756 €</strong></td>
+            <td style="padding:.5rem .75rem"><strong>≈ gleich</strong></td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem">15 km</td>
+            <td style="padding:.5rem .75rem">1.254 €</td>
+            <td style="padding:.5rem .75rem">756 €</td>
+            <td style="padding:.5rem .75rem"><strong>Pauschale</strong></td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem">25 km</td>
+            <td style="padding:.5rem .75rem">2.090 €</td>
+            <td style="padding:.5rem .75rem">756 €</td>
+            <td style="padding:.5rem .75rem"><strong>Pauschale</strong></td>
+          </tr>
+          <tr>
+            <td style="padding:.5rem .75rem">40 km</td>
+            <td style="padding:.5rem .75rem">3.344 €</td>
+            <td style="padding:.5rem .75rem">756 €</td>
+            <td style="padding:.5rem .75rem"><strong>Pauschale</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>
+      <strong>Fazit:</strong> Ab etwa <strong>10 Kilometern</strong> einfachem
+      Arbeitsweg bringt die Pendlerpauschale mehr. Bei kürzerem Weg lohnt es
+      sich, die tatsächlichen Ticketkosten anzugeben. Da das Finanzamt
+      automatisch den höheren Betrag wählt, trägst du am besten beides ein.
+    </p>
+
+    <h2>So trägst du es in der Steuererklärung ein</h2>
+    <p>
+      Die Angaben gehören in die <strong>Anlage N</strong> deiner
+      Einkommensteuererklärung, Abschnitt „Wege zwischen Wohnung und erster
+      Tätigkeitsstätte":
+    </p>
+    <p>
+      <strong>Entfernungskilometer:</strong> Die einfache Strecke in vollen
+      Kilometern (nur Hinweg). Maßgeblich ist die kürzeste Straßenverbindung —
+      auch wenn du mit dem Zug fährst. Eine längere Route darfst du nur
+      ansetzen, wenn sie verkehrstechnisch günstiger ist.
+    </p>
+    <p>
+      <strong>Arbeitstage:</strong> Die Zahl der Tage, an denen du tatsächlich
+      zur Arbeit gefahren bist. Homeoffice-Tage zählen nicht. Übliche
+      Richtwerte: 220 bis 230 Tage bei Vollzeit. Führe im Zweifel eine
+      einfache Liste deiner Bürotage.
+    </p>
+    <p>
+      <strong>Tatsächliche Kosten:</strong> Hier trägst du die
+      Deutschlandticket-Kosten ein — 756 € bei 12 Monaten, anteilig weniger,
+      wenn du das Ticket nicht das ganze Jahr hattest. Belege aufbewahren:
+      Kontoauszüge mit den monatlichen 63-€-Abbuchungen oder die
+      Abo-Bestätigung reichen.
+    </p>
+
+    <h2>Sonderfall Jobticket: steuerfreier Zuschuss vom Arbeitgeber</h2>
+    <p>
+      Viele Arbeitgeber bezuschussen das Deutschlandticket oder übernehmen es
+      komplett. Der Zuschuss ist <strong>steuerfrei</strong> nach
+      § 3 Nr. 15 EStG — du zahlst darauf keine Einkommensteuer und keine
+      Sozialabgaben. Das ist deutlich besser als eine vergleichbare
+      Gehaltserhöhung, von der nach Steuern und Abgaben nur rund 60 %
+      übrig blieben.
+    </p>
+    <p>
+      <strong>Aber:</strong> Der steuerfreie Zuschuss mindert deine absetzbare
+      Pendlerpauschale. Der Betrag steht auf deiner
+      <strong>Lohnsteuerbescheinigung in Zeile 17</strong> („Steuerfreie
+      Arbeitgeberzuschüsse für Fahrten Wohnung – erste Tätigkeitsstätte").
+      Das Finanzamt rechnet ihn automatisch von deiner Entfernungspauschale ab.
+    </p>
+    <p>
+      <strong>Rechenbeispiel:</strong> Arbeitsweg 15 km, 220 Tage.
+      Pendlerpauschale: 15 × 220 × 0,38 € = 1.254 €. Dein Arbeitgeber
+      zahlt das <a href="/ratgeber/deutschlandticket-jobticket">Jobticket</a>
+      komplett (756 €/Jahr, steuerfrei). Abzug: 1.254 € − 756 € =
+      <strong>498 €</strong> Werbungskosten für dich.
+    </p>
+    <p>
+      Wenn die Zeile 17 auf deiner Lohnsteuerbescheinigung leer ist, obwohl
+      dein Arbeitgeber einen Zuschuss zahlt, kläre das mit der
+      Personalabteilung — sonst drohen Nachforderungen.
+    </p>
+
+    <h2>Sonderfall Homeoffice: geteilte Tage, geteilte Pauschalen</h2>
+    <p>
+      Wer teils im Büro und teils zuhause arbeitet, muss die Tage aufteilen:
+    </p>
+    <p>
+      <strong>Bürotage:</strong> Pendlerpauschale (oder die anteilig höheren
+      Ticketkosten).
+    </p>
+    <p>
+      <strong>Homeoffice-Tage:</strong> Homeoffice-Pauschale von
+      <strong>6 € pro Tag</strong>, maximal 1.260 € pro Jahr (210 Tage).
+    </p>
+    <p>
+      Beides am selben Tag geht nicht. Fährst du montags und dienstags ins
+      Büro und arbeitest mittwochs bis freitags von zuhause, rechnest du
+      2 Tage Pendlerpauschale + 3 Tage Homeoffice-Pauschale pro Woche.
+    </p>
+    <p>
+      Beim Deutschlandticket zahlst du den vollen Monatspreis unabhängig
+      von der Zahl deiner Bürotage. Steuerlich absetzbar ist aber nur der
+      Anteil, der auf tatsächliche Pendelfahrten entfällt. Fährst du an
+      10 von 20 Werktagen, kannst du 50 % der Ticketkosten ansetzen.
+    </p>
+    <p>
+      <strong>Praxistipp:</strong> Führe eine einfache Liste mit Datum und
+      „Büro" oder „Homeoffice". Ein Kalender oder eine Excel-Tabelle reicht.
+    </p>
+
+    <h2>Private Nutzung: kein Problem</h2>
+    <p>
+      Darf ich das Ticket absetzen, obwohl ich es auch am Wochenende nutze?
+      <strong>Ja.</strong> Die private Nutzung hat keine negativen steuerlichen
+      Folgen. Solange das Deutschlandticket tatsächlich auch für den Arbeitsweg
+      genutzt wird, darfst du die vollen Kosten ansetzen. Eine Aufteilung in
+      „beruflich" und „privat" ist bei ÖPNV-Zeitkarten nicht vorgesehen.
+    </p>
+
+    <h2>Ohne Arbeitsweg: kann ich trotzdem absetzen?</h2>
+    <p>
+      Wenn du das Ticket ausschließlich privat nutzt, kannst du es
+      <strong>nicht</strong> als Werbungskosten absetzen. Die
+      Entfernungspauschale gilt nur für Fahrten zwischen Wohnung und erster
+      Tätigkeitsstätte. Ausnahme: beruflich veranlasste Auswärtstätigkeiten
+      (Dienstreisen, Kundenbesuche) — die laufen aber als Reisekosten, nicht
+      als Entfernungspauschale.
+    </p>
+
+    <h2>Häufige Fehler</h2>
+    <p>
+      <strong>Nur die Ticketkosten angeben.</strong> Viele tragen nur 756 € ein
+      und verschenken Geld. Ab 10 km Arbeitsweg ist die Pauschale höher — gib
+      immer auch Entfernungskilometer und Arbeitstage an.
+    </p>
+    <p>
+      <strong>Hin- und Rückweg zählen.</strong> Die Entfernungspauschale gilt
+      nur für die einfache Strecke. 15 km Arbeitsweg = 15 km, nicht 30 km.
+    </p>
+    <p>
+      <strong>Arbeitgeberzuschuss vergessen.</strong> Steht auf der
+      Lohnsteuerbescheinigung in Zeile 17. Wer es nicht angibt, riskiert
+      Nachforderungen.
+    </p>
+    <p>
+      <strong>Homeoffice-Tage als Bürotage zählen.</strong> Nur Tage, an
+      denen du wirklich zur Arbeit gefahren bist, dürfen als Pendeltage
+      angesetzt werden.
+    </p>
+
+    <h2>Zusammenfassung</h2>
+    <p>
+      Du kannst das Deutschlandticket als Werbungskosten absetzen — aber die
+      Pendlerpauschale bringt ab 10 km Arbeitsweg mehr. Trag in der
+      Anlage N immer beides ein: Entfernungskilometer, Arbeitstage und
+      Ticketkosten. Das Finanzamt nimmt den höheren Betrag. Beim Jobticket
+      wird der steuerfreie Zuschuss von der Pauschale abgezogen (Zeile 17).
+      Private Nutzung ist kein Problem.
+    </p>
+    <p>
+      Ob sich das Deutschlandticket für dein Fahrverhalten lohnt, zeigt dir
+      unser <a href="/lohnt-sich-rechner">Lohnt-sich-Rechner</a>. Falls du
+      dich gegen das Abo entscheidest:
+      <a href="/ratgeber/deutschlandticket-kuendigen">So kündigst du richtig</a>.
+      Alle Preise und Varianten:
+      <a href="/ratgeber/deutschlandticket-kosten">Kosten-Überblick</a>.
+    </p>
+
+    <h2>Häufige Fragen (FAQ)</h2>
+
+    <h3>Kann ich das Deutschlandticket von der Steuer absetzen?</h3>
+    <p>
+      Ja, als Werbungskosten in der Anlage N — 756 € pro Jahr bei 12 Monaten.
+      Ab 10 km Arbeitsweg ist die Pendlerpauschale aber höher. Gib beides an.
+    </p>
+
+    <h3>Was ist besser — Pendlerpauschale oder Ticketkosten?</h3>
+    <p>
+      Ab etwa 10 km einfachem Arbeitsweg bringt die Pauschale (0,38 €/km)
+      mehr. Das Finanzamt nimmt automatisch den höheren Betrag.
+    </p>
+
+    <h3>Darf ich das Ticket privat nutzen, wenn ich es absetze?</h3>
+    <p>
+      Ja. Private Nutzung hat keine steuerlichen Nachteile.
+    </p>
+
+    <h3>Mindert der Arbeitgeberzuschuss meinen Steuerabzug?</h3>
+    <p>
+      Ja. Steuerfreie Zuschüsse werden von der Pauschale abgezogen. Prüfe
+      Zeile 17 deiner Lohnsteuerbescheinigung.
+      <a href="/ratgeber/deutschlandticket-jobticket">Mehr zum Jobticket →</a>
+    </p>
+
+    <h3>Kann ich Homeoffice-Pauschale und Pendlerpauschale kombinieren?</h3>
+    <p>
+      Ja, aber nicht am selben Tag. Bürotage = Pendlerpauschale,
+      Homeoffice-Tage = 6 €/Tag (max. 1.260 €/Jahr).
+    </p>
+
+    <h3>Wie weise ich die Kosten nach?</h3>
+    <p>
+      Kontoauszüge oder die Abo-Bestätigung reichen. Führe zusätzlich eine
+      formlose Liste deiner Bürotage.
+    </p>
+
+    <h3>Lohnt sich das Deutschlandticket für mich?</h3>
+    <p>
+      Ab 18 Fahrten pro Monat (bei 3,50 € Einzelfahrpreis) rechnet sich das
+      Ticket. <a href="/lohnt-sich-rechner">Berechne dein Ergebnis →</a>
+    </p>
+
+    <p style="color:var(--ink-soft);font-size:.9rem;margin-top:2.5rem">
+      Redaktion ticket-rechner.de · Quellen: § 9 Abs. 1–4 EStG,
+      § 3 Nr. 15 EStG, VLH, Finanztip, ADAC. <strong>Dieser Artikel ist
+      keine Steuerberatung.</strong> Im Einzelfall wende dich an einen
+      Steuerberater oder Lohnsteuerhilfeverein. Alle Angaben ohne Gewähr.
+    </p>
+  </article>
+</Base>
