@@ -9,19 +9,36 @@ export function getStaticPaths() {
       short: 'DB',
       app: 'DB Navigator',
       portal: 'dein Kundenkonto auf bahn.de bzw. im DB Navigator',
+      portalUrl: 'bahn.de/aboportal',
+      email: 'deutschlandticket-abo@deutschebahn.com',
+      telefon: '030 2970 (DB Kundenservice, täglich erreichbar)',
       frist: 'zum 10. des Monats',
       weg: 'Öffne den DB Navigator, gehe zu „Meine Reisen" bzw. deinem Profil → „Abos & Tickets" → wähle dein Deutschlandticket → „Vertrag kündigen". Alternativ im Browser: auf bahn.de einloggen und im Kundenkonto den Abo-Bereich öffnen.',
-      hinweis: 'Die DB bestätigt die Kündigung per E-Mail an die Adresse deines Kundenkontos. Keine E-Mail erhalten? Prüfe den Spam-Ordner und den Status im Navigator — erst die Bestätigung zählt als Nachweis.'
+      hinweis: 'Die DB bestätigt die Kündigung per E-Mail an die Adresse deines Kundenkontos. Keine E-Mail erhalten? Prüfe den Spam-Ordner und den Status im Navigator — erst die Bestätigung zählt als Nachweis.',
+      besonderheiten: [
+        'Hast du dein Ticket als Chipkarte, läuft die Kündigung trotzdem über das Abo-Portal auf bahn.de — nicht per Rücksendung der Karte.',
+        'Das SEPA-Lastschrift-Mandat wird bei der DB mit Vertragsende automatisch beendet. Du musst es nicht separat widerrufen.',
+        'Falls du dein Deutschlandticket über deutschlandticket.de statt über bahn.de gekauft hast, kündige dort im Kundenkonto — nicht über den DB Navigator.'
+      ]
     },
     {
       slug: 'hvv',
       name: 'HVV (Hamburg)',
       short: 'HVV',
-      app: 'HVV-App / hvv switch',
-      portal: 'das HVV Onlineshop-Kundenkonto',
+      app: 'hvv switch',
+      portal: 'das meinhvv Kundenkonto',
+      portalUrl: 'meinhvv.de',
+      email: 'service@hvv.de',
+      telefon: '040 19 449 (HVV Kundenservice, Mo–Fr 7–22 Uhr)',
       frist: 'zum 10. des Monats',
-      weg: 'Logge dich in dein HVV-Kundenkonto ein (dort, wo du das Deutschlandticket abgeschlossen hast), öffne die Abo-Verwaltung und wähle die Kündigung deines Deutschlandtickets. Hast du das Ticket in einer HVV-App gekauft, findest du die Kündigung in der App unter deinem Abo.',
-      hinweis: 'Beim HVV hängt der genaue Weg davon ab, über welchen Kanal du abgeschlossen hast (Onlineshop, App oder Servicestelle). Kündige immer über denselben Kanal — das vermeidet Zuordnungsprobleme.'
+      weg: 'Logge dich auf meinhvv.de ein oder öffne die hvv switch App. Gehe zu „Deutschlandticket" → „Abo kündigen". Wähle als Termin „zum nächstmöglichen Zeitpunkt" und bestätige.',
+      hinweis: 'Beim HVV hängt der genaue Weg davon ab, über welchen Kanal du abgeschlossen hast (Onlineshop, App oder Servicestelle). Kündige immer über denselben Kanal — das vermeidet Zuordnungsprobleme.',
+      besonderheiten: [
+        'Der HVV bietet die Möglichkeit, das Deutschlandticket anteilig zu kaufen: Du kannst ein Startdatum in der Zukunft wählen und zahlst nur für die verbleibenden Tage des Monats.',
+        'Hast du eine hvv Chipkarte, muss diese nach Abo-Ende auf einem Ticketautomaten mit Kartenleser aktualisiert oder an einer Servicestelle zurückgegeben werden.',
+        'Für die 1. Klasse in RE/RB im HVV-Gebiet gibt es ein separates Upgrade: 3,70 € pro Fahrt, 6,30 € pro Tag oder 54,30 € pro Monat.',
+        'HVV Servicestellen: Hamburg Hbf, Altona, Jungfernstieg, Harburg — dort ist auch eine persönliche Kündigung möglich.'
+      ]
     },
     {
       slug: 'rmv',
@@ -29,29 +46,56 @@ export function getStaticPaths() {
       short: 'RMV',
       app: 'RMVgo',
       portal: 'das RMV-Abo-Kundenportal (Meine Abos)',
+      portalUrl: 'rmv.de (Kundenkonto)',
+      email: 'info@rmv.de',
+      telefon: '069 24 24 80 24 (RMV-Servicetelefon, Mo–Fr 8–18 Uhr)',
       frist: 'zum 10. des Monats',
-      weg: 'Melde dich im RMV-Kundenportal an, öffne „Meine Abos", wähle dein Deutschlandticket und klicke auf „Abo kündigen". Wähle als Termin „zum nächstmöglichen Zeitpunkt".',
-      hinweis: 'Beim RMV können auch lokale Partner (z. B. Verkehrsgesellschaften einzelner Städte) dein Vertragspartner sein — schau auf deine Bestellbestätigung, wer dort als Anbieter steht, und kündige genau dort.'
+      weg: 'Melde dich im RMV-Kundenportal an, öffne „Meine Abos", wähle dein Deutschlandticket und klicke auf „Abo kündigen". Wähle als Termin „zum nächstmöglichen Zeitpunkt". Die Kündigung ist auch direkt in der RMVgo App möglich.',
+      hinweis: 'Beim RMV können auch lokale Partner (z. B. Verkehrsgesellschaften einzelner Städte) dein Vertragspartner sein — schau auf deine Bestellbestätigung, wer dort als Anbieter steht, und kündige genau dort.',
+      besonderheiten: [
+        'Die Kündigung funktioniert auch direkt in der RMVgo App: Menü → Abo → Kündigen.',
+        'Hast du ein eTicket als Chipkarte, muss die Karte nach Vertragsende an einer RMV-Servicestelle zurückgegeben werden.',
+        'RMV-Servicestellen mit persönlicher Beratung: Frankfurt Hbf (Hauptwache), Darmstadt Hbf, Wiesbaden Hbf, Offenbach Marktplatz.',
+        'Im RMV-Gebiet kannst du zusätzlich zum Deutschlandticket ein Upgrade für die 1. Klasse in Regionalzügen buchen.'
+      ]
     },
     {
       slug: 'mvv',
       name: 'MVG / MVV (München)',
       short: 'MVG',
-      app: 'MVGO / MVV-App',
-      portal: 'dein MVG-Kundenkonto (M-Login)',
+      app: 'MVGO / München Navigator',
+      portal: 'dein MVG-Kundenkonto (M-Login) oder das DB-Aboportal',
+      portalUrl: 'mvg.de (M-Login) oder bahn.de/aboportal',
+      email: 'abo-mvv@bahn.de (MVV Abo-Center)',
+      telefon: '089 95471680 (MVV Abo-Center, Mo–Fr 8–18 Uhr)',
       frist: 'zum 10. des Monats',
-      weg: 'Logge dich mit deinem M-Login in das MVG-Kundenportal ein, öffne die Abo-Verwaltung, wähle dein Deutschlandticket und kündige „zum nächstmöglichen Termin". In der App findest du den Abo-Bereich in deinem Profil.',
-      hinweis: 'In München kann dein Vertragspartner die MVG oder die S-Bahn München (DB) sein, je nachdem wo du bestellt hast. Die Bestellbestätigung verrät es dir — kündige beim richtigen Anbieter.'
+      weg: 'Logge dich mit deinem M-Login auf mvg.de ein oder öffne die MVGO App. Gehe zur Abo-Verwaltung, wähle dein Deutschlandticket und kündige „zum nächstmöglichen Termin". Falls du über die DB gekauft hast: Auf bahn.de einloggen → Aboportal → „Meine Abos" → Kündigung. Im DB Navigator geht es unter dem Reiter „MVV Abo".',
+      hinweis: 'In München kann dein Vertragspartner die MVG oder die S-Bahn München (DB) sein, je nachdem wo du bestellt hast. Die Bestellbestätigung verrät es dir — kündige beim richtigen Anbieter.',
+      besonderheiten: [
+        'Im MVV wird das Deutschlandticket häufig über DB Regio verkauft. In diesem Fall läuft die Kündigung über bahn.de/aboportal oder den DB Navigator — nicht über die MVG.',
+        'Für Azubis, Studierende und Freiwilligendienstleistende in Bayern gibt es das Bayerische Ermäßigungsticket für 29 €/Monat statt 63 €. Die Kündigung funktioniert genauso.',
+        'MVG-Kundencenter mit persönlicher Beratung: Marienplatz (im Sperrengeschoss), Poccistraße und Sendlinger Tor.',
+        'Falls du von einem bisherigen MVV-Abo (z. B. IsarCard) zum Deutschlandticket gewechselt bist und zurückwechseln willst: Erst das D-Ticket kündigen, dann das neue Abo separat abschließen.'
+      ]
     },
     {
       slug: 'bvg',
       name: 'BVG (Berlin)',
       short: 'BVG',
-      app: 'BVG Fahrinfo / BVG Tickets',
-      portal: 'das BVG-Abo-Portal',
+      app: 'BVG Tickets / Jelbi',
+      portal: 'das BVG Abo-Online Portal',
+      portalUrl: 'bvg.de/abo-online',
+      email: 'kundenservice@bvg.de',
+      telefon: '030 19 449 (BVG Kundenservice, täglich 6–22 Uhr)',
       frist: 'zum 10. des Monats',
-      weg: 'Öffne das BVG-Abo-Portal, logge dich ein, wähle dein Deutschlandticket-Abo und dort die Kündigung. Hast du dein Ticket über die BVG-App abgeschlossen, kündigst du direkt im Abo-Bereich der App.',
-      hinweis: 'In Berlin verkauft neben der BVG auch die S-Bahn Berlin Deutschlandtickets. Prüfe auf deinem Ticket oder in der Bestellbestätigung, wer dein Vertragspartner ist — dort musst du kündigen.'
+      weg: 'Öffne bvg.de/abo-online, logge dich ein, wähle dein Deutschlandticket-Abo und dort die Kündigung. In der BVG Tickets App: Menü → Abo-Bereich → „Abo kündigen". Die BVG bietet zusätzlich ein Kündigungsformular als PDF auf bvg.de an.',
+      hinweis: 'In Berlin verkauft neben der BVG auch die S-Bahn Berlin (DB) Deutschlandtickets. Prüfe auf deinem Ticket oder in der Bestellbestätigung, wer dein Vertragspartner ist — dort musst du kündigen.',
+      besonderheiten: [
+        'Die BVG bietet drei Kündigungswege: App, Online-Portal und PDF-Formular zum Download auf bvg.de. Das Formular ist praktisch, wenn du keinen Zugang zum Kundenkonto hast.',
+        'Hast du eine VBB-fahrCard (Chipkarte), muss diese nach Abo-Ende an einem BVG-Kundenzentrum zurückgegeben werden.',
+        'BVG-Kundenzentren: Alexanderplatz (Dircksenstraße), Zoologischer Garten (Hardenbergplatz), Holzhauser Straße, Schöneweide.',
+        'Für Schülerinnen und Schüler mit Wohnsitz in Berlin ist das Deutschlandticket kostenlos. Bei Kündigung dieses Tickets bitte über das Schulticket-Portal vorgehen.'
+      ]
     }
   ];
 
@@ -66,7 +110,7 @@ const schema = [
     "@type": "Article",
     "headline": `Deutschlandticket bei ${p.name} kündigen 2026`,
     "datePublished": "2026-07-19",
-    "dateModified": "2026-07-19",
+    "dateModified": "2026-07-21",
     "inLanguage": "de",
     "author": { "@type": "Organization", "name": "Redaktion ticket-rechner.de" },
     "publisher": { "@type": "Organization", "name": "ticket-rechner.de" },
@@ -77,7 +121,8 @@ const schema = [
     "@type": "FAQPage",
     "mainEntity": [
       { "@type": "Question", "name": `Wie kündige ich das Deutschlandticket bei ${p.short}?`, "acceptedAnswer": { "@type": "Answer", "text": p.weg } },
-      { "@type": "Question", "name": `Bis wann muss ich das Deutschlandticket bei ${p.short} kündigen?`, "acceptedAnswer": { "@type": "Answer", "text": `Die Kündigung muss ${p.frist} eingehen, damit dein Ticket zum Ende desselben Monats endet. Danach verlängert sich das Abo um einen Monat (63 €).` } }
+      { "@type": "Question", "name": `Bis wann muss ich das Deutschlandticket bei ${p.short} kündigen?`, "acceptedAnswer": { "@type": "Answer", "text": `Die Kündigung muss ${p.frist} eingehen, damit dein Ticket zum Ende desselben Monats endet. Danach verlängert sich das Abo um einen Monat (63 €).` } },
+      { "@type": "Question", "name": `Wie erreiche ich den ${p.short}-Kundenservice?`, "acceptedAnswer": { "@type": "Answer", "text": `Per E-Mail an ${p.email} oder telefonisch unter ${p.telefon}.` } }
     ]
   }
 ];
@@ -89,7 +134,7 @@ const schema = [
 >
   <article class="container--narrow" style="padding:2rem 0 1rem">
     <p style="color:var(--brand);font-weight:800;letter-spacing:.06em;text-transform:uppercase;font-size:.8rem;margin:0">
-      Anbieter-Guide · Aktualisiert am 19.07.2026
+      Anbieter-Guide · Aktualisiert am 21.07.2026
     </p>
     <h1>Deutschlandticket bei {p.name} kündigen</h1>
     <p style="color:var(--ink-soft)">
@@ -115,10 +160,22 @@ const schema = [
     <h2>Gut zu wissen bei {p.short}</h2>
     <p>{p.hinweis}</p>
 
+    <h2>Besonderheiten bei {p.short}</h2>
+    <ul>
+      {p.besonderheiten.map(b => <li>{b}</li>)}
+    </ul>
+
+    <h2>{p.short}-Kontakt für die Kündigung</h2>
+    <p>
+      <strong>Portal:</strong> {p.portalUrl}<br />
+      <strong>E-Mail:</strong> {p.email}<br />
+      <strong>Telefon:</strong> {p.telefon}
+    </p>
+
     <h2>Lieber schriftlich kündigen?</h2>
     <p>
       Wenn du einen schriftlichen Nachweis willst oder das Portal nicht erreichbar ist,
-      sende ein Kündigungsschreiben per E-Mail an den {p.short}-Kundenservice. Unser
+      sende ein Kündigungsschreiben per E-Mail an {p.email}. Unser
       <a href="/kuendigungsschreiben">Kündigungsschreiben-Generator</a> erstellt es dir
       in 30 Sekunden — mit Vertragsnummer, SEPA-Widerruf und Bestätigungsbitte.
     </p>
@@ -128,9 +185,22 @@ const schema = [
       Prüfe im Folgemonat deinen Kontoauszug: Es darf keine weitere Abbuchung über 63 €
       geben. Dein Ticket bleibt bis zum letzten Tag des Monats gültig — nutze es ruhig
       noch. Und falls du das Ticket später wieder brauchst: Ein Neuabschluss ist
-      jederzeit möglich, ohne Wartezeit. Ob sich das Abo für dich überhaupt (noch)
-      rechnet, zeigt dir der <a href="/lohnt-sich-rechner">Lohnt-sich-Rechner</a>.
+      jederzeit möglich, ohne Wartezeit.
     </p>
+    <p>
+      Ob sich das Abo für dich überhaupt (noch) rechnet, zeigt dir der
+      <a href="/lohnt-sich-rechner">Lohnt-sich-Rechner</a>. Alle Preise und Varianten
+      (Jobticket, Semesterticket, Sozialticket) findest du im
+      <a href="/ratgeber/deutschlandticket-kosten">Kosten-Überblick</a>.
+    </p>
+
+    <h2>Häufige Fragen</h2>
+    <h3>Wie kündige ich das Deutschlandticket bei {p.short}?</h3>
+    <p>{p.weg}</p>
+    <h3>Bis wann muss ich bei {p.short} kündigen?</h3>
+    <p>Die Kündigung muss {p.frist} eingehen, damit dein Ticket zum Monatsende endet. <a href="/kuendigungsfrist-rechner">Rechner nutzen →</a></p>
+    <h3>Wie erreiche ich den {p.short}-Kundenservice?</h3>
+    <p>Per E-Mail an {p.email} oder telefonisch unter {p.telefon}.</p>
 
     <p style="margin-top:1.5rem">
       <a href="/ratgeber/deutschlandticket-kuendigen">→ Zum großen Kündigungs-Ratgeber (alle Anbieter, alle Wege)</a>
