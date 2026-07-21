@@ -1,0 +1,450 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Deutschlandticket Kinder 2026: Kostenlos, ermäßigt oder Vollpreis?",
+    "datePublished": "2026-07-21",
+    "dateModified": "2026-07-21",
+    "inLanguage": "de",
+    "author": { "@type": "Organization", "name": "Redaktion ticket-rechner.de" },
+    "publisher": { "@type": "Organization", "name": "ticket-rechner.de" },
+    "mainEntityOfPage": "https://ticket-rechner.de/ratgeber/deutschlandticket-kinder"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Brauchen Kinder ein eigenes Deutschlandticket?", "acceptedAnswer": { "@type": "Answer", "text": "Kinder unter 6 Jahren fahren kostenlos und brauchen kein Ticket. Ab dem 6. Geburtstag braucht jedes Kind ein eigenes Ticket — entweder das reguläre Deutschlandticket für 63 € oder ein ermäßigtes Schülerticket des jeweiligen Bundeslandes." } },
+      { "@type": "Question", "name": "Können Kinder auf dem Deutschlandticket der Eltern mitfahren?", "acceptedAnswer": { "@type": "Answer", "text": "Nur Kinder unter 6 Jahren dürfen kostenlos mitfahren. Ab 6 Jahren ist keine kostenlose Mitnahme vorgesehen — anders als bei Fahrkarten im DB-Fernverkehr, wo Kinder bis 14 in Begleitung der Eltern kostenlos reisen." } },
+      { "@type": "Question", "name": "Gibt es ein ermäßigtes Deutschlandticket für Schüler?", "acceptedAnswer": { "@type": "Answer", "text": "Ja, aber es gibt keine bundesweit einheitliche Ermäßigung. Jedes Bundesland regelt den Preis für Schüler unterschiedlich. In Hamburg ist das Deutschlandticket für Schüler komplett kostenlos, in Berlin gibt es ein kostenloses Schülerticket für den Tarifbereich AB, in NRW kostet das DeutschlandTicket Schule 43 €." } },
+      { "@type": "Question", "name": "Ab welchem Alter brauchen Kinder ein Ticket?", "acceptedAnswer": { "@type": "Answer", "text": "Ab dem 6. Geburtstag. Die kostenlose Mitfahrt endet genau an dem Tag, an dem das Kind 6 Jahre alt wird. Ab dann braucht es ein eigenes Ticket." } },
+      { "@type": "Question", "name": "Was kostet das Deutschlandticket für eine Familie?", "acceptedAnswer": { "@type": "Answer", "text": "Für jede Person ab 6 Jahren fallen 63 € pro Monat an, sofern kein ermäßigtes Schülerticket verfügbar ist. Eine Familie mit zwei Erwachsenen und einem Kind ab 6 zahlt also mindestens 189 € pro Monat. Regionale Schülerermäßigungen können die Kosten senken." } },
+      { "@type": "Question", "name": "Ist das Deutschlandticket für Schüler in Hamburg wirklich kostenlos?", "acceptedAnswer": { "@type": "Answer", "text": "Ja. Schüler mit Wohnsitz in Hamburg erhalten das hvv Deutschlandticket komplett kostenlos. Es gilt bundesweit im Nahverkehr. Über 200.000 Hamburger Schüler nutzen dieses Angebot." } },
+      { "@type": "Question", "name": "Gilt das kostenlose Schülerticket Berlin auch bundesweit?", "acceptedAnswer": { "@type": "Answer", "text": "Nein. Das Berliner Schülerticket gilt nur im Tarifbereich AB (Berliner Stadtgebiet). Es ist kein Deutschlandticket, sondern ein kostenloses regionales Ticket. Für bundesweite Fahrten bräuchte das Kind ein reguläres Deutschlandticket." } },
+      { "@type": "Question", "name": "Lohnt sich das Deutschlandticket für Schulkinder?", "acceptedAnswer": { "@type": "Answer", "text": "Für den Schulweg allein lohnt es sich nur, wenn keine günstigere regionale Alternative existiert. Viele Bundesländer bieten Schülertickets, die innerhalb des Verbunds deutlich günstiger oder sogar kostenlos sind. Das Deutschlandticket lohnt sich, wenn das Kind auch außerhalb des Verbundgebiets unterwegs ist." } },
+      { "@type": "Question", "name": "Wie bestelle ich ein Deutschlandticket für mein Kind?", "acceptedAnswer": { "@type": "Answer", "text": "Über die Deutschlandticket-App oder beim jeweiligen Verkehrsverbund. In vielen Apps kannst du über die Funktion Abo hinzufügen ein weiteres Ticket für dein Kind im selben Kundenkonto bestellen. Das Kind muss mindestens 6 Jahre alt sein." } }
+    ]
+  }
+];
+---
+<Base
+  title="Deutschlandticket Kinder 2026: Kostenlos, ermäßigt oder Vollpreis?"
+  description="Deutschlandticket für Kinder: Ab welchem Alter ein Ticket nötig ist, was es kostet, welche Ermäßigungen es pro Bundesland gibt und wann sich das Ticket für Familien lohnt."
+  schema={schema}
+>
+  <article class="container--narrow" style="padding:2rem 0 1rem">
+    <p style="color:var(--brand);font-weight:800;letter-spacing:.06em;text-transform:uppercase;font-size:.8rem;margin:0">
+      Ratgeber · Aktualisiert am 21.07.2026
+    </p>
+    <h1>Deutschlandticket für Kinder: Ab wann zahlen, was kostet es, welche Ermäßigungen gibt es?</h1>
+    <p style="color:var(--ink-soft)">
+      Kinder unter 6 Jahren fahren im deutschen Nahverkehr kostenlos — ohne
+      Ticket, ohne Anmeldung. Ab dem 6. Geburtstag braucht jedes Kind ein
+      eigenes Ticket. Das reguläre Deutschlandticket kostet auch für Kinder
+      <a href="/ratgeber/deutschlandticket-kosten">63 € pro Monat</a>. Einen
+      bundesweit einheitlichen Kinderrabatt gibt es nicht. Was viele Eltern
+      nicht wissen: In mehreren Bundesländern gibt es deutlich günstigere oder
+      sogar kostenlose Schülertickets. Dieser Ratgeber erklärt die Regeln
+      und zeigt, in welchem Bundesland Kinder wie viel zahlen.
+    </p>
+
+    <h2>Die Grundregel: Unter 6 kostenlos, ab 6 Ticket nötig</h2>
+    <p>
+      Die bundesweite Regel ist eindeutig: Kinder unter 6 Jahren fahren im
+      gesamten öffentlichen Nahverkehr kostenlos mit. Das gilt für Busse,
+      Straßenbahnen, U-Bahnen, S-Bahnen und Regionalzüge — ohne
+      Einschränkung, ohne Anmeldung, ohne Ticket. Es spielt keine Rolle, wie
+      viele Kinder unter 6 mitfahren.
+    </p>
+    <p>
+      Ab dem <strong>6. Geburtstag</strong> ändert sich das. Das Kind braucht
+      dann ein eigenes Ticket — entweder ein reguläres Deutschlandticket,
+      ein ermäßigtes Schülerticket des Bundeslandes oder eine andere gültige
+      Fahrkarte. Die kostenlose Mitfahrt endet genau an dem Tag, an dem das
+      Kind 6 wird.
+    </p>
+    <p>
+      <strong>Wichtig für Familien:</strong> Anders als im Fernverkehr der
+      Deutschen Bahn (wo Kinder bis 14 in Begleitung der Eltern kostenlos
+      fahren) gibt es beim Deutschlandticket keine kostenlose Mitnahme für
+      Kinder ab 6. Jedes Familienmitglied ab 6 braucht ein eigenes Ticket.
+    </p>
+
+    <h2>Was das Deutschlandticket für Familien kostet</h2>
+    <p>
+      Das Deutschlandticket kennt keinen Kinderpreis. Für jede Person ab 6
+      Jahren gilt der reguläre Preis von <strong>63 € pro Monat</strong>
+      (Stand 2026), sofern kein ermäßigtes Landesprogramm greift.
+    </p>
+    <div class="card" style="overflow-x:auto">
+      <table style="width:100%;border-collapse:collapse;font-size:.95rem">
+        <thead>
+          <tr style="border-bottom:2px solid var(--line);text-align:left">
+            <th style="padding:.5rem .75rem">Familienkonstellation</th>
+            <th style="padding:.5rem .75rem">Monatliche Kosten</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem">1 Erwachsener + Kind unter 6</td>
+            <td style="padding:.5rem .75rem">63 €</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem">2 Erwachsene + Kind unter 6</td>
+            <td style="padding:.5rem .75rem">126 €</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem">2 Erwachsene + 1 Kind ab 6</td>
+            <td style="padding:.5rem .75rem">189 €</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem">2 Erwachsene + 2 Kinder ab 6</td>
+            <td style="padding:.5rem .75rem">252 €</td>
+          </tr>
+          <tr>
+            <td style="padding:.5rem .75rem">2 Erwachsene + 3 Kinder ab 6</td>
+            <td style="padding:.5rem .75rem">315 €</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>
+      Diese Beträge gelten nur, wenn jedes Familienmitglied den vollen Preis
+      zahlt. In vielen Bundesländern können Schüler ein ermäßigtes Ticket
+      bekommen — teilweise sogar kostenlos. Das senkt die realen
+      Familienkosten erheblich.
+    </p>
+
+    <h2>Ermäßigtes Deutschlandticket für Schüler: Was bietet jedes Bundesland?</h2>
+    <p>
+      Es gibt kein bundesweit einheitliches Schülerticket. Jedes Bundesland
+      entscheidet selbst, ob und wie stark es das Deutschlandticket für Schüler
+      subventioniert. Die Unterschiede sind enorm — von kostenlos bis
+      Vollpreis.
+    </p>
+    <div class="card" style="overflow-x:auto">
+      <table style="width:100%;border-collapse:collapse;font-size:.95rem">
+        <thead>
+          <tr style="border-bottom:2px solid var(--line);text-align:left">
+            <th style="padding:.5rem .75rem">Bundesland</th>
+            <th style="padding:.5rem .75rem">Schülerpreis</th>
+            <th style="padding:.5rem .75rem">Bundesweit?</th>
+            <th style="padding:.5rem .75rem">Hinweis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem"><strong>Hamburg</strong></td>
+            <td style="padding:.5rem .75rem"><strong>0 € (kostenlos)</strong></td>
+            <td style="padding:.5rem .75rem">Ja</td>
+            <td style="padding:.5rem .75rem">Wohnsitz Hamburg, über 200.000 Schüler nutzen es</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem"><strong>Berlin</strong></td>
+            <td style="padding:.5rem .75rem"><strong>0 € (kostenlos)</strong></td>
+            <td style="padding:.5rem .75rem">Nein (nur AB)</td>
+            <td style="padding:.5rem .75rem">Schülerticket Berlin, gilt nur im Stadtgebiet</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem">NRW (VRR)</td>
+            <td style="padding:.5rem .75rem">43 €</td>
+            <td style="padding:.5rem .75rem">Ja</td>
+            <td style="padding:.5rem .75rem">DeutschlandTicket Schule, Schulträger entscheidet</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem">Saarland</td>
+            <td style="padding:.5rem .75rem">44,40 €</td>
+            <td style="padding:.5rem .75rem">Ja</td>
+            <td style="padding:.5rem .75rem">Junge-Leute-Ticket für Schüler, Azubis, FSJ</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem">Baden-Württemberg</td>
+            <td style="padding:.5rem .75rem">ca. 44 €</td>
+            <td style="padding:.5rem .75rem">Ja</td>
+            <td style="padding:.5rem .75rem">D-Ticket JugendBW, unter 21 (Schüler) bzw. unter 27</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem">Bayern (Azubis/FSJ)</td>
+            <td style="padding:.5rem .75rem">43 €</td>
+            <td style="padding:.5rem .75rem">Ja</td>
+            <td style="padding:.5rem .75rem">Ermäßigungsticket — nicht für Schüler</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem">Bayern (365-€-Ticket)</td>
+            <td style="padding:.5rem .75rem">~30,42 €</td>
+            <td style="padding:.5rem .75rem">Nein (Verbund)</td>
+            <td style="padding:.5rem .75rem">Nur in MVV, VGN, AVV, RVV, INVG, Mainfranken</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem">Niedersachsen (Hannover)</td>
+            <td style="padding:.5rem .75rem">30,40 €</td>
+            <td style="padding:.5rem .75rem">Ja</td>
+            <td style="padding:.5rem .75rem">Deutschlandticket Hannover Jugend, regional</td>
+          </tr>
+          <tr>
+            <td style="padding:.5rem .75rem">Übrige Bundesländer</td>
+            <td style="padding:.5rem .75rem">63 € (Vollpreis)</td>
+            <td style="padding:.5rem .75rem">Ja</td>
+            <td style="padding:.5rem .75rem">Teilweise regionale Einzelangebote</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>
+      <strong>Achtung:</strong> Die Tabelle zeigt die häufigsten Modelle.
+      Innerhalb eines Bundeslandes können verschiedene Verkehrsverbünde
+      unterschiedliche Regelungen haben. Im Zweifel beim Schulträger oder
+      beim Verkehrsverbund am Wohnort nachfragen.
+    </p>
+
+    <h3>Hamburg: komplett kostenlos, bundesweit gültig</h3>
+    <p>
+      Hamburg bietet das großzügigste Modell in Deutschland. Alle
+      Schülerinnen und Schüler mit Wohnsitz in Hamburg — von der Einschulung
+      bis zum Schulabschluss — erhalten ein kostenloses hvv Deutschlandticket.
+      Es gilt nicht nur im hvv-Gebiet, sondern bundesweit im gesamten
+      Nahverkehr. Über 200.000 Hamburger Schüler nutzen dieses Angebot.
+    </p>
+    <p>
+      Auch Kinder ab 6 Jahren, die noch nicht eingeschult sind (z. B.
+      Vorschulkinder und Kita-Kinder), können das kostenlose Ticket
+      beantragen. Die Bestellung erfolgt online über hvv.de. Bis zum 16.
+      Geburtstag bestellen die Eltern, ab 16 können Jugendliche sich das
+      Ticket mit einem Berechtigungsnachweis der Schule selbst bestellen.
+    </p>
+
+    <h3>Berlin: kostenlos, aber nur im Stadtgebiet</h3>
+    <p>
+      Berlin bietet ein kostenloses Schülerticket für alle Berliner Kinder
+      von 6 bis 15 Jahren (mit Berliner Schülerausweis I). Dieses Ticket
+      gilt allerdings nur im <strong>Tarifbereich AB</strong> — also im
+      Berliner Stadtgebiet. Es ist kein Deutschlandticket und gilt nicht
+      bundesweit.
+    </p>
+    <p>
+      Für bundesweite Fahrten bräuchten Berliner Schüler zusätzlich ein
+      reguläres Deutschlandticket für 63 €. Wer nur innerhalb Berlins
+      unterwegs ist, spart mit dem kostenlosen Schülerticket aber erheblich.
+    </p>
+
+    <h3>Bayern: verschiedene Modelle, kein einheitlicher Schülerpreis</h3>
+    <p>
+      Bayern ist kompliziert. Das bayerische <strong>Ermäßigungsticket</strong>
+      (43 € pro Monat, bundesweit gültig) gibt es nur für Auszubildende,
+      Studierende und Freiwilligendienstleistende — nicht für Schüler.
+    </p>
+    <p>
+      Für Schüler gibt es stattdessen das <strong>365-Euro-Jahresticket</strong>
+      (~30,42 €/Monat), das aber nur in bestimmten Verkehrsverbünden gilt
+      (München, Nürnberg, Regensburg, Augsburg, Ingolstadt, Mainfranken) —
+      nicht bundesweit. Außerdem haben viele bayerische Schüler durch die
+      Schulwegkostenfreiheit ein kostenloses Ticket für den Schulweg
+      (bis zur 10. Klasse bei der nächstgelegenen Schule).
+    </p>
+
+    <h2>Lohnt sich das Deutschlandticket für Schulkinder?</h2>
+    <p>
+      Nicht automatisch. Es kommt auf drei Fragen an:
+    </p>
+    <p>
+      <strong>1. Gibt es ein günstigeres Schülerticket?</strong>
+      In Hamburg, Berlin, NRW und vielen anderen Regionen existieren deutlich
+      günstigere Alternativen. Prüfe zuerst, ob dein Kind Anspruch auf ein
+      ermäßigtes oder kostenloses Schülerticket hat.
+    </p>
+    <p>
+      <strong>2. Fährt das Kind über das Verbundgebiet hinaus?</strong>
+      Wenn ja, lohnt sich das bundesweit gültige Deutschlandticket trotz des
+      höheren Preises. Ein regionales Schülerticket (z. B. das Berliner
+      Schülerticket oder das bayerische 365-€-Ticket) gilt nur im jeweiligen
+      Verbund.
+    </p>
+    <p>
+      <strong>3. Wie oft fährt das Kind?</strong>
+      Bei täglichem Schulweg plus Freizeitfahrten rechnet sich das
+      Deutschlandticket für 63 € fast immer gegenüber Einzelfahrscheinen. Bei
+      nur wenigen Fahrten pro Monat sind Einzeltickets oder eine
+      Streifenkarte günstiger.
+    </p>
+    <p>
+      Ob sich das Ticket für eure Familie insgesamt lohnt, könnt ihr mit
+      unserem <a href="/lohnt-sich-rechner">Lohnt-sich-Rechner</a> prüfen.
+    </p>
+
+    <h2>So bestellst du ein Deutschlandticket für dein Kind</h2>
+    <p>
+      <strong>Reguläres Deutschlandticket (63 €):</strong> Über die
+      Deutschlandticket-App, den DB Navigator oder beim lokalen
+      Verkehrsverbund. In vielen Apps gibt es die Funktion „Abo hinzufügen",
+      um ein weiteres Ticket im selben Kundenkonto zu bestellen. Das Kind
+      muss mindestens 6 Jahre alt sein.
+    </p>
+    <p>
+      <strong>Ermäßigtes Schülerticket:</strong> Der Bestellweg hängt vom
+      Bundesland ab. In Hamburg läuft die Bestellung über hvv.de, in NRW
+      über den Schulträger, in Bayern über das jeweilige Verkehrsunternehmen.
+      In der Regel braucht das Kind einen <strong>Berechtigungsnachweis der
+      Schule</strong> — frag im Schulsekretariat nach.
+    </p>
+    <p>
+      <strong>Kündigung:</strong> Das Deutschlandticket ist monatlich
+      kündbar, jeweils bis zum 10. eines Monats zum Monatsende. Das gilt auch
+      für Kinder-Abos. In den Sommerferien kann es sich lohnen, das Ticket
+      zu pausieren oder zu kündigen — wenn das Kind es nicht nutzt.
+    </p>
+    <p>
+      <a href="/ratgeber/deutschlandticket-kuendigen">Anleitung: Deutschlandticket kündigen →</a>
+    </p>
+
+    <h2>Häufige Fehler</h2>
+    <p>
+      <strong>Kein Ticket ab dem 6. Geburtstag.</strong>
+      Viele Eltern vergessen, dass die kostenlose Mitfahrt genau am
+      6. Geburtstag endet. Bei einer Kontrolle ohne gültiges Ticket droht
+      ein erhöhtes Beförderungsentgelt von mindestens 60 €.
+    </p>
+    <p>
+      <strong>Fernverkehrsregel auf den Nahverkehr übertragen.</strong>
+      Im Fernverkehr der DB fahren Kinder bis 14 in Begleitung der Eltern
+      kostenlos. Im Nahverkehr mit dem Deutschlandticket gilt das nicht. Hier
+      braucht jedes Kind ab 6 ein eigenes Ticket.
+    </p>
+    <p>
+      <strong>Bundesweites Schülerticket annehmen, obwohl es nur regional gilt.</strong>
+      Das Berliner Schülerticket (nur AB) und das bayerische 365-€-Ticket
+      (nur Verbund) gelten nicht bundesweit. Wer damit in einem anderen
+      Bundesland fährt, fährt ohne Ticket.
+    </p>
+    <p>
+      <strong>Schulwegkostenfreiheit nicht prüfen.</strong>
+      In vielen Bundesländern übernimmt der Schulträger die Fahrtkosten, wenn
+      der Schulweg eine bestimmte Länge überschreitet (oft 2 km für
+      Grundschüler, 3,5 km ab Sek I). Dann bekommt das Kind ein kostenloses
+      Ticket — frag beim Schulsekretariat nach.
+    </p>
+    <p>
+      <strong>Sommerferienmonat voll bezahlen.</strong>
+      Wenn das Kind im Sommer nicht fährt, kann sich eine Kündigung
+      lohnen. Beachte die Kündigungsfrist bis zum 10. des Monats.
+      <a href="/kuendigungsfrist-rechner">Kündigungsfrist berechnen →</a>
+    </p>
+
+    <h2>Tipps für Familien</h2>
+    <p>
+      <strong>Immer zuerst das Schülerticket des Bundeslandes prüfen.</strong>
+      Der Preisunterschied zwischen 0 € (Hamburg) und 63 € (Vollpreis) ist
+      enorm. Die fünf Minuten Recherche beim Verkehrsverbund können
+      Hunderte Euro im Jahr sparen.
+    </p>
+    <p>
+      <strong>Schulwegkostenfreiheit beantragen.</strong>
+      Viele Eltern wissen nicht, dass ihr Kind Anspruch auf ein kostenloses
+      Schulwegticket hat. Die Mindestentfernung ist je nach Bundesland und
+      Schulform unterschiedlich — in der Regel 2 km (Grundschule) oder
+      3,5 km (weiterführende Schule). Der Antrag läuft über die Schule.
+    </p>
+    <p>
+      <strong>Jobticket der Eltern prüfen.</strong>
+      Wenn ein Elternteil das
+      <a href="/ratgeber/deutschlandticket-jobticket">Deutschlandticket als Jobticket</a>
+      für maximal 44,10 € bekommt, sinken die Gesamtkosten für die Familie.
+    </p>
+    <p>
+      <strong>Bei mehreren Kindern: Geschwisterrabatte prüfen.</strong>
+      Einige Verkehrsverbünde bieten Geschwisterrabatte. Im VRR (NRW)
+      beispielsweise zahlt das zweite Kind nur 7 € Eigenanteil pro Monat.
+      Ab dem dritten Kind entfällt der Eigenanteil ganz.
+    </p>
+    <p>
+      <strong>Steuerlich absetzen.</strong>
+      Die Kosten für das Deutschlandticket deines Kindes kannst du nicht als
+      Werbungskosten absetzen (das geht nur für den eigenen Arbeitsweg). Aber:
+      Wenn du das Ticket für dich selbst nutzt, kann es sich steuerlich
+      lohnen. <a href="/ratgeber/deutschlandticket-steuer-absetzen">Mehr dazu
+      im Steuer-Ratgeber →</a>
+    </p>
+
+    <h2>Häufige Fragen (FAQ)</h2>
+
+    <h3>Brauchen Kinder ein eigenes Deutschlandticket?</h3>
+    <p>
+      Unter 6 Jahren: nein, sie fahren kostenlos. Ab 6 Jahren: ja, jedes
+      Kind braucht ein eigenes Ticket.
+    </p>
+
+    <h3>Können Kinder auf dem Deutschlandticket der Eltern mitfahren?</h3>
+    <p>
+      Nur Kinder unter 6. Ab 6 Jahren gibt es beim Deutschlandticket keine
+      kostenlose Mitnahme — anders als bei DB-Fernverkehrstickets.
+    </p>
+
+    <h3>Gibt es ein ermäßigtes Deutschlandticket für Schüler?</h3>
+    <p>
+      Ja, aber nicht bundesweit einheitlich. Jedes Bundesland hat eigene
+      Regeln — von kostenlos (Hamburg) über 43 € (NRW) bis Vollpreis.
+      Beim Verkehrsverbund am Wohnort nachfragen.
+    </p>
+
+    <h3>Was kostet das Deutschlandticket für eine Familie mit zwei Kindern?</h3>
+    <p>
+      Ohne Ermäßigung: 4 × 63 € = 252 € pro Monat. Mit Schülerticket je
+      nach Bundesland deutlich weniger. In Hamburg z. B. nur 126 € (2 ×
+      Erwachsene, Kinder kostenlos).
+    </p>
+
+    <h3>Ist das Schülerticket Hamburg bundesweit gültig?</h3>
+    <p>
+      Ja. Das kostenlose hvv Deutschlandticket für Schüler gilt im gesamten
+      deutschen Nahverkehr — nicht nur in Hamburg.
+    </p>
+
+    <h3>Gilt das Berliner Schülerticket auch bundesweit?</h3>
+    <p>
+      Nein. Es gilt nur im Tarifbereich AB (Berlin). Für bundesweite Fahrten
+      braucht das Kind ein reguläres Deutschlandticket.
+    </p>
+
+    <h3>Ab welchem Alter brauchen Kinder ein Ticket?</h3>
+    <p>
+      Ab dem 6. Geburtstag. Die kostenlose Mitfahrt endet an genau diesem Tag.
+    </p>
+
+    <h3>Lohnt sich das Deutschlandticket für mein Kind?</h3>
+    <p>
+      Wenn keine günstigere regionale Alternative existiert und das Kind
+      regelmäßig fährt (Schulweg + Freizeit), rechnet es sich meistens. Bei
+      reinem Schulweg innerhalb des Verbundgebiets ist ein lokales Schülerabo
+      oft günstiger. <a href="/lohnt-sich-rechner">Hier berechnen →</a>
+    </p>
+
+    <h3>Wie bestelle ich ein Ticket für mein Kind?</h3>
+    <p>
+      Reguläres Ticket: über die Deutschlandticket-App oder den
+      Verkehrsverbund. Ermäßigtes Schülerticket: über den Schulträger oder
+      den Verkehrsverbund am Wohnort, mit Berechtigungsnachweis der Schule.
+    </p>
+
+    <h2>Offizielle Quellen</h2>
+    <p>
+      <a href="https://wissen.deutschlandticket.de/mitnahme-regelungen" target="_blank" rel="noopener">deutschlandticket.de — Mitnahmeregelungen</a> ·
+      <a href="https://www.bundesregierung.de/breg-de/aktuelles/deutschlandticket-2134074" target="_blank" rel="noopener">Bundesregierung — FAQ Deutschlandticket</a> ·
+      <a href="https://www.hvv.de/de/schule-faq" target="_blank" rel="noopener">HVV — Kostenloses Schülerticket Hamburg</a> ·
+      <a href="https://www.bvg.de/en/subscriptions-and-tickets/school-student-ticket" target="_blank" rel="noopener">BVG — Schülerticket Berlin</a> ·
+      <a href="https://www.vrr.de/tickets-tarife/deutschlandticket/schule/" target="_blank" rel="noopener">VRR — DeutschlandTicket Schule NRW</a> ·
+      <a href="https://bahnland-bayern.de/de/ermaessigungsticket" target="_blank" rel="noopener">Bahnland Bayern — Ermäßigungsticket</a>
+    </p>
+
+    <p style="color:var(--ink-soft);font-size:.9rem;margin-top:2.5rem">
+      Redaktion ticket-rechner.de · Stand: Juli 2026. Regionale Regelungen
+      können sich ändern — vor dem Kauf beim zuständigen Verkehrsverbund
+      oder Schulträger prüfen. Alle Angaben ohne Gewähr.
+      <a href="/ratgeber/deutschlandticket-gueltigkeit">Gültigkeit im Detail</a> ·
+      <a href="/ratgeber/deutschlandticket-kaufen">Deutschlandticket kaufen</a> ·
+      <a href="/ratgeber/deutschlandticket-kosten">Kosten-Überblick</a> ·
+      <a href="/ratgeber/deutschlandticket-pausieren">Deutschlandticket pausieren</a>
+    </p>
+  </article>
+</Base>
