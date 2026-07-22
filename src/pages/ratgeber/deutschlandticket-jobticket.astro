@@ -7,7 +7,7 @@ const schema = [
     "@type": "Article",
     "headline": "Deutschlandticket als Jobticket 2026: nur 44,10 € — so geht's",
     "datePublished": "2026-07-19",
-    "dateModified": "2026-07-19",
+    "dateModified": "2026-07-22",
     "inLanguage": "de",
     "author": { "@type": "Organization", "name": "Redaktion ticket-rechner.de" },
     "publisher": { "@type": "Organization", "name": "ticket-rechner.de" },
@@ -20,7 +20,9 @@ const schema = [
       { "@type": "Question", "name": "Was kostet das Deutschlandticket als Jobticket 2026?", "acceptedAnswer": { "@type": "Answer", "text": "Maximal 44,10 € pro Monat: Der Arbeitgeber zahlt mindestens 25 % des Ticketpreises (15,75 €) dazu, zusätzlich gibt es 5 % Rabatt (3,15 €) auf den Ausgabepreis von 63 €. Zahlt der Arbeitgeber mehr — bis zu 100 % — sinkt dein Eigenanteil entsprechend." } },
       { "@type": "Question", "name": "Kann ich das Jobticket auch privat nutzen?", "acceptedAnswer": { "@type": "Answer", "text": "Ja, uneingeschränkt. Das Jobticket ist ein normales Deutschlandticket und gilt bundesweit — auch am Wochenende, im Urlaub und für Freizeitfahrten." } },
       { "@type": "Question", "name": "Ist das Deutschlandticket-Jobticket steuerfrei?", "acceptedAnswer": { "@type": "Answer", "text": "Ja. Der Arbeitgeberzuschuss zum Jobticket ist gemäß § 3 Nr. 15 EStG steuer- und sozialabgabenfrei — für Arbeitgeber wie Arbeitnehmer ein Vorteil gegenüber einer Gehaltserhöhung in gleicher Höhe." } },
-      { "@type": "Question", "name": "Was passiert mit dem Jobticket beim Jobwechsel?", "acceptedAnswer": { "@type": "Answer", "text": "Mit dem Ende des Arbeitsverhältnisses musst du das Jobticket kündigen — es hängt am Rahmenvertrag deines Arbeitgebers. Auch hier gilt die übliche Frist zum 10. des Monats. Danach kannst du nahtlos ein reguläres Deutschlandticket abschließen." } }
+      { "@type": "Question", "name": "Was passiert mit dem Jobticket beim Jobwechsel?", "acceptedAnswer": { "@type": "Answer", "text": "Mit dem Ende des Arbeitsverhältnisses musst du das Jobticket kündigen — es hängt am Rahmenvertrag deines Arbeitgebers. Auch hier gilt die übliche Frist zum 10. des Monats. Danach kannst du nahtlos ein reguläres Deutschlandticket abschließen." } },
+      { "@type": "Question", "name": "Mindert der Jobticket-Zuschuss meine Pendlerpauschale?", "acceptedAnswer": { "@type": "Answer", "text": "Ja. Steuerfreie Zuschüsse nach § 3 Nr. 15 EStG werden von der Entfernungspauschale abgezogen. Der Betrag steht auf der Lohnsteuerbescheinigung in Zeile 17. Das Finanzamt rechnet das automatisch gegen." } },
+      { "@type": "Question", "name": "Kann ich das Jobticket pausieren?", "acceptedAnswer": { "@type": "Answer", "text": "Das hängt vom Rahmenvertrag deines Arbeitgebers ab. Manche Verträge erlauben eine Pausierung, andere nicht. Frag bei deiner Personalabteilung nach. Alternativ kannst du das Ticket zum 10. des Monats kündigen und später neu bestellen." } }
     ]
   }
 ];
@@ -32,14 +34,15 @@ const schema = [
 >
   <article class="container--narrow" style="padding:2rem 0 1rem">
     <p style="color:var(--brand);font-weight:800;letter-spacing:.06em;text-transform:uppercase;font-size:.8rem;margin:0">
-      Ratgeber · Aktualisiert am 19.07.2026
+      Ratgeber · Aktualisiert am 22.07.2026
     </p>
     <h1>Deutschlandticket als Jobticket: nur 44,10 € statt 63 €</h1>
     <p style="color:var(--ink-soft)">
       Das Jobticket ist die günstigste Art, als Berufstätiger an das Deutschlandticket
       zu kommen: <strong>maximal 44,10 € im Monat</strong> — fast 19 € unter dem
-      Normalpreis. Der Haken? Es gibt keinen, außer dass du deinen Arbeitgeber
-      aktiv fragen musst. Viele wissen gar nicht, dass ihre Firma längst mitmacht.
+      <a href="/ratgeber/deutschlandticket-kosten">Normalpreis</a>. Der Haken? Es gibt
+      keinen, außer dass du deinen Arbeitgeber aktiv fragen musst. Viele wissen gar
+      nicht, dass ihre Firma längst mitmacht.
     </p>
 
     <h2>So kommt der Preis zustande</h2>
@@ -61,6 +64,13 @@ const schema = [
       Bruttolohn. Genau mit diesem Argument überzeugst du eine zögernde
       Personalabteilung.
     </p>
+    <p>
+      <strong>Aber Achtung:</strong> Der steuerfreie Zuschuss mindert deine absetzbare
+      Pendlerpauschale. Der Betrag steht auf deiner Lohnsteuerbescheinigung in
+      Zeile 17. Wie das genau funktioniert und wann sich die Pauschale trotzdem
+      mehr lohnt als die Ticketkosten, steht im
+      <a href="/ratgeber/deutschlandticket-steuer-absetzen">Steuer-Ratgeber</a>.
+    </p>
 
     <h2>So bekommst du das Jobticket — Schritt für Schritt</h2>
     <p>
@@ -80,7 +90,10 @@ const schema = [
       im Urlaub, für jeden privaten Ausflug. Es ist nicht auf den Arbeitsweg
       beschränkt und auch nicht auf Vollzeitkräfte. Die üblichen Grenzen gelten
       natürlich auch hier: <a href="/ratgeber/deutschlandticket-ice">kein
-      Fernverkehr</a>, keine 1. Klasse, personengebunden.
+      Fernverkehr</a>, keine
+      <a href="/ratgeber/deutschlandticket-erste-klasse">1. Klasse</a>,
+      personengebunden. Wo genau das Ticket überall gilt, steht im
+      <a href="/ratgeber/deutschlandticket-gueltigkeit">Gültigkeits-Überblick</a>.
     </p>
 
     <h2>Jobwechsel oder Kündigung: daran denken</h2>
@@ -88,9 +101,12 @@ const schema = [
       Das Jobticket hängt am Rahmenvertrag deines Arbeitgebers. Endet dein
       Arbeitsverhältnis, musst du das Ticket kündigen — und auch hier gilt die
       <a href="/kuendigungsfrist-rechner">Frist zum 10. des Monats</a>. Danach kannst
-      du nahtlos ein reguläres Deutschlandticket für 63 € abschließen (oder beim neuen
-      Arbeitgeber wieder ein Jobticket beantragen). Für das Kündigungsschreiben
-      hilft dir unser <a href="/kuendigungsschreiben">Generator</a>.
+      du nahtlos ein <a href="/ratgeber/deutschlandticket-kaufen">reguläres
+      Deutschlandticket für 63 €</a> abschließen (oder beim neuen Arbeitgeber wieder
+      ein Jobticket beantragen). Für das Kündigungsschreiben hilft dir unser
+      <a href="/kuendigungsschreiben">Generator</a>. Alles zur Kündigung Schritt für
+      Schritt: <a href="/ratgeber/deutschlandticket-kuendigen">Deutschlandticket
+      kündigen</a>.
     </p>
 
     <h2>Lohnt sich das Jobticket immer?</h2>
@@ -100,6 +116,52 @@ const schema = [
       das sind gerade einmal 7 Pendeltage. Wer auch nur halbwegs regelmäßig mit Bus
       oder Bahn zur Arbeit fährt, spart praktisch immer. Rechne deinen konkreten Fall
       im <a href="/lohnt-sich-rechner">Lohnt-sich-Rechner</a> durch.
+    </p>
+
+    <h2>Häufige Fragen (FAQ)</h2>
+
+    <h3>Was kostet das Jobticket 2026?</h3>
+    <p>
+      Maximal 44,10 € pro Monat (63 € minus 25 % Arbeitgeberzuschuss minus 5 %
+      Rabatt). Zahlt der Arbeitgeber mehr, sinkt dein Anteil weiter — bis auf 0 €.
+    </p>
+
+    <h3>Kann ich das Jobticket privat nutzen?</h3>
+    <p>
+      Ja, uneingeschränkt. Bundesweit, rund um die Uhr, auch am Wochenende und
+      im Urlaub.
+    </p>
+
+    <h3>Ist der Zuschuss steuerfrei?</h3>
+    <p>
+      Ja, nach § 3 Nr. 15 EStG. Er mindert aber die Pendlerpauschale.
+      <a href="/ratgeber/deutschlandticket-steuer-absetzen">Steuer-Details →</a>
+    </p>
+
+    <h3>Was passiert beim Jobwechsel?</h3>
+    <p>
+      Jobticket kündigen (Frist: 10. des Monats), dann reguläres Ticket oder neues
+      Jobticket beim neuen Arbeitgeber abschließen.
+      <a href="/ratgeber/deutschlandticket-kuendigen">Kündigungsanleitung →</a>
+    </p>
+
+    <h3>Mindert der Zuschuss meine Pendlerpauschale?</h3>
+    <p>
+      Ja. Steuerfreie Zuschüsse werden von der Entfernungspauschale abgezogen
+      (Zeile 17 Lohnsteuerbescheinigung).
+    </p>
+
+    <h3>Kann ich das Jobticket pausieren?</h3>
+    <p>
+      Hängt vom Rahmenvertrag ab — frag bei der Personalabteilung nach.
+      Alternativ: <a href="/ratgeber/deutschlandticket-pausieren">Ticket pausieren
+      oder kündigen</a>.
+    </p>
+
+    <p style="margin-top:1.5rem">
+      <a href="/ratgeber/deutschlandticket-kosten">Kosten-Überblick</a> ·
+      <a href="/ratgeber/deutschlandticket-preiserhoehung">Preiserhöhung 2026</a> ·
+      <a href="/ratgeber">Alle Ratgeber</a>
     </p>
 
     <p style="color:var(--ink-soft);font-size:.9rem;margin-top:2.5rem">
