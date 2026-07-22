@@ -1,7 +1,7 @@
 /**
  * Manual sitemap — lists only currently live pages.
  * UPDATE this file every time a page is added or removed.
- * Last updated: 2026-07-21
+ * Last updated: 2026-07-22
  */
 const SITE = 'https://ticket-rechner.de';
 interface SitemapEntry {
@@ -17,17 +17,21 @@ const pages: SitemapEntry[] = [
   { url: '/lohnt-sich-rechner',            lastmod: '2026-07-19', changefreq: 'weekly',  priority: 0.9 },
   { url: '/kuendigungsschreiben',          lastmod: '2026-07-19', changefreq: 'weekly',  priority: 0.9 },
   // Ratgeber hub
-  { url: '/ratgeber',                      lastmod: '2026-07-21', changefreq: 'weekly',  priority: 0.8 },
+  { url: '/ratgeber',                      lastmod: '2026-07-22', changefreq: 'weekly',  priority: 0.8 },
   // Ratgeber articles
   { url: '/ratgeber/deutschlandticket-kuendigen',        lastmod: '2026-07-21', changefreq: 'monthly', priority: 0.8 },
   { url: '/ratgeber/deutschlandticket-kaufen',           lastmod: '2026-07-21', changefreq: 'monthly', priority: 0.7 },
+  { url: '/ratgeber/deutschlandticket-steuer-absetzen',  lastmod: '2026-07-22', changefreq: 'monthly', priority: 0.7 },
   { url: '/ratgeber/deutschlandticket-kosten',           lastmod: '2026-07-21', changefreq: 'monthly', priority: 0.7 },
   { url: '/ratgeber/deutschlandticket-gueltigkeit',      lastmod: '2026-07-21', changefreq: 'monthly', priority: 0.7 },
+  { url: '/ratgeber/deutschlandticket-ausland',          lastmod: '2026-07-22', changefreq: 'monthly', priority: 0.7 },
   { url: '/ratgeber/deutschlandticket-ice',              lastmod: '2026-07-19', changefreq: 'monthly', priority: 0.7 },
   { url: '/ratgeber/deutschlandticket-studenten',        lastmod: '2026-07-19', changefreq: 'monthly', priority: 0.7 },
   { url: '/ratgeber/deutschlandticket-jobticket',        lastmod: '2026-07-19', changefreq: 'monthly', priority: 0.7 },
+  { url: '/ratgeber/deutschlandticket-kinder',           lastmod: '2026-07-22', changefreq: 'monthly', priority: 0.6 },
   { url: '/ratgeber/deutschlandticket-preiserhoehung',   lastmod: '2026-07-19', changefreq: 'monthly', priority: 0.6 },
   { url: '/ratgeber/deutschlandticket-mitnahme',         lastmod: '2026-07-19', changefreq: 'monthly', priority: 0.6 },
+  { url: '/ratgeber/deutschlandticket-verloren',         lastmod: '2026-07-22', changefreq: 'monthly', priority: 0.6 },
   { url: '/ratgeber/deutschlandticket-erste-klasse',     lastmod: '2026-07-21', changefreq: 'monthly', priority: 0.5 },
   { url: '/ratgeber/deutschlandticket-pausieren',        lastmod: '2026-07-21', changefreq: 'monthly', priority: 0.5 },
   // Provider cancellation guides
