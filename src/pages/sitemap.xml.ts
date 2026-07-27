@@ -1,7 +1,7 @@
 /**
  * Manual sitemap — lists only currently live pages.
  * UPDATE this file every time a page is added or removed.
- * Last updated: 2026-07-22
+ * Last updated: 2026-07-27
  */
 const SITE = 'https://ticket-rechner.de';
 interface SitemapEntry {
@@ -17,10 +17,10 @@ const pages: SitemapEntry[] = [
   { url: '/lohnt-sich-rechner',            lastmod: '2026-07-22', changefreq: 'weekly',  priority: 0.9 },
   { url: '/kuendigungsschreiben',          lastmod: '2026-07-22', changefreq: 'weekly',  priority: 0.9 },
   // Ratgeber hub
-  { url: '/ratgeber',                      lastmod: '2026-07-22', changefreq: 'weekly',  priority: 0.8 },
+  { url: '/ratgeber',                      lastmod: '2026-07-27', changefreq: 'weekly',  priority: 0.8 },
   // Ratgeber articles
   { url: '/ratgeber/deutschlandticket-kuendigen',        lastmod: '2026-07-21', changefreq: 'monthly', priority: 0.8 },
-  { url: '/ratgeber/deutschlandticket-kaufen',           lastmod: '2026-07-21', changefreq: 'monthly', priority: 0.7 },
+  { url: '/ratgeber/deutschlandticket-kaufen',           lastmod: '2026-07-27', changefreq: 'monthly', priority: 0.8 },
   { url: '/ratgeber/deutschlandticket-steuer-absetzen',  lastmod: '2026-07-22', changefreq: 'monthly', priority: 0.7 },
   { url: '/ratgeber/deutschlandticket-kosten',           lastmod: '2026-07-21', changefreq: 'monthly', priority: 0.7 },
   { url: '/ratgeber/deutschlandticket-gueltigkeit',      lastmod: '2026-07-21', changefreq: 'monthly', priority: 0.7 },
@@ -34,6 +34,17 @@ const pages: SitemapEntry[] = [
   { url: '/ratgeber/deutschlandticket-verloren',         lastmod: '2026-07-22', changefreq: 'monthly', priority: 0.6 },
   { url: '/ratgeber/deutschlandticket-erste-klasse',     lastmod: '2026-07-21', changefreq: 'monthly', priority: 0.5 },
   { url: '/ratgeber/deutschlandticket-pausieren',        lastmod: '2026-07-21', changefreq: 'monthly', priority: 0.5 },
+  // New Cluster 1: Problem Solving
+  { url: '/ratgeber/deutschlandticket-gestohlen',              lastmod: '2026-07-27', changefreq: 'monthly', priority: 0.7 },
+  { url: '/ratgeber/deutschlandticket-ersatzkarte',            lastmod: '2026-07-27', changefreq: 'monthly', priority: 0.7 },
+  { url: '/ratgeber/deutschlandticket-gesperrt',               lastmod: '2026-07-27', changefreq: 'monthly', priority: 0.7 },
+  { url: '/ratgeber/deutschlandticket-app-funktioniert-nicht', lastmod: '2026-07-27', changefreq: 'monthly', priority: 0.7 },
+  { url: '/ratgeber/deutschlandticket-erstattung',             lastmod: '2026-07-27', changefreq: 'monthly', priority: 0.7 },
+  // New Cluster 2: Evergreen High Volume
+  { url: '/ratgeber/deutschlandticket-verlaengern',            lastmod: '2026-07-27', changefreq: 'monthly', priority: 0.6 },
+  { url: '/ratgeber/deutschlandticket-kundenservice',          lastmod: '2026-07-27', changefreq: 'monthly', priority: 0.7 },
+  { url: '/ratgeber/deutschlandticket-schueler',               lastmod: '2026-07-27', changefreq: 'monthly', priority: 0.7 },
+  { url: '/ratgeber/deutschlandticket-vs-bahncard',            lastmod: '2026-07-27', changefreq: 'monthly', priority: 0.7 },
   // Provider cancellation guides
   { url: '/kuendigen/db',   lastmod: '2026-07-21', changefreq: 'monthly', priority: 0.7 },
   { url: '/kuendigen/hvv',  lastmod: '2026-07-21', changefreq: 'monthly', priority: 0.6 },
