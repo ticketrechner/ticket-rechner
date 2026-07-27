@@ -1,0 +1,730 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const title = 'Deutschlandticket Ersatzkarte 2026: Kosten, Anbieter & Anleitung';
+const description = 'Deutschlandticket Ersatzkarte beantragen — alle Anbieter, Gebühren (10–25 €), Lieferzeiten und Alternativen im Überblick. Schritt-für-Schritt für Chipkarte und Handyticket.';
+const canonical = 'https://ticket-rechner.de/ratgeber/deutschlandticket-ersatzkarte';
+const ogTitle = 'Deutschlandticket Ersatzkarte 2026: Kosten, Anbieter & Anleitung';
+const ogDescription = 'Chipkarte verloren, gestohlen oder defekt? So beantragst du eine Ersatzkarte — Gebühren, Lieferzeiten und wann sich der Wechsel aufs Handyticket lohnt.';
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": title,
+  "description": description,
+  "datePublished": "2026-07-27",
+  "dateModified": "2026-07-27",
+  "author": {
+    "@type": "Organization",
+    "name": "Redaktion ticket-rechner.de",
+    "url": "https://ticket-rechner.de/ueber-uns"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "ticket-rechner.de",
+    "url": "https://ticket-rechner.de",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ticket-rechner.de/og-image.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": canonical
+  },
+  "image": "https://ticket-rechner.de/og-image.png"
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Was kostet eine Deutschlandticket Ersatzkarte?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Zwischen 10 und 25 €, je nach Verkehrsunternehmen. Die häufigsten Gebühren: DB und viele Verbünde 10 €, MVG München und RVS Baden-Württemberg 15 €, rnv Mannheim/Heidelberg und OWL Verkehr Bielefeld 20–25 €. Bei wiederholtem Ersatz innerhalb von 12 Monaten steigt die Gebühr bei einigen Anbietern auf 20 €."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie lange dauert die Lieferung einer Ersatzkarte?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Per Post dauert es je nach Anbieter 2–14 Werktage. DB und viele Verbünde liefern in 2–5 Werktagen, HVV Hamburg in bis zu 10 Tagen, MVG München in bis zu 14 Tagen. In Kundenzentren bekommst du die Karte bei vielen Anbietern sofort."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wo beantrage ich eine Ersatzkarte für das Deutschlandticket?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Immer beim Verkehrsunternehmen, bei dem du das Abo abgeschlossen hast. Die Beantragung läuft über das Online-Kundenportal (z. B. Aboportal bei bahn.de), per Telefon, per E-Mail oder im Kundenzentrum vor Ort."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kann ich statt einer Ersatzkarte auf das Handyticket wechseln?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja, bei vielen Anbietern ist der Wechsel von Chipkarte auf Handyticket im Kundenportal möglich. Das spart die Ersatzgebühr und du hast das Ticket sofort. Voraussetzung: ein Smartphone mit Android 8+ oder iOS 16+ und die App deines Anbieters."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was ist der Unterschied zwischen Ersatzkarte und Folgekarte?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Eine Ersatzkarte brauchst du bei Verlust, Diebstahl oder Beschädigung — dafür fällt eine Gebühr an und die alte Karte wird sofort gesperrt. Eine Folgekarte bekommst du automatisch und kostenlos, wenn die Chipkarte nach 4–5 Jahren abläuft."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Funktioniert meine alte Chipkarte noch, wenn ich eine Ersatzkarte bestelle?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nein. Mit der Bestellung der Ersatzkarte wird die alte Chipkarte gesperrt und ist ab sofort ungültig — auch wenn du sie wiederfindest. Die Gebühr wird nicht erstattet."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Muss ich bei einer defekten Chipkarte auch eine Gebühr zahlen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In der Regel ja — die meisten Anbieter unterscheiden nicht zwischen Verlust und Defekt. Ausnahme: Wenn die Karte nachweislich einen Produktionsfehler hat (z. B. Chip funktioniert ab Tag 1 nicht), übernehmen einige Anbieter den Ersatz kostenlos. Frag gezielt danach."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was mache ich in der Übergangszeit, bis die Ersatzkarte kommt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Einige Anbieter stellen ein vorläufiges Papierticket aus, das mit Ausweis bis zu 7 Tage gültig ist. Alternativ: Wechsel aufs Handyticket im Kundenportal — dann hast du dein Ticket sofort. Falls beides nicht geht, musst du Einzeltickets kaufen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Bekomme ich die Ersatzgebühr zurück, wenn ich die alte Karte wiederfinde?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nein. Die Ersatzgebühr wird nicht erstattet. Die alte Karte ist gesperrt und funktioniert nicht mehr. Gib sie beim Verkehrsunternehmen zurück."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie oft kann ich eine Ersatzkarte bestellen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Es gibt keine offizielle Obergrenze, aber die Gebühren steigen bei vielen Anbietern mit jeder Bestellung. Beim Rheinbahn-Abo z. B. kostet die erste Ersatzkarte 10 €, die zweite innerhalb von 12 Monaten bereits 20 €. Bei Schülertickets (z. B. OWL Verkehr) werden maximal drei Ersatzkarten pro Schuljahr ausgestellt."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Brauche ich eine Polizeianzeige für die Ersatzkarte?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nur bei Diebstahl. Viele Verkehrsunternehmen (z. B. HVV) verlangen das polizeiliche Aktenzeichen, wenn du angibst, dass die Karte gestohlen wurde. Bei einfachem Verlust oder Defekt ist keine Anzeige nötig."
+      }
+    }
+  ]
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://ticket-rechner.de/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Ratgeber",
+      "item": "https://ticket-rechner.de/ratgeber"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Deutschlandticket Ersatzkarte",
+      "item": canonical
+    }
+  ]
+};
+---
+
+<Base
+  title={title}
+  description={description}
+  canonical={canonical}
+  ogTitle={ogTitle}
+  ogDescription={ogDescription}
+  ogType="website"
+  ogUrl={canonical}
+>
+  <article>
+    <p class="article-meta">Ratgeber · Aktualisiert am 27.07.2026</p>
+
+    <h1>Deutschlandticket Ersatzkarte — Kosten, Wege und die schnellste Lösung</h1>
+
+    <p>
+      Eine Ersatzkarte für das Deutschlandticket kostet je nach Anbieter zwischen 10 und 25 € und
+      wird über das Kundenportal, telefonisch oder im Kundenzentrum beantragt. Die alte Chipkarte
+      wird dabei sofort gesperrt. Wer nicht warten will, kann bei vielen Anbietern direkt aufs
+      Handyticket wechseln — kostenlos und sofort verfügbar.
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>Wann du eine Ersatzkarte brauchst — und wann nicht</h2>
+
+    <p>
+      Nicht jedes Problem mit dem Deutschlandticket erfordert eine neue Chipkarte. Bevor du eine
+      Ersatzkarte bestellst (und bezahlst), prüfe, welche Situation auf dich zutrifft:
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Situation</th>
+          <th>Ersatzkarte nötig?</th>
+          <th>Bessere Alternative</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Chipkarte verloren</td>
+          <td>Ja</td>
+          <td>Oder: Wechsel aufs Handyticket (0 €)</td>
+        </tr>
+        <tr>
+          <td>Chipkarte gestohlen</td>
+          <td>Ja (mit Polizeianzeige)</td>
+          <td>Oder: Wechsel aufs Handyticket (0 €)</td>
+        </tr>
+        <tr>
+          <td>Chipkarte defekt / nicht lesbar</td>
+          <td>Ja</td>
+          <td>Reklamation bei Produktionsfehler</td>
+        </tr>
+        <tr>
+          <td>Chipkarte abgelaufen (nach 4–5 Jahren)</td>
+          <td>Nein — Folgekarte kommt automatisch</td>
+          <td>Nichts tun, abwarten</td>
+        </tr>
+        <tr>
+          <td>Handy verloren / gestohlen</td>
+          <td>Nein</td>
+          <td>App auf neuem Gerät installieren (0 €)</td>
+        </tr>
+        <tr>
+          <td>Handy-Akku leer bei Kontrolle</td>
+          <td>Nein</td>
+          <td>Handy laden, Powerbank mitnehmen</td>
+        </tr>
+        <tr>
+          <td>App zeigt Ticket nicht an</td>
+          <td>Nein</td>
+          <td>App-Update, Neuanmeldung, Kundenservice</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>
+      <strong>Kurz:</strong> Eine Ersatzkarte brauchst du nur, wenn die physische Chipkarte weg oder
+      kaputt ist. Bei allen digitalen Problemen gibt es schnellere und kostenlose Lösungen.
+    </p>
+
+    <p>
+      Details zu Verlust und Diebstahl findest du in den spezialisierten Ratgebern:
+      <a href="/ratgeber/deutschlandticket-verloren">Deutschlandticket verloren</a> ·
+      <a href="/ratgeber/deutschlandticket-gestohlen">Deutschlandticket gestohlen</a>
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>Ersatzkarte beantragen: Schritt für Schritt</h2>
+
+    <h3>Schritt 1: Anbieter identifizieren</h3>
+
+    <p>
+      Dein Ansprechpartner ist das Verkehrsunternehmen, bei dem du das Abo abgeschlossen hast.
+      Nicht sicher, wer das ist? Schau auf deinen Kontoauszug — im Buchungstext der monatlichen
+      Abbuchung steht der Name (z. B. „DB Vertrieb", „HVV", „MVG München", „Rheinbahn").
+    </p>
+
+    <h3>Schritt 2: Verlust oder Defekt melden</h3>
+
+    <p>
+      Je nach Anbieter hast du mehrere Wege:
+    </p>
+
+    <p>
+      <strong>Online-Kundenportal</strong> — der schnellste Weg bei den meisten Anbietern. Bei der
+      DB über das Aboportal auf bahn.de, bei der MVG München unter „Vertragsverwaltung" →
+      „Chipkarte neu beantragen", beim HVV über das meinhvv-Kundenkonto.<br>
+      <strong>Kundenzentrum vor Ort</strong> — hier bekommst du bei vielen Anbietern die Karte
+      sofort ausgehändigt (gegen Vorlage Personalausweis + Zahlung der Gebühr).<br>
+      <strong>Telefon</strong> — DB-Kundenservice: 030 2970, HVV-Infoline: 040 / 19 449 (auch
+      außerhalb der Geschäftszeiten).<br>
+      <strong>E-Mail oder Kontaktformular</strong> — bei einigen Verbünden wie der Rheinbahn oder
+      DB Regio.
+    </p>
+
+    <h3>Schritt 3: Gebühr zahlen</h3>
+
+    <p>
+      Die Ersatzgebühr wird entweder direkt vor Ort kassiert oder per SEPA-Lastschrift vom
+      hinterlegten Konto abgebucht. Die genauen Kosten pro Anbieter findest du in der Tabelle
+      weiter unten.
+    </p>
+
+    <h3>Schritt 4: Neue Chipkarte erhalten</h3>
+
+    <p>
+      Per Post (2–14 Werktage, je nach Anbieter) oder sofort im Kundenzentrum. Die alte Karte ist
+      ab dem Moment der Bestellung gesperrt und ungültig.
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>Was kostet die Ersatzkarte? Gebühren nach Anbieter</h2>
+
+    <p>
+      Die Gebühren für eine Deutschlandticket-Ersatzkarte variieren stark je nach
+      Verkehrsunternehmen. Hier die wichtigsten Anbieter im Überblick:
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Anbieter / Verbund</th>
+          <th>Gebühr (1. Ersatz)</th>
+          <th>Gebühr (2. Ersatz in 12 Mon.)</th>
+          <th>Lieferzeit per Post</th>
+          <th>Sofort-Ersatz vor Ort?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>DB / viele Verbünde</td>
+          <td>10 €</td>
+          <td>20 €</td>
+          <td>2–5 Werktage</td>
+          <td>Teilweise (DB Reisezentren)</td>
+        </tr>
+        <tr>
+          <td>Rheinbahn (Düsseldorf)</td>
+          <td>10 €</td>
+          <td>20 €</td>
+          <td>3–5 Werktage</td>
+          <td>Ja (KundenCenter)</td>
+        </tr>
+        <tr>
+          <td>Westfalentarif / DB Regio NRW</td>
+          <td>10 €</td>
+          <td>—</td>
+          <td>3–5 Werktage</td>
+          <td>Teilweise</td>
+        </tr>
+        <tr>
+          <td>MVG (München)</td>
+          <td>15 €</td>
+          <td>15 €</td>
+          <td>Bis zu 14 Tage</td>
+          <td>Nein (nur Post)</td>
+        </tr>
+        <tr>
+          <td>RVS (Baden-Württemberg)</td>
+          <td>15 €</td>
+          <td>15 €</td>
+          <td>3–5 Werktage</td>
+          <td>Teilweise</td>
+        </tr>
+        <tr>
+          <td>HVV (Hamburg)</td>
+          <td>Variiert</td>
+          <td>Variiert</td>
+          <td>Bis zu 10 Tage</td>
+          <td>Ja (Servicestellen)</td>
+        </tr>
+        <tr>
+          <td>rnv (Mannheim/Heidelberg)</td>
+          <td>20 €</td>
+          <td>20 €</td>
+          <td>3–5 Werktage</td>
+          <td>Ja (Mobilitätszentralen)</td>
+        </tr>
+        <tr>
+          <td>OWL Verkehr (Bielefeld)</td>
+          <td>25 €</td>
+          <td>25 €</td>
+          <td>3 Werktage</td>
+          <td>Ja (Mobilitätsberatung)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>
+      <strong>Wichtig:</strong> Die Gebühren ändern sich regelmäßig und können abweichen. Im
+      Zweifel frag direkt bei deinem Anbieter nach, bevor du bestellst.
+    </p>
+
+    <p>
+      Bei Schülertickets gelten oft andere Regeln: Manche Verbünde stellen maximal drei
+      Ersatzkarten pro Schuljahr aus. Die Bestellung läuft über das Schulsekretariat, nicht direkt
+      über den Verkehrsverbund. Mehr dazu:
+      <a href="/ratgeber/deutschlandticket-studenten">Deutschlandticket für Schüler und Studenten</a>.
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>Ersatzkarte vs. Folgekarte: Der Unterschied</h2>
+
+    <p>
+      Zwei Begriffe, die häufig verwechselt werden — aber komplett unterschiedliche Vorgänge
+      beschreiben:
+    </p>
+
+    <p>
+      <strong>Ersatzkarte:</strong> Du brauchst eine neue Chipkarte, weil die alte verloren,
+      gestohlen oder defekt ist. Du musst aktiv werden und eine Gebühr (10–25 €) zahlen. Die alte
+      Karte wird sofort gesperrt.
+    </p>
+
+    <p>
+      <strong>Folgekarte:</strong> Deine Chipkarte läuft nach ihrer regulären Gültigkeitsdauer
+      (bei den meisten Anbietern 4–5 Jahre) ab. Der Anbieter schickt dir automatisch eine neue
+      Karte — kostenlos und ohne dass du etwas tun musst. Dein Abo läuft dabei nahtlos weiter.
+    </p>
+
+    <p>
+      <strong>Prüfe also zuerst:</strong> Steht auf deiner Chipkarte ein Ablaufdatum? Wenn die
+      Karte bald ausläuft, bekommst du die neue Karte automatisch ca. 4–6 Wochen vorher zugeschickt.
+      Keine Gebühr, kein Aufwand.
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>Die schnellere Alternative: Wechsel aufs Handyticket</h2>
+
+    <p>
+      Bevor du 10–25 € für eine neue Chipkarte ausgibst und tagelang auf die Post wartest, prüfe
+      diese Option: Bei vielen Anbietern kannst du dein Abo direkt im Kundenportal von Chipkarte
+      auf Handyticket umstellen.
+    </p>
+
+    <p>
+      <strong>Vorteile:</strong> Keine Ersatzgebühr. Ticket sofort verfügbar. Kein Warten auf Post.
+      Bei zukünftigem Verlust (Handy weg) stellst du das Ticket kostenlos auf einem neuen Gerät
+      wieder her — ebenfalls ohne Gebühr.
+    </p>
+
+    <p>
+      <strong>So funktioniert der Wechsel:</strong>
+    </p>
+
+    <p>
+      1. Logge dich in das Kundenportal deines Anbieters ein (z. B. Aboportal bahn.de, meinhvv,
+      MVG-Kundenportal).<br>
+      2. Suche die Option „Ticketmedium wechseln" oder „Auf Handyticket umstellen".<br>
+      3. Bestätige den Wechsel. Du bekommst einen Abrufcode per E-Mail.<br>
+      4. Installiere die App deines Anbieters (DB Navigator, hvv switch, MVGO etc.) auf deinem
+      Smartphone.<br>
+      5. Gib den Abrufcode ein oder melde dich mit deinen Zugangsdaten an.<br>
+      6. Das Ticket ist sofort aktiv.
+    </p>
+
+    <p>
+      <strong>Voraussetzung:</strong> Ein Smartphone mit mindestens Android 8 (bei einigen Anbietern
+      Android 9) oder iOS 16. Bei der MVG München musst du mindestens 16 Jahre alt sein, um ein
+      Handyticket nutzen zu können — für Jüngere bleibt nur die Chipkarte.
+    </p>
+
+    <p>
+      <strong>Beachte:</strong> Der Wechsel von Chipkarte auf Handyticket ist bei den meisten
+      Anbietern erst zum Folgemonat wirksam (Bestellung bis zum 10. des Vormonats). In der
+      Zwischenzeit brauchst du also entweder die Ersatzkarte oder ein Übergangsticket. Frag deinen
+      Anbieter, ob ein sofortiger Wechsel möglich ist — einige Verbünde erlauben es auch im
+      laufenden Monat.
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>Chipkarte defekt: Was tun, wenn die Karte nicht mehr funktioniert?</h2>
+
+    <p>
+      Wenn deine Chipkarte bei der Kontrolle nicht ausgelesen werden kann oder am Automaten nicht
+      erkannt wird, gibt es zwei mögliche Ursachen:
+    </p>
+
+    <p>
+      <strong>Physische Beschädigung:</strong> Knicke, Risse über dem Chip-Bereich, starke Hitze
+      oder Wasser können den eingebauten Chip zerstören. In diesem Fall brauchst du eine
+      Ersatzkarte — der Vorgang und die Gebühren sind identisch mit einer verlorenen Karte.
+    </p>
+
+    <p>
+      <strong>Produktionsfehler:</strong> Selten, aber möglich — der Chip funktioniert ab Lieferung
+      nicht oder fällt nach kurzer Zeit ohne äußere Einwirkung aus. In diesem Fall solltest du deinen
+      Anbieter kontaktieren und ausdrücklich auf den Produktionsfehler hinweisen. Einige
+      Verkehrsunternehmen ersetzen die Karte dann kostenlos. Das ist aber kein garantierter
+      Rechtsanspruch — es hängt vom Anbieter ab.
+    </p>
+
+    <p>
+      <strong>Tipp:</strong> Wenn die Karte bei einer Kontrolle nicht lesbar ist, wird das wie
+      „Fahren ohne gültigen Fahrschein" behandelt — 60 € erhöhtes Beförderungsentgelt. Du kannst
+      das nachträglich mit Abonachweis auf 7 € reduzieren lassen, aber es ist nervig. Bemerke eine
+      defekte Karte also lieber vor der Fahrt: Halte sie testweise an einen Fahrkartenautomaten.
+      Wird sie nicht erkannt, beantrage sofort Ersatz.
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>Übergangszeit: So fährst du weiter, bis die Ersatzkarte kommt</h2>
+
+    <p>
+      Zwischen Bestellung und Erhalt der neuen Chipkarte können mehrere Tage (bis zu 14 Tage bei
+      der MVG München) vergehen. In dieser Zeit hast du technisch kein gültiges Ticket.
+    </p>
+
+    <p>
+      <strong>Möglichkeit 1: Vorläufiges Papierticket.</strong> Einige Anbieter stellen bei der
+      Verlustmeldung ein provisorisches Papierticket aus, das zusammen mit dem Personalausweis für
+      bis zu 7 Tage gültig ist. Frag bei der Bestellung gezielt danach — nicht jeder Anbieter
+      bietet das an.
+    </p>
+
+    <p>
+      <strong>Möglichkeit 2: Sofort-Ersatz im Kundenzentrum.</strong> Rheinbahn, OWL Verkehr, rnv
+      und einige DB-Reisezentren können die neue Chipkarte direkt vor Ort ausstellen. Du zahlst die
+      Gebühr, zeigst deinen Ausweis und nimmst die Karte sofort mit.
+    </p>
+
+    <p>
+      <strong>Möglichkeit 3: Wechsel aufs Handyticket.</strong> Wenn dein Anbieter den sofortigen
+      Medienwechsel erlaubt, ist das die beste Lösung — Ticket ab sofort verfügbar, keine
+      Wartezeit, keine Ersatzgebühr.
+    </p>
+
+    <p>
+      <strong>Möglichkeit 4: Einzeltickets kaufen.</strong> Wenn keine der obigen Optionen
+      funktioniert, musst du für die Übergangszeit reguläre Einzeltickets an Automaten oder in Apps
+      kaufen. Die Kosten werden nicht vom Deutschlandticket-Abo abgezogen oder erstattet.
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>5 Fehler, die bei der Ersatzkarte Geld und Zeit kosten</h2>
+
+    <p>
+      <strong>Neues Abo abschließen statt Ersatzkarte bestellen.</strong> Ein verbreiteter Fehler.
+      Du brauchst kein neues Abo — nur eine Ersatzkarte für das bestehende. Ein neues Abo bedeutet
+      doppelte monatliche Kosten (2 × 63 €), und du musst das alte erst kündigen. Ersatzkarte
+      beantragen reicht.
+    </p>
+
+    <p>
+      <strong>Verlust nicht melden.</strong> Solange du den Verlust nicht meldest, bleibt die alte
+      Karte aktiv. Jemand anderes könnte sie nutzen. Außerdem bekommst du ohne Verlustmeldung keine
+      Ersatzkarte. Melde den Verlust sofort.
+    </p>
+
+    <p>
+      <strong>Wiedergefundene Karte weiternutzen.</strong> Sobald du eine Ersatzkarte bestellt hast,
+      ist die alte Karte gesperrt — auch wenn du sie wiederfindest. Sie funktioniert nicht mehr.
+      Nutze nur die neue Karte und gib die alte beim Verkehrsunternehmen zurück.
+    </p>
+
+    <p>
+      <strong>Auf Post warten statt Sofort-Ersatz nutzen.</strong> Wenn du die Karte dringend
+      brauchst, geh ins Kundenzentrum. Viele Anbieter stellen die Karte direkt aus. Das spart
+      tagelangen Verzicht auf das Ticket.
+    </p>
+
+    <p>
+      <strong>Ersatzgebühr-Erstattung erwarten.</strong> Die Gebühr wird nicht zurückerstattet —
+      auch nicht, wenn du die alte Karte wiederfindest. Das steht in den Tarifbedingungen aller
+      großen Anbieter.
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>Ersatzkarte für Schüler- und Jobticket</h2>
+
+    <p>
+      <strong>Schülerticket:</strong> Schüler, die ihr Deutschlandticket über die Schule oder den
+      Schulträger erhalten haben, melden den Verlust dort — nicht beim Verkehrsunternehmen. Der
+      Schulträger bestellt die Ersatzkarte, die Gebühr (meist 10–25 €) wird mit den Eltern
+      abgerechnet. Manche Verbünde beschränken die Anzahl auf drei Ersatzkarten pro Schuljahr. Beim
+      HVV Hamburg ist die Ersatzkarte für das kostenlose Schüler-Deutschlandticket gebührenfrei.
+    </p>
+
+    <p>
+      <strong>Jobticket:</strong> Beim Deutschlandticket Jobticket läuft die Ersatzbestellung über
+      denselben Weg wie beim normalen Abo — Kundenportal, Telefon oder Kundenzentrum. Die Gebühr
+      trägst in der Regel du, nicht der Arbeitgeber. Bei einigen Firmenticket-Programmen ist ein
+      Wechsel auf das Handyticket über das Aboportal besonders einfach — frag im Zweifel deine
+      HR-Abteilung.
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>Häufige Fragen (FAQ)</h2>
+
+    <h3>Was kostet eine Deutschlandticket Ersatzkarte?</h3>
+    <p>
+      Zwischen 10 und 25 €, je nach Verkehrsunternehmen. Die häufigsten Gebühren: DB und viele
+      Verbünde 10 €, MVG München und RVS 15 €, rnv und OWL Verkehr 20–25 €. Bei wiederholtem
+      Ersatz innerhalb von 12 Monaten steigt die Gebühr bei einigen Anbietern auf 20 €.
+    </p>
+
+    <h3>Wie lange dauert die Lieferung einer Ersatzkarte?</h3>
+    <p>
+      Per Post 2–14 Werktage. DB und viele Verbünde liefern in 2–5 Werktagen, HVV in bis zu 10
+      Tagen, MVG München in bis zu 14 Tagen. Im Kundenzentrum vor Ort bekommst du die Karte bei
+      vielen Anbietern sofort.
+    </p>
+
+    <h3>Wo beantrage ich eine Ersatzkarte?</h3>
+    <p>
+      Beim Verkehrsunternehmen, bei dem du dein Abo hast. Über das Online-Kundenportal, telefonisch,
+      per E-Mail oder im Kundenzentrum vor Ort.
+    </p>
+
+    <h3>Kann ich statt Ersatzkarte aufs Handyticket wechseln?</h3>
+    <p>
+      Ja, bei vielen Anbietern ist das im Kundenportal möglich. Das spart die Ersatzgebühr und du
+      hast das Ticket sofort. Voraussetzung: Smartphone mit Android 8+ oder iOS 16+.
+    </p>
+
+    <h3>Was ist der Unterschied zwischen Ersatzkarte und Folgekarte?</h3>
+    <p>
+      Ersatzkarte: bei Verlust, Diebstahl oder Defekt — kostet 10–25 €, alte Karte wird sofort
+      gesperrt. Folgekarte: bei regulärem Ablauf nach 4–5 Jahren — kommt automatisch und kostenlos.
+    </p>
+
+    <h3>Funktioniert die alte Chipkarte nach der Ersatzbestellung noch?</h3>
+    <p>
+      Nein. Die alte Karte wird mit der Bestellung gesperrt und ist sofort ungültig — auch wenn du
+      sie wiederfindest.
+    </p>
+
+    <h3>Muss ich bei einer defekten Chipkarte auch die Gebühr zahlen?</h3>
+    <p>
+      Meistens ja. Ausnahme: nachweislicher Produktionsfehler. Frag deinen Anbieter gezielt danach.
+    </p>
+
+    <h3>Was mache ich in der Übergangszeit ohne Ticket?</h3>
+    <p>
+      Vorläufiges Papierticket anfragen, Sofort-Ersatz im Kundenzentrum holen, aufs Handyticket
+      wechseln oder Einzeltickets kaufen.
+    </p>
+
+    <h3>Bekomme ich die Gebühr zurück, wenn ich die Karte wiederfinde?</h3>
+    <p>
+      Nein. Die Gebühr wird nicht erstattet. Die alte Karte ist gesperrt und muss zurückgegeben
+      werden.
+    </p>
+
+    <h3>Wie oft kann ich eine Ersatzkarte bestellen?</h3>
+    <p>
+      Keine offizielle Obergrenze, aber die Kosten steigen bei vielen Anbietern mit jeder weiteren
+      Bestellung. Bei Schülertickets teilweise auf drei Stück pro Schuljahr begrenzt.
+    </p>
+
+    <h3>Brauche ich eine Polizeianzeige für die Ersatzkarte?</h3>
+    <p>
+      Nur bei Diebstahl. Viele Anbieter verlangen das Aktenzeichen, wenn du Diebstahl als Grund
+      angibst. Bei Verlust oder Defekt brauchst du keine Anzeige.
+      Mehr zum Diebstahl-Ablauf: <a href="/ratgeber/deutschlandticket-gestohlen">Deutschlandticket gestohlen</a>.
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>Zusammenfassung: Deine Optionen im Vergleich</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Option</th>
+          <th>Kosten</th>
+          <th>Wartezeit</th>
+          <th>Geeignet für</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Ersatzkarte per Post</td>
+          <td>10–25 €</td>
+          <td>2–14 Werktage</td>
+          <td>Wer die Chipkarte behalten will</td>
+        </tr>
+        <tr>
+          <td>Sofort-Ersatz im Kundenzentrum</td>
+          <td>10–25 €</td>
+          <td>Sofort</td>
+          <td>Dringender Bedarf, Kundenzentrum erreichbar</td>
+        </tr>
+        <tr>
+          <td>Wechsel aufs Handyticket</td>
+          <td>0 €</td>
+          <td>Sofort (oder ab Folgemonat)</td>
+          <td>Smartphone vorhanden, kein Chip-Bedarf</td>
+        </tr>
+        <tr>
+          <td>Einzeltickets in der Übergangszeit</td>
+          <td>Variiert</td>
+          <td>Sofort</td>
+          <td>Notlösung, wenn nichts anderes geht</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>
+      Wer sich die Ersatzgebühr sparen will und ein Smartphone hat, für den ist der Wechsel aufs
+      Handyticket die klügste Lösung. Die Chipkarte bleibt die bessere Wahl für alle, die kein
+      Smartphone nutzen möchten oder können — etwa Kinder oder ältere Familienangehörige.
+    </p>
+
+    <p>
+      <a href="/lohnt-sich-rechner">Lohnt sich das Deutschlandticket für dich? →</a> ·
+      <a href="/kuendigungsfrist-rechner">Kündigungsfrist berechnen →</a>
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>Offizielle Quellen</h2>
+
+    <p>
+      <a href="https://www.bahn.de/faq/ich-habe-mein-ticket-verloren-es-wurde-mir-gestohlen-stark-beschaedigt-wie-und-wo-bekomme-ich-ersatz" target="_blank" rel="noopener">DB — FAQ bei Verlust, Diebstahl oder Beschädigung</a> ·
+      <a href="https://www.hvv.de/de/deutschlandticket-faq" target="_blank" rel="noopener">HVV — Deutschlandticket FAQ</a> ·
+      <a href="https://www.mvg.de/abos-tickets/abos/hilfe-chipkarte.html" target="_blank" rel="noopener">MVG München — Hilfe zur Chipkarte</a> ·
+      <a href="https://www.rnv-online.de/tickets/ticket-abo/deutschland-ticket/faq-chipkarte/" target="_blank" rel="noopener">rnv — FAQ Chipkarte</a> ·
+      <a href="https://www.rheinbahn.de/service/faq/tickets" target="_blank" rel="noopener">Rheinbahn — FAQ Tickets</a>
+    </p>
+
+    <p class="article-footer">
+      Redaktion ticket-rechner.de · Stand: Juli 2026. Ersatzgebühren und Verfahren können je nach
+      Verkehrsverbund abweichen — im Zweifel direkt beim Anbieter nachfragen. Alle Angaben ohne
+      Gewähr. Diese Website ist nicht affiliiert mit der Deutschen Bahn oder einem Verkehrsverbund.
+    </p>
+
+    <p>
+      <a href="/ratgeber/deutschlandticket-verloren">Deutschlandticket verloren</a> ·
+      <a href="/ratgeber/deutschlandticket-gestohlen">Deutschlandticket gestohlen</a> ·
+      <a href="/ratgeber/deutschlandticket-kosten">Kosten-Überblick</a> ·
+      <a href="/ratgeber/deutschlandticket-kuendigen">Deutschlandticket kündigen</a>
+    </p>
+
+  </article>
+
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+</Base>

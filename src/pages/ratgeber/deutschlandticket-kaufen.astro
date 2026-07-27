@@ -1,507 +1,631 @@
 ---
 import Base from '../../layouts/Base.astro';
 
-const schema = [
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Deutschlandticket kaufen 2026: Wo, wie und welcher Anbieter?",
-    "datePublished": "2026-07-21",
-    "dateModified": "2026-07-21",
-    "inLanguage": "de",
-    "author": { "@type": "Organization", "name": "Redaktion ticket-rechner.de" },
-    "publisher": { "@type": "Organization", "name": "ticket-rechner.de" },
-    "mainEntityOfPage": "https://ticket-rechner.de/ratgeber/deutschlandticket-kaufen"
+const title = 'Deutschlandticket kaufen 2026: Wo, wie und worauf du achten musst';
+const description = 'Deutschlandticket kaufen — alle Anbieter, Zahlungsmethoden und Fallstricke auf einen Blick. So bestellst du das 63-€-Ticket, ohne doppelt zu zahlen.';
+const canonical = 'https://ticket-rechner.de/ratgeber/deutschlandticket-kaufen';
+const ogTitle = 'Deutschlandticket kaufen 2026: Wo, wie und worauf du achten musst';
+const ogDescription = 'DB, Verbund-App oder Deutschlandticket-App? SEPA, PayPal oder Kreditkarte? Alle Kaufwege im Vergleich — plus die Fehler, die dich Geld kosten.';
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": title,
+  "description": description,
+  "datePublished": "2026-07-27",
+  "dateModified": "2026-07-27",
+  "author": {
+    "@type": "Organization",
+    "name": "Redaktion ticket-rechner.de",
+    "url": "https://ticket-rechner.de/ueber-uns"
   },
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      { "@type": "Question", "name": "Wo kann ich das Deutschlandticket kaufen?", "acceptedAnswer": { "@type": "Answer", "text": "Über die App oder Website der Deutschen Bahn (DB Navigator, bahn.de), über deutschlandticket.de, über die Apps und Portale der regionalen Verkehrsverbünde (z. B. HVV, RMV, MVG, BVG) oder vor Ort in DB Reisezentren und Servicestellen der Verbünde. Das Ticket gibt es als Handyticket oder Chipkarte — der Preis ist überall gleich: 63 € pro Monat." } },
-      { "@type": "Question", "name": "Kann ich das Deutschlandticket ohne App kaufen?", "acceptedAnswer": { "@type": "Answer", "text": "Ja. Du kannst es als Chipkarte über das Kundenportal deines Verbunds, in DB Reisezentren oder in Kundencentern bestellen. Die Chipkarte kommt per Post und braucht bis zu 14 Tage. Einige Verbünde bieten außerdem ein Wallet-Ticket an, das ohne eigene App funktioniert." } },
-      { "@type": "Question", "name": "Kann ich das Deutschlandticket für nur einen Monat kaufen?", "acceptedAnswer": { "@type": "Answer", "text": "Ja. Das Ticket ist zwar ein Abo, aber monatlich kündbar ohne Mindestlaufzeit. Bestelle es und kündige direkt nach der Bestellung — spätestens bis zum 10. des laufenden Monats. Dann endet das Abo zum Monatsende und du zahlst nur einmal 63 €." } },
-      { "@type": "Question", "name": "Was brauche ich bei der Kontrolle?", "acceptedAnswer": { "@type": "Answer", "text": "Dein Ticket (QR-Code in der App oder Chipkarte) plus einen amtlichen Lichtbildausweis — Personalausweis oder Reisepass. Ein Führerschein wird von der DB offiziell nicht anerkannt, in der Praxis aber oft akzeptiert. Ohne Ausweis giltst du als Fahrgast ohne gültigen Fahrschein." } },
-      { "@type": "Question", "name": "Kann ich das Deutschlandticket am Automaten kaufen?", "acceptedAnswer": { "@type": "Answer", "text": "Nein. Das Deutschlandticket ist ein Abo-Produkt und wird nicht an Fahrkartenautomaten verkauft. Der Kauf läuft über Apps, Websites oder Kundencenter." } },
-      { "@type": "Question", "name": "Welche Zahlungsmethoden gibt es?", "acceptedAnswer": { "@type": "Answer", "text": "SEPA-Lastschrift und Kreditkarte bei fast allen Anbietern. Einzelne Verbünde wie der HVV akzeptieren zusätzlich PayPal. Barzahlung ist in der Regel nicht möglich." } },
-      { "@type": "Question", "name": "Bei welchem Anbieter sollte ich kaufen?", "acceptedAnswer": { "@type": "Answer", "text": "Das Ticket ist überall identisch — gleicher Preis, gleiche Gültigkeit. Aber: Du kündigst immer dort, wo du gekauft hast. Wähle deinen lokalen Verbund, wenn du Servicestellen vor Ort nutzen willst. Wähle die DB, wenn du einen bundesweit erreichbaren Kundenservice bevorzugst." } },
-      { "@type": "Question", "name": "Was passiert, wenn ich nach dem 10. bestelle?", "acceptedAnswer": { "@type": "Answer", "text": "Du kannst auch nach dem 10. bestellen und im laufenden Monat nutzen — aber du kannst dann nicht mehr zum Monatsende kündigen. Dein Abo läuft mindestens bis Ende des Folgemonats. Wer das Ticket nur für einen Monat will, sollte vor dem 10. bestellen und sofort kündigen." } },
-      { "@type": "Question", "name": "Wie schnell bekomme ich das Ticket?", "acceptedAnswer": { "@type": "Answer", "text": "Als Handyticket in der App: sofort bis wenige Stunden. Als Chipkarte per Post: bis zu 14 Tage. Übergangsweise stellen manche Anbieter ein provisorisches Papierticket aus." } }
-    ]
-  }
-];
+  "publisher": {
+    "@type": "Organization",
+    "name": "ticket-rechner.de",
+    "url": "https://ticket-rechner.de",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ticket-rechner.de/og-image.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": canonical
+  },
+  "image": "https://ticket-rechner.de/og-image.png"
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Wo kann ich das Deutschlandticket kaufen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Online über die Deutsche Bahn (bahn.de oder DB Navigator), über die Deutschlandticket-App (deutschlandticket.de), über regionale Verbund-Apps (hvv switch, MVGO, BVG etc.) oder in Kundenzentren vor Ort. Am Fahrkartenautomaten ist das Ticket nicht erhältlich."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kann ich das Deutschlandticket ohne Abo kaufen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nein — das Ticket gibt es nur als Abo. Du kannst es aber sofort nach dem Kauf wieder kündigen (bis zum 10. des Monats), dann läuft es nur für den aktuellen Monat. So nutzt du es faktisch ohne langfristige Bindung."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was kostet das Deutschlandticket 2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "63 € pro Monat. Der Preis ist bei allen Anbietern identisch und gesetzlich einheitlich. Günstiger wird es als Jobticket (ab 44,10 € mit Arbeitgeberzuschuss) oder als ermäßigtes Ticket für Studenten, Azubis und Schüler (je nach Bundesland)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kann ich das Deutschlandticket mitten im Monat kaufen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja — bei der DB und vielen Verbünden auch für den laufenden Monat. Du zahlst aber trotzdem den vollen Monatspreis von 63 €, auch wenn du erst am 20. kaufst. Und wenn du nach dem 10. kaufst, kannst du erst zum Ende des Folgemonats kündigen — dann zahlst du zwei volle Monate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Welche Zahlungsmethoden gibt es für das Deutschlandticket?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Das hängt vom Anbieter ab. Die DB akzeptiert SEPA-Lastschrift und Kreditkarte. Die Deutschlandticket-App bietet SEPA und Debit-/Kreditkarte. Andere Anbieter (z. B. mo.pla, TicketPlus+) akzeptieren auch PayPal, Apple Pay und Google Pay. SEPA erfordert bei vielen Anbietern eine Schufa-Abfrage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Gibt es das Deutschlandticket am Fahrkartenautomaten?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nein. Das Deutschlandticket ist ein Abo und erfordert die Hinterlegung persönlicher Daten und Zahlungsdaten. Es wird nur online (App, Website) oder in Kundenzentren verkauft — nicht am Automaten."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Bekomme ich das Deutschlandticket trotz negativer Schufa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja — wenn du per Kreditkarte oder PayPal zahlst statt per SEPA-Lastschrift. Die Deutschlandticket-App, die BVG-App und einige Drittanbieter verzichten auf die Schufa-Prüfung. Bei der DB per SEPA wird eine Bonitätsprüfung über Arvato/LOGPAY durchgeführt."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kann ich das Deutschlandticket für eine andere Person kaufen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja, bei der DB im Bestellprozess die Daten der anderen Person eingeben. In der Deutschlandticket-App gibt es die Option 'Deutschlandticket für eine andere Person kaufen'. Du bleibst Vertragspartner und bist für Zahlung und Kündigung verantwortlich."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Handyticket oder Chipkarte — was soll ich wählen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Handyticket: sofort verfügbar, bei Verlust kostenlos wiederherstellbar, braucht aber geladenen Akku. Chipkarte: kein Akku-Problem, aber Lieferzeit (bis 14 Tage) und Ersatzgebühr (10–25 €) bei Verlust. Für die meisten Nutzer ist das Handyticket die praktischere Wahl."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ist das Deutschlandticket sofort nach dem Kauf gültig?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Beim Handyticket ja — es ist in der Regel innerhalb weniger Minuten in der App verfügbar. Bei der Chipkarte dauert es 2–14 Tage per Post. Bei manchen Anbietern (z. B. ÜSTRA) gilt ein Bestellschluss: Handyticket bis zum 20. des Vormonats, Chipkarte bis zum 1. des Vormonats."
+      }
+    }
+  ]
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://ticket-rechner.de/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Ratgeber",
+      "item": "https://ticket-rechner.de/ratgeber"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Deutschlandticket kaufen",
+      "item": canonical
+    }
+  ]
+};
 ---
+
 <Base
-  title="Deutschlandticket kaufen 2026: Wo, wie & welcher Anbieter?"
-  description="Deutschlandticket kaufen: alle Wege im Vergleich — App, Chipkarte, DB oder Verbund. Welcher Anbieter? Welche Fehler vermeiden? Der unabhängige Kaufratgeber."
-  schema={schema}
+  title={title}
+  description={description}
+  canonical={canonical}
+  ogTitle={ogTitle}
+  ogDescription={ogDescription}
+  ogType="website"
+  ogUrl={canonical}
 >
-  <article class="container--narrow" style="padding:2rem 0 1rem">
-    <p style="color:var(--brand);font-weight:800;letter-spacing:.06em;text-transform:uppercase;font-size:.8rem;margin:0">
-      Ratgeber · Aktualisiert am 21.07.2026
-    </p>
-    <h1>Deutschlandticket kaufen — der unabhängige Kaufratgeber</h1>
-    <p style="color:var(--ink-soft)">
-      Das Deutschlandticket kostet <strong><a href="/ratgeber/deutschlandticket-kosten">63 € im Monat</a></strong>,
-      ist bei über 60 verschiedenen Anbietern erhältlich — und trotzdem überall
-      identisch. Gleicher Preis, gleiche
-      <a href="/ratgeber/deutschlandticket-gueltigkeit">Gültigkeit</a>, gleiche Regeln.
-      Was sich unterscheidet: die App, der Kundenservice und die Frage, ob du eine
-      Chipkarte oder ein Handyticket bekommst. Hier steht alles, was du brauchst, um die
-      richtige Entscheidung zu treffen — ohne die Marketing-Brille eines einzelnen
-      Anbieters.
-    </p>
+  <article>
+    <p class="article-meta">Ratgeber · Aktualisiert am 27.07.2026</p>
 
-    <div class="card" style="margin:1.25rem 0">
-      <strong>Erst prüfen:</strong> Lohnt sich das Deutschlandticket bei deinem
-      Fahrverhalten überhaupt?
-      <a href="/lohnt-sich-rechner">In 10 Sekunden berechnen →</a>
-    </div>
-
-    <!-- ========== KAUFWEGE ========== -->
-
-    <h2>Die 4 Kaufwege — und für wen sich welcher eignet</h2>
-
-    <h3>1. Deutsche Bahn (DB Navigator oder bahn.de)</h3>
-    <p>
-      Der bekannteste Kanal: Im <strong>DB Navigator</strong> (iOS und Android) oder
-      auf bahn.de findest du das Deutschlandticket unter „Abos & Tickets". Kundenkonto
-      anlegen, Zahlungsmethode hinterlegen, bestellen. Das Handyticket wird innerhalb
-      von Minuten als QR-Code in der App angezeigt.
-    </p>
-    <p>
-      <strong>Vorteil:</strong> Bundesweit einheitlicher Kundenservice, große
-      Wissensdatenbank auf bahn.de, viele DB Reisezentren als Anlaufstelle.
-    </p>
-    <p>
-      <strong>Nachteil:</strong> Der DB Navigator ist eine umfangreiche App, die
-      weit mehr kann als nur das Deutschlandticket — das macht sie für manche
-      unübersichtlich. Außerdem hat die Verbraucherzentrale in der Vergangenheit
-      Probleme mit Doppelbuchungen dokumentiert, wenn der Bestellprozess abbrach und
-      Nutzer ihn wiederholten.
-    </p>
-    <p>
-      <strong>Tipp:</strong> Warte nach dem Bestellen unbedingt auf die
-      Bestätigungs-E-Mail, bevor du den Vorgang wiederholst. Prüfe im Kundenkonto
-      unter „Meine Abos", ob die Bestellung durchgegangen ist.
-    </p>
-    <p>
-      <strong>Zahlung:</strong> SEPA-Lastschrift, Kreditkarte (Visa, Mastercard).
-    </p>
-
-    <h3>2. deutschlandticket.de</h3>
-    <p>
-      Die offizielle Plattform bietet das Ticket über die
-      <strong>Deutschlandticket App</strong> (iOS und Android). Die App ist schlanker
-      als der DB Navigator — sie macht genau eine Sache: dein Deutschlandticket
-      verwalten. Du kannst das Ticket auch in die Apple Wallet oder Google Wallet
-      übernehmen und brauchst die App dann nicht einmal mehr zum Vorzeigen.
-    </p>
-    <p>
-      <strong>Vorteil:</strong> Übersichtlich, schnell, Wallet-Integration.
-    </p>
-    <p>
-      <strong>Nachteil:</strong> Der Kundenservice läuft über den jeweiligen
-      Vertragspartner, der im Hintergrund zugeordnet wird — das ist nicht immer
-      transparent.
-    </p>
-    <p>
-      <strong>Zahlung:</strong> Kreditkarte, SEPA-Lastschrift.
-    </p>
-
-    <h3>3. Dein regionaler Verkehrsverbund</h3>
-    <p>
-      Jeder große Verbund verkauft das Deutschlandticket über seine eigene App
-      und sein Kundenportal — <strong>hvv switch</strong> in Hamburg,
-      <strong>RMVgo</strong> in Rhein-Main, <strong>MVGO</strong> in München,
-      <strong>BVG Tickets</strong> in Berlin und Dutzende weitere. Das ist oft die
-      beste Wahl, wenn du bereits ein Kundenkonto bei deinem Verbund hast oder
-      Servicestellen vor Ort nutzen willst.
-    </p>
-    <p>
-      <strong>Vorteil:</strong> Persönliche Beratung in Kundencentern. Manche
-      Verbünde bieten Extras: Der HVV ermöglicht zum Beispiel ein frei wählbares
-      Startdatum mit anteiliger Berechnung. Im MVV bekommst du das Bayerische
-      Ermäßigungsticket für Azubis und Studierende (29 €/Monat) direkt über das
-      gleiche Portal.
-    </p>
-    <p>
-      <strong>Nachteil:</strong> Die App-Qualität variiert. Manche Verbund-Apps
-      sind ausgereift, andere weniger. Und die Kündigung muss später beim gleichen
-      Verbund erfolgen — wenn du umziehst, kann das unpraktisch werden.
-    </p>
-    <p>
-      <strong>Zahlung:</strong> Variiert — meist Lastschrift und Kreditkarte,
-      teils PayPal (z. B. HVV).
-    </p>
-
-    <h3>4. Vor Ort: DB Reisezentrum oder Kundencenter</h3>
-    <p>
-      Kein Smartphone, keine Lust auf Apps? In <strong>DB Reisezentren</strong> an
-      größeren Bahnhöfen und in den <strong>Servicestellen</strong> der
-      Verkehrsverbünde kannst du das Ticket persönlich bestellen. Du bekommst es
-      dann als Chipkarte per Post (bis zu 14 Tage), manche Verbünde stellen
-      übergangsweise ein Papierticket aus.
-    </p>
-    <p>
-      <strong>Vorteil:</strong> Persönliche Hilfe, kein Smartphone nötig.
-    </p>
-    <p>
-      <strong>Nachteil:</strong> Nicht alle Reisezentren bieten den Sofortkauf an,
-      Wartezeiten vor Ort, und die Chipkarte braucht Tage per Post. An
-      Fahrkartenautomaten gibt es das Deutschlandticket <strong>nicht</strong>.
-    </p>
-
-    <!-- ========== HANDYTICKET VS CHIPKARTE ========== -->
-
-    <h2>Handyticket oder Chipkarte — die ehrliche Gegenüberstellung</h2>
-    <p>
-      Diese Entscheidung fällt vor dem Kauf und lässt sich später nur schwer ändern.
-      Beide Varianten sind gleich gültig — aber im Alltag spürst du die Unterschiede.
-    </p>
-    <div class="card" style="overflow-x:auto">
-      <table style="width:100%;border-collapse:collapse;font-size:.95rem">
-        <thead>
-          <tr style="border-bottom:2px solid var(--line);text-align:left">
-            <th style="padding:.5rem .75rem">Kriterium</th>
-            <th style="padding:.5rem .75rem">Handyticket</th>
-            <th style="padding:.5rem .75rem">Chipkarte</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr style="border-bottom:1px solid var(--line)">
-            <td style="padding:.5rem .75rem"><strong>Verfügbarkeit nach Kauf</strong></td>
-            <td style="padding:.5rem .75rem">Sofort bis wenige Stunden</td>
-            <td style="padding:.5rem .75rem">Bis zu 14 Tage (Post)</td>
-          </tr>
-          <tr style="border-bottom:1px solid var(--line)">
-            <td style="padding:.5rem .75rem"><strong>Voraussetzung</strong></td>
-            <td style="padding:.5rem .75rem">Smartphone mit iOS oder Android</td>
-            <td style="padding:.5rem .75rem">Keine</td>
-          </tr>
-          <tr style="border-bottom:1px solid var(--line)">
-            <td style="padding:.5rem .75rem"><strong>Bei Kontrolle</strong></td>
-            <td style="padding:.5rem .75rem">QR-Code in App oder Wallet</td>
-            <td style="padding:.5rem .75rem">Karte vorzeigen</td>
-          </tr>
-          <tr style="border-bottom:1px solid var(--line)">
-            <td style="padding:.5rem .75rem"><strong>Akku leer?</strong></td>
-            <td style="padding:.5rem .75rem">Kein Nachweis möglich — Risiko</td>
-            <td style="padding:.5rem .75rem">Kein Problem</td>
-          </tr>
-          <tr style="border-bottom:1px solid var(--line)">
-            <td style="padding:.5rem .75rem"><strong>Verlust</strong></td>
-            <td style="padding:.5rem .75rem">Neues Gerät, App neu einrichten</td>
-            <td style="padding:.5rem .75rem">Sperren, Ersatzkarte beantragen</td>
-          </tr>
-          <tr style="border-bottom:1px solid var(--line)">
-            <td style="padding:.5rem .75rem"><strong>Kündigung</strong></td>
-            <td style="padding:.5rem .75rem">In der App, sofort</td>
-            <td style="padding:.5rem .75rem">Über Portal, teils umständlicher</td>
-          </tr>
-          <tr>
-            <td style="padding:.5rem .75rem"><strong>Datenschutz</strong></td>
-            <td style="padding:.5rem .75rem">App sammelt Nutzungsdaten</td>
-            <td style="padding:.5rem .75rem">Datensparsamer</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <p>
-      <strong>Empfehlung:</strong> Für die meisten ist das Handyticket der bessere
-      Weg — sofort verfügbar, leicht zu kündigen und immer dabei. Die Chipkarte
-      ist die bessere Wahl, wenn du kein Smartphone nutzen willst, dir Datenschutz
-      besonders wichtig ist oder dein Akku regelmäßig nicht durchhält. Falls du
-      ein Handyticket nutzt: Speichere es zusätzlich in der Apple Wallet oder
-      Google Wallet — das funktioniert auch bei schwachem Netz und verbraucht
-      weniger Akku als die volle App.
-    </p>
-
-    <!-- ========== AUSWEISPFLICHT ========== -->
-
-    <h2>Was du bei der Kontrolle brauchst</h2>
-    <p>
-      Das Deutschlandticket ist personengebunden. Bei der Kontrolle musst du
-      <strong>zwei Dinge</strong> vorzeigen: dein Ticket (QR-Code oder Chipkarte)
-      und einen <strong>amtlichen Lichtbildausweis</strong>. Akzeptiert werden
-      Personalausweis und Reisepass. Ein Führerschein wird von der DB offiziell
-      <strong>nicht</strong> als gültiger Ausweis anerkannt — in der Praxis
-      akzeptieren ihn viele Kontrolleure trotzdem, aber ein Rechtsanspruch besteht
-      nicht.
-    </p>
-    <p>
-      Ohne Ausweis giltst du formal als Fahrgast ohne gültigen Fahrschein.
-      Je nach Kontrolleur und Verbund droht ein erhöhtes Beförderungsentgelt
-      von <strong>60 €</strong> oder du bekommst die Möglichkeit, den Ausweis
-      innerhalb einer Frist nachzureichen. Verlasse dich darauf aber nicht —
-      <strong>Ausweis immer dabei</strong> ist die einzige sichere Regel.
-    </p>
-    <p>
-      Kinder zwischen 6 und 14 Jahren brauchen ebenfalls einen Lichtbildausweis,
-      etwa einen Kinderreisepass oder Schülerausweis mit Foto. Kinder unter 6
-      fahren kostenlos und brauchen kein Ticket.
-    </p>
-
-    <!-- ========== NUR EINEN MONAT ========== -->
-
-    <h2>Deutschlandticket für nur einen Monat — so geht's</h2>
-    <p>
-      Das Deutschlandticket ist technisch ein Abo — aber mit einer
-      Kündigungsfrist, die so kurz ist, dass du es praktisch wie ein
-      Monatsticket nutzen kannst. Der Trick: Bestelle es und kündige direkt
-      danach. Wichtig ist nur, dass du <strong>bis zum 10. des laufenden
-      Monats</strong> kündigst, dann endet das Abo zum Monatsende.
-    </p>
-    <p>
-      <strong>Beispiel:</strong> Du bestellst am 3. August und kündigst am
-      selben Tag. Dein Ticket gilt vom 3. bis 31. August, du zahlst einmal
-      63 €, und danach passiert nichts mehr.
-    </p>
-    <p>
-      <strong>Achtung — die 10.-des-Monats-Falle:</strong> Bestellst du erst
-      am 12. August, kannst du nicht mehr zum 31. August kündigen. Dein Abo
-      verlängert sich automatisch bis Ende September — und du zahlst zweimal.
-      Wer das Ticket nur für einen Monat will, muss vor dem 10. bestellen und
-      sofort kündigen. Unser
-      <a href="/kuendigungsfrist-rechner">Kündigungsfrist-Rechner</a> zeigt dir,
-      ob du noch in der Frist bist.
-    </p>
-    <p>
-      <strong>Sonderfall HVV:</strong> Über die hvv switch App kannst du ein
-      Startdatum in der Zukunft wählen und zahlst dann anteilig nur für die
-      verbleibenden Tage des Monats. Das ist aktuell die einzige Möglichkeit,
-      das Deutschlandticket tagegenau und anteilig zu kaufen.
-    </p>
-
-    <!-- ========== ANBIETER-WAHL ========== -->
-
-    <h2>Welchen Anbieter soll ich wählen?</h2>
-    <p>
-      Diese Frage klingt unwichtig — das Ticket ist ja überall gleich. Aber
-      sie hat Konsequenzen, die dir erst später auffallen:
-    </p>
-    <p>
-      <strong>Du kündigst dort, wo du gekauft hast.</strong> Ein Ticket der DB
-      kündigst du bei der DB, ein Ticket vom HVV beim HVV. Das klingt logisch,
-      aber wer umzieht und plötzlich keinen Zugang zum Kundencenter seines
-      alten Verbunds hat, ärgert sich. Unsere
-      <a href="/ratgeber/deutschlandticket-kuendigen">Kündigungsanleitung</a>
-      beschreibt die Wege für alle großen Anbieter:
-      <a href="/kuendigen/db">DB</a> ·
-      <a href="/kuendigen/hvv">HVV</a> ·
-      <a href="/kuendigen/rmv">RMV</a> ·
-      <a href="/kuendigen/mvv">MVV</a> ·
-      <a href="/kuendigen/bvg">BVG</a>.
-    </p>
-    <p>
-      <strong>Der Kundenservice unterscheidet sich.</strong> Die DB bietet einen
-      bundesweiten Telefon- und E-Mail-Service. Regionale Verbünde haben oft
-      Servicestellen mit persönlicher Beratung vor Ort — dafür manchmal
-      eingeschränkte Erreichbarkeit per Telefon. Wenn dir persönlicher Kontakt
-      wichtig ist, wähle deinen lokalen Verbund. Wenn du lieber alles digital
-      erledigst, funktioniert die DB oder deutschlandticket.de am unkompliziertesten.
-    </p>
-    <p>
-      <strong>Regionale Extras sind anbietergebunden.</strong> Das Bayerische
-      Ermäßigungsticket für Azubis und Studierende (29 €/Monat) gibt es nur über
-      die MVG oder andere bayerische Anbieter. Das anteilige Kaufen beim HVV
-      funktioniert nur dort. Prüfe, ob dein Verbund Extras bietet, die du nutzen
-      willst.
-    </p>
-
-    <!-- ========== ZAHLUNGSMETHODEN ========== -->
-
-    <h2>Zahlungsmethoden</h2>
-    <div class="card" style="overflow-x:auto">
-      <table style="width:100%;border-collapse:collapse;font-size:.95rem">
-        <thead>
-          <tr style="border-bottom:2px solid var(--line);text-align:left">
-            <th style="padding:.5rem .75rem">Anbieter</th>
-            <th style="padding:.5rem .75rem">Lastschrift</th>
-            <th style="padding:.5rem .75rem">Kreditkarte</th>
-            <th style="padding:.5rem .75rem">PayPal</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr style="border-bottom:1px solid var(--line)">
-            <td style="padding:.5rem .75rem">Deutsche Bahn</td>
-            <td style="padding:.5rem .75rem">✅</td>
-            <td style="padding:.5rem .75rem">✅</td>
-            <td style="padding:.5rem .75rem">❌</td>
-          </tr>
-          <tr style="border-bottom:1px solid var(--line)">
-            <td style="padding:.5rem .75rem">deutschlandticket.de</td>
-            <td style="padding:.5rem .75rem">✅</td>
-            <td style="padding:.5rem .75rem">✅</td>
-            <td style="padding:.5rem .75rem">❌</td>
-          </tr>
-          <tr style="border-bottom:1px solid var(--line)">
-            <td style="padding:.5rem .75rem">HVV (Hamburg)</td>
-            <td style="padding:.5rem .75rem">✅</td>
-            <td style="padding:.5rem .75rem">✅</td>
-            <td style="padding:.5rem .75rem">✅</td>
-          </tr>
-          <tr style="border-bottom:1px solid var(--line)">
-            <td style="padding:.5rem .75rem">RMV (Rhein-Main)</td>
-            <td style="padding:.5rem .75rem">✅</td>
-            <td style="padding:.5rem .75rem">✅</td>
-            <td style="padding:.5rem .75rem">❌</td>
-          </tr>
-          <tr style="border-bottom:1px solid var(--line)">
-            <td style="padding:.5rem .75rem">MVG (München)</td>
-            <td style="padding:.5rem .75rem">✅</td>
-            <td style="padding:.5rem .75rem">✅</td>
-            <td style="padding:.5rem .75rem">❌</td>
-          </tr>
-          <tr>
-            <td style="padding:.5rem .75rem">BVG (Berlin)</td>
-            <td style="padding:.5rem .75rem">✅</td>
-            <td style="padding:.5rem .75rem">✅</td>
-            <td style="padding:.5rem .75rem">❌</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <p>
-      Barzahlung ist bei keinem Anbieter möglich. Wer keine Kreditkarte und kein
-      Bankkonto mit SEPA-Lastschrift hat, muss auf eine Person mit Zugang zu
-      diesen Zahlungswegen zurückgreifen — das Ticket wird dann auf deren Namen
-      ausgestellt und ist nicht übertragbar.
-    </p>
-
-    <!-- ========== FEHLER VERMEIDEN ========== -->
-
-    <h2>Die 5 häufigsten Fehler beim Kauf — und wie du sie vermeidest</h2>
+    <h1>Deutschlandticket kaufen — alle Wege, alle Fallstricke, eine Anleitung</h1>
 
     <p>
-      <strong>1. Nach dem 10. bestellen und wundern, warum du nicht sofort kündigen kannst.</strong>
-      Die Kündigungsfrist zum 10. des Monats gilt auch für das Bestell-Timing. Wer
-      am 15. bestellt und „nur einen Monat" will, zahlt trotzdem zwei.
-    </p>
-    <p>
-      <strong>2. Bestellung wiederholen, wenn keine Bestätigung kommt.</strong>
-      Die Verbraucherzentrale hat zahlreiche Fälle von Doppelbuchungen dokumentiert.
-      Prüfe erst in deinem Kundenkonto, ob die Bestellung durchging, bevor du es
-      erneut versuchst.
-    </p>
-    <p>
-      <strong>3. Ausweis vergessen.</strong>
-      Das Deutschlandticket ist personengebunden und nur mit Lichtbildausweis gültig.
-      Ohne Ausweis riskierst du 60 € Strafe. Habe immer deinen Personalausweis dabei.
-    </p>
-    <p>
-      <strong>4. Denken, das Ticket gelte im ICE.</strong>
-      Das Deutschlandticket gilt nur im
-      <a href="/ratgeber/deutschlandticket-gueltigkeit">Nah- und Regionalverkehr</a>.
-      Wer ohne Fernverkehrsticket in den ICE steigt, zahlt den vollen Flexpreis. Die
-      wenigen Ausnahmestrecken erklärt unser
-      <a href="/ratgeber/deutschlandticket-ice">ICE-Ratgeber</a>.
-    </p>
-    <p>
-      <strong>5. Beim falschen Anbieter kündigen.</strong>
-      Ein Deutschlandticket der DB kannst du nicht beim HVV kündigen und umgekehrt.
-      Wenn du nicht mehr weißt, wo du bestellt hast: Prüfe deinen Kontoauszug —
-      der Zahlungsempfänger ist dein Vertragspartner.
+      Das Deutschlandticket kostet 63 € pro Monat und ist nur als Abo erhältlich — nicht am
+      Automaten, nicht als Einzelticket. Du kaufst es online (DB Navigator, Deutschlandticket-App
+      oder Verbund-App), wählst zwischen Handyticket und Chipkarte und zahlst per SEPA-Lastschrift,
+      Kreditkarte oder bei einigen Anbietern per PayPal. Wer nach dem 10. des Monats kauft, zahlt
+      automatisch zwei Monate. Hier steht alles, was du vor dem Kauf wissen musst.
     </p>
 
-    <!-- ========== JOBTICKET / SEMESTERTICKET ========== -->
+    <!-- ============================================================ -->
 
-    <h2>Günstiger kaufen: Jobticket und Semesterticket</h2>
+    <h2>Wo kaufe ich das Deutschlandticket?</h2>
+
     <p>
-      Nicht jeder zahlt 63 €. Es gibt zwei offizielle Ermäßigungen:
-    </p>
-    <p>
-      <strong><a href="/ratgeber/deutschlandticket-jobticket">Jobticket</a>
-      — maximal 44,10 €:</strong> Dein Arbeitgeber zahlt mindestens 25 % des
-      Ticketpreises, dazu gibt es 5 % Rabatt. Steuerfrei nach § 3 Nr. 15 EStG.
-      Frag bei deiner Personalabteilung nach.
-    </p>
-    <p>
-      <strong><a href="/ratgeber/deutschlandticket-studenten">Semesterticket</a>
-      — 34,80 bis 37,80 €:</strong> 60 % des regulären Preises, bundesweit
-      gültig. Im Sommersemester 2026 noch 34,80 €, ab Wintersemester 2026/27
-      dann 37,80 €. Je nach Hochschule als Solidarmodell oder freiwilliges
-      Upgrade.
+      Das Ticket ist bei verschiedenen Anbietern erhältlich. Die Leistung ist überall identisch
+      (gleicher Preis, gleiche Gültigkeit, gleiche Verkehrsmittel) — die Unterschiede liegen bei
+      Zahlungsmethoden, App-Qualität, Extras und Kundenservice.
     </p>
 
-    <!-- ========== CHECKLISTE ========== -->
+    <table>
+      <thead>
+        <tr>
+          <th>Kaufkanal</th>
+          <th>Ticketformat</th>
+          <th>Zahlungsmethoden</th>
+          <th>Besonderheiten</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Deutsche Bahn (bahn.de / DB Navigator)</td>
+          <td>Handyticket, Chipkarte (einige Verbünde)</td>
+          <td>SEPA, Kreditkarte</td>
+          <td>Größter Anbieter, integrierte Fahrplanauskunft, Kauf für andere Personen möglich</td>
+        </tr>
+        <tr>
+          <td>Deutschlandticket-App (deutschlandticket.de)</td>
+          <td>Handyticket</td>
+          <td>SEPA, Debit-/Kreditkarte</td>
+          <td>Keine Schufa-Abfrage, Wallet-Integration, schneller Kauf</td>
+        </tr>
+        <tr>
+          <td>Regionale Verbund-Apps (HVV, MVG, BVG, RMV etc.)</td>
+          <td>Handyticket, Chipkarte</td>
+          <td>Variiert (meist SEPA, teils Kreditkarte)</td>
+          <td>Lokaler Kundenservice, regionale Extras (Fahrradmitnahme, 1.-Klasse-Upgrade)</td>
+        </tr>
+        <tr>
+          <td>Drittanbieter (mo.pla, TicketPlus+ etc.)</td>
+          <td>Handyticket</td>
+          <td>SEPA, Kreditkarte, PayPal, Apple Pay, Google Pay</td>
+          <td>Breiteste Zahlungsauswahl, teils Pause-Funktion, Neukundenbonus</td>
+        </tr>
+        <tr>
+          <td>DB Reisezentrum (Schalter)</td>
+          <td>Handyticket oder Chipkarte</td>
+          <td>Vor Ort</td>
+          <td>Persönliche Beratung, nicht bei allen Reisezentren verfügbar</td>
+        </tr>
+      </tbody>
+    </table>
 
-    <h2>Checkliste: Deutschlandticket kaufen</h2>
     <p>
-      Prüfe, ob sich das Ticket lohnt
-      (<a href="/lohnt-sich-rechner">Rechner →</a>)
-      — entscheide: Handyticket oder Chipkarte? — wähle einen Anbieter (DB,
-      deutschlandticket.de oder dein Verbund) — Kundenkonto anlegen —
-      Zahlungsmethode hinterlegen — Ticket bestellen — bei Kontrolle QR-Code
-      oder Chipkarte <strong>zusammen mit Personalausweis</strong> vorzeigen —
-      Ticket nicht mehr nötig?
-      <a href="/ratgeber/deutschlandticket-kuendigen">Bis zum 10. kündigen</a>,
-      oder eine <a href="/ratgeber/deutschlandticket-pausieren">Pause einlegen</a>.
+      <strong>Nicht möglich:</strong> Kauf am Fahrkartenautomaten, in Bussen oder Bahnen. Das
+      Deutschlandticket erfordert ein Abo mit hinterlegten Zahlungsdaten — dafür ist der
+      Automatenverkauf nicht eingerichtet.
     </p>
 
-    <!-- ========== FAQ ========== -->
+    <!-- ============================================================ -->
+
+    <h2>Schritt für Schritt: So kaufst du das Deutschlandticket</h2>
+
+    <h3>Über den DB Navigator (häufigster Weg)</h3>
+
+    <p>
+      1. App installieren (iOS oder Android) und DB-Kundenkonto erstellen, falls noch nicht
+      vorhanden.<br>
+      2. Im Menü auf „Deutschlandticket" oder unter „Angebote" → „Deutschland-Ticket" tippen.<br>
+      3. Persönliche Daten eingeben (Name, Geburtsdatum, E-Mail).<br>
+      4. Zahlungsmethode wählen (SEPA-Lastschrift oder Kreditkarte) und IBAN oder Kartendaten
+      hinterlegen.<br>
+      5. Startmonat wählen — du kannst auch den laufenden Monat wählen (volles Monatsentgelt).<br>
+      6. Bestellung bestätigen. Das Handyticket ist in der Regel innerhalb weniger Minuten unter
+      „Reisen" verfügbar.
+    </p>
+
+    <h3>Über die Deutschlandticket-App</h3>
+
+    <p>
+      1. App von deutschlandticket.de installieren.<br>
+      2. Konto erstellen (E-Mail + Passwort).<br>
+      3. „Deutschlandticket kaufen" wählen.<br>
+      4. Zahlungsmethode wählen (SEPA oder Debit-/Kreditkarte — kein PayPal, kein Apple/Google
+      Pay).<br>
+      5. Bestellung abschließen. Ticket erscheint unter „Meine Tickets".
+    </p>
+
+    <p>
+      <strong>Vorteil dieser App:</strong> Keine Schufa-Abfrage bei Kartenzahlung. Du kannst das
+      Ticket auch für andere Personen kaufen (Häkchen bei „Deutschlandticket für eine andere Person
+      kaufen").
+    </p>
+
+    <h3>Im Kundenzentrum vor Ort</h3>
+
+    <p>
+      In DB-Reisezentren und Kundenzentren regionaler Verbünde kannst du das Abo auch persönlich
+      abschließen. Du brauchst deinen Personalausweis und ein Konto oder eine Kreditkarte für die
+      monatliche Abbuchung. Das Ticket wird dann entweder als Handyticket freigeschaltet oder als
+      Chipkarte per Post zugeschickt.
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>Die Timing-Falle: Wann du kaufst, bestimmt, wie viel du zahlst</h2>
+
+    <p>
+      Das Deutschlandticket gilt immer für den <strong>vollen Kalendermonat</strong> — egal wann
+      du kaufst. Und es gibt keine anteilige Berechnung. Das führt zu einer Falle, die viele
+      übersehen:
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Du kaufst am…</th>
+          <th>Ticket gültig ab</th>
+          <th>Kündigung möglich bis</th>
+          <th>Mindestkosten</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1.–10. des Monats</td>
+          <td>Sofort (laufender Monat)</td>
+          <td>10. des Monats → Ende Monat</td>
+          <td>63 € (1 Monat)</td>
+        </tr>
+        <tr>
+          <td>11.–31. des Monats</td>
+          <td>Sofort (laufender Monat)</td>
+          <td>10. des Folgemonats → Ende Folgemonat</td>
+          <td>126 € (2 Monate)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>
+      <strong>Beispiel:</strong> Du kaufst am 15. Juli. Das Ticket gilt sofort — aber du kannst
+      erst zum 10. August kündigen, und die Kündigung wird zum 31. August wirksam. Du zahlst Juli
+      (63 €) und August (63 €) = 126 € Minimum.
+    </p>
+
+    <p>
+      <strong>Wer das Ticket nur für einen Monat braucht:</strong> Kaufe vor dem 10. des
+      gewünschten Monats und kündige am selben Tag. Dann zahlst du genau einen Monat.
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>Handyticket oder Chipkarte?</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Kriterium</th>
+          <th>Handyticket</th>
+          <th>Chipkarte</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Verfügbarkeit nach Kauf</td>
+          <td>Sofort (Minuten)</td>
+          <td>2–14 Tage (Post)</td>
+        </tr>
+        <tr>
+          <td>Kosten bei Verlust</td>
+          <td>0 € (App neu installieren)</td>
+          <td>10–25 € (Ersatzkarte)</td>
+        </tr>
+        <tr>
+          <td>Akku-Abhängigkeit</td>
+          <td>Ja (Wallet hilft)</td>
+          <td>Nein</td>
+        </tr>
+        <tr>
+          <td>Monatliches Internet nötig</td>
+          <td>Ja (1× pro Monat)</td>
+          <td>Nein</td>
+        </tr>
+        <tr>
+          <td>Altersgrenze</td>
+          <td>16+ (bei manchen Anbietern 18+)</td>
+          <td>Keine</td>
+        </tr>
+        <tr>
+          <td>Geeignet für</td>
+          <td>Die meisten Nutzer</td>
+          <td>Kinder, Senioren, Nutzer ohne Smartphone</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>
+      Für die meisten Nutzer ist das Handyticket die bessere Wahl — schneller verfügbar, kostenloser
+      Ersatz und kein Warten auf Post. Die Chipkarte ist ideal für alle, die kein Smartphone nutzen
+      möchten oder können, und für Kinder unter 16.
+    </p>
+
+    <p>
+      Mehr zum Thema Ersatz bei Verlust:
+      <a href="/ratgeber/deutschlandticket-ersatzkarte">Ersatzkarte beantragen</a> ·
+      <a href="/ratgeber/deutschlandticket-verloren">Deutschlandticket verloren</a>
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>Zahlungsmethoden: Was geht wo?</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Anbieter</th>
+          <th>SEPA</th>
+          <th>Kreditkarte</th>
+          <th>PayPal</th>
+          <th>Apple/Google Pay</th>
+          <th>Schufa-Abfrage?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Deutsche Bahn</td>
+          <td>Ja</td>
+          <td>Ja</td>
+          <td>Nein</td>
+          <td>Nein</td>
+          <td>Ja (bei SEPA)</td>
+        </tr>
+        <tr>
+          <td>Deutschlandticket-App</td>
+          <td>Ja</td>
+          <td>Ja</td>
+          <td>Nein</td>
+          <td>Nein</td>
+          <td>Ja (bei SEPA)</td>
+        </tr>
+        <tr>
+          <td>HVV (Hamburg)</td>
+          <td>Ja</td>
+          <td>Teilweise</td>
+          <td>Nein</td>
+          <td>Nein</td>
+          <td>Ja (bei SEPA)</td>
+        </tr>
+        <tr>
+          <td>BVG (Berlin)</td>
+          <td>Ja</td>
+          <td>Ja</td>
+          <td>Nein</td>
+          <td>Nein</td>
+          <td>Nein</td>
+        </tr>
+        <tr>
+          <td>mo.pla</td>
+          <td>Ja</td>
+          <td>Ja</td>
+          <td>Ja</td>
+          <td>Ja</td>
+          <td>Nein</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>
+      <strong>Tipp bei Schufa-Problemen:</strong> Wenn deine Bonitätsprüfung bei der DB oder einem
+      Verbund abgelehnt wird, weiche auf einen Anbieter ohne Schufa-Abfrage aus. Die
+      Deutschlandticket-App (bei Kartenzahlung), die BVG-App und Drittanbieter wie mo.pla
+      verzichten darauf. Du musst dafür nicht in Berlin oder einer bestimmten Stadt wohnen — das
+      Ticket gilt bundesweit, egal wo du es kaufst.
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>Deutschlandticket für eine andere Person kaufen</h2>
+
+    <p>
+      Du kannst das Deutschlandticket auch für Familienmitglieder, Partner oder Kinder bestellen.
+    </p>
+
+    <p>
+      <strong>Bei der DB:</strong> Im Bestellschritt „Reisende Person" die Daten der anderen Person
+      eingeben. Dein DB-Kundenkonto bleibt als Vertragspartner hinterlegt — du bist für Zahlung
+      und Kündigung verantwortlich.<br>
+      <strong>In der Deutschlandticket-App:</strong> Beim Kauf das Häkchen bei „Deutschlandticket
+      für eine andere Person kaufen" setzen.<br>
+      <strong>Im Reisezentrum:</strong> Persönlich am Schalter, mit den Daten der anderen Person.
+    </p>
+
+    <p>
+      <strong>Wichtig:</strong> Das Deutschlandticket ist personengebunden und nicht übertragbar.
+      Die andere Person muss bei Kontrollen einen Lichtbildausweis vorzeigen können. SEPA-Lastschrift
+      für Tickets, die für andere Personen gekauft werden, ist bei manchen Anbietern aktuell
+      eingeschränkt — Kreditkarte funktioniert in der Regel.
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>Sonderfälle: Jobticket, Studenten, Schüler</h2>
+
+    <p>
+      <strong>Jobticket:</strong> Arbeitgeber können das Deutschlandticket als Jobticket anbieten.
+      Der Arbeitgeber zahlt mindestens 25 % Zuschuss, dazu kommt ein 5-%-Rabatt — du zahlst
+      maximal 44,10 € statt 63 €. Der Kauf läuft über den Arbeitgeber oder das DB-Aboportal mit
+      Rahmenvertrag. Frag in deiner HR-Abteilung, ob dein Unternehmen das Jobticket anbietet.
+      <a href="/ratgeber/deutschlandticket-jobticket">Mehr zum Jobticket →</a>
+    </p>
+
+    <p>
+      <strong>Studenten / Azubis:</strong> In vielen Bundesländern gibt es ein ermäßigtes
+      Deutschlandticket. In Bayern z. B. für 38 €/Monat (Ermäßigungsticket). In NRW gibt es das
+      „Deutschlandticket Schule" über den Schulträger. Die Preise variieren je nach Bundesland und
+      Semester.
+      <a href="/ratgeber/deutschlandticket-studenten">Mehr für Studenten →</a>
+    </p>
+
+    <p>
+      <strong>Kinder:</strong> Kinder unter 6 fahren kostenlos. Für Kinder ab 6 muss ein eigenes
+      Deutschlandticket gekauft werden — zum vollen Preis von 63 €, sofern kein regionales
+      Schülerticket greift. Eine Mitnahme von Kindern ab 6 ist beim Deutschlandticket nicht
+      vorgesehen.
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>5 Fehler beim Kauf, die Geld kosten</h2>
+
+    <p>
+      <strong>Nach dem 10. kaufen und nur einen Monat wollen.</strong> Wer am 11. oder später
+      kauft, kann erst zum Ende des Folgemonats kündigen — das sind mindestens 126 € statt 63 €.
+      Immer vor dem 10. kaufen, wenn du nur einen Monat brauchst.
+    </p>
+
+    <p>
+      <strong>Versehentlich zwei Abos abschließen.</strong> Wer den Anbieter wechselt (z. B. von
+      HVV zu DB), muss das alte Abo separat kündigen. Sonst laufen beide parallel und du zahlst
+      2 × 63 €. Kontrolliere deine Kontoauszüge.
+    </p>
+
+    <p>
+      <strong>Kauf auf Chipkarte und sofort losfahren wollen.</strong> Die Chipkarte kommt per
+      Post — das dauert 2–14 Tage. Wer das Ticket sofort braucht, muss das Handyticket wählen.
+    </p>
+
+    <p>
+      <strong>SEPA-Lastschrift ohne ausreichend Kontodeckung.</strong> Eine Rücklastschrift führt
+      zu Mahngebühren und kann zur
+      <a href="/ratgeber/deutschlandticket-gesperrt">Sperrung des Tickets</a> führen. Stelle sicher,
+      dass am Abbuchungstag genug Geld auf dem Konto ist.
+    </p>
+
+    <p>
+      <strong>Rücklastschrift statt regulärer Kündigung.</strong> Wer die Lastschrift über die Bank
+      zurückbucht statt das Abo ordnungsgemäß zu kündigen, riskiert eine Kontosperrung bei der DB,
+      Mahngebühren und Inkasso. Immer den offiziellen Kündigungsweg nutzen.
+      <a href="/ratgeber/deutschlandticket-kuendigen">So kündigst du richtig →</a>
+    </p>
+
+    <!-- ============================================================ -->
 
     <h2>Häufige Fragen (FAQ)</h2>
 
     <h3>Wo kann ich das Deutschlandticket kaufen?</h3>
     <p>
-      Über die Apps und Websites der DB, über deutschlandticket.de, über regionale
-      Verkehrsverbünde oder vor Ort in DB Reisezentren und Servicestellen. Der
-      Preis ist überall gleich: 63 €/Monat.
+      Online über die DB (bahn.de / DB Navigator), die Deutschlandticket-App, regionale Verbund-Apps
+      oder im Kundenzentrum. Nicht am Automaten.
     </p>
 
-    <h3>Kann ich das Deutschlandticket ohne App kaufen?</h3>
+    <h3>Kann ich das Deutschlandticket ohne Abo kaufen?</h3>
     <p>
-      Ja — als Chipkarte über Kundenportale, DB Reisezentren oder Kundencenter.
-      Die Chipkarte kommt per Post und braucht bis zu 14 Tage.
+      Nein — nur als Abo. Du kannst es aber sofort nach dem Kauf kündigen (bis zum 10. des Monats),
+      dann läuft es nur für den aktuellen Monat.
     </p>
 
-    <h3>Kann ich das Ticket für nur einen Monat kaufen?</h3>
+    <h3>Was kostet das Deutschlandticket 2026?</h3>
     <p>
-      Ja. Bestelle und kündige direkt danach — spätestens bis zum 10. des Monats.
-      Dann zahlst du nur einmal 63 €.
-      <a href="/kuendigungsfrist-rechner">Frist prüfen →</a>
+      63 € pro Monat, einheitlich bei allen Anbietern. Günstiger als Jobticket (ab 44,10 €) oder
+      ermäßigt für Studenten/Azubis (je nach Bundesland).
+      <a href="/ratgeber/deutschlandticket-kosten">Kosten-Überblick →</a>
     </p>
 
-    <h3>Kann ich das Deutschlandticket am Automaten kaufen?</h3>
+    <h3>Kann ich mitten im Monat kaufen?</h3>
     <p>
-      Nein. Das Deutschlandticket ist ein Abo und wird nur über Apps, Websites
-      oder Kundencenter verkauft — nicht an Fahrkartenautomaten.
-    </p>
-
-    <h3>Was brauche ich bei der Kontrolle?</h3>
-    <p>
-      Dein Ticket (QR-Code oder Chipkarte) plus einen amtlichen Lichtbildausweis
-      (Personalausweis oder Reisepass). Ohne Ausweis drohen 60 € Strafe.
-    </p>
-
-    <h3>Was passiert, wenn ich nach dem 10. bestelle?</h3>
-    <p>
-      Du kannst das Ticket trotzdem im laufenden Monat nutzen, aber nicht mehr
-      zum Monatsende kündigen. Dein Abo läuft mindestens bis Ende des
-      Folgemonats — du zahlst also zweimal.
-    </p>
-
-    <h3>Wie schnell bekomme ich das Ticket?</h3>
-    <p>
-      Handyticket: sofort bis wenige Stunden. Chipkarte: bis zu 14 Tage per Post.
+      Ja, aber du zahlst den vollen Monatspreis. Und wenn du nach dem 10. kaufst, zahlst du
+      mindestens zwei Monate, weil du erst zum Ende des Folgemonats kündigen kannst.
     </p>
 
     <h3>Welche Zahlungsmethoden gibt es?</h3>
     <p>
-      SEPA-Lastschrift und Kreditkarte bei fast allen Anbietern. Einzelne Verbünde
-      wie der HVV bieten zusätzlich PayPal. Barzahlung ist nicht möglich.
+      DB: SEPA + Kreditkarte. Deutschlandticket-App: SEPA + Debit-/Kreditkarte. Drittanbieter
+      (mo.pla, TicketPlus+): zusätzlich PayPal, Apple Pay, Google Pay. SEPA erfordert bei vielen
+      Anbietern eine Schufa-Abfrage.
     </p>
 
-    <h3>Lohnt sich das Deutschlandticket für mich?</h3>
+    <h3>Gibt es das Ticket am Automaten?</h3>
     <p>
-      Ab etwa 18 Fahrten im Monat (bei 3,50 € Einzelfahrpreis) rechnet sich das
-      Ticket. <a href="/lohnt-sich-rechner">Berechne dein Ergebnis →</a>
+      Nein. Nur online oder im Kundenzentrum.
     </p>
 
-    <p style="color:var(--ink-soft);font-size:.9rem;margin-top:2.5rem">
-      Redaktion ticket-rechner.de · Alle Angaben ohne Gewähr; maßgeblich sind die
-      Informationen des jeweiligen Anbieters. Preisstand: 63 €/Monat seit
-      01.01.2026.
+    <h3>Bekomme ich das Ticket trotz negativer Schufa?</h3>
+    <p>
+      Ja — über Anbieter ohne Schufa-Abfrage: Deutschlandticket-App (Kartenzahlung), BVG-App,
+      mo.pla. Oder per Kreditkarte statt SEPA bei jedem Anbieter, der Kreditkarte akzeptiert.
     </p>
+
+    <h3>Kann ich das Ticket für eine andere Person kaufen?</h3>
+    <p>
+      Ja, bei der DB und in der Deutschlandticket-App. Du gibst die Daten der anderen Person ein
+      und bleibst Vertragspartner.
+    </p>
+
+    <h3>Handyticket oder Chipkarte?</h3>
+    <p>
+      Handyticket: sofort verfügbar, kostenloser Ersatz bei Verlust, braucht Akku. Chipkarte: kein
+      Akku nötig, aber Lieferzeit und Ersatzgebühr. Für die meisten: Handyticket.
+      <a href="/ratgeber/deutschlandticket-ersatzkarte">Mehr zur Chipkarte →</a>
+    </p>
+
+    <h3>Ist das Ticket sofort gültig?</h3>
+    <p>
+      Handyticket: ja, in wenigen Minuten. Chipkarte: nein, 2–14 Tage Lieferzeit. Bei einigen
+      Anbietern Bestellschluss im Vormonat.
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>Offizielle Quellen</h2>
+
+    <p>
+      <a href="https://www.bahn.de/angebot/regio/deutschland-ticket" target="_blank" rel="noopener">DB — Deutschlandticket kaufen</a> ·
+      <a href="https://deutschlandticket.de/" target="_blank" rel="noopener">deutschlandticket.de — Offizieller Ticketshop</a> ·
+      <a href="https://www.verbraucherzentrale.de/wissen/reise-mobilitaet/unterwegs-sein/deutschlandticket-von-kaufen-bis-kuendigen-alle-wichtigen-infos-82203" target="_blank" rel="noopener">Verbraucherzentrale — Deutschlandticket Infos</a> ·
+      <a href="https://www.bahn.de/faq/deutschlandticket-ab-sofort" target="_blank" rel="noopener">DB — Kauf mitten im Monat</a>
+    </p>
+
+    <p class="article-footer">
+      Redaktion ticket-rechner.de · Stand: Juli 2026. Zahlungsmethoden, Bestellfristen und
+      Zusatzleistungen können je nach Anbieter abweichen. Alle Angaben ohne Gewähr. Diese Website
+      ist nicht affiliiert mit der Deutschen Bahn oder einem Verkehrsverbund.
+    </p>
+
+    <p>
+      <a href="/ratgeber/deutschlandticket-kosten">Kosten-Überblick</a> ·
+      <a href="/ratgeber/deutschlandticket-kuendigen">Deutschlandticket kündigen</a> ·
+      <a href="/ratgeber/deutschlandticket-jobticket">Jobticket</a> ·
+      <a href="/ratgeber/deutschlandticket-studenten">Studenten & Schüler</a> ·
+      <a href="/lohnt-sich-rechner">Lohnt-sich-Rechner</a> ·
+      <a href="/kuendigungsfrist-rechner">Kündigungsfrist berechnen</a>
+    </p>
+
   </article>
+
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
 </Base>

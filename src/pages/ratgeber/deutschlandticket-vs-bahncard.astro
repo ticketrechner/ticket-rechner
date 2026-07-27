@@ -1,0 +1,600 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const title = 'Deutschlandticket vs BahnCard 2026: Was lohnt sich für wen?';
+const description = 'Deutschlandticket oder BahnCard 25, 50, 100? Der direkte Vergleich mit Preisen, Rechenbeispielen und Entscheidungshilfe — plus wann sich die Kombination lohnt.';
+const canonical = 'https://ticket-rechner.de/ratgeber/deutschlandticket-vs-bahncard';
+const ogTitle = 'Deutschlandticket vs BahnCard 2026: Der ehrliche Vergleich';
+const ogDescription = 'Nahverkehr-Flatrate oder Fernverkehr-Rabatt? Deutschlandticket und BahnCard im direkten Vergleich — mit Preistabelle und Rechenbeispielen.';
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": title,
+  "description": description,
+  "datePublished": "2026-07-27",
+  "dateModified": "2026-07-27",
+  "author": {
+    "@type": "Organization",
+    "name": "Redaktion ticket-rechner.de",
+    "url": "https://ticket-rechner.de/ueber-uns"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "ticket-rechner.de",
+    "url": "https://ticket-rechner.de",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ticket-rechner.de/og-image.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": canonical
+  },
+  "image": "https://ticket-rechner.de/og-image.png"
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Was ist der Unterschied zwischen Deutschlandticket und BahnCard?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Das Deutschlandticket ist ein Fahrschein — es berechtigt zur Nutzung des gesamten Nahverkehrs in Deutschland (63 €/Monat). Die BahnCard ist eine Rabattkarte — sie gibt Prozente auf Fernverkehrstickets (ICE, IC), ist aber selbst kein Ticket. Die beiden Produkte ergänzen sich, sie konkurrieren nicht."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kann ich Deutschlandticket und BahnCard kombinieren?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja, und das ist oft die klügste Lösung. Das Deutschlandticket deckt den Nahverkehr ab (Pendeln, Zubringer zum ICE-Bahnhof), die BahnCard senkt den Preis für Fernverkehrsfahrten. Beispiel: Deutschlandticket (63 €/Monat) + BahnCard 25 (62,90 €/Jahr = 5,24 €/Monat) = 68,24 €/Monat für Nahverkehr-Flatrate plus 25 % Rabatt auf alle ICE-Tickets."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ist das Deutschlandticket in der BahnCard 100 enthalten?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. Die BahnCard 100 (4.899 €/Jahr, 2. Klasse) enthält das Deutschlandticket ohne Aufpreis. Du kannst damit unbegrenzt im Fern- und Nahverkehr fahren — ICE, IC, RE, RB, S-Bahn, U-Bahn, Bus, Tram."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kann ich mit dem Deutschlandticket ICE fahren?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Grundsätzlich nein. Das Deutschlandticket gilt nur im Nahverkehr (RE, RB, S-Bahn, Bus, U-Bahn, Tram). Für ICE, IC und EC brauchst du ein separates Fernverkehrsticket. Die BahnCard gibt dir Rabatt auf dieses Ticket."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was kostet die BahnCard 25 im Jahr 2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Regulär 62,90 € pro Jahr (2. Klasse). My BahnCard 25 für unter 27-Jährige: 39,90 €. Senioren BahnCard 25 (ab 65): 40,90 €. Probe BahnCard 25 (3 Monate): 19,90 €."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ab wann lohnt sich die BahnCard 25 zusätzlich zum Deutschlandticket?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ab ca. 252 € Fernverkehrsausgaben pro Jahr — das sind etwa 2–4 längere Hin- und Rückfahrten mit Sparpreis. Bei der My BahnCard 25 (39,90 €) reichen schon ca. 160 € Ausgaben, also 1–2 Fernreisen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Deutschlandticket oder BahnCard 50 — was ist günstiger?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Das sind verschiedene Produkte für verschiedene Zwecke. Das Deutschlandticket (756 €/Jahr) gibt dir unbegrenzten Nahverkehr. Die BahnCard 50 (244 €/Jahr) gibt dir 50 % Rabatt auf Fernverkehr-Flexpreise — aber kein einziges Ticket. Wer nur im Nahverkehr fährt, braucht keine BahnCard. Wer nur Fernverkehr fährt, braucht kein Deutschlandticket."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Lohnt sich die BahnCard 100 gegenüber Deutschlandticket + Einzeltickets?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Die BahnCard 100 kostet 4.899 €/Jahr (2. Klasse) und enthält das Deutschlandticket (Wert 756 €). Der effektive Mehrpreis für unbegrenzten Fernverkehr beträgt also ca. 4.143 €/Jahr. Das lohnt sich ab etwa 38 Fernverkehrsfahrten pro Jahr (ca. eine pro Woche) mit durchschnittlichen Flexpreisen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Gibt es einen Rabatt auf das Deutschlandticket mit BahnCard?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nein. Die BahnCard gibt keinen Rabatt auf das Deutschlandticket. Der Deutschlandticket-Preis von 63 €/Monat ist einheitlich und nicht rabattierbar. Die BahnCard rabattiert nur Fernverkehrstickets."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Brauche ich eine BahnCard, wenn ich schon das Deutschlandticket habe?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nur, wenn du gelegentlich oder regelmäßig Fernverkehr (ICE, IC) fährst. Das Deutschlandticket deckt den kompletten Nahverkehr ab. Für den Fernverkehr brauchst du zusätzlich ein Ticket — und die BahnCard macht dieses Ticket günstiger."
+      }
+    }
+  ]
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://ticket-rechner.de/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Ratgeber",
+      "item": "https://ticket-rechner.de/ratgeber"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Deutschlandticket vs BahnCard",
+      "item": canonical
+    }
+  ]
+};
+---
+
+<Base
+  title={title}
+  description={description}
+  canonical={canonical}
+  ogTitle={ogTitle}
+  ogDescription={ogDescription}
+  ogType="website"
+  ogUrl={canonical}
+>
+  <article>
+    <p class="article-meta">Ratgeber · Aktualisiert am 27.07.2026</p>
+
+    <h1>Deutschlandticket vs. BahnCard — der Vergleich, der die richtige Frage stellt</h1>
+
+    <p>
+      Deutschlandticket oder BahnCard — diese Frage klingt nach „entweder/oder", ist aber in
+      Wirklichkeit eine Falle. Das Deutschlandticket ist ein <strong>Fahrschein</strong> für den
+      Nahverkehr (63 €/Monat). Die BahnCard ist eine <strong>Rabattkarte</strong> für den
+      Fernverkehr (ab 62,90 €/Jahr). Die beiden konkurrieren nicht — sie ergänzen sich. Die
+      eigentliche Frage ist: Brauchst du nur Nahverkehr, nur Fernverkehr oder beides?
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>Was du vergleichst: Fahrschein vs. Rabattkarte</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Eigenschaft</th>
+          <th>Deutschlandticket</th>
+          <th>BahnCard 25/50</th>
+          <th>BahnCard 100</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Was ist es?</td>
+          <td>Ein Ticket (Fahrschein)</td>
+          <td>Eine Rabattkarte (kein Ticket)</td>
+          <td>Flatrate-Ticket (Fern + Nah)</td>
+        </tr>
+        <tr>
+          <td>Preis 2026</td>
+          <td>63 €/Monat (756 €/Jahr)</td>
+          <td>BC25: 62,90 €/Jahr · BC50: 244 €/Jahr</td>
+          <td>4.899 €/Jahr (2. Klasse)</td>
+        </tr>
+        <tr>
+          <td>Gültig in</td>
+          <td>Nahverkehr (RE, RB, S-Bahn, Bus, U-Bahn, Tram)</td>
+          <td>Fernverkehr (ICE, IC, EC) — nur Rabatt</td>
+          <td>Alles (Fern + Nah, inkl. Deutschlandticket)</td>
+        </tr>
+        <tr>
+          <td>ICE/IC nutzbar?</td>
+          <td>Nein</td>
+          <td>Ja (mit separatem Ticket)</td>
+          <td>Ja (unbegrenzt)</td>
+        </tr>
+        <tr>
+          <td>Laufzeit</td>
+          <td>Monatlich kündbar</td>
+          <td>12 Monate (auto. Verlängerung)</td>
+          <td>12 Monate (auto. Verlängerung)</td>
+        </tr>
+        <tr>
+          <td>Kündigungsfrist</td>
+          <td>Bis zum 10. des Monats</td>
+          <td>6 Wochen vor Ablauf</td>
+          <td>6 Wochen vor Ablauf</td>
+        </tr>
+        <tr>
+          <td>Deutschlandticket inklusive?</td>
+          <td>—</td>
+          <td>Nein</td>
+          <td>Ja</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- ============================================================ -->
+
+    <h2>Für wen was die richtige Wahl ist</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Dein Nutzungsprofil</th>
+          <th>Empfehlung</th>
+          <th>Monatliche Kosten</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Nur Nahverkehr (Pendeln, Stadt, Region)</td>
+          <td>Deutschlandticket allein</td>
+          <td>63 €</td>
+        </tr>
+        <tr>
+          <td>Nur Fernverkehr (ICE, wenig Nahverkehr)</td>
+          <td>BahnCard 25 oder 50 allein</td>
+          <td>5,24 € (BC25) oder 20,33 € (BC50) + Ticketkosten</td>
+        </tr>
+        <tr>
+          <td>Nahverkehr täglich + gelegentlich ICE</td>
+          <td>Deutschlandticket + BahnCard 25</td>
+          <td>68,24 € + vergünstigte ICE-Tickets</td>
+        </tr>
+        <tr>
+          <td>Nahverkehr täglich + häufig ICE (flexibel)</td>
+          <td>Deutschlandticket + BahnCard 50</td>
+          <td>83,33 € + vergünstigte ICE-Tickets</td>
+        </tr>
+        <tr>
+          <td>Täglich Fern- und Nahverkehr (Vielpendler)</td>
+          <td>BahnCard 100 (enthält D-Ticket)</td>
+          <td>408,25 €</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- ============================================================ -->
+
+    <h2>Rechenbeispiel 1: Pendler mit gelegentlicher Fernreise</h2>
+
+    <p>
+      Lisa pendelt täglich mit der S-Bahn zur Arbeit und fährt etwa einmal im Monat mit dem ICE
+      zu ihrer Familie (z. B. Hamburg–München, Sparpreis ca. 30 € pro Strecke).
+    </p>
+
+    <p>
+      <strong>Ohne BahnCard:</strong> Deutschlandticket 63 € + 2 × 30 € ICE-Tickets = 123 €/Monat<br>
+      <strong>Mit BahnCard 25:</strong> Deutschlandticket 63 € + BahnCard 5,24 €/Monat + 2 × 22,50 €
+      (25 % Rabatt) = 113,24 €/Monat<br>
+      <strong>Ersparnis:</strong> Ca. 10 €/Monat = 117 €/Jahr. Die BahnCard 25 (62,90 €) hat
+      sich nach 7 Monaten amortisiert.
+    </p>
+
+    <p>
+      <strong>Fazit:</strong> Schon ab 1–2 Fernfahrten pro Monat mit Sparpreisen lohnt sich die
+      BahnCard 25 als Ergänzung zum Deutschlandticket.
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>Rechenbeispiel 2: Wochenend-Fernpendler</h2>
+
+    <p>
+      Tom arbeitet in Frankfurt, seine Partnerin lebt in Berlin. Er fährt jedes zweite Wochenende
+      mit dem ICE (Flexpreis ca. 130 € pro Strecke).
+    </p>
+
+    <p>
+      <strong>Ohne BahnCard:</strong> Deutschlandticket 63 € + 4 × 130 € = 583 €/Monat<br>
+      <strong>Mit BahnCard 50:</strong> Deutschlandticket 63 € + BahnCard 20,33 €/Monat +
+      4 × 65 € (50 % Rabatt auf Flexpreis) = 343,33 €/Monat<br>
+      <strong>Ersparnis:</strong> Ca. 240 €/Monat. Die BahnCard 50 amortisiert sich in unter
+      2 Monaten.
+    </p>
+
+    <p>
+      <strong>Fazit:</strong> Wer regelmäßig Flexpreise bucht (kurzfristig, ohne Zugbindung),
+      spart mit der BahnCard 50 erheblich. Das Deutschlandticket übernimmt dabei den Zubringer
+      zum ICE-Bahnhof — ohne zusätzliche Kosten.
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>Rechenbeispiel 3: Student mit My BahnCard</h2>
+
+    <p>
+      Mia studiert in Köln und fährt 3–4 Mal im Jahr zu ihren Eltern nach München (Sparpreis
+      ca. 25 € pro Strecke).
+    </p>
+
+    <p>
+      <strong>Ohne BahnCard:</strong> Semesterticket (ca. 35 €/Monat) + 8 × 25 € = 535 €/Jahr<br>
+      <strong>Mit My BahnCard 25:</strong> Semesterticket 35 €/Monat + My BahnCard 39,90 €/Jahr
+      + 8 × 18,75 € (25 % Rabatt) = 609,90 €/Jahr<br>
+      <strong>Fazit:</strong> Bei nur 3–4 Fernreisen pro Jahr lohnt sich die My BahnCard 25 für
+      Mia kaum. Ab 6+ Fernreisen wird sie rentabel.
+    </p>
+
+    <p>
+      <strong>Besser:</strong> Die Probe BahnCard 25 für 19,90 € (3 Monate) testen, z. B. in den
+      Semesterferien, wenn die meisten Heimfahrten anfallen.
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>Der Sonderfall: BahnCard 100</h2>
+
+    <p>
+      Die BahnCard 100 ist keine Rabattkarte — sie ist eine <strong>Jahres-Flatrate</strong> für
+      das gesamte DB-Netz, inklusive ICE, IC, RE, RB und dem Deutschlandticket.
+    </p>
+
+    <p>
+      <strong>Preis 2026:</strong> 4.899 € (2. Klasse) / 7.999 € (1. Klasse). My BahnCard 100
+      (unter 27): 3.199 € (2. Klasse).<br>
+      <strong>Deutschlandticket enthalten:</strong> Ja — das D-Ticket im Wert von 756 €/Jahr ist
+      inklusive. Der effektive Aufpreis für unbegrenzten Fernverkehr beträgt also ca. 4.143 €.<br>
+      <strong>Break-Even:</strong> Ab ca. 38 Fernverkehrsfahrten pro Jahr (ca. eine pro Woche) mit
+      durchschnittlichen Flexpreisen. Oder: ab ca. 5.000 € jährliche Ticketausgaben ohne BahnCard.
+    </p>
+
+    <p>
+      Für die meisten Menschen ist die BahnCard 100 überdimensioniert. Sie lohnt sich für
+      Fernpendler, die 4–5 Tage pro Woche ICE fahren, und für Berufstätige, die mehrmals wöchentlich
+      deutschlandweit unterwegs sind.
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>Der versteckte Vorteil: Das Deutschlandticket als Zubringer</h2>
+
+    <p>
+      Ein Aspekt, den viele übersehen: Wer Deutschlandticket und BahnCard kombiniert, spart nicht
+      nur den BahnCard-Rabatt auf das ICE-Ticket, sondern auch das
+      <strong>Zubringer-Ticket zum Fernbahnhof</strong>.
+    </p>
+
+    <p>
+      Ohne Deutschlandticket müsstest du für die S-Bahn oder den RE zum ICE-Bahnhof ein separates
+      Nahverkehrsticket kaufen (oder die Nahverkehrsstrecke in die Fernverkehrsbuchung
+      einschließen). Mit dem Deutschlandticket fällt dieser Posten komplett weg — du bist bereits
+      „abgedeckt" bis zum Einstieg in den ICE.
+    </p>
+
+    <p>
+      Dieser Zubringer-Effekt spart je nach Strecke 5–15 € pro Fahrt. Über ein Jahr mit
+      regelmäßigen Fernreisen summiert sich das zu einem dreistelligen Betrag.
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>BahnCard-Preise 2026 im Überblick</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>BahnCard-Variante</th>
+          <th>Preis (2. Klasse)</th>
+          <th>Rabatt</th>
+          <th>Lohnt sich ab</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>BahnCard 25</td>
+          <td>62,90 €/Jahr</td>
+          <td>25 % auf Flex-, Spar- und Super-Sparpreise</td>
+          <td>~252 € Ticketausgaben/Jahr</td>
+        </tr>
+        <tr>
+          <td>My BahnCard 25 (unter 27)</td>
+          <td>39,90 €/Jahr</td>
+          <td>25 % auf alles</td>
+          <td>~160 € Ticketausgaben/Jahr</td>
+        </tr>
+        <tr>
+          <td>Senioren BahnCard 25 (ab 65)</td>
+          <td>40,90 €/Jahr</td>
+          <td>25 % auf alles</td>
+          <td>~164 € Ticketausgaben/Jahr</td>
+        </tr>
+        <tr>
+          <td>BahnCard 50</td>
+          <td>244 €/Jahr (Aktion 199 € bis 31.7.2026)</td>
+          <td>50 % auf Flexpreis, 25 % auf Sparpreise</td>
+          <td>~488 € Flexpreis-Ausgaben/Jahr</td>
+        </tr>
+        <tr>
+          <td>BahnCard 100</td>
+          <td>4.899 €/Jahr</td>
+          <td>Unbegrenzt (inkl. Deutschlandticket)</td>
+          <td>~5.000 € Ticketausgaben/Jahr</td>
+        </tr>
+        <tr>
+          <td>Probe BahnCard 25</td>
+          <td>19,90 € (3 Monate)</td>
+          <td>25 % auf alles</td>
+          <td>~80 € Ticketausgaben in 3 Monaten</td>
+        </tr>
+        <tr>
+          <td>Probe BahnCard 50</td>
+          <td>76,90 € (3 Monate)</td>
+          <td>50 % auf Flexpreis</td>
+          <td>~154 € Flexpreis in 3 Monaten</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>
+      <strong>Achtung:</strong> Die BahnCard ist ein Jahres-Abo und verlängert sich automatisch.
+      Kündigung 6 Wochen vor Ablauf. Die Probe BahnCard endet automatisch nach 3 Monaten, wenn du
+      bis 4 Wochen vorher kündigst — sonst geht sie ins Jahresabo über.
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>Was die BahnCard nicht kann (und das Deutschlandticket schon)</h2>
+
+    <p>
+      <strong>Kein Nahverkehr.</strong> Die BahnCard 25/50 gibt keinen Rabatt auf Nahverkehrstickets
+      innerhalb von Verkehrsverbünden. Du bekommst damit keine günstigere S-Bahn, U-Bahn oder
+      Busfahrt. Dafür brauchst du das Deutschlandticket oder Einzeltickets.<br>
+      <strong>Kein Fahrschein.</strong> Die BahnCard allein berechtigt zu keiner Fahrt. Du brauchst
+      immer zusätzlich ein Ticket.<br>
+      <strong>Keine monatliche Kündigung.</strong> Die BahnCard läuft 12 Monate mit 6 Wochen
+      Kündigungsfrist. Das Deutschlandticket ist monatlich kündbar.
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>Was das Deutschlandticket nicht kann (und die BahnCard schon)</h2>
+
+    <p>
+      <strong>Kein Fernverkehr.</strong> Mit dem Deutschlandticket kannst du nicht im ICE, IC oder
+      EC fahren (wenige Ausnahmen auf bestimmten Nahverkehrsstrecken).
+      <a href="/ratgeber/deutschlandticket-ice">Details zu ICE-Ausnahmen →</a><br>
+      <strong>Kein Rabatt auf Ferntickets.</strong> Das Deutschlandticket reduziert nicht den Preis
+      eines ICE-Tickets. Dafür brauchst du die BahnCard.<br>
+      <strong>Keine 1. Klasse.</strong> Das Deutschlandticket gilt nur in der 2. Klasse.
+      <a href="/ratgeber/deutschlandticket-erste-klasse">Mehr zur 1. Klasse →</a>
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>Häufige Fragen (FAQ)</h2>
+
+    <h3>Was ist der Unterschied zwischen Deutschlandticket und BahnCard?</h3>
+    <p>
+      Das Deutschlandticket ist ein Fahrschein (Nahverkehr, 63 €/Monat). Die BahnCard ist eine
+      Rabattkarte (Fernverkehr, ab 62,90 €/Jahr). Sie ergänzen sich.
+    </p>
+
+    <h3>Kann ich Deutschlandticket und BahnCard kombinieren?</h3>
+    <p>
+      Ja. D-Ticket für den Nahverkehr + BahnCard für günstigere ICE-Tickets. Das ist oft die
+      klügste Lösung für Menschen, die beides nutzen.
+    </p>
+
+    <h3>Ist das Deutschlandticket in der BahnCard 100 enthalten?</h3>
+    <p>
+      Ja. BahnCard 100 = unbegrenzter Fern- und Nahverkehr, Deutschlandticket inklusive.
+    </p>
+
+    <h3>Kann ich mit dem Deutschlandticket ICE fahren?</h3>
+    <p>
+      Nein (wenige Ausnahmen auf bestimmten Strecken).
+      <a href="/ratgeber/deutschlandticket-ice">ICE-Ausnahmen →</a>
+    </p>
+
+    <h3>Was kostet die BahnCard 25?</h3>
+    <p>
+      62,90 €/Jahr (2. Klasse). My BahnCard 25 (unter 27): 39,90 €. Senioren (ab 65): 40,90 €.
+      Probe BahnCard 25: 19,90 € für 3 Monate.
+    </p>
+
+    <h3>Ab wann lohnt sich die BahnCard 25 zum Deutschlandticket?</h3>
+    <p>
+      Ab ca. 252 € Fernverkehrsausgaben pro Jahr (2–4 längere Hin- und Rückfahrten). Mit der
+      My BahnCard 25 (39,90 €) ab ca. 160 €.
+    </p>
+
+    <h3>Deutschlandticket oder BahnCard 50?</h3>
+    <p>
+      Verschiedene Produkte. D-Ticket = Nahverkehr-Flatrate. BahnCard 50 = Fernverkehr-Rabatt.
+      Wer beides braucht: kombinieren.
+    </p>
+
+    <h3>Lohnt sich die BahnCard 100?</h3>
+    <p>
+      Ab ca. 5.000 € Ticketausgaben/Jahr bzw. ca. 38 Fernverkehrsfahrten/Jahr. Enthält das
+      Deutschlandticket im Wert von 756 €. Für die meisten Menschen überdimensioniert.
+    </p>
+
+    <h3>Gibt es Rabatt auf das Deutschlandticket mit BahnCard?</h3>
+    <p>
+      Nein. Der Deutschlandticket-Preis (63 €) ist einheitlich und wird durch keine BahnCard
+      rabattiert.
+    </p>
+
+    <h3>Brauche ich eine BahnCard, wenn ich das Deutschlandticket habe?</h3>
+    <p>
+      Nur wenn du Fernverkehr fährst. Das Deutschlandticket deckt den gesamten Nahverkehr ab.
+      Für ICE/IC brauchst du ein separates Ticket — die BahnCard macht es günstiger.
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>Zusammenfassung: Drei einfache Regeln</h2>
+
+    <p>
+      <strong>Regel 1:</strong> Wenn du hauptsächlich im Nahverkehr unterwegs bist (Pendeln,
+      Stadt, Region), nimm das Deutschlandticket. Du brauchst keine BahnCard.
+    </p>
+
+    <p>
+      <strong>Regel 2:</strong> Wenn du auch Fernverkehr fährst, kombiniere Deutschlandticket +
+      BahnCard 25. Die BahnCard kostet dich 5,24 €/Monat und spart bei jeder ICE-Fahrt 25 %.
+      Das Deutschlandticket deckt den Zubringer ab.
+    </p>
+
+    <p>
+      <strong>Regel 3:</strong> Wenn du fast täglich Fernverkehr fährst, prüfe die BahnCard 100.
+      Sie enthält das Deutschlandticket und lohnt sich ab ca. einer ICE-Fahrt pro Woche.
+    </p>
+
+    <p>
+      Ob sich das Deutschlandticket allein für dich rechnet:
+      <a href="/lohnt-sich-rechner">Lohnt-sich-Rechner →</a>
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>Offizielle Quellen</h2>
+
+    <p>
+      <a href="https://www.bahn.de/angebot/bahncard" target="_blank" rel="noopener">DB — BahnCard-Übersicht und Preise 2026</a> ·
+      <a href="https://www.bahn.de/angebot/regio/deutschland-ticket" target="_blank" rel="noopener">DB — Deutschlandticket kaufen</a> ·
+      <a href="https://www.finanztip.de/bahntickets/bahncard/" target="_blank" rel="noopener">Finanztip — BahnCard: Kosten & Ermäßigungen</a> ·
+      <a href="https://www.finanztip.de/deutschlandticket/" target="_blank" rel="noopener">Finanztip — Deutschlandticket 2026</a>
+    </p>
+
+    <p class="article-footer">
+      Redaktion ticket-rechner.de · Stand: Juli 2026. BahnCard-Preise, Aktionsangebote und
+      Rabattsätze können sich ändern — aktuelle Konditionen auf bahn.de prüfen. Alle Angaben ohne
+      Gewähr. Diese Website ist nicht affiliiert mit der Deutschen Bahn oder einem Verkehrsverbund.
+    </p>
+
+    <p>
+      <a href="/ratgeber/deutschlandticket-ice">Deutschlandticket & ICE</a> ·
+      <a href="/ratgeber/deutschlandticket-kosten">Kosten-Überblick</a> ·
+      <a href="/ratgeber/deutschlandticket-kaufen">Deutschlandticket kaufen</a> ·
+      <a href="/ratgeber/deutschlandticket-erste-klasse">1. Klasse</a> ·
+      <a href="/ratgeber/deutschlandticket-kuendigen">Kündigen</a> ·
+      <a href="/lohnt-sich-rechner">Lohnt-sich-Rechner</a> ·
+      <a href="/kuendigungsfrist-rechner">Kündigungsfrist berechnen</a>
+    </p>
+
+  </article>
+
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+</Base>

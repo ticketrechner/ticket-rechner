@@ -1,0 +1,547 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const title = 'Deutschlandticket verlängern 2026: Automatisch, nach Kündigung & bei Preiserhöhung';
+const description = 'Deutschlandticket verlängern — musst du etwas tun? So funktioniert die automatische Verlängerung, Reaktivierung nach Kündigung und Zustimmung bei Preisänderungen.';
+const canonical = 'https://ticket-rechner.de/ratgeber/deutschlandticket-verlaengern';
+const ogTitle = 'Deutschlandticket verlängern 2026: Was du wissen musst';
+const ogDescription = 'Auto-Verlängerung, Reaktivierung nach Kündigung, Zustimmung bei Preiserhöhung — alles zur Verlängerung des Deutschlandtickets auf einen Blick.';
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": title,
+  "description": description,
+  "datePublished": "2026-07-27",
+  "dateModified": "2026-07-27",
+  "author": {
+    "@type": "Organization",
+    "name": "Redaktion ticket-rechner.de",
+    "url": "https://ticket-rechner.de/ueber-uns"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "ticket-rechner.de",
+    "url": "https://ticket-rechner.de",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ticket-rechner.de/og-image.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": canonical
+  },
+  "image": "https://ticket-rechner.de/og-image.png"
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Verlängert sich das Deutschlandticket automatisch?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. Das Deutschlandticket ist ein Abo und verlängert sich jeden Monat automatisch, solange du nicht kündigst. Du musst nichts tun — das Ticket wird am Monatsersten automatisch für den neuen Monat aktualisiert und der Betrag abgebucht."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Muss ich der Preiserhöhung beim Deutschlandticket zustimmen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Das hängt vom Anbieter ab. Bei der Deutschen Bahn mussten Kunden der Erhöhung auf 63 € aktiv zustimmen (Frist: 30. November 2025). Ohne Zustimmung wurde das Abo automatisch gekündigt. Andere Anbieter (z. B. STOAG) haben den Preis ohne Zustimmungspflicht angepasst. Bei der nächsten Preisänderung (voraussichtlich Ende 2026 für 2027) ist das Verfahren noch offen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kann ich mein gekündigtes Deutschlandticket wieder aktivieren?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nur solange das Abo den Status 'Kündigung eingeleitet' hat, also vor dem Kündigungsdatum. Im Aboportal oder DB Navigator unter 'Abo reaktivieren'. Nach dem Kündigungsdatum ist eine Reaktivierung nicht mehr möglich — du musst ein komplett neues Abo abschließen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kann ich das Deutschlandticket pausieren statt kündigen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bei den meisten Anbietern (DB, HVV, MVG, BVG) nicht. Du musst kündigen und danach ein neues Abo abschließen. Ausnahme: TicketPlus+ bietet eine Pausenfunktion bis 24 Stunden vor Monatsende. Einige weitere Drittanbieter haben ähnliche Optionen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was passiert mit meiner Chipkarte bei der Verlängerung?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nichts — die Chipkarte bleibt aktiv und wird automatisch mit dem neuen Monat bespielt. Du musst die Karte nicht am Automaten aktualisieren (anders als beim erstmaligen Abo-Wechsel). Die Chipkarte selbst ist 4–5 Jahre gültig; vor Ablauf bekommst du automatisch eine neue zugeschickt."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Muss ich mein Handyticket jeden Monat erneuern?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nein. Das Handyticket aktualisiert sich am Monatsersten automatisch — du siehst den neuen Gültigkeitszeitraum, wenn du das Ticket in der App öffnest. Einzige Voraussetzung: Das Smartphone muss einmal pro Monat mit dem Internet verbunden sein, damit die Aktualisierung durchläuft."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was kostet die Verlängerung des Deutschlandtickets?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Die Verlängerung kostet nichts extra — du zahlst weiterhin den regulären Monatspreis von 63 €. Es gibt keine Verlängerungsgebühr. Bei einer Preiserhöhung ändert sich der monatliche Betrag, aber die Verlängerung selbst bleibt kostenlos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was passiert 2027 mit dem Preis des Deutschlandtickets?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ab 2027 wird der Preis über einen automatischen Preisindex (Kosten für Personal und Energie) berechnet. Der neue Preis wird bis Ende September 2026 bekanntgegeben. Je nach Anbieter kann dann wieder eine Zustimmung nötig sein. Die Finanzierung ist bis 2030 gesichert (3 Milliarden € jährlich von Bund und Ländern)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Mein Abo wurde wegen der Preiserhöhung gekündigt — was tun?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Wenn du der Preiserhöhung nicht rechtzeitig zugestimmt hast und das Abo dadurch gekündigt wurde, musst du ein neues Abo zum aktuellen Preis von 63 €/Monat abschließen. Eine rückwirkende Reaktivierung ist in der Regel nicht möglich."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ich habe mehrere Deutschlandtickets — muss ich jedes einzeln verlängern?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Die reguläre monatliche Verlängerung läuft automatisch für alle Tickets. Bei einer Preiserhöhung mit Zustimmungspflicht (wie Ende 2025) musst du für jedes Ticket separat zustimmen."
+      }
+    }
+  ]
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://ticket-rechner.de/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Ratgeber",
+      "item": "https://ticket-rechner.de/ratgeber"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Deutschlandticket verlängern",
+      "item": canonical
+    }
+  ]
+};
+---
+
+<Base
+  title={title}
+  description={description}
+  canonical={canonical}
+  ogTitle={ogTitle}
+  ogDescription={ogDescription}
+  ogType="website"
+  ogUrl={canonical}
+>
+  <article>
+    <p class="article-meta">Ratgeber · Aktualisiert am 27.07.2026</p>
+
+    <h1>Deutschlandticket verlängern — musst du überhaupt etwas tun?</h1>
+
+    <p>
+      Im Normalfall: nein. Das Deutschlandticket verlängert sich jeden Monat automatisch, solange
+      du nicht kündigst. Es gibt keine Verlängerungsgebühr, keinen Antrag und keinen Button, den
+      du drücken musst. Die einzige Ausnahme: Bei einer Preiserhöhung mussten einige Anbieter eine
+      aktive Zustimmung verlangen — wer die Frist verpasste, stand ohne Ticket da. Dieser Artikel
+      erklärt, wann du wirklich handeln musst und wann du dich zurücklehnen kannst.
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>So funktioniert die automatische Verlängerung</h2>
+
+    <p>
+      Das Deutschlandticket ist ein monatlich kündbares Abo. Es wird am <strong>1. jedes
+      Monats</strong> automatisch für den neuen Kalendermonat verlängert. Der Preis von 63 € wird
+      per SEPA-Lastschrift oder Kreditkarte abgebucht — je nachdem, welche Zahlungsmethode du beim
+      Kauf hinterlegt hast.
+    </p>
+
+    <p>
+      <strong>Beim Handyticket:</strong> Der QR-Code aktualisiert sich automatisch auf den neuen
+      Monat. Du siehst den aktuellen Gültigkeitszeitraum, wenn du das Ticket in der App öffnest.
+      In der Ticketvorschau kann der Monat manchmal verzögert angezeigt werden — der QR-Code selbst
+      ist aber korrekt. Einzige Voraussetzung: Dein Smartphone muss <strong>einmal pro
+      Monat</strong> mit dem Internet verbunden sein, damit die Aktualisierung durchläuft.
+    </p>
+
+    <p>
+      <strong>Bei der Chipkarte:</strong> Das Ticket auf dem Chip wird automatisch mit dem neuen
+      Monat bespielt. Du musst die Karte nicht an einem Automaten aktualisieren — das war nur beim
+      erstmaligen Wechsel auf das Deutschlandticket nötig. Die Chipkarte selbst ist 4–5 Jahre gültig;
+      vor Ablauf schickt dir dein Anbieter automatisch und kostenlos eine neue zu (Folgekarte).
+    </p>
+
+    <p>
+      <strong>Zusammengefasst:</strong> Solange du nicht kündigst und die monatliche Zahlung
+      durchgeht, musst du für die Verlängerung nichts tun.
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>Die Ausnahme: Preiserhöhung mit Zustimmungspflicht</h2>
+
+    <p>
+      Bei der letzten Preiserhöhung (von 58 € auf 63 € zum 1. Januar 2026) mussten Abonnenten
+      bei einigen Anbietern <strong>aktiv zustimmen</strong>, dass sie das Ticket zum neuen Preis
+      weiterführen wollen. Wer bis zur Frist nicht zugestimmt hatte, dessen Abo wurde automatisch
+      zum 31. Dezember 2025 gekündigt.
+    </p>
+
+    <h3>Welche Anbieter Zustimmung verlangten</h3>
+
+    <p>
+      <strong>Deutsche Bahn:</strong> Zustimmung erforderlich bis 30. November 2025, über das
+      Aboportal auf bahn.de oder im DB Navigator. Ohne Zustimmung: automatische Kündigung zum
+      31.12.2025.<br>
+      <strong>Viele Verkehrsverbünde:</strong> Ähnliches Verfahren — E-Mail-Aufforderung zur
+      Zustimmung, bei Nichtreaktion automatische Kündigung.
+    </p>
+
+    <p>
+      <strong>Andere Anbieter ohne Zustimmungspflicht:</strong> Einige Verkehrsunternehmen (z. B.
+      STOAG Oberhausen) haben den Preis ohne aktive Zustimmung der Kunden angepasst — das Abo
+      lief einfach zum neuen Preis weiter. Das hing von den jeweiligen Tarifbedingungen ab.
+    </p>
+
+    <p>
+      Wer nach dem 15. Oktober 2025 neu bestellt hatte, wurde bereits im Bestellprozess über den
+      neuen Preis informiert. Eine gesonderte Zustimmung war dann nicht mehr nötig.
+    </p>
+
+    <h3>Was kommt 2027?</h3>
+
+    <p>
+      Ab 2027 wird der Preis des Deutschlandtickets über einen <strong>automatischen
+      Preisindex</strong> berechnet, der an die Entwicklung von Personal- und Energiekosten
+      gekoppelt ist. Das wurde im März 2026 von den Verkehrsministern beschlossen. Der neue Preis
+      für 2027 wird bis <strong>Ende September 2026</strong> bekanntgegeben.
+    </p>
+
+    <p>
+      Ob dann wieder eine aktive Zustimmung nötig ist, hängt vom Anbieter und den
+      Tarifbedingungen ab. Achte ab Herbst 2026 auf E-Mails deines Anbieters — und prüfe auch
+      den Spam-Ordner. Die Finanzierung des Deutschlandtickets ist bis 2030 gesichert (3 Milliarden €
+      jährlich von Bund und Ländern).
+    </p>
+
+    <p>
+      Mehr dazu:
+      <a href="/ratgeber/deutschlandticket-preiserhoehung">Deutschlandticket Preiserhöhung — alle Details</a>
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>Deutschlandticket nach Kündigung wieder aktivieren</h2>
+
+    <p>
+      Du hast dein Abo gekündigt und willst es doch behalten? Dann hängt es davon ab, wo du im
+      Zeitablauf stehst:
+    </p>
+
+    <h3>Vor dem Kündigungsdatum: Reaktivieren</h3>
+
+    <p>
+      Solange dein Abo den Status <strong>„Kündigung eingeleitet"</strong> hat (also der letzte
+      Gültigkeitsmonat noch nicht abgelaufen ist), kannst du es in den meisten Fällen reaktivieren:
+    </p>
+
+    <p>
+      <strong>Bei der DB:</strong> Im Aboportal auf bahn.de oder im DB Navigator → „Abo
+      reaktivieren".<br>
+      <strong>Bei Verbünden:</strong> Im Kundenportal des jeweiligen Anbieters — die Option
+      erscheint, solange das Abo noch nicht endgültig beendet ist.
+    </p>
+
+    <p>
+      <strong>Wann die Reaktivierung nicht funktioniert:</strong> Wenn die Voraussetzungen für das
+      Abo entfallen sind (z. B. Jobticket nach Arbeitgeberwechsel), wenn der Arbeitgeber gekündigt
+      hat, oder wenn das Abo-Produkt nicht mehr angeboten wird. In diesen Fällen erscheint der
+      Button „Abo reaktivieren" nicht.
+    </p>
+
+    <h3>Nach dem Kündigungsdatum: Neues Abo</h3>
+
+    <p>
+      Ist das Kündigungsdatum überschritten und das Abo endgültig beendet, kannst du es
+      <strong>nicht mehr reaktivieren</strong>. Du musst ein komplett neues Abo abschließen — über
+      die DB, die Deutschlandticket-App oder einen Verbund deiner Wahl.
+    </p>
+
+    <p>
+      Bei der Deutschlandticket-App wird das explizit bestätigt: „Ein gekündigtes Ticket kann nicht
+      erneut aktiviert werden." Du bekommst eine neue Abonummer und startest von vorn.
+    </p>
+
+    <p>
+      <strong>Tipp:</strong> Wenn du das Ticket regelmäßig nur für bestimmte Monate brauchst
+      (z. B. nicht im Urlaub), ist die Pausenfunktion — wo verfügbar — sinnvoller als Kündigen und
+      Neu-Abschließen.
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>Pausieren statt kündigen: Wer bietet das an?</h2>
+
+    <p>
+      Eine echte Pausenfunktion (Abo bleibt bestehen, aber es wird für einen Monat nicht
+      abgebucht) bieten die meisten großen Anbieter <strong>nicht</strong> an:
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Anbieter</th>
+          <th>Pausenfunktion?</th>
+          <th>Wie stattdessen?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Deutsche Bahn</td>
+          <td>Nein</td>
+          <td>Kündigen + neues Abo</td>
+        </tr>
+        <tr>
+          <td>HVV (Hamburg)</td>
+          <td>Nein</td>
+          <td>Kündigen + neues Abo</td>
+        </tr>
+        <tr>
+          <td>MVG (München)</td>
+          <td>Nein</td>
+          <td>Kündigen + neues Abo</td>
+        </tr>
+        <tr>
+          <td>BVG (Berlin)</td>
+          <td>Nein</td>
+          <td>Kündigen + neues Abo</td>
+        </tr>
+        <tr>
+          <td>TicketPlus+</td>
+          <td>Ja (bis 24h vor Monatsende)</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td>Deutschlandticket-App</td>
+          <td>Nein</td>
+          <td>Kündigen + neues Abo</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>
+      Bei den meisten Anbietern ist „Pausieren" also faktisch: bis zum 10. des Monats kündigen,
+      den Monat auslaufen lassen und danach ein neues Abo abschließen. Das funktioniert, kostet
+      aber jedes Mal den Aufwand einer Neubestellung.
+    </p>
+
+    <p>
+      <a href="/ratgeber/deutschlandticket-pausieren">Mehr zum Pausieren im Detail →</a>
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>Wann die Verlängerung scheitert</h2>
+
+    <p>
+      In drei Fällen wird das Abo nicht verlängert, obwohl du es eigentlich weiterführen willst:
+    </p>
+
+    <p>
+      <strong>Zahlung fehlgeschlagen.</strong> Wenn die monatliche Abbuchung scheitert (Konto nicht
+      gedeckt, IBAN ungültig, Kreditkarte abgelaufen), wird das Ticket nach einer
+      Zahlungserinnerung gesperrt. Dann greift kein automatischer Verlängerungsmechanismus mehr.
+      <a href="/ratgeber/deutschlandticket-gesperrt">Mehr zur Sperrung bei Zahlungsproblemen →</a>
+    </p>
+
+    <p>
+      <strong>Preiserhöhung nicht zugestimmt.</strong> Bei Anbietern mit Zustimmungspflicht wird
+      das Abo ohne fristgerechte Bestätigung automatisch gekündigt. Dann hilft auch keine
+      Reaktivierung mehr, wenn die Frist abgelaufen ist.
+    </p>
+
+    <p>
+      <strong>Chipkarte abgelaufen und Folgekarte nicht angekommen.</strong> Die Chipkarte hat eine
+      Gültigkeit von 4–5 Jahren. Normalerweise kommt die Folgekarte automatisch per Post. Falls
+      sie nicht ankommt (Post-Problem, falsche Adresse), funktioniert die alte Karte nach Ablauf
+      nicht mehr. Kontaktiere deinen Anbieter, wenn die neue Karte 6 Wochen vor Ablauf noch nicht
+      eingetroffen ist.
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>Checkliste: Musst du etwas tun?</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Situation</th>
+          <th>Musst du handeln?</th>
+          <th>Was tun?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Normaler Monatswechsel</td>
+          <td>Nein</td>
+          <td>Ticket verlängert sich automatisch</td>
+        </tr>
+        <tr>
+          <td>Preiserhöhung angekündigt</td>
+          <td>Kommt drauf an</td>
+          <td>E-Mail des Anbieters prüfen — bei DB: Zustimmung im Aboportal</td>
+        </tr>
+        <tr>
+          <td>Kündigung versehentlich ausgelöst</td>
+          <td>Ja</td>
+          <td>Vor Kündigungsdatum: „Abo reaktivieren" im Portal</td>
+        </tr>
+        <tr>
+          <td>Kündigung abgelaufen, will wieder fahren</td>
+          <td>Ja</td>
+          <td>Neues Abo abschließen</td>
+        </tr>
+        <tr>
+          <td>Zahlungsmethode geändert</td>
+          <td>Ja</td>
+          <td>Neue IBAN / Kreditkarte im Kundenportal hinterlegen</td>
+        </tr>
+        <tr>
+          <td>Chipkarte läuft bald ab</td>
+          <td>Nein (meist)</td>
+          <td>Folgekarte kommt automatisch. Falls nicht: Anbieter kontaktieren</td>
+        </tr>
+        <tr>
+          <td>Adresse geändert</td>
+          <td>Ja (bei Chipkarte)</td>
+          <td>Adresse im Kundenportal aktualisieren — sonst kommt die Folgekarte nicht an</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- ============================================================ -->
+
+    <h2>Häufige Fragen (FAQ)</h2>
+
+    <h3>Verlängert sich das Deutschlandticket automatisch?</h3>
+    <p>
+      Ja. Es verlängert sich jeden Monat automatisch, solange du nicht kündigst. Kein Antrag, kein
+      Button, keine Gebühr.
+    </p>
+
+    <h3>Muss ich der Preiserhöhung zustimmen?</h3>
+    <p>
+      Bei einigen Anbietern ja (z. B. DB: Zustimmung im Aboportal nötig). Andere passen den Preis
+      automatisch an. Prüfe die E-Mails deines Anbieters.
+      <a href="/ratgeber/deutschlandticket-preiserhoehung">Details zur Preiserhöhung →</a>
+    </p>
+
+    <h3>Kann ich mein gekündigtes Ticket reaktivieren?</h3>
+    <p>
+      Nur vor dem Kündigungsdatum (Status „Kündigung eingeleitet"). Im Aboportal oder DB Navigator →
+      „Abo reaktivieren". Nach dem Kündigungsdatum: neues Abo abschließen.
+    </p>
+
+    <h3>Kann ich das Abo pausieren statt kündigen?</h3>
+    <p>
+      Bei DB, HVV, MVG, BVG nicht. Bei TicketPlus+ ja (bis 24h vor Monatsende). Bei den meisten
+      Anbietern: kündigen + neues Abo abschließen.
+      <a href="/ratgeber/deutschlandticket-pausieren">Mehr zum Pausieren →</a>
+    </p>
+
+    <h3>Was passiert mit meiner Chipkarte bei der Verlängerung?</h3>
+    <p>
+      Nichts — die Karte wird automatisch aktualisiert. Kein Automaten-Update nötig. Die Karte
+      selbst ist 4–5 Jahre gültig; Folgekarte kommt automatisch.
+    </p>
+
+    <h3>Muss ich das Handyticket monatlich erneuern?</h3>
+    <p>
+      Nein. Das Ticket aktualisiert sich automatisch. Einzige Voraussetzung: einmal pro Monat
+      Internet, damit der QR-Code aktualisiert wird.
+      <a href="/ratgeber/deutschlandticket-app-funktioniert-nicht">App-Probleme lösen →</a>
+    </p>
+
+    <h3>Was kostet die Verlängerung?</h3>
+    <p>
+      Nichts extra — du zahlst den regulären Monatspreis (63 €). Keine Verlängerungsgebühr.
+    </p>
+
+    <h3>Was passiert 2027 mit dem Preis?</h3>
+    <p>
+      Ab 2027 wird der Preis per Preisindex berechnet (Personal- und Energiekosten). Neuer Preis
+      wird bis September 2026 bekanntgegeben. Finanzierung ist bis 2030 gesichert.
+    </p>
+
+    <h3>Mein Abo wurde wegen Preiserhöhung gekündigt — was tun?</h3>
+    <p>
+      Neues Abo zum aktuellen Preis (63 €/Monat) abschließen. Rückwirkende Reaktivierung ist nicht
+      möglich.
+      <a href="/ratgeber/deutschlandticket-kaufen">So kaufst du das Ticket →</a>
+    </p>
+
+    <h3>Mehrere Tickets — muss ich jedes verlängern?</h3>
+    <p>
+      Die reguläre Verlängerung läuft automatisch. Bei Preiserhöhungen mit Zustimmungspflicht:
+      für jedes Ticket separat zustimmen.
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>Offizielle Quellen</h2>
+
+    <p>
+      <a href="https://www.bahn.de/faq/deutschlandticket-preisanpassung-2026" target="_blank" rel="noopener">DB — Preisanpassung 2026</a> ·
+      <a href="https://www.bahn.de/faq/abo-reaktivieren-nicht-moeglich" target="_blank" rel="noopener">DB — Abo reaktivieren nicht möglich</a> ·
+      <a href="https://wissen.deutschlandticket.de/mindestlaufzeit" target="_blank" rel="noopener">deutschlandticket.de — Mindestlaufzeit und Verlängerung</a> ·
+      <a href="https://wissen.deutschlandticket.de/neubestellung-nach-k%C3%BCndigung" target="_blank" rel="noopener">deutschlandticket.de — Neubestellung nach Kündigung</a>
+    </p>
+
+    <p class="article-footer">
+      Redaktion ticket-rechner.de · Stand: Juli 2026. Verlängerungs- und Reaktivierungsregeln
+      können je nach Anbieter abweichen. Alle Angaben ohne Gewähr. Diese Website ist nicht
+      affiliiert mit der Deutschen Bahn oder einem Verkehrsverbund.
+    </p>
+
+    <p>
+      <a href="/ratgeber/deutschlandticket-kuendigen">Deutschlandticket kündigen</a> ·
+      <a href="/ratgeber/deutschlandticket-pausieren">Deutschlandticket pausieren</a> ·
+      <a href="/ratgeber/deutschlandticket-kaufen">Deutschlandticket kaufen</a> ·
+      <a href="/ratgeber/deutschlandticket-preiserhoehung">Preiserhöhung</a> ·
+      <a href="/ratgeber/deutschlandticket-gesperrt">Deutschlandticket gesperrt</a> ·
+      <a href="/lohnt-sich-rechner">Lohnt-sich-Rechner</a> ·
+      <a href="/kuendigungsfrist-rechner">Kündigungsfrist berechnen</a>
+    </p>
+
+  </article>
+
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+</Base>

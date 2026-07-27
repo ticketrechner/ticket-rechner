@@ -1,0 +1,517 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const title = 'Deutschlandticket Kundenservice 2026: Alle Kontakte, Hotlines & Anlaufstellen';
+const description = 'Deutschlandticket Kundenservice — alle Telefonnummern, E-Mail-Adressen und Anlaufstellen für DB, HVV, MVG, BVG, RMV und weitere Anbieter. Plus: Beschwerdewege, wenn der Service nicht hilft.';
+const canonical = 'https://ticket-rechner.de/ratgeber/deutschlandticket-kundenservice';
+const ogTitle = 'Deutschlandticket Kundenservice 2026: Alle Kontakte & Hotlines';
+const ogDescription = 'Telefonnummern, E-Mail, Kundenportale — die richtige Anlaufstelle für jedes Deutschlandticket-Problem. Alle Anbieter auf einen Blick.';
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": title,
+  "description": description,
+  "datePublished": "2026-07-27",
+  "dateModified": "2026-07-27",
+  "author": {
+    "@type": "Organization",
+    "name": "Redaktion ticket-rechner.de",
+    "url": "https://ticket-rechner.de/ueber-uns"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "ticket-rechner.de",
+    "url": "https://ticket-rechner.de",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ticket-rechner.de/og-image.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": canonical
+  },
+  "image": "https://ticket-rechner.de/og-image.png"
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Wie erreiche ich den Kundenservice für das Deutschlandticket?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kontaktiere den Anbieter, bei dem du das Abo abgeschlossen hast. DB: 030 2970 (24/7) oder Aboportal auf bahn.de. HVV: 040 / 19 449. MVG München: Kundenportal oder Kontakt-Assistent. BVG Berlin: Kundenzentren oder Servicetelefon. Deutschlandticket-App: Kontaktformular in der App unter 'Mein Konto' → 'Hilfe' (keine Telefonhotline)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Woher weiß ich, welcher Anbieter mein Deutschlandticket verkauft hat?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Drei Wege: 1) App-Name prüfen — DB Navigator = Deutsche Bahn, hvv switch = HVV usw. 2) Kontoauszug: Der Buchungstext der monatlichen Abbuchung zeigt den Anbieter. 3) Bestellbestätigung per E-Mail durchsuchen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Die DB-Hotline hilft nicht weiter — an wen kann ich mich wenden?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Eskalationspfad: 1) Schriftliche Beschwerde an den Anbieter per E-Mail oder Kontaktformular. 2) Schlichtungsstelle für den öffentlichen Personenverkehr (söp) — kostenlos, online unter soep-online.de. 3) Eisenbahn-Bundesamt (EBA) als nationale Durchsetzungsstelle für Fahrgastrechte. 4) Verbraucherzentrale deines Bundeslandes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hat die Deutschlandticket-App eine Telefon-Hotline?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nein. Der Support der Deutschlandticket-App (deutschlandticket.de / Transdev) läuft ausschließlich über das Kontaktformular in der App unter 'Mein Konto' → 'Hilfe' und über die Wissensdatenbank auf wissen.deutschlandticket.de. Es gibt keine Telefonnummer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Welche Telefonnummer hat der DB-Kundenservice für das Deutschlandticket?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Die allgemeine DB-Service-Hotline 030 2970 ist 24 Stunden am Tag, 7 Tage die Woche erreichbar. Für Abo-spezifische Fragen gibt es regionale Abo-Center mit eigenen Nummern — die richtige Nummer hängt vom Verkehrsverbund ab, über den du das Ticket beziehst."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was ist die Schlichtungsstelle für den öffentlichen Personenverkehr?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Die söp (Schlichtungsstelle für den öffentlichen Personenverkehr e.V.) ist eine neutrale, kostenlose Stelle, die bei Streitigkeiten zwischen Fahrgästen und Verkehrsunternehmen vermittelt. Du kannst einen Schlichtungsantrag online unter soep-online.de stellen, wenn dein Anbieter dein Problem nicht löst."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kann ich ein erhöhtes Beförderungsentgelt (60 €) anfechten?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. Innerhalb der auf dem Beanstandungsbeleg genannten Frist (meist 14 Tage) kannst du beim kontrollierenden Verkehrsunternehmen dein gültiges Abo nachweisen. In der Regel wird die Strafe dann auf 7 € Bearbeitungsgebühr reduziert. Hilft das nicht: Schlichtungsstelle söp kontaktieren."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wann ist der beste Zeitpunkt, den Kundenservice zu kontaktieren?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vermeide den Monatsanfang (1.–3.) — da ist das Aufkommen am höchsten (Verlängerungsprobleme, Zahlungsfragen). Werktags zwischen 10 und 14 Uhr sind die Wartezeiten typischerweise kürzer. Am Wochenende ist nur die DB-Hotline 030 2970 durchgehend erreichbar; die meisten Verbund-Hotlines sind samstags und sonntags geschlossen."
+      }
+    }
+  ]
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://ticket-rechner.de/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Ratgeber",
+      "item": "https://ticket-rechner.de/ratgeber"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Deutschlandticket Kundenservice",
+      "item": canonical
+    }
+  ]
+};
+---
+
+<Base
+  title={title}
+  description={description}
+  canonical={canonical}
+  ogTitle={ogTitle}
+  ogDescription={ogDescription}
+  ogType="website"
+  ogUrl={canonical}
+>
+  <article>
+    <p class="article-meta">Ratgeber · Aktualisiert am 27.07.2026</p>
+
+    <h1>Deutschlandticket Kundenservice — die richtige Anlaufstelle für jedes Problem</h1>
+
+    <p>
+      Dein Ansprechpartner beim Deutschlandticket ist immer das Verkehrsunternehmen, bei dem du
+      das Abo abgeschlossen hast — nicht „die Bahn" im Allgemeinen. Die DB-Hotline ist unter
+      030 2970 rund um die Uhr erreichbar. Verbund-Hotlines haben eingeschränkte Zeiten. Die
+      Deutschlandticket-App hat keine Telefonnummer — nur ein Kontaktformular. Wenn der Anbieter
+      nicht hilft, gibt es Schlichtungsstellen und das Eisenbahn-Bundesamt. Hier findest du alle
+      Kontakte.
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>Schritt 1: Finde deinen Anbieter</h2>
+
+    <p>
+      Bevor du irgendjemanden anrufst, kläre zuerst, <strong>wer dein Vertragspartner ist</strong>.
+      Das ist nicht immer offensichtlich — wer im DB Navigator kauft, hat trotzdem manchmal einen
+      regionalen Verbund als Vertragspartner.
+    </p>
+
+    <p>
+      <strong>So findest du deinen Anbieter:</strong>
+    </p>
+
+    <p>
+      <strong>1. App-Name prüfen.</strong> Die App, in der dein Ticket angezeigt wird, verrät den
+      Anbieter: DB Navigator = Deutsche Bahn, hvv switch = HVV Hamburg, MVGO = MVG München, BVG
+      Fahrinfo = BVG Berlin, Deutschlandticket-App = Transdev/deutschlandticket.de.<br>
+      <strong>2. Kontoauszug.</strong> Im Buchungstext der monatlichen Abbuchung steht der Name
+      des Verkehrsunternehmens (z. B. „DB Vertrieb", „HVV", „MVG", „LOGPAY/Transdev").<br>
+      <strong>3. Bestellbestätigung.</strong> Suche in deinem E-Mail-Posteingang nach
+      „Deutschlandticket" oder „D-Ticket". Die Bestätigungsmail zeigt den Absender und damit den
+      Anbieter.
+    </p>
+
+    <p>
+      <strong>Bei Jobtickets:</strong> Frag deine Personalabteilung — die kennt den
+      Vertragspartner.
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>Kontaktdaten der größten Anbieter</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Anbieter</th>
+          <th>Telefon</th>
+          <th>E-Mail / Online</th>
+          <th>Erreichbarkeit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Deutsche Bahn (allgemein)</td>
+          <td>030 2970</td>
+          <td>Kontaktformular auf bahn.de</td>
+          <td>24/7</td>
+        </tr>
+        <tr>
+          <td>DB Abo-Center (Abo-Fragen)</td>
+          <td>Je nach Verbund (s. bahn.de/abo_center)</td>
+          <td>Je nach Verbund (z. B. abo-service@bahn.de)</td>
+          <td>Mo–Fr 8–18 Uhr</td>
+        </tr>
+        <tr>
+          <td>HVV (Hamburg)</td>
+          <td>040 / 19 449</td>
+          <td>meinhvv-Kundenkonto</td>
+          <td>Mo–Fr + auch außerhalb der Geschäftszeiten</td>
+        </tr>
+        <tr>
+          <td>MVG (München)</td>
+          <td>Kontakt-Assistent auf mvg.de</td>
+          <td>Kundenportal unter „Vertragsverwaltung"</td>
+          <td>Online rund um die Uhr</td>
+        </tr>
+        <tr>
+          <td>BVG (Berlin)</td>
+          <td>030 19449</td>
+          <td>BVG-Kundenzentren, Kontaktformular auf bvg.de</td>
+          <td>Mo–Fr 6:30–22 Uhr, Sa–So 9–18 Uhr</td>
+        </tr>
+        <tr>
+          <td>RMV (Frankfurt/Rhein-Main)</td>
+          <td>069 / 24 24 80 24</td>
+          <td>RMVgo-App, Kontaktformular auf rmv.de</td>
+          <td>Mo–Fr 8–18 Uhr</td>
+        </tr>
+        <tr>
+          <td>VRS / VRR (Köln, Ruhrgebiet)</td>
+          <td>Je nach Verkehrsunternehmen</td>
+          <td>service@vrr.de (VRR)</td>
+          <td>Mo–Fr 8–18 Uhr</td>
+        </tr>
+        <tr>
+          <td>Deutschlandticket-App (Transdev)</td>
+          <td>Keine Hotline</td>
+          <td>Kontaktformular in der App → „Mein Konto" → „Hilfe"</td>
+          <td>Per E-Mail, Bearbeitungszeit variiert</td>
+        </tr>
+        <tr>
+          <td>Servicecenter Fahrgastrechte</td>
+          <td>030 / 586 020 920</td>
+          <td>Postanschrift: 60647 Frankfurt am Main</td>
+          <td>Mo–Fr</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>
+      <strong>DB Abo-Center — regionale Nummern:</strong> Die Deutsche Bahn hat für jeden
+      Verkehrsverbund ein eigenes Abo-Center mit separater Telefonnummer und E-Mail-Adresse. Die
+      vollständige Liste findest du auf
+      <a href="https://www.bahn.de/angebot/pendler/verkehrsverbuende/abocenteronline/abo_center" target="_blank" rel="noopener">bahn.de/abo_center</a>.
+      Von dort findest du dein Abo-Center, indem du den Anfangsbuchstaben deines Verbundes anklickst.
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>Welches Problem = welcher Kontaktweg?</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Dein Problem</th>
+          <th>Bester Kontaktweg</th>
+          <th>Warum</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Ticket wird nicht angezeigt</td>
+          <td>Erst selbst prüfen, dann Anbieter-Hotline</td>
+          <td><a href="/ratgeber/deutschlandticket-app-funktioniert-nicht">Selbsthilfe-Anleitung →</a></td>
+        </tr>
+        <tr>
+          <td>Chipkarte verloren / gestohlen</td>
+          <td>Anbieter-Hotline (sofort sperren)</td>
+          <td>Schnellste Sperrung telefonisch</td>
+        </tr>
+        <tr>
+          <td>Zahlung fehlgeschlagen / Ticket gesperrt</td>
+          <td>Kundenportal (Zahlungsdaten prüfen) + Hotline</td>
+          <td><a href="/ratgeber/deutschlandticket-gesperrt">Details zur Sperrung →</a></td>
+        </tr>
+        <tr>
+          <td>Kündigung / Preiserhöhung</td>
+          <td>Aboportal online (DB) oder Kundenportal</td>
+          <td>Schriftlicher Nachweis wichtig</td>
+        </tr>
+        <tr>
+          <td>Doppelte Abbuchung</td>
+          <td>E-Mail an Anbieter mit Kontoauszug</td>
+          <td>Schriftlicher Nachweis für Erstattung nötig</td>
+        </tr>
+        <tr>
+          <td>60 € EBE anfechten</td>
+          <td>Kontrollierendes Verkehrsunternehmen (Adresse auf Beleg)</td>
+          <td>Frist beachten (14 Tage)</td>
+        </tr>
+        <tr>
+          <td>Verspätungsentschädigung</td>
+          <td>Fahrgastrechte-Formular online (bahn.de)</td>
+          <td><a href="/ratgeber/deutschlandticket-erstattung">Erstattung im Detail →</a></td>
+        </tr>
+        <tr>
+          <td>Ersatzkarte beantragen</td>
+          <td>Kundenportal oder Kundenzentrum vor Ort</td>
+          <td><a href="/ratgeber/deutschlandticket-ersatzkarte">Ersatzkarte-Anleitung →</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- ============================================================ -->
+
+    <h2>Wenn der Anbieter nicht hilft: Eskalationswege</h2>
+
+    <p>
+      Die Verbraucherzentrale Bundesverband bestätigt: Der Kundenservice beim Deutschlandticket
+      ist ein „Dauerärgernis". Telefonisch schlecht erreichbar, auf E-Mails kommen
+      Standardtexte, Kündigungen werden nicht korrekt verarbeitet. Wenn du bei deinem Anbieter
+      nicht weiterkommst, gibt es drei Eskalationsstufen:
+    </p>
+
+    <h3>Stufe 1: Schriftliche Beschwerde an den Anbieter</h3>
+
+    <p>
+      Formuliere dein Anliegen schriftlich (E-Mail oder Brief) und setze eine Frist von 14 Tagen
+      für eine Antwort. Wichtig: Beschreibe das Problem konkret, füge Nachweise bei (Kontoauszug,
+      Screenshot, Kündigungsbestätigung) und fordere eine schriftliche Stellungnahme. Per
+      Einwurf-Einschreiben hast du einen Zustellnachweis — das kann bei späteren
+      Auseinandersetzungen helfen.
+    </p>
+
+    <h3>Stufe 2: Schlichtungsstelle (söp)</h3>
+
+    <p>
+      Die <strong>Schlichtungsstelle für den öffentlichen Personenverkehr e.V. (söp)</strong> ist
+      eine neutrale, kostenlose Vermittlungsstelle. Du kannst dort einen Schlichtungsantrag
+      stellen, wenn dein Anbieter dein Problem innerhalb einer angemessenen Frist nicht gelöst hat.
+    </p>
+
+    <p>
+      <strong>Online-Antrag:</strong> soep-online.de<br>
+      <strong>Voraussetzung:</strong> Du hast dich vorher an deinen Anbieter gewandt und keine
+      zufriedenstellende Lösung erhalten.<br>
+      <strong>Kosten:</strong> Kostenlos für Fahrgäste.
+    </p>
+
+    <p>
+      Für Nahverkehr gibt es in einigen Bundesländern eigene Schlichtungsstellen (z. B. NRW:
+      Schlichtungsstelle Nahverkehr, Tel. 0211 / 380 93 80).
+    </p>
+
+    <h3>Stufe 3: Eisenbahn-Bundesamt (EBA)</h3>
+
+    <p>
+      Das <strong>Eisenbahn-Bundesamt</strong> ist die nationale Durchsetzungsstelle für
+      Fahrgastrechte im Eisenbahnverkehr. Es kann Verwaltungsverfahren gegen Verkehrsunternehmen
+      einleiten, wenn diese Fahrgastrechte verletzen.
+    </p>
+
+    <p>
+      <strong>Wichtig:</strong> Das EBA ist <strong>nicht</strong> zuständig für allgemeine
+      Deutschlandticket-Probleme (App funktioniert nicht, Kündigung klappt nicht,
+      Zahlungsprobleme). Es hilft nur bei Verstößen gegen Fahrgastrechte im engeren Sinne
+      (Entschädigungsansprüche bei Verspätung nicht ausgezahlt etc.).
+    </p>
+
+    <p>
+      <strong>Online-Beschwerdeformular:</strong> eba.bund.de → Fahrgastrechte
+    </p>
+
+    <h3>Alternative: Verbraucherzentrale</h3>
+
+    <p>
+      Die Verbraucherzentralen der Bundesländer bieten Beratung und können Unternehmen bei
+      Verstößen abmahnen. Das ist besonders relevant, wenn trotz fristgerechter Kündigung
+      weiterhin abgebucht wird oder unberechtigte Inkassoforderungen eingehen.
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>Tipps für schnelleren Service</h2>
+
+    <p>
+      <strong>Vermeide den Monatsanfang.</strong> Am 1.–3. eines Monats ist das Aufkommen am
+      höchsten (Verlängerungsprobleme, Zahlungsfragen, App-Updates). Ruf lieber ab dem 4. oder
+      5. an.
+    </p>
+
+    <p>
+      <strong>Halte deine Daten bereit.</strong> Abonummer, Nachname im Abo, E-Mail-Adresse des
+      Kontos und den letzten Kontoauszug mit der Abbuchung. Das spart Rückfragen und
+      beschleunigt die Bearbeitung erheblich.
+    </p>
+
+    <p>
+      <strong>Schreib statt anzurufen.</strong> Bei Erstattungen, Doppelzahlungen und
+      Kündigungsproblemen ist eine schriftliche Anfrage (E-Mail mit Nachweis) sinnvoller als ein
+      Anruf — du hast einen dokumentierten Nachweis und der Sachbearbeiter kann den Fall intern
+      weiterleiten.
+    </p>
+
+    <p>
+      <strong>Nutze das Kundenportal zuerst.</strong> Viele Probleme (Zahlungsdaten ändern,
+      Chipkarte sperren, Abo kündigen, Ersatzkarte bestellen) lassen sich im Online-Kundenportal
+      selbst lösen — ohne Wartezeit am Telefon.
+    </p>
+
+    <p>
+      <strong>Fordere eine Bestätigung an.</strong> Bei Kündigungen und Erstattungsanträgen immer
+      schriftlich um Bestätigung bitten: „Bitte bestätigen Sie mir die Bearbeitung und das
+      Ergebnis schriftlich per E-Mail." Das schützt dich vor späteren Streitigkeiten.
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>Häufige Fragen (FAQ)</h2>
+
+    <h3>Wie erreiche ich den Kundenservice für das Deutschlandticket?</h3>
+    <p>
+      Kontaktiere den Anbieter, bei dem du dein Abo hast. DB: 030 2970 (24/7). HVV: 040 / 19 449.
+      BVG: 030 19449. Deutschlandticket-App: nur per Kontaktformular in der App.
+    </p>
+
+    <h3>Woher weiß ich, welcher Anbieter mein Ticket verkauft hat?</h3>
+    <p>
+      App-Name prüfen (DB Navigator = DB, hvv switch = HVV etc.), Kontoauszug anschauen
+      (Buchungstext zeigt den Anbieter) oder Bestellbestätigung per E-Mail suchen.
+    </p>
+
+    <h3>Der Anbieter hilft nicht — was tun?</h3>
+    <p>
+      Schriftliche Beschwerde mit 14-Tage-Frist → Schlichtungsstelle söp (kostenlos, soep-online.de)
+      → Eisenbahn-Bundesamt bei Fahrgastrechte-Verstößen → Verbraucherzentrale bei
+      Vertragsproblemen.
+    </p>
+
+    <h3>Hat die Deutschlandticket-App eine Telefonnummer?</h3>
+    <p>
+      Nein. Support nur per Kontaktformular in der App unter „Mein Konto" → „Hilfe". Alternativ
+      die Wissensdatenbank auf wissen.deutschlandticket.de nutzen.
+    </p>
+
+    <h3>Welche Telefonnummer hat die DB für Deutschlandticket-Fragen?</h3>
+    <p>
+      Allgemeine Hotline: 030 2970 (24/7). Für Abo-spezifische Fragen: regionales Abo-Center
+      (Nummern auf bahn.de/abo_center, sortiert nach Verbund).
+    </p>
+
+    <h3>Was ist die Schlichtungsstelle söp?</h3>
+    <p>
+      Neutrale, kostenlose Vermittlungsstelle bei Streit zwischen Fahrgast und
+      Verkehrsunternehmen. Online-Antrag unter soep-online.de. Voraussetzung: vorherige
+      Beschwerde beim Anbieter blieb erfolglos.
+    </p>
+
+    <h3>Kann ich ein 60-€-Bußgeld anfechten?</h3>
+    <p>
+      Ja. Innerhalb der Frist (meist 14 Tage) beim kontrollierenden Verkehrsunternehmen dein
+      gültiges Abo + Lichtbildausweis nachweisen. Strafe wird in der Regel auf 7 € reduziert.
+      <a href="/ratgeber/deutschlandticket-verloren">Mehr dazu →</a>
+    </p>
+
+    <h3>Wann ist der Kundenservice am besten erreichbar?</h3>
+    <p>
+      Werktags 10–14 Uhr, nach dem 3. des Monats. Monatsanfang und Montag morgens = längste
+      Wartezeiten. DB-Hotline 030 2970 ist 24/7 erreichbar, die meisten Verbund-Hotlines nur
+      Mo–Fr 8–18 Uhr.
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>Offizielle Quellen</h2>
+
+    <p>
+      <a href="https://www.bahn.de/angebot/pendler/verkehrsverbuende/abocenteronline/abo_center" target="_blank" rel="noopener">DB — Abo-Center Kontaktliste nach Verbund</a> ·
+      <a href="https://wissen.deutschlandticket.de/kundensupport" target="_blank" rel="noopener">deutschlandticket.de — Kundensupport</a> ·
+      <a href="https://www.eba.bund.de/DE/Themen/Fahrgastrechte/fahrgastrechte_node.html" target="_blank" rel="noopener">Eisenbahn-Bundesamt — Fahrgastrechte</a> ·
+      <a href="https://www.bahn.de/service/informationen-buchung/fahrgastrechte/fahrgastrechte-schlichtung" target="_blank" rel="noopener">DB — Schlichtung und Widerspruch</a> ·
+      <a href="https://www.vzbv.de/pressemitteilungen/ein-jahr-deutschlandticket-viele-probleme-bleiben" target="_blank" rel="noopener">Verbraucherzentrale Bundesverband — Deutschlandticket-Probleme</a>
+    </p>
+
+    <p class="article-footer">
+      Redaktion ticket-rechner.de · Stand: Juli 2026. Kontaktdaten, Erreichbarkeiten und
+      Servicezeiten können sich ändern — im Zweifel direkt auf der Website des jeweiligen
+      Anbieters prüfen. Alle Angaben ohne Gewähr. Diese Website ist nicht affiliiert mit der
+      Deutschen Bahn oder einem Verkehrsverbund.
+    </p>
+
+    <p>
+      <a href="/ratgeber/deutschlandticket-gesperrt">Deutschlandticket gesperrt</a> ·
+      <a href="/ratgeber/deutschlandticket-erstattung">Erstattung</a> ·
+      <a href="/ratgeber/deutschlandticket-app-funktioniert-nicht">App funktioniert nicht</a> ·
+      <a href="/ratgeber/deutschlandticket-ersatzkarte">Ersatzkarte</a> ·
+      <a href="/ratgeber/deutschlandticket-kuendigen">Kündigen</a> ·
+      <a href="/kuendigungsfrist-rechner">Kündigungsfrist berechnen</a> ·
+      <a href="/lohnt-sich-rechner">Lohnt-sich-Rechner</a>
+    </p>
+
+  </article>
+
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+</Base>

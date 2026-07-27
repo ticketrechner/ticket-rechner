@@ -1,0 +1,609 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const title = 'Deutschlandticket Erstattung 2026: Wann du Geld zurückbekommst (und wann nicht)';
+const description = 'Deutschlandticket Erstattung bei Verspätung, Krankheit, Doppelzahlung oder Kündigung — wann du Anspruch hast, wie du ihn geltend machst und was nicht erstattet wird.';
+const canonical = 'https://ticket-rechner.de/ratgeber/deutschlandticket-erstattung';
+const ogTitle = 'Deutschlandticket Erstattung 2026: Wann du Geld zurückbekommst';
+const ogDescription = 'Verspätung, Krankheit, Doppelzahlung, Kündigung — wann gibt es Geld zurück beim Deutschlandticket? Alle Erstattungs-Regeln auf einen Blick.';
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": title,
+  "description": description,
+  "datePublished": "2026-07-27",
+  "dateModified": "2026-07-27",
+  "author": {
+    "@type": "Organization",
+    "name": "Redaktion ticket-rechner.de",
+    "url": "https://ticket-rechner.de/ueber-uns"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "ticket-rechner.de",
+    "url": "https://ticket-rechner.de",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ticket-rechner.de/og-image.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": canonical
+  },
+  "image": "https://ticket-rechner.de/og-image.png"
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Bekomme ich beim Deutschlandticket Geld zurück bei Verspätung?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja — aber nur 1,50 € pro Verspätungsfall ab 60 Minuten im Nahverkehr. Beträge unter 4 € werden wegen der gesetzlichen Bagatellgrenze nicht ausgezahlt, du kannst aber mehrere Fälle sammeln. Maximal werden 25 % des Ticketpreises (also 15,75 € bei 63 €) pro Monat erstattet."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Bekomme ich Geld zurück, wenn ich das Deutschlandticket kündige?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nein. Bereits bezahlte Monate werden nicht erstattet, auch nicht anteilig. Das Ticket gilt immer für den vollen Kalendermonat, unabhängig davon, ob und wie oft du es nutzt."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Gibt es eine Erstattung bei Krankheit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja, bei vielen Anbietern. Voraussetzung: Die Krankheit dauert länger als 21 zusammenhängende Tage, und du legst eine ärztliche Bescheinigung vor. Der Antrag muss in der Regel innerhalb einer Woche nach Ende des betroffenen Monats gestellt werden."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Darf ich bei Verspätung mit dem Deutschlandticket in den ICE umsteigen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Grundsätzlich nein. Das Deutschlandticket gilt als 'erheblich ermäßigtes Beförderungsentgelt' — der Wechsel in den Fernverkehr ist auch bei Verspätung nicht kostenlos. Ausnahme: letzte Verbindung des Tages (Ankunft bis 24 Uhr) oder Verspätung ab 60 Minuten bei Nachtfahrten (Ankunft 0–5 Uhr). In diesen Fällen musst du trotzdem erst ein ICE-Ticket kaufen — die Kosten werden dann bis 120 € erstattet."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Mein Deutschlandticket wurde doppelt abgebucht. Was tun?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Prüfe im Kundenportal, ob versehentlich zwei Abos bestehen. Falls ja: eines kündigen. Veranlasse keine Rücklastschrift über die Bank — das kann zur Sperrung deines Kontos und Kündigung aller Tickets führen. Kontaktiere stattdessen den Kundenservice für eine reguläre Erstattung."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Gibt es Erstattung bei Streik?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nein. Bei Streiks im öffentlichen Verkehr besteht kein Erstattungsanspruch für das Deutschlandticket. Das Ticket bleibt bundesweit gültig und kann außerhalb der betroffenen Region genutzt werden."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie beantrage ich eine Verspätungsentschädigung mit dem Deutschlandticket?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Über das Fahrgastrechte-Formular der DB (online, per App oder im Reisezentrum) oder direkt beim genutzten Eisenbahnverkehrsunternehmen. Du brauchst keine Verspätungsbescheinigung — die Unternehmen regulieren anhand eigener Daten. Frist: 12 Monate nach der Fahrt."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie viel Geld bekomme ich maximal zurück bei Verspätungen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Maximal 25 % des monatlichen Ticketpreises, also 15,75 € bei einem Preis von 63 €. Die Auszahlung erfolgt erst ab einem Gesamtbetrag von 4 € — du musst also mindestens 3 Verspätungsfälle sammeln."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Bekomme ich Erstattung, wenn ich das Deutschlandticket einen Monat nicht genutzt habe?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nein. Der Ticketpreis gilt für den gesamten Monat, unabhängig von der Nutzungshäufigkeit. Wenn du einen Monat nicht fahren willst, ist es günstiger, das Abo zu pausieren (wo möglich) oder rechtzeitig zu kündigen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was passiert, wenn nach meiner Kündigung weiter abgebucht wird?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Abbuchungen nach dem Kündigungsdatum sind nicht vom Vertrag gedeckt. Kontaktiere deinen Anbieter mit dem Nachweis deiner fristgerechten Kündigung. Der Anbieter muss den Betrag erstatten. Veranlasse keine eigenmächtige Rücklastschrift — das kann zur Kontosperrung führen."
+      }
+    }
+  ]
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://ticket-rechner.de/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Ratgeber",
+      "item": "https://ticket-rechner.de/ratgeber"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Deutschlandticket Erstattung",
+      "item": canonical
+    }
+  ]
+};
+---
+
+<Base
+  title={title}
+  description={description}
+  canonical={canonical}
+  ogTitle={ogTitle}
+  ogDescription={ogDescription}
+  ogType="website"
+  ogUrl={canonical}
+>
+  <article>
+    <p class="article-meta">Ratgeber · Aktualisiert am 27.07.2026</p>
+
+    <h1>Deutschlandticket Erstattung — wann du Geld zurückbekommst und wann nicht</h1>
+
+    <p>
+      Beim Deutschlandticket gibt es Erstattungen nur in wenigen Fällen: bei Zugverspätungen ab 60
+      Minuten (1,50 € pro Fall), bei Krankheit über 21 Tage, bei Doppelzahlungen und im Sterbefall.
+      Keine Erstattung gibt es bei Kündigung, Nichtnutzung, Streik oder wenn du den ICE statt
+      Nahverkehr nimmst. Dieser Artikel zeigt für jede Situation, ob und wie du dein Geld
+      zurückbekommst.
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>Übersicht: Erstattung ja oder nein?</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Situation</th>
+          <th>Erstattung?</th>
+          <th>Betrag</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Zugverspätung ab 60 Min. (Nahverkehr)</td>
+          <td>Ja</td>
+          <td>1,50 € pro Fall, max. 15,75 €/Monat</td>
+        </tr>
+        <tr>
+          <td>Krankheit über 21 Tage</td>
+          <td>Ja (bei vielen Anbietern)</td>
+          <td>Anteilig für die Krankheitstage</td>
+        </tr>
+        <tr>
+          <td>Sterbefall des Abonnenten</td>
+          <td>Ja</td>
+          <td>Volle Monate nach dem Todesdatum</td>
+        </tr>
+        <tr>
+          <td>Doppelte Abbuchung / Überzahlung</td>
+          <td>Ja</td>
+          <td>Überzahlter Betrag</td>
+        </tr>
+        <tr>
+          <td>Abbuchung nach Kündigung</td>
+          <td>Ja</td>
+          <td>Unberechtigte Abbuchung vollständig</td>
+        </tr>
+        <tr>
+          <td>Kündigung (bereits bezahlte Monate)</td>
+          <td>Nein</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td>Ticket nicht genutzt</td>
+          <td>Nein</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td>Streik</td>
+          <td>Nein</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td>Zugausfall wegen Unwetter / höhere Gewalt</td>
+          <td>Nein (seit Juni 2023)</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td>ICE-Ticket wegen verpasstem Nahverkehr</td>
+          <td>Nein (Ausnahmen s. unten)</td>
+          <td>—</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- ============================================================ -->
+
+    <h2>Verspätung im Nahverkehr: 1,50 € pro Fall</h2>
+
+    <p>
+      Wenn du mit dem Deutschlandticket im Nahverkehr unterwegs bist und dein Zug mindestens
+      <strong>60 Minuten verspätet</strong> am Zielbahnhof ankommt, hast du Anspruch auf
+      <strong>1,50 € Entschädigung pro Verspätungsfall</strong> (2. Klasse).
+    </p>
+
+    <p>
+      Die wichtigsten Regeln:
+    </p>
+
+    <p>
+      <strong>Bagatellgrenze:</strong> Beträge unter 4 € werden nicht ausgezahlt. Du musst also
+      mindestens 3 Verspätungsfälle sammeln (3 × 1,50 € = 4,50 €), bevor du etwas bekommst.<br>
+      <strong>Deckelung:</strong> Maximal 25 % des Ticketpreises pro Monat. Bei 63 € sind das
+      15,75 € — dafür bräuchtest du 11 Verspätungen ab 60 Minuten in einem Monat.<br>
+      <strong>Nur Eisenbahnverkehr:</strong> Verspätungen bei U-Bahnen, Straßenbahnen, Bussen oder
+      Fähren zählen nicht. Nur S-Bahn, Regionalbahn (RB), Regionalexpress (RE) und S-Bahn.<br>
+      <strong>Keine Bescheinigung nötig:</strong> Du brauchst keine Verspätungsbescheinigung vom
+      Zugbegleiter. Die Eisenbahnunternehmen regulieren anhand eigener Daten.<br>
+      <strong>Frist:</strong> 12 Monate nach der Fahrt.
+    </p>
+
+    <h3>So beantragst du die Entschädigung</h3>
+
+    <p>
+      1. Notiere bei jeder Verspätung ab 60 Minuten: Datum, Zugnummer, Strecke, planmäßige und
+      tatsächliche Ankunft. Ein Screenshot der Verspätungsanzeige in der DB-App oder im DB
+      Navigator hilft, ist aber nicht zwingend nötig.<br>
+      2. Sammle mehrere Fälle, bis du über die 4-€-Bagatellgrenze kommst.<br>
+      3. Reiche die gesammelten Fälle ein — über einen dieser Wege:
+    </p>
+
+    <p>
+      <strong>Online:</strong> Über das Fahrgastrechte-Formular auf bahn.de oder im DB Navigator
+      unter „Meine Reisen" → „Fahrgastrechte".<br>
+      <strong>Postalisch:</strong> Fahrgastrechte-Formular (als PDF von bahn.de) ausfüllen und an
+      das Servicecenter Fahrgastrechte senden: 60647 Frankfurt am Main.<br>
+      <strong>Im Reisezentrum:</strong> Am DB-Schalter mit dem ausgefüllten Formular.
+    </p>
+
+    <p>
+      Wenn du den Zug eines anderen Eisenbahnunternehmens (z. B. Abellio, Metronom, Go-Ahead)
+      genutzt hast, reiche den Antrag direkt bei diesem Unternehmen oder beim Servicecenter
+      Fahrgastrechte ein.
+    </p>
+
+    <p>
+      Die Erstattung erfolgt als Banküberweisung auf dein angegebenes Konto. Auf Wunsch stellt die
+      DB auch einen Gutschein aus.
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>Kein ICE bei Verspätung — die wichtigste Einschränkung</h2>
+
+    <p>
+      Anders als bei regulären Fahrkarten darfst du mit dem Deutschlandticket bei einer Verspätung
+      im Nahverkehr <strong>nicht kostenlos in den ICE oder IC umsteigen</strong>. Das
+      Deutschlandticket ist gesetzlich als „erheblich ermäßigtes Beförderungsentgelt" definiert
+      (§ 3 Eisenbahn-Verkehrsordnung). Deshalb gelten eingeschränkte Fahrgastrechte.
+    </p>
+
+    <p>
+      <strong>Die einzigen Ausnahmen:</strong>
+    </p>
+
+    <p>
+      — Ein Zugausfall oder eine Verspätung betrifft die <strong>letzte Verbindung des Tages</strong>
+      mit Ankunft bis 24 Uhr.<br>
+      — Eine Verspätung von mindestens 60 Minuten tritt bei einer Verbindung mit
+      <strong>planmäßiger Ankunft zwischen 0 und 5 Uhr</strong> ein.
+    </p>
+
+    <p>
+      Auch in diesen Fällen gilt: Du musst <strong>erst ein ICE-/IC-Ticket kaufen</strong>. Die
+      Kosten werden dann nachträglich über das Fahrgastrechte-Formular erstattet — bis maximal
+      120 €.
+    </p>
+
+    <p>
+      In allen anderen Fällen musst du im Nahverkehr bleiben und den nächsten RE oder RB nehmen.
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>Keine Erstattung nach Kündigung</h2>
+
+    <p>
+      Bereits bezahlte Monate werden bei einer Kündigung nicht erstattet — auch nicht anteilig. Das
+      Deutschlandticket wird immer für den <strong>vollen Kalendermonat</strong> abgerechnet,
+      unabhängig davon, wann im Monat du kündigst oder ob du das Ticket danach noch nutzt.
+    </p>
+
+    <p>
+      <strong>Beispiel:</strong> Du kündigst am 5. Juli zum 31. Juli. Die 63 € für Juli sind
+      bezahlt und werden nicht zurückerstattet, auch wenn du ab dem 6. Juli nicht mehr fährst.
+    </p>
+
+    <p>
+      Wer einen bestimmten Monat nicht fahren will, kann bei manchen Anbietern das Abo
+      <a href="/ratgeber/deutschlandticket-pausieren">pausieren</a> statt zu kündigen — dann fällt
+      für den Pausenmonat keine Gebühr an. Alternativ: Fristgerecht
+      <a href="/ratgeber/deutschlandticket-kuendigen">kündigen</a> (bis zum 10. des Monats für das
+      Monatsende) und später ein neues Abo abschließen.
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>Keine Erstattung bei Nichtnutzung</h2>
+
+    <p>
+      Ob du das Ticket 30 Tage am Stück nutzt oder gar nicht — der Preis bleibt gleich. Es gibt
+      keine Erstattung für ungenutzte Monate. Das Deutschlandticket ist ein Flatrate-Abo, kein
+      Einzelticket.
+    </p>
+
+    <p>
+      Ob sich das Ticket für dich lohnt, kannst du hier prüfen:
+      <a href="/lohnt-sich-rechner">Lohnt-sich-Rechner →</a>
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>Erstattung bei Krankheit</h2>
+
+    <p>
+      Bei vielen Anbietern kannst du eine Erstattung beantragen, wenn du das Deutschlandticket
+      wegen Krankheit längere Zeit nicht nutzen konntest. Die Voraussetzungen:
+    </p>
+
+    <p>
+      <strong>Mindestdauer:</strong> Die Krankheit muss länger als <strong>21 zusammenhängende
+      Tage</strong> angedauert haben.<br>
+      <strong>Nachweis:</strong> Ärztliche Bescheinigung, Krankenhausbescheinigung oder
+      Bescheinigung der Krankenkasse. Die Bescheinigung muss bestätigen, dass du im genannten
+      Zeitraum nicht in der Lage warst, öffentliche Verkehrsmittel zu nutzen.<br>
+      <strong>Frist:</strong> Der Antrag muss in der Regel innerhalb einer Woche nach Ablauf des
+      betroffenen Monats beim Kundensupport eingehen.<br>
+      <strong>Erstattung:</strong> Anteilig für die Krankheitstage. Die genaue Berechnung variiert
+      je nach Anbieter.
+    </p>
+
+    <p>
+      <strong>Wichtig:</strong> Diese Regelung ist nicht bei allen Anbietern identisch. Beim HVV
+      gilt sie ausdrücklich für Zeitticket-Abonnenten (mit Ausnahme des Deutschlandsemestertickets).
+      Prüfe die Tarifbedingungen deines Anbieters oder frag beim Kundensupport nach, ob eine
+      Krankheitserstattung möglich ist.
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>Erstattung im Sterbefall</h2>
+
+    <p>
+      Verstirbt der Abonnent, wird das Abo gekündigt und die vollen Kalendermonate nach dem
+      Todesdatum erstattet. Dafür brauchst du:
+    </p>
+
+    <p>
+      — Die <strong>Sterbeurkunde</strong> des verstorbenen Abonnenten.<br>
+      — Falls die Erstattung auf ein anderes Konto gehen soll: die alternative Bankverbindung.
+    </p>
+
+    <p>
+      Sende beides an den Kundensupport des Anbieters. Die Kündigung und Erstattung werden nach
+      Prüfung veranlasst.
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>Doppelte Abbuchung oder Überzahlung</h2>
+
+    <p>
+      Es gibt zwei häufige Szenarien:
+    </p>
+
+    <p>
+      <strong>Versehentlich zwei Abos abgeschlossen.</strong> Passiert öfter als man denkt —
+      besonders bei einem Anbieterwechsel, wenn das alte Abo nicht rechtzeitig gekündigt wurde.
+      Prüfe im Kundenportal (oder auf deinem Kontoauszug), ob tatsächlich zwei Abos laufen. Falls
+      ja: das überflüssige Abo sofort kündigen. Eine Erstattung für doppelt bezahlte Monate ist
+      möglich, aber nicht garantiert — kontaktiere den Kundenservice.
+    </p>
+
+    <p>
+      <strong>Gleicher Monat doppelt abgebucht.</strong> Kann durch einen technischen Fehler oder
+      eine gleichzeitige SEPA-Lastschrift und manuelle Überweisung passieren. Kontaktiere den
+      Kundenservice mit einem Kontoauszug als Nachweis. Die Erstattung erfolgt nach Prüfung
+      innerhalb von ca. 14 Tagen.
+    </p>
+
+    <p>
+      <strong>Kritisch:</strong> Veranlasse bei einer doppelten Abbuchung <strong>keine
+      Rücklastschrift über deine Bank</strong>. Die DB warnt ausdrücklich davor: Eine
+      Rücklastschrift kann zur Sperrung deines gesamten DB-Kundenkontos und zur Kündigung aller
+      Tickets führen. Lass die Erstattung immer über den regulären Kundenservice laufen.
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>Abbuchung nach Kündigung</h2>
+
+    <p>
+      Wenn nach deiner fristgerechten Kündigung weiterhin Geld abgebucht wird, ist die Abbuchung
+      nicht vom Vertrag gedeckt. Der Anbieter muss den Betrag erstatten.
+    </p>
+
+    <p>
+      <strong>So gehst du vor:</strong>
+    </p>
+
+    <p>
+      1. Dokumentiere deine Kündigung: Bestätigungs-E-Mail, Screenshot aus dem Kundenportal oder
+      das Kündigungsschreiben.<br>
+      2. Kontaktiere den Kundenservice mit dem Nachweis und der unberechtigten Abbuchung auf deinem
+      Kontoauszug.<br>
+      3. Fordere die Erstattung des unberechtigten Betrags an.
+    </p>
+
+    <p>
+      <strong>Auch hier gilt:</strong> Keine eigenmächtige Rücklastschrift. Das kann zu
+      Folgeproblemen führen (Kontosperrung, Mahnverfahren). Gehe den offiziellen Weg über den
+      Kundenservice.
+    </p>
+
+    <p>
+      <a href="/ratgeber/deutschlandticket-kuendigen">Alles zur Kündigung →</a> ·
+      <a href="/kuendigungsfrist-rechner">Kündigungsfrist berechnen →</a>
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>Keine Erstattung bei Streik</h2>
+
+    <p>
+      Bei Warnstreiks oder Streiks im öffentlichen Nahverkehr besteht kein Erstattungsanspruch für
+      das Deutschlandticket. Die Begründung: Das Ticket bleibt bundesweit gültig und kann außerhalb
+      der bestreikten Region weiterhin genutzt werden.
+    </p>
+
+    <p>
+      Auch die seit Juni 2023 geltende EU-Fahrgastrechteverordnung schließt Entschädigungen bei
+      „außergewöhnlichen Umständen" (Streik, Unwetter, Personen im Gleis, medizinische Notfälle)
+      aus. Das gilt nicht nur für das Deutschlandticket, sondern für alle Eisenbahnfahrkarten in
+      der EU.
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>Keine Erstattung bei Zugausfall durch höhere Gewalt</h2>
+
+    <p>
+      Seit Juni 2023 müssen Eisenbahnunternehmen keine Entschädigung mehr zahlen, wenn Verspätungen
+      oder Ausfälle durch außergewöhnliche Umstände verursacht wurden:
+    </p>
+
+    <p>
+      — Unwetter, Sturm, Starkregen, Hochwasser<br>
+      — Personen im Gleis<br>
+      — Polizei- oder Notarzteinsatz<br>
+      — Sabotage oder Vandalismus
+    </p>
+
+    <p>
+      Wenn der Zugausfall dagegen auf technische Probleme der Bahn oder Infrastrukturmängel
+      zurückgeht (z. B. Weichenstörung, Signalstörung), besteht weiterhin Anspruch auf die 1,50 €
+      pro Verspätungsfall.
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>Häufige Fragen (FAQ)</h2>
+
+    <h3>Bekomme ich Geld zurück bei Verspätung?</h3>
+    <p>
+      Ja — 1,50 € pro Verspätungsfall ab 60 Minuten im Nahverkehr. Auszahlung erst ab 4 €
+      (mehrere Fälle sammeln). Maximum: 15,75 € pro Monat (25 % von 63 €).
+    </p>
+
+    <h3>Bekomme ich Geld zurück bei Kündigung?</h3>
+    <p>
+      Nein. Bereits bezahlte Monate werden nicht erstattet — auch nicht anteilig.
+      <a href="/ratgeber/deutschlandticket-kuendigen">Mehr zur Kündigung →</a>
+    </p>
+
+    <h3>Gibt es Erstattung bei Krankheit?</h3>
+    <p>
+      Bei vielen Anbietern ja, wenn die Krankheit länger als 21 zusammenhängende Tage dauert und
+      durch ärztliche Bescheinigung belegt ist. Antrag innerhalb einer Woche nach Monatsende.
+    </p>
+
+    <h3>Darf ich bei Verspätung in den ICE umsteigen?</h3>
+    <p>
+      Grundsätzlich nein. Nur bei letzter Verbindung des Tages (Ankunft bis 24 Uhr) oder bei
+      Nachtfahrt-Verspätung ab 60 Minuten (Ankunft 0–5 Uhr). Auch dann: ICE-Ticket erst kaufen,
+      dann über Fahrgastrechte erstatten lassen (max. 120 €).
+    </p>
+
+    <h3>Doppelt abgebucht — was tun?</h3>
+    <p>
+      Prüfen, ob zwei Abos bestehen (eines kündigen). Keine Rücklastschrift über die Bank
+      veranlassen. Stattdessen Kundenservice kontaktieren mit Kontoauszug als Nachweis.
+    </p>
+
+    <h3>Gibt es Erstattung bei Streik?</h3>
+    <p>
+      Nein. Streik zählt zu den außergewöhnlichen Umständen — kein Erstattungsanspruch.
+    </p>
+
+    <h3>Wie beantrage ich die Verspätungsentschädigung?</h3>
+    <p>
+      Über das Fahrgastrechte-Formular auf bahn.de, im DB Navigator oder am DB-Schalter. Keine
+      Verspätungsbescheinigung nötig. Frist: 12 Monate nach der Fahrt.
+    </p>
+
+    <h3>Wie viel bekomme ich maximal zurück?</h3>
+    <p>
+      25 % des Ticketpreises pro Monat = 15,75 € bei 63 €. Auszahlung erst ab 4 € Gesamtbetrag.
+    </p>
+
+    <h3>Erstattung wenn ich das Ticket einen Monat nicht nutze?</h3>
+    <p>
+      Nein. Der Preis gilt für den ganzen Monat, egal ob du fährst oder nicht. Alternative:
+      <a href="/ratgeber/deutschlandticket-pausieren">Abo pausieren</a> (wenn dein Anbieter das
+      anbietet).
+    </p>
+
+    <h3>Weiterhin abgebucht nach Kündigung — was tun?</h3>
+    <p>
+      Kündigungsnachweis an den Kundenservice senden, Erstattung des unberechtigten Betrags fordern.
+      Keine Rücklastschrift über die Bank — das kann zu Kontosperrung führen.
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>Offizielle Quellen</h2>
+
+    <p>
+      <a href="https://www.bahn.de/faq/deutschlandticket-verspaetung-erstattung" target="_blank" rel="noopener">DB — Verspätung und Erstattung beim D-Ticket</a> ·
+      <a href="https://www.bahn.de/faq/pk/angebot/regionale-angebote/deutschland-ticket/fahrgastrechte" target="_blank" rel="noopener">DB — Fahrgastrechte beim D-Ticket</a> ·
+      <a href="https://www.bahn.de/faq/deutschlandticket-verspaetung-ice-nutzung" target="_blank" rel="noopener">DB — ICE-Nutzung bei Verspätung</a> ·
+      <a href="https://wissen.deutschlandticket.de/erstattung-aufgrund-von-tod-krankheit-oder-reha-aufenthalt-1" target="_blank" rel="noopener">deutschlandticket.de — Erstattung bei Krankheit/Sterbefall</a> ·
+      <a href="https://www.verbraucherzentrale.de/wissen/reise-mobilitaet/unterwegs-sein/erstattung-bei-zugverspaetung-so-gibts-geld-zurueck-12080" target="_blank" rel="noopener">Verbraucherzentrale — Erstattung bei Zugverspätung</a>
+    </p>
+
+    <p class="article-footer">
+      Redaktion ticket-rechner.de · Stand: Juli 2026. Erstattungsregelungen können je nach
+      Verkehrsunternehmen und Tarifbedingungen abweichen. Alle Angaben ohne Gewähr. Diese Website
+      ist nicht affiliiert mit der Deutschen Bahn oder einem Verkehrsverbund.
+    </p>
+
+    <p>
+      <a href="/ratgeber/deutschlandticket-kuendigen">Deutschlandticket kündigen</a> ·
+      <a href="/ratgeber/deutschlandticket-pausieren">Deutschlandticket pausieren</a> ·
+      <a href="/ratgeber/deutschlandticket-kosten">Kosten-Überblick</a> ·
+      <a href="/ratgeber/deutschlandticket-gesperrt">Deutschlandticket gesperrt</a> ·
+      <a href="/lohnt-sich-rechner">Lohnt-sich-Rechner</a> ·
+      <a href="/kuendigungsfrist-rechner">Kündigungsfrist berechnen</a>
+    </p>
+
+  </article>
+
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+</Base>

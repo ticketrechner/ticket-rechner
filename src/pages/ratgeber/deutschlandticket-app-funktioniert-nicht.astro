@@ -1,0 +1,638 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const title = 'Deutschlandticket App funktioniert nicht 2026: Alle Probleme & Lösungen';
+const description = 'Deutschlandticket wird in der App nicht angezeigt? QR-Code fehlt, Login klappt nicht oder Akku leer? Die Lösung für jedes App-Problem — Schritt für Schritt.';
+const canonical = 'https://ticket-rechner.de/ratgeber/deutschlandticket-app-funktioniert-nicht';
+const ogTitle = 'Deutschlandticket App funktioniert nicht 2026: Alle Probleme & Lösungen';
+const ogDescription = 'Ticket weg, QR-Code fehlt, App stürzt ab? So behebst du jedes Problem mit dem Deutschlandticket in DB Navigator, Deutschlandticket-App und Verbund-Apps.';
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": title,
+  "description": description,
+  "datePublished": "2026-07-27",
+  "dateModified": "2026-07-27",
+  "author": {
+    "@type": "Organization",
+    "name": "Redaktion ticket-rechner.de",
+    "url": "https://ticket-rechner.de/ueber-uns"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "ticket-rechner.de",
+    "url": "https://ticket-rechner.de",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ticket-rechner.de/og-image.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": canonical
+  },
+  "image": "https://ticket-rechner.de/og-image.png"
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Warum wird mein Deutschlandticket in der App nicht angezeigt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Die häufigsten Ursachen: Du bist in der falschen App angemeldet (das Ticket wird nur in der App angezeigt, über die du es gekauft hast), du bist mit der falschen E-Mail-Adresse eingeloggt, die App braucht ein Update, oder das Ticket muss manuell unter 'Reisen' mit Abonummer und Nachname hinzugefügt werden."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Deutschlandticket QR-Code wird nicht angezeigt — was tun?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Öffne das Ticket direkt unter 'Meine Tickets' oder 'Reisen' — der QR-Code erscheint erst, wenn du das Ticket antippst. Falls er trotzdem fehlt: App-Daten aktualisieren (drei Punkte → 'Tickets aktualisieren'), App neu starten oder das Ticket über die Abonummer erneut hinzufügen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Funktioniert das Deutschlandticket in der App auch offline?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja, der QR-Code kann auch ohne Internetverbindung angezeigt werden — vorausgesetzt, du hast das Ticket mindestens einmal im aktuellen Monat online aktualisiert. Ohne diese monatliche Aktualisierung wird das Ticket als abgelaufen angezeigt."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was passiert bei einer Kontrolle, wenn die App nicht funktioniert?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ohne sichtbares Ticket wirst du wie ein Fahrgast ohne Fahrschein behandelt — 60 € erhöhtes Beförderungsentgelt. Nachträglich kannst du mit Abonachweis die Strafe auf 7 € reduzieren lassen. Tipp: Lade das Ticket in Apple Wallet oder Google Wallet — dort funktioniert es auch bei App-Problemen und niedrigem Akku."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kann ich einen Screenshot vom Deutschlandticket bei der Kontrolle zeigen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nein. Screenshots werden nicht als gültiger Fahrschein anerkannt. Der QR-Code ändert sich regelmäßig, und Kontrolleure prüfen die Echtheit digital. Nur die offizielle App oder ein unterstütztes Wallet (Apple Wallet, Google Wallet) gelten."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Mein Deutschlandticket zeigt den falschen Monat an — ist es noch gültig?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Wahrscheinlich ja. In der Ticketvorschau unter 'Reisen' wird der Zeitraum manchmal verzögert aktualisiert. Öffne das Ticket vollständig — auf dem QR-Code-Bildschirm wird der aktuelle Gültigkeitszeitraum angezeigt. Die Aktualisierung auf den neuen Monat erfolgt automatisch am Monatsersten."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Welche App brauche ich für das Deutschlandticket?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Das Ticket wird nur in der App angezeigt, über die du es gekauft hast. Bei der DB: DB Navigator. Bei Verbünden: die jeweilige Verbund-App (hvv switch, MVGO, RMVgo etc.). Bei deutschlandticket.de: die Deutschlandticket-App. Ein in der DB-App gekauftes Ticket erscheint nicht in einer Verbund-App und umgekehrt."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Deutschlandticket in Apple Wallet oder Google Wallet laden — wie geht das?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In der Deutschlandticket-App: unter 'Meine Verträge' die Wallet-Option wählen. Oder: den Wallet-Link in der monatlichen E-Mail-Quittung nutzen. Im DB Navigator und einigen Verbund-Apps ist die Wallet-Integration ebenfalls verfügbar. Das Wallet-Ticket aktualisiert sich automatisch und funktioniert auch bei niedrigem Akku."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "App stürzt ab oder lässt sich nicht öffnen — was tun?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "App-Cache leeren (Android: Einstellungen → Apps → [App-Name] → Speicher → Cache leeren), App aktualisieren, Smartphone neu starten. Falls das nicht hilft: App deinstallieren, neu installieren und mit Zugangsdaten anmelden. Dein Ticket geht dabei nicht verloren — es ist an dein Konto gebunden."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Akku leer bei der Kontrolle — was tun?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ohne sichtbares Ticket drohen 60 € EBE. Nachträglicher Abonachweis kann die Strafe auf 7 € reduzieren. Vorbeugung: Ticket in Apple/Google Wallet laden (funktioniert bei sehr niedrigem Akku), Powerbank mitnehmen, oder Chipkarte als Backup nutzen."
+      }
+    }
+  ]
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://ticket-rechner.de/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Ratgeber",
+      "item": "https://ticket-rechner.de/ratgeber"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Deutschlandticket App funktioniert nicht",
+      "item": canonical
+    }
+  ]
+};
+---
+
+<Base
+  title={title}
+  description={description}
+  canonical={canonical}
+  ogTitle={ogTitle}
+  ogDescription={ogDescription}
+  ogType="website"
+  ogUrl={canonical}
+>
+  <article>
+    <p class="article-meta">Ratgeber · Aktualisiert am 27.07.2026</p>
+
+    <h1>Deutschlandticket App funktioniert nicht — finde dein Problem, löse es sofort</h1>
+
+    <p>
+      Wenn dein Deutschlandticket in der App nicht angezeigt wird, der QR-Code fehlt oder der Login
+      nicht klappt, liegt es meistens an einem von fünf Problemen: falsche App, fehlendes
+      Update, monatliche Aktualisierung nicht durchgeführt, falsches Konto oder eine tatsächliche
+      Sperrung. In den meisten Fällen hast du das Problem in unter zwei Minuten gelöst.
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>Schnellcheck: Welches Problem hast du?</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Symptom</th>
+          <th>Wahrscheinliche Ursache</th>
+          <th>Springe zu</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Ticket wird gar nicht angezeigt</td>
+          <td>Falsche App oder falsches Konto</td>
+          <td>Problem 1</td>
+        </tr>
+        <tr>
+          <td>QR-Code fehlt oder lädt nicht</td>
+          <td>Ticket muss aktualisiert werden</td>
+          <td>Problem 2</td>
+        </tr>
+        <tr>
+          <td>Ticket zeigt falschen Monat</td>
+          <td>Verzögerte Monats-Aktualisierung</td>
+          <td>Problem 3</td>
+        </tr>
+        <tr>
+          <td>Login funktioniert nicht</td>
+          <td>Passwort, E-Mail oder Serverproblem</td>
+          <td>Problem 4</td>
+        </tr>
+        <tr>
+          <td>App stürzt ab / öffnet sich nicht</td>
+          <td>Veraltete Version oder Cache-Problem</td>
+          <td>Problem 5</td>
+        </tr>
+        <tr>
+          <td>Ticket als „ungültig" markiert</td>
+          <td>Sperrung durch Anbieter</td>
+          <td>Problem 6</td>
+        </tr>
+        <tr>
+          <td>Akku leer bei Kontrolle</td>
+          <td>Kein App-Problem — aber teuer</td>
+          <td>Notfall-Abschnitt</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- ============================================================ -->
+
+    <h2>Problem 1: Ticket wird in der App nicht angezeigt</h2>
+
+    <p>
+      Das häufigste „Problem" ist gar kein technischer Fehler — du schaust in der falschen App
+      nach. Das Deutschlandticket wird <strong>nur in der App angezeigt, über die du es gekauft
+      hast</strong>.
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Gekauft bei</th>
+          <th>Ticket sichtbar in</th>
+          <th>Nicht sichtbar in</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Deutsche Bahn</td>
+          <td>DB Navigator</td>
+          <td>Deutschlandticket-App, Verbund-Apps</td>
+        </tr>
+        <tr>
+          <td>deutschlandticket.de</td>
+          <td>Deutschlandticket-App</td>
+          <td>DB Navigator, Verbund-Apps</td>
+        </tr>
+        <tr>
+          <td>HVV</td>
+          <td>hvv switch</td>
+          <td>DB Navigator, Deutschlandticket-App</td>
+        </tr>
+        <tr>
+          <td>MVG München</td>
+          <td>MVGO</td>
+          <td>DB Navigator, Deutschlandticket-App</td>
+        </tr>
+        <tr>
+          <td>BVG Berlin</td>
+          <td>BVG-App (Fahrinfo)</td>
+          <td>DB Navigator, Deutschlandticket-App</td>
+        </tr>
+        <tr>
+          <td>Anderer Verbund</td>
+          <td>App des jeweiligen Verbunds</td>
+          <td>Alle anderen Apps</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>
+      <strong>Nicht sicher, wo du gekauft hast?</strong> Schau auf deinen Kontoauszug — der
+      Buchungstext der monatlichen Abbuchung verrät den Anbieter.
+    </p>
+
+    <h3>Ticket in der richtigen App, aber trotzdem nicht sichtbar?</h3>
+
+    <p>
+      Prüfe diese drei Dinge:
+    </p>
+
+    <p>
+      <strong>1. Richtiges Konto?</strong> Du musst mit der E-Mail-Adresse eingeloggt sein, mit
+      der du das Abo abgeschlossen hast. Unter „Profil" oder „Mein Konto" siehst du, welche
+      Adresse aktiv ist. Falsche E-Mail → ausloggen → mit der richtigen anmelden.<br>
+      <strong>2. Ticket manuell hinzufügen.</strong> Im DB Navigator: Unter „Reisen" rechts oben
+      auf „+" tippen → Abonummer und Nachname eingeben. Die Abonummer findest du in deiner
+      Bestellbestätigung oder Aktivierungsmail.<br>
+      <strong>3. App aktualisieren.</strong> Eine veraltete App-Version kann dazu führen, dass
+      Tickets nicht geladen werden. Öffne den App Store (iOS) oder Play Store (Android) und prüfe,
+      ob ein Update verfügbar ist.
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>Problem 2: QR-Code fehlt oder lädt nicht</h2>
+
+    <p>
+      Du siehst dein Abo in der App, aber der QR-Code für die Kontrolle wird nicht angezeigt. Das
+      passiert meistens aus einem von drei Gründen:
+    </p>
+
+    <p>
+      <strong>Monatliche Aktualisierung fehlt.</strong> Das Deutschlandticket muss
+      <strong>einmal pro Monat</strong> mit dem Internet verbunden werden, um den QR-Code für den
+      aktuellen Monat zu laden. Ohne diese Aktualisierung zeigt die App das Ticket als abgelaufen
+      an. Stelle eine WLAN- oder Mobilfunkverbindung her, öffne die App und warte einige Sekunden.
+    </p>
+
+    <p>
+      <strong>Ticket nicht vollständig geöffnet.</strong> In der Ticketvorschau (Listenansicht)
+      wird der QR-Code oft nicht angezeigt. Tippe auf das Ticket, um es vollständig zu öffnen —
+      erst auf dem Detailbildschirm erscheint der scannbare Code.
+    </p>
+
+    <p>
+      <strong>App-Daten veraltet.</strong> Im DB Navigator: Öffne „Reisen", tippe auf die drei
+      Punkte (⋮) oben rechts und wähle „Tickets aktualisieren". In der Deutschlandticket-App:
+      Ziehe den Bildschirm unter „Meine Tickets" nach unten, um eine Aktualisierung auszulösen.
+    </p>
+
+    <p>
+      Falls der QR-Code nach diesen Schritten immer noch fehlt: Ticket über die Abonummer entfernen
+      und neu hinzufügen (DB Navigator: „Reisen" → „+" → Abonummer + Nachname). Dein Abo bleibt
+      dabei bestehen — du verlierst nichts.
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>Problem 3: Ticket zeigt den falschen Monat an</h2>
+
+    <p>
+      Am Monatsanfang zeigt die Ticketvorschau manchmal noch den Vormonat an. Das ist ein bekanntes
+      Anzeige-Problem, kein echtes Ticket-Problem.
+    </p>
+
+    <p>
+      <strong>Lösung:</strong> Öffne das Ticket vollständig (tippe darauf, bis der QR-Code
+      erscheint). Auf dem QR-Code-Bildschirm wird der <strong>tatsächliche</strong>
+      Gültigkeitszeitraum angezeigt. Die Aktualisierung auf den neuen Monat erfolgt automatisch am
+      Monatsersten — die Vorschau hinkt manchmal hinterher.
+    </p>
+
+    <p>
+      Du brauchst für den neuen Monat kein neues Ticket zu laden und nichts zu bestätigen. Das Abo
+      verlängert sich automatisch.
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>Problem 4: Login funktioniert nicht</h2>
+
+    <p>
+      Du kannst dich nicht in der App anmelden — Passwort wird nicht akzeptiert, E-Mail-Adresse
+      nicht erkannt oder die Anmeldung bleibt hängen.
+    </p>
+
+    <p>
+      <strong>Passwort falsch?</strong> Nutze die „Passwort vergessen"-Funktion in der App. Du
+      bekommst eine E-Mail mit einem Zurücksetzungs-Link. Wichtig: Prüfe auch den Spam-Ordner. Bei
+      der DB: Die Zugangsdaten sind die gleichen wie für bahn.de.<br>
+      <strong>E-Mail nicht erkannt?</strong> Du bist möglicherweise mit einer anderen Adresse
+      registriert als du denkst. Prüfe deine Postfächer nach der Bestellbestätigung — die
+      Absenderadresse verrät, welche E-Mail hinterlegt ist.<br>
+      <strong>Server-Problem?</strong> Manchmal sind die Server des Anbieters überlastet —
+      besonders am Monatsanfang, wenn Millionen Tickets gleichzeitig aktualisiert werden. Warte
+      15–30 Minuten und versuche es erneut.
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>Problem 5: App stürzt ab oder öffnet sich nicht</h2>
+
+    <p>
+      Die App lässt sich nicht starten, hängt beim Laden oder schließt sich sofort wieder. Das
+      liegt fast immer an einer veralteten Version oder einem vollen App-Cache.
+    </p>
+
+    <p>
+      <strong>Schritt 1: App aktualisieren.</strong> Öffne den App Store (iOS) oder Play Store
+      (Android) und suche nach der App. Steht „Aktualisieren" statt „Öffnen" → Update
+      installieren.<br>
+      <strong>Schritt 2: Smartphone neu starten.</strong> Ein Neustart löst überraschend viele
+      App-Probleme — besonders auf älteren Geräten.<br>
+      <strong>Schritt 3: App-Cache leeren (nur Android).</strong> Einstellungen → Apps →
+      [App-Name] → Speicher → „Cache leeren". Nicht „Daten löschen" — das löscht deine
+      Anmeldedaten.<br>
+      <strong>Schritt 4: App deinstallieren und neu installieren.</strong> Dein Ticket geht dabei
+      nicht verloren. Es ist an dein Kundenkonto gebunden, nicht an die App-Installation. Nach der
+      Neuinstallation einfach anmelden und Ticket über die Abonummer laden.
+    </p>
+
+    <p>
+      <strong>Systemvoraussetzungen:</strong> DB Navigator und Deutschlandticket-App benötigen
+      mindestens Android 8 (bei einigen Anbietern Android 9) oder iOS 16. Auf älteren
+      Betriebssystemen funktionieren aktuelle App-Versionen nicht. Wenn dein Gerät zu alt ist,
+      bleibt als Alternative die
+      <a href="/ratgeber/deutschlandticket-ersatzkarte">Chipkarte</a>.
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>Problem 6: Ticket als „ungültig" oder „gesperrt" markiert</h2>
+
+    <p>
+      Wenn die App dein Ticket explizit als ungültig, gesperrt oder deaktiviert anzeigt, ist das
+      kein App-Problem — dein Abo wurde vom Anbieter deaktiviert. Die häufigsten Gründe: eine
+      fehlgeschlagene Lastschrift, eine nicht bestätigte Preiserhöhung oder ein Betrugsverdacht.
+    </p>
+
+    <p>
+      In diesem Fall hilft kein App-Neustart. Du musst den Grund der Sperrung klären und das Abo
+      beim Anbieter wieder freischalten lassen. Alles dazu im Detail:
+      <a href="/ratgeber/deutschlandticket-gesperrt">Deutschlandticket gesperrt — Gründe und Soforthilfe</a>.
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>Notfall: Akku leer oder App-Ausfall bei der Kontrolle</h2>
+
+    <p>
+      Die App stürzt ab, der Akku ist leer oder du hast keinen Empfang — und genau jetzt kommt
+      die Kontrolle. Das ist kein App-Fehler, aber es kann teuer werden.
+    </p>
+
+    <p>
+      <strong>Was passiert:</strong> Ohne sichtbares Ticket wirst du wie ein Fahrgast ohne
+      Fahrschein behandelt. Der Kontrolleur stellt ein erhöhtes Beförderungsentgelt von
+      <strong>60 €</strong> aus.
+    </p>
+
+    <p>
+      <strong>Nachträglich reduzieren:</strong> Da das Deutschlandticket ein personengebundenes Abo
+      ist, kannst du innerhalb der Frist (meist 14 Tage) nachweisen, dass du zum Kontrollzeitpunkt
+      einen gültigen Vertrag hattest. Viele Verkehrsunternehmen reduzieren die Strafe dann auf
+      <strong>7 € Bearbeitungsgebühr</strong>. Dafür brauchst du den Beanstandungsbeleg, dein
+      gültiges Ticket (auf geladenem Handy) und einen Lichtbildausweis.
+    </p>
+
+    <p>
+      <strong>Wichtig:</strong> Ein Screenshot des QR-Codes wird <strong>nicht</strong> als
+      gültiges Ticket akzeptiert. Screenshots lassen sich fälschen, und Kontrolleure erkennen den
+      Unterschied. Nur die offizielle App oder ein unterstütztes Wallet gelten.
+    </p>
+
+    <h3>So schützt du dich für die Zukunft</h3>
+
+    <p>
+      <strong>Ticket in Apple Wallet oder Google Wallet laden.</strong> Das ist der beste Schutz
+      gegen App-Abstürze und niedrigen Akku. Das Wallet-Ticket funktioniert unabhängig von der
+      Ticket-App und bleibt auch bei sehr niedrigem Akkustand abrufbar. So geht's:
+    </p>
+
+    <p>
+      — In der <strong>Deutschlandticket-App</strong>: unter „Meine Verträge" die Wallet-Option
+      wählen. Oder den Wallet-Link in der monatlichen E-Mail-Quittung nutzen.<br>
+      — Im <strong>DB Navigator</strong>: Ticket öffnen → Option „Zu Wallet hinzufügen" (wenn
+      verfügbar).<br>
+      — In <strong>Verbund-Apps</strong> (BVG, hvv switch etc.): Die Wallet-Integration variiert.
+      Prüfe in der App unter Einstellungen oder Ticket-Optionen.
+    </p>
+
+    <p>
+      Das Wallet-Ticket aktualisiert sich automatisch, solange dein Abo aktiv ist.
+    </p>
+
+    <p>
+      <strong>Weitere Vorbeugung:</strong> Powerbank mitnehmen (besonders auf längeren Fahrten),
+      Handy vor der Fahrt laden, und die
+      <a href="/ratgeber/deutschlandticket-ersatzkarte">Chipkarte als Backup</a> in Betracht ziehen
+      — die braucht keinen Akku.
+    </p>
+
+    <p>
+      Mehr zum Thema Akku-Probleme und Kontrollen:
+      <a href="/ratgeber/deutschlandticket-verloren">Deutschlandticket verloren (Abschnitt Akku leer)</a>.
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>Gerätewechsel: Ticket auf neues Handy übertragen</h2>
+
+    <p>
+      Neues Smartphone gekauft oder altes Handy
+      <a href="/ratgeber/deutschlandticket-gestohlen">gestohlen</a>? Dein Deutschlandticket ist
+      an dein Kundenkonto gebunden, nicht an das Gerät. So überträgst du es:
+    </p>
+
+    <p>
+      <strong>Altes Handy noch vorhanden:</strong> Ticket in der alten App entfernen → App auf
+      neuem Handy installieren → anmelden → Ticket laden.<br>
+      <strong>Altes Handy nicht mehr vorhanden:</strong> App auf neuem Handy installieren → unter
+      „Reisen" (DB Navigator) oder „Meine Tickets" anmelden → Abonummer + Nachname eingeben →
+      Bestätigungslink per E-Mail bestätigen → Ticket wird geladen.
+    </p>
+
+    <p>
+      <strong>Achtung:</strong> Bei der Deutschen Bahn ist die Übertragung auf ein neues Gerät aus
+      Sicherheitsgründen innerhalb eines Monats nur begrenzt möglich. Wenn du eine Fehlermeldung
+      bekommst, dass das Wechsellimit erreicht ist, kontaktiere den DB-Kundenservice unter
+      <strong>030 2970</strong>.
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>Welche App-Probleme der Anbieter lösen muss</h2>
+
+    <p>
+      Nicht jedes Problem kannst du selbst beheben. Kontaktiere den Kundenservice, wenn:
+    </p>
+
+    <p>
+      — Dein Ticket nach allen oben genannten Schritten weiterhin nicht angezeigt wird.<br>
+      — Die App meldet, dass dein Abo „nicht existiert", obwohl Geld abgebucht wird.<br>
+      — Du das Wechsellimit beim Gerätetausch erreicht hast.<br>
+      — Dein Ticket trotz aktiver Zahlung als „gesperrt" oder „ungültig" erscheint.<br>
+      — Du deine Abonummer nicht finden kannst (der Kundenservice kann sie über deine
+      Vertragsdaten ermitteln).
+    </p>
+
+    <p>
+      Halte bei der Kontaktaufnahme bereit: Abonummer (falls vorhanden), die E-Mail-Adresse deines
+      Kontos, einen Screenshot des Fehlers und den letzten Kontoauszug mit der Abbuchung.
+    </p>
+
+    <p>
+      <strong>Deutsche Bahn:</strong> 030 2970 oder Aboportal auf bahn.de<br>
+      <strong>Deutschlandticket-App:</strong> Support über „Mein Konto" → „Hilfe"<br>
+      <strong>Verbund-Apps:</strong> Kontaktdaten findest du in der jeweiligen App unter
+      Einstellungen oder auf der Website des Verbunds.
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>Häufige Fragen (FAQ)</h2>
+
+    <h3>Warum wird mein Deutschlandticket in der App nicht angezeigt?</h3>
+    <p>
+      Häufigste Ursachen: falsche App (Ticket nur dort sichtbar, wo es gekauft wurde), falsche
+      E-Mail-Adresse, veraltete App-Version oder Ticket muss manuell mit Abonummer hinzugefügt
+      werden.
+    </p>
+
+    <h3>Deutschlandticket QR-Code wird nicht angezeigt — was tun?</h3>
+    <p>
+      Ticket antippen und vollständig öffnen, App-Daten aktualisieren (drei Punkte → „Tickets
+      aktualisieren"), Internetverbindung herstellen für die monatliche Aktualisierung. Falls alles
+      scheitert: Ticket über Abonummer entfernen und neu hinzufügen.
+    </p>
+
+    <h3>Funktioniert das Deutschlandticket in der App auch offline?</h3>
+    <p>
+      Ja — aber nur, wenn das Ticket im aktuellen Monat mindestens einmal online aktualisiert
+      wurde. Der QR-Code wird dann lokal gespeichert und kann ohne Internet angezeigt werden.
+    </p>
+
+    <h3>Was passiert bei einer Kontrolle, wenn die App nicht funktioniert?</h3>
+    <p>
+      60 € erhöhtes Beförderungsentgelt. Nachträglicher Abonachweis kann die Strafe auf 7 €
+      reduzieren. Sicherste Vorbeugung: Ticket in Apple/Google Wallet laden.
+    </p>
+
+    <h3>Kann ich einen Screenshot vom Deutschlandticket bei der Kontrolle zeigen?</h3>
+    <p>
+      Nein. Screenshots sind kein gültiger Fahrschein. Nur die offizielle App oder ein
+      unterstütztes Wallet (Apple Wallet, Google Wallet) werden akzeptiert.
+    </p>
+
+    <h3>Mein Ticket zeigt den falschen Monat an — ist es noch gültig?</h3>
+    <p>
+      Vermutlich ja. Öffne das Ticket vollständig — der QR-Code-Bildschirm zeigt den korrekten
+      Zeitraum. Die Vorschau aktualisiert sich manchmal verzögert zum Monatsanfang.
+    </p>
+
+    <h3>Welche App brauche ich für das Deutschlandticket?</h3>
+    <p>
+      Die App deines Anbieters: DB Navigator (Deutsche Bahn), Deutschlandticket-App
+      (deutschlandticket.de), hvv switch (Hamburg), MVGO (München), BVG Fahrinfo (Berlin) oder die
+      App deines regionalen Verbunds.
+    </p>
+
+    <h3>Wie lade ich das Deutschlandticket in die Wallet?</h3>
+    <p>
+      In der Deutschlandticket-App unter „Meine Verträge" oder über den Wallet-Link in der
+      monatlichen E-Mail-Quittung. Im DB Navigator und einigen Verbund-Apps ähnlich. Das
+      Wallet-Ticket aktualisiert sich automatisch.
+    </p>
+
+    <h3>App stürzt ab oder öffnet sich nicht — was tun?</h3>
+    <p>
+      App aktualisieren, Handy neu starten, Cache leeren (Android). Falls alles scheitert: App
+      deinstallieren, neu installieren, anmelden. Dein Ticket ist an dein Konto gebunden und geht
+      nicht verloren.
+    </p>
+
+    <h3>Akku leer bei der Kontrolle — was tun?</h3>
+    <p>
+      60 € EBE drohen. Nachträglich mit Abonachweis auf 7 € reduzierbar. Vorbeugung: Wallet
+      nutzen, Powerbank mitnehmen, Chipkarte als Backup erwägen.
+      <a href="/ratgeber/deutschlandticket-verloren">Mehr dazu →</a>
+    </p>
+
+    <!-- ============================================================ -->
+
+    <h2>Offizielle Quellen</h2>
+
+    <p>
+      <a href="https://www.bahn.de/faq/deutschlandticket-im-db-navigator-nicht-angezeigt" target="_blank" rel="noopener">DB — Ticket im Navigator nicht angezeigt</a> ·
+      <a href="https://www.bahn.de/faq/pk/angebot/regionale-angebote/deutschland-ticket/technische_anliegen" target="_blank" rel="noopener">DB — Technische Anliegen zum D-Ticket</a> ·
+      <a href="https://deutschlandticket.app/fragen-und-antworten.html" target="_blank" rel="noopener">Deutschlandticket-App — FAQ</a> ·
+      <a href="https://www.hvv.de/de/deutschlandticket-faq" target="_blank" rel="noopener">HVV — Deutschlandticket FAQ</a>
+    </p>
+
+    <p class="article-footer">
+      Redaktion ticket-rechner.de · Stand: Juli 2026. App-Funktionen und Systemvoraussetzungen
+      können je nach Anbieter und App-Version abweichen. Alle Angaben ohne Gewähr. Diese Website
+      ist nicht affiliiert mit der Deutschen Bahn oder einem Verkehrsverbund.
+    </p>
+
+    <p>
+      <a href="/ratgeber/deutschlandticket-gesperrt">Deutschlandticket gesperrt</a> ·
+      <a href="/ratgeber/deutschlandticket-verloren">Deutschlandticket verloren</a> ·
+      <a href="/ratgeber/deutschlandticket-ersatzkarte">Ersatzkarte beantragen</a> ·
+      <a href="/ratgeber/deutschlandticket-kuendigen">Deutschlandticket kündigen</a> ·
+      <a href="/lohnt-sich-rechner">Lohnt-sich-Rechner</a>
+    </p>
+
+  </article>
+
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+</Base>
