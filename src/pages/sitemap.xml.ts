@@ -16,7 +16,7 @@ interface SitemapEntry {
 
 const pages: SitemapEntry[] = [
   // Homepage + calculators
-  { url: '/',                              lastmod: '2026-07-20', changefreq: 'weekly',  priority: 1.0 },
+  { url: '/',                              lastmod: '2026-08-03', changefreq: 'weekly',  priority: 1.0 },
   { url: '/kuendigungsfrist-rechner',      lastmod: '2026-07-22', changefreq: 'weekly',  priority: 0.9 },
   { url: '/lohnt-sich-rechner',            lastmod: '2026-07-22', changefreq: 'weekly',  priority: 0.9 },
   { url: '/kuendigungsschreiben',          lastmod: '2026-07-22', changefreq: 'weekly',  priority: 0.9 },
@@ -35,7 +35,7 @@ const pages: SitemapEntry[] = [
   { url: '/ratgeber/deutschlandticket-kinder',           lastmod: '2026-07-22', changefreq: 'monthly', priority: 0.6 },
   { url: '/ratgeber/deutschlandticket-preiserhoehung',   lastmod: '2026-07-22', changefreq: 'monthly', priority: 0.6 },
   { url: '/ratgeber/deutschlandticket-mitnahme',         lastmod: '2026-07-22', changefreq: 'monthly', priority: 0.6 },
-  { url: '/ratgeber/deutschlandticket-verloren',         lastmod: '2026-07-22', changefreq: 'monthly', priority: 0.6 },
+  { url: '/ratgeber/deutschlandticket-verloren',         lastmod: '2026-07-22', changefreq: 'monthly', priority: 0.8 },
   { url: '/ratgeber/deutschlandticket-erste-klasse',     lastmod: '2026-07-21', changefreq: 'monthly', priority: 0.5 },
   { url: '/ratgeber/deutschlandticket-pausieren',        lastmod: '2026-07-21', changefreq: 'monthly', priority: 0.5 },
   // Problem Solving cluster
