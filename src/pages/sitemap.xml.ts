@@ -1,15 +1,19 @@
 /**
- * Manual sitemap — lists only currently live pages.
+ * Manual sitemap + dynamic route pages from routes.json
  * UPDATE this file every time a page is added or removed.
- * Last updated: 2026-07-27
+ * Last updated: 2026-08-03
  */
+import routes from '../data/routes.json';
+
 const SITE = 'https://ticket-rechner.de';
+
 interface SitemapEntry {
   url: string;
   lastmod: string;
   changefreq: 'daily' | 'weekly' | 'monthly';
   priority: number;
 }
+
 const pages: SitemapEntry[] = [
   // Homepage + calculators
   { url: '/',                              lastmod: '2026-07-20', changefreq: 'weekly',  priority: 1.0 },
@@ -34,13 +38,13 @@ const pages: SitemapEntry[] = [
   { url: '/ratgeber/deutschlandticket-verloren',         lastmod: '2026-07-22', changefreq: 'monthly', priority: 0.6 },
   { url: '/ratgeber/deutschlandticket-erste-klasse',     lastmod: '2026-07-21', changefreq: 'monthly', priority: 0.5 },
   { url: '/ratgeber/deutschlandticket-pausieren',        lastmod: '2026-07-21', changefreq: 'monthly', priority: 0.5 },
-  // New Cluster 1: Problem Solving
+  // Problem Solving cluster
   { url: '/ratgeber/deutschlandticket-gestohlen',              lastmod: '2026-07-27', changefreq: 'monthly', priority: 0.7 },
   { url: '/ratgeber/deutschlandticket-ersatzkarte',            lastmod: '2026-07-27', changefreq: 'monthly', priority: 0.7 },
   { url: '/ratgeber/deutschlandticket-gesperrt',               lastmod: '2026-07-27', changefreq: 'monthly', priority: 0.7 },
   { url: '/ratgeber/deutschlandticket-app-funktioniert-nicht', lastmod: '2026-07-27', changefreq: 'monthly', priority: 0.7 },
   { url: '/ratgeber/deutschlandticket-erstattung',             lastmod: '2026-07-27', changefreq: 'monthly', priority: 0.7 },
-  // New Cluster 2: Evergreen High Volume
+  // Evergreen High Volume cluster
   { url: '/ratgeber/deutschlandticket-verlaengern',            lastmod: '2026-07-27', changefreq: 'monthly', priority: 0.6 },
   { url: '/ratgeber/deutschlandticket-kundenservice',          lastmod: '2026-07-27', changefreq: 'monthly', priority: 0.7 },
   { url: '/ratgeber/deutschlandticket-schueler',               lastmod: '2026-07-27', changefreq: 'monthly', priority: 0.7 },
@@ -58,10 +62,21 @@ const pages: SitemapEntry[] = [
   { url: '/impressum',     lastmod: '2026-07-19', changefreq: 'monthly', priority: 0.3 },
   { url: '/datenschutz',   lastmod: '2026-07-21', changefreq: 'monthly', priority: 0.3 },
 ];
+
+// Dynamically add route pages from routes.json
+const routePages: SitemapEntry[] = (routes as any[]).map((route) => ({
+  url: `/strecke/${route.slug}`,
+  lastmod: '2026-08-03',
+  changefreq: 'monthly' as const,
+  priority: 0.7,
+}));
+
+const allPages = [...pages, ...routePages];
+
 export async function GET() {
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${pages
+${allPages
   .map(
     (p) => `  <url>
     <loc>${SITE}${p.url}</loc>
