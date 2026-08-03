@@ -1,0 +1,1999 @@
+[
+  {
+    "slug": "berlin-hamburg",
+    "from": {
+      "name": "Berlin Hbf",
+      "city": "Berlin",
+      "category": 1,
+      "lat": 52.5251,
+      "lon": 13.3694,
+      "amenities": {
+        "schliessfaecher": true,
+        "schliessfaecherPreis": "ab 4 € (klein) bis 7 € (groß) pro 24 Stunden",
+        "wc": true,
+        "wcPreis": "1 €",
+        "wlan": true,
+        "wlanKosten": "kostenlos (DB WLAN / Telekom)",
+        "barrierefrei": true,
+        "aufzuege": true,
+        "rolltreppe": true,
+        "reisezentrum": true,
+        "reisezentrumZeiten": "Mo–Fr 6:00–22:00, Sa–So 8:00–22:00",
+        "gastronomie": "Bäckereien, Restaurants, Supermärkte, Coffeeshops im Bahnhof",
+        "parkAndRide": true,
+        "parkAndRideKapazitaet": "ca. 300 Plätze im Parkhaus",
+        "fahrradstellplaetze": true,
+        "taxiStand": true,
+        "dbLounge": true
+      },
+      "attractions": [
+        {
+          "name": "Brandenburger Tor",
+          "typ": "Denkmal",
+          "entfernungKm": 1.0,
+          "gehzeit": "12 Min.",
+          "anfahrt": "Zu Fuß oder S-Bahn S1/S2 bis Brandenburger Tor",
+          "eintritt": "kostenlos",
+          "beschreibung": "Wahrzeichen Berlins und Symbol der deutschen Wiedervereinigung"
+        },
+        {
+          "name": "Reichstagsgebäude",
+          "typ": "Regierungsgebäude / Aussichtspunkt",
+          "entfernungKm": 0.8,
+          "gehzeit": "10 Min.",
+          "anfahrt": "Zu Fuß Richtung Spreebogen",
+          "eintritt": "kostenlos (Anmeldung erforderlich)",
+          "beschreibung": "Sitz des Deutschen Bundestages mit begehbarer Glaskuppel"
+        },
+        {
+          "name": "Museumsinsel",
+          "typ": "Museumskomplex (UNESCO-Welterbe)",
+          "entfernungKm": 2.0,
+          "gehzeit": "25 Min.",
+          "anfahrt": "S-Bahn S5/S7 bis Hackescher Markt, dann 5 Min. zu Fuß",
+          "eintritt": "ab 12 € (Einzelmuseum), 21 € Tageskarte",
+          "beschreibung": "Fünf weltberühmte Museen auf einer Insel in der Spree"
+        }
+      ]
+    },
+    "to": {
+      "name": "Hamburg Hbf",
+      "city": "Hamburg",
+      "category": 1,
+      "lat": 53.553,
+      "lon": 10.0069,
+      "amenities": {
+        "schliessfaecher": true,
+        "schliessfaecherPreis": "ab 4 € (klein) bis 7 € (groß) pro 24 Stunden",
+        "wc": true,
+        "wcPreis": "1 €",
+        "wlan": true,
+        "wlanKosten": "kostenlos",
+        "barrierefrei": true,
+        "aufzuege": true,
+        "rolltreppe": true,
+        "reisezentrum": true,
+        "reisezentrumZeiten": "Mo–Fr 6:00–22:00, Sa–So 7:00–22:00",
+        "gastronomie": "Wandelhalle mit über 50 Geschäften, Restaurants und Bäckereien",
+        "parkAndRide": false,
+        "parkAndRideKapazitaet": "",
+        "fahrradstellplaetze": true,
+        "taxiStand": true,
+        "dbLounge": true
+      },
+      "attractions": [
+        {
+          "name": "Elbphilharmonie",
+          "typ": "Konzerthaus / Architektur",
+          "entfernungKm": 2.5,
+          "gehzeit": "30 Min.",
+          "anfahrt": "U3 bis Baumwall, dann 5 Min. zu Fuß",
+          "eintritt": "Plaza kostenlos (Konzerte ab 15 €)",
+          "beschreibung": "Hamburgs spektakuläres Konzerthaus in der HafenCity mit frei zugänglicher Plaza"
+        },
+        {
+          "name": "Speicherstadt & Miniatur Wunderland",
+          "typ": "UNESCO-Welterbe / Museum",
+          "entfernungKm": 2.0,
+          "gehzeit": "25 Min.",
+          "anfahrt": "U1 bis Meßberg, dann 5 Min. zu Fuß",
+          "eintritt": "Speicherstadt kostenlos, Miniatur Wunderland ab 22 €",
+          "beschreibung": "Größter zusammenhängender Lagerhausdistrikt der Welt mit berühmter Modelleisenbahn-Ausstellung"
+        },
+        {
+          "name": "Landungsbrücken & Hafenrundfahrt",
+          "typ": "Hafen / Aussichtspunkt",
+          "entfernungKm": 2.8,
+          "gehzeit": "35 Min.",
+          "anfahrt": "S1/S3 bis Landungsbrücken",
+          "eintritt": "kostenlos (Hafenrundfahrt ab 22 €)",
+          "beschreibung": "Hamburgs berühmter Hafen mit Fährverbindungen und Rundfahrten"
+        },
+        {
+          "name": "Rathaus & Jungfernstieg",
+          "typ": "Historisches Gebäude / Shopping",
+          "entfernungKm": 1.5,
+          "gehzeit": "18 Min.",
+          "anfahrt": "U1/U2 bis Jungfernstieg",
+          "eintritt": "Rathausführung 5 €",
+          "beschreibung": "Prachtvolles Neorenaissance-Rathaus am Rathausmarkt mit Blick auf die Alster"
+        },
+        {
+          "name": "Reeperbahn & St. Pauli",
+          "typ": "Ausgehviertel",
+          "entfernungKm": 3.5,
+          "gehzeit": "40 Min.",
+          "anfahrt": "S1/S3 bis Reeperbahn",
+          "eintritt": "kostenlos",
+          "beschreibung": "Hamburgs berühmteste Unterhaltungsmeile mit Clubs, Theater und Musik"
+        }
+      ]
+    },
+    "trains": [
+      "RE 8 (Schwerin)",
+      "RE 1 (Schwerin–Büchen)"
+    ],
+    "reisezeit": "ca. 4:20 Std.",
+    "reisezeitICE": "ca. 1:45 Std.",
+    "entfernungKm": 286,
+    "umstiege": 1,
+    "umstiegsort": "Schwerin Hbf (ca. 30 Min. Umstiegszeit)",
+    "taktung": "stündlich (RE 8 + RE 1 mit Umstieg)",
+    "ersteFahrt": "ca. 05:00",
+    "letzteFahrt": "ca. 22:00",
+    "zwischenhalte": [
+      {
+        "name": "Berlin-Spandau",
+        "fahrzeit": "15 Min."
+      },
+      {
+        "name": "Wustermark",
+        "fahrzeit": "28 Min."
+      },
+      {
+        "name": "Nauen",
+        "fahrzeit": "35 Min."
+      },
+      {
+        "name": "Neustadt (Dosse)",
+        "fahrzeit": "1:05 Std."
+      },
+      {
+        "name": "Wittenberge",
+        "fahrzeit": "1:30 Std."
+      },
+      {
+        "name": "Ludwigslust",
+        "fahrzeit": "1:50 Std."
+      },
+      {
+        "name": "Schwerin Hbf (Umstieg)",
+        "fahrzeit": "2:30 Std."
+      },
+      {
+        "name": "Bad Kleinen",
+        "fahrzeit": "2:50 Std."
+      },
+      {
+        "name": "Büchen",
+        "fahrzeit": "3:30 Std."
+      },
+      {
+        "name": "Hamburg-Bergedorf",
+        "fahrzeit": "4:05 Std."
+      }
+    ],
+    "kosten": {
+      "einzelticket": "ca. 55–65 €",
+      "iceSparpreis": "ab 17,99 €",
+      "iceFlexpreis": "ab 79 €",
+      "auto": "ca. 85 € (286 km × 0,30 €/km)"
+    },
+    "tipps": [
+      {
+        "title": "Umstieg in Schwerin nutzen",
+        "text": "Der Umstieg in Schwerin dauert oft 20–30 Minuten. Nutze die Zeit für einen schnellen Blick auf das Schweriner Schloss."
+      },
+      {
+        "title": "Alternative Route über Büchen",
+        "text": "Je nach Tageszeit gibt es auch Verbindungen über Büchen ohne Umstieg in Schwerin. Prüfe im DB Navigator beide Optionen."
+      },
+      {
+        "title": "ICE-Alternative für Eilige",
+        "text": "Der ICE schafft die Strecke in unter 2 Stunden – das Deutschlandticket gilt hier aber nicht. Sparpreise ab 17,99 € sind dennoch oft günstig."
+      },
+      {
+        "title": "Fahrrad mitnehmen",
+        "text": "Im RE 8 und RE 1 ist die Fahrradmitnahme in der Regel kostenlos möglich, je nach Verbund und Auslastung."
+      },
+      {
+        "title": "Stoßzeiten meiden",
+        "text": "Freitagabend und Sonntagabend sind die Züge besonders voll. Unter der Woche außerhalb der Pendlerzeiten (9–16 Uhr) ist es deutlich ruhiger."
+      }
+    ],
+    "related": [
+      "hamburg-luebeck",
+      "berlin-dresden",
+      "hannover-bremen"
+    ]
+  },
+  {
+    "slug": "muenchen-nuernberg",
+    "from": {
+      "name": "München Hbf",
+      "city": "München",
+      "category": 1,
+      "lat": 48.1402,
+      "lon": 11.56,
+      "amenities": {
+        "schliessfaecher": true,
+        "schliessfaecherPreis": "ab 4 € bis 7 € pro 24 Stunden",
+        "wc": true,
+        "wcPreis": "1 €",
+        "wlan": true,
+        "wlanKosten": "kostenlos",
+        "barrierefrei": true,
+        "aufzuege": true,
+        "rolltreppe": true,
+        "reisezentrum": true,
+        "reisezentrumZeiten": "Mo–Fr 6:00–22:00, Sa–So 7:00–22:00",
+        "gastronomie": "Zahlreiche Restaurants, Bäckereien und Imbisse in der Bahnhofshalle",
+        "parkAndRide": true,
+        "parkAndRideKapazitaet": "Parkhaus am Bahnhof vorhanden",
+        "fahrradstellplaetze": true,
+        "taxiStand": true,
+        "dbLounge": true
+      },
+      "attractions": [
+        {
+          "name": "Marienplatz & Neues Rathaus",
+          "typ": "Platz / Historisches Gebäude",
+          "entfernungKm": 1.0,
+          "gehzeit": "12 Min.",
+          "anfahrt": "S-Bahn oder U-Bahn bis Marienplatz",
+          "eintritt": "kostenlos (Turmaufstieg 6 €)",
+          "beschreibung": "Münchens zentraler Platz mit dem berühmten Glockenspiel am Neuen Rathaus"
+        },
+        {
+          "name": "Englischer Garten",
+          "typ": "Park",
+          "entfernungKm": 2.5,
+          "gehzeit": "30 Min.",
+          "anfahrt": "U3/U6 bis Universität",
+          "eintritt": "kostenlos",
+          "beschreibung": "Einer der größten Stadtparks der Welt mit Biergarten am Chinesischen Turm"
+        },
+        {
+          "name": "Deutsches Museum",
+          "typ": "Museum",
+          "entfernungKm": 2.0,
+          "gehzeit": "25 Min.",
+          "anfahrt": "S-Bahn bis Isartor, dann 5 Min. zu Fuß",
+          "eintritt": "15 €",
+          "beschreibung": "Weltweit größtes Museum für Naturwissenschaft und Technik"
+        }
+      ]
+    },
+    "to": {
+      "name": "Nürnberg Hbf",
+      "city": "Nürnberg",
+      "category": 1,
+      "lat": 49.4457,
+      "lon": 11.0823,
+      "amenities": {
+        "schliessfaecher": true,
+        "schliessfaecherPreis": "ab 4 € bis 6 € pro 24 Stunden",
+        "wc": true,
+        "wcPreis": "1 €",
+        "wlan": true,
+        "wlanKosten": "kostenlos",
+        "barrierefrei": true,
+        "aufzuege": true,
+        "rolltreppe": true,
+        "reisezentrum": true,
+        "reisezentrumZeiten": "Mo–Fr 6:00–21:00, Sa 8:00–18:00, So 9:00–18:00",
+        "gastronomie": "Bäckereien, Imbisse und Restaurants in der Osthalle und Mittelhalle",
+        "parkAndRide": true,
+        "parkAndRideKapazitaet": "ca. 200 Plätze",
+        "fahrradstellplaetze": true,
+        "taxiStand": true,
+        "dbLounge": false
+      },
+      "attractions": [
+        {
+          "name": "Kaiserburg Nürnberg",
+          "typ": "Burg / Museum",
+          "entfernungKm": 1.2,
+          "gehzeit": "15 Min.",
+          "anfahrt": "Zu Fuß durch die Altstadt Richtung Norden",
+          "eintritt": "7 €",
+          "beschreibung": "Eine der bedeutendsten Kaiserburgen des Mittelalters mit Panoramablick über die Stadt"
+        },
+        {
+          "name": "Germanisches Nationalmuseum",
+          "typ": "Museum",
+          "entfernungKm": 0.8,
+          "gehzeit": "10 Min.",
+          "anfahrt": "Zu Fuß Richtung Kornmarkt",
+          "eintritt": "8 €",
+          "beschreibung": "Das größte kulturgeschichtliche Museum im deutschsprachigen Raum"
+        },
+        {
+          "name": "Nürnberger Altstadt & Handwerkerhof",
+          "typ": "Altstadt / Shopping",
+          "entfernungKm": 0.5,
+          "gehzeit": "6 Min.",
+          "anfahrt": "Zu Fuß durch den Hauptausgang Richtung Königstraße",
+          "eintritt": "kostenlos",
+          "beschreibung": "Malerische Altstadt mit Fachwerkhaeusern und Handwerkerhof am Königstor"
+        },
+        {
+          "name": "Dokumentationszentrum Reichsparteitagsgelände",
+          "typ": "Museum / Gedenkstätte",
+          "entfernungKm": 4.5,
+          "gehzeit": "–",
+          "anfahrt": "Straßenbahn 8 bis Doku-Zentrum (ca. 15 Min.)",
+          "eintritt": "8 €",
+          "beschreibung": "Ausstellung über die Geschichte des Nationalsozialismus im ehemaligen Kongressbau"
+        },
+        {
+          "name": "DB Museum Nürnberg",
+          "typ": "Museum",
+          "entfernungKm": 0.5,
+          "gehzeit": "7 Min.",
+          "anfahrt": "Zu Fuß vom Hbf Richtung Süden",
+          "eintritt": "9 €",
+          "beschreibung": "Ältestes Eisenbahnmuseum Deutschlands mit historischen Lokomotiven und dem Adler-Nachbau"
+        }
+      ]
+    },
+    "trains": [
+      "RE 1 (München-Nürnberg-Express)"
+    ],
+    "reisezeit": "ca. 1:45 Std.",
+    "reisezeitICE": "ca. 1:00 Std.",
+    "entfernungKm": 171,
+    "umstiege": 0,
+    "umstiegsort": "",
+    "taktung": "zweistündlich (RE 1), stündlich mit RB 16",
+    "ersteFahrt": "ca. 05:05",
+    "letzteFahrt": "ca. 21:05",
+    "zwischenhalte": [
+      {
+        "name": "München-Pasing",
+        "fahrzeit": "8 Min."
+      },
+      {
+        "name": "Pfaffenhofen (Ilm)",
+        "fahrzeit": "30 Min."
+      },
+      {
+        "name": "Ingolstadt Hbf",
+        "fahrzeit": "45 Min."
+      },
+      {
+        "name": "Allersberg (Rothsee)",
+        "fahrzeit": "1:15 Std."
+      }
+    ],
+    "kosten": {
+      "einzelticket": "ca. 35–40 €",
+      "iceSparpreis": "ab 17,90 €",
+      "iceFlexpreis": "ab 57 €",
+      "auto": "ca. 51 € (171 km × 0,30 €/km)"
+    },
+    "tipps": [
+      {
+        "title": "Deutschlands schnellster Regionalzug",
+        "text": "Der München-Nürnberg-Express fährt mit bis zu 190 km/h über die Schnellfahrstrecke – schneller als viele ICE-Verbindungen anderswo. Und das Deutschlandticket gilt!"
+      },
+      {
+        "title": "Am Wochenende früh da sein",
+        "text": "Der RE 1 ist besonders an Wochenenden extrem beliebt. Steige möglichst am Anfang oder Ende des Zuges ein."
+      },
+      {
+        "title": "RB 16 als Alternative",
+        "text": "Die RB 16 fährt über Treuchtlingen und braucht ca. 2:30 Stunden – ist aber deutlich weniger voll als der RE 1."
+      },
+      {
+        "title": "Ingolstadt als Zwischenstopp",
+        "text": "In Ingolstadt hat der RE 1 ca. 10 Minuten Aufenthalt. Ideal für einen kurzen Beinevertreter."
+      },
+      {
+        "title": "WLAN im Zug",
+        "text": "Der RE 1 bietet in der Regel WLAN an Bord, allerdings kann die Verbindung auf der Schnellfahrstrecke schwanken."
+      }
+    ],
+    "related": [
+      "stuttgart-ulm",
+      "koeln-duesseldorf",
+      "frankfurt-mainz"
+    ]
+  },
+  {
+    "slug": "koeln-duesseldorf",
+    "from": {
+      "name": "Köln Hbf",
+      "city": "Köln",
+      "category": 1,
+      "lat": 50.9433,
+      "lon": 6.9589,
+      "amenities": {
+        "schliessfaecher": true,
+        "schliessfaecherPreis": "ab 4 € bis 7 € pro 24 Stunden",
+        "wc": true,
+        "wcPreis": "1 €",
+        "wlan": true,
+        "wlanKosten": "kostenlos",
+        "barrierefrei": true,
+        "aufzuege": true,
+        "rolltreppe": true,
+        "reisezentrum": true,
+        "reisezentrumZeiten": "Mo–Fr 6:00–22:00, Sa–So 7:00–21:00",
+        "gastronomie": "Zahlreiche Shops, Bäckereien und Restaurants im Bahnhof",
+        "parkAndRide": false,
+        "parkAndRideKapazitaet": "",
+        "fahrradstellplaetze": true,
+        "taxiStand": true,
+        "dbLounge": true
+      },
+      "attractions": [
+        {
+          "name": "Kölner Dom",
+          "typ": "Kathedrale (UNESCO-Welterbe)",
+          "entfernungKm": 0.1,
+          "gehzeit": "1 Min.",
+          "anfahrt": "Direkt vor dem Bahnhof",
+          "eintritt": "Dom kostenlos, Turmbesteigung 6 €",
+          "beschreibung": "Gotische Kathedrale und UNESCO-Welterbe, direkt neben dem Hauptbahnhof"
+        },
+        {
+          "name": "Hohenzollernbrücke",
+          "typ": "Brücke / Aussichtspunkt",
+          "entfernungKm": 0.2,
+          "gehzeit": "3 Min.",
+          "anfahrt": "Direkt neben dem Dom",
+          "eintritt": "kostenlos",
+          "beschreibung": "Berühmte Eisenbahnbrücke mit tausenden Liebesschlössern und Rheinblick"
+        },
+        {
+          "name": "Altstadt & Brauhaus-Viertel",
+          "typ": "Altstadt / Gastronomie",
+          "entfernungKm": 0.5,
+          "gehzeit": "6 Min.",
+          "anfahrt": "Zu Fuß Richtung Süden entlang des Rheins",
+          "eintritt": "kostenlos (Kölsch ab 2,20 €)",
+          "beschreibung": "Traditionelle Brauhäuser mit frisch gezapftem Kölsch in der historischen Altstadt"
+        }
+      ]
+    },
+    "to": {
+      "name": "Düsseldorf Hbf",
+      "city": "Düsseldorf",
+      "category": 1,
+      "lat": 51.22,
+      "lon": 6.7928,
+      "amenities": {
+        "schliessfaecher": true,
+        "schliessfaecherPreis": "ab 4 € bis 6 € pro 24 Stunden",
+        "wc": true,
+        "wcPreis": "1 €",
+        "wlan": true,
+        "wlanKosten": "kostenlos",
+        "barrierefrei": true,
+        "aufzuege": true,
+        "rolltreppe": true,
+        "reisezentrum": true,
+        "reisezentrumZeiten": "Mo–Fr 6:00–22:00, Sa–So 8:00–20:00",
+        "gastronomie": "Bäckereien, Fast-Food und Cafés im Bahnhof",
+        "parkAndRide": true,
+        "parkAndRideKapazitaet": "Parkhaus am Hbf vorhanden",
+        "fahrradstellplaetze": true,
+        "taxiStand": true,
+        "dbLounge": true
+      },
+      "attractions": [
+        {
+          "name": "Altstadt & Bolkerstraße",
+          "typ": "Altstadt / Gastronomie",
+          "entfernungKm": 1.2,
+          "gehzeit": "15 Min.",
+          "anfahrt": "Zu Fuß oder Straßenbahn bis Heinrich-Heine-Allee",
+          "eintritt": "kostenlos (Altbier ab 2,20 €)",
+          "beschreibung": "Die sogenannte längste Theke der Welt mit über 260 Kneipen und Restaurants"
+        },
+        {
+          "name": "Rheinuferpromenade & MedienHafen",
+          "typ": "Promenade / Architektur",
+          "entfernungKm": 2.0,
+          "gehzeit": "25 Min.",
+          "anfahrt": "Straßenbahn bis Landtag/Kniebrücke",
+          "eintritt": "kostenlos",
+          "beschreibung": "Moderne Architektur von Frank Gehry am MedienHafen und Flaniermeile am Rheinufer"
+        },
+        {
+          "name": "Königsallee (Kö)",
+          "typ": "Einkaufsstraße",
+          "entfernungKm": 0.8,
+          "gehzeit": "10 Min.",
+          "anfahrt": "Zu Fuß Richtung Osten",
+          "eintritt": "kostenlos",
+          "beschreibung": "Düsseldorfs eleganteste Einkaufsstraße mit Luxusboutiquen am Stadtgraben"
+        },
+        {
+          "name": "Kunstsammlung NRW – K20",
+          "typ": "Museum",
+          "entfernungKm": 1.5,
+          "gehzeit": "18 Min.",
+          "anfahrt": "U-Bahn bis Heinrich-Heine-Allee",
+          "eintritt": "14 €",
+          "beschreibung": "Eines der bedeutendsten Kunstmuseen Deutschlands mit Werken der Klassischen Moderne"
+        },
+        {
+          "name": "Rheinturm",
+          "typ": "Aussichtsturm",
+          "entfernungKm": 2.5,
+          "gehzeit": "30 Min.",
+          "anfahrt": "Straßenbahn bis Landtag/Kniebrücke",
+          "eintritt": "11 €",
+          "beschreibung": "240 Meter hoher Fernsehturm mit Aussichtsplattform und dezimaler Lichtuhr"
+        }
+      ]
+    },
+    "trains": [
+      "RE 1 (RRX)",
+      "RE 5",
+      "RE 6 (RRX)"
+    ],
+    "reisezeit": "ca. 25–30 Min.",
+    "reisezeitICE": "ca. 21 Min.",
+    "entfernungKm": 40,
+    "umstiege": 0,
+    "umstiegsort": "",
+    "taktung": "alle 10–15 Min. (RE + S-Bahn), ca. 100 Züge/Tag",
+    "ersteFahrt": "ca. 04:30",
+    "letzteFahrt": "ca. 01:00",
+    "zwischenhalte": [
+      {
+        "name": "Köln Messe/Deutz",
+        "fahrzeit": "3 Min."
+      },
+      {
+        "name": "Köln-Mülheim",
+        "fahrzeit": "7 Min."
+      },
+      {
+        "name": "Leverkusen Mitte",
+        "fahrzeit": "13 Min."
+      },
+      {
+        "name": "Düsseldorf-Benrath",
+        "fahrzeit": "22 Min."
+      }
+    ],
+    "kosten": {
+      "einzelticket": "ca. 12–15 € (VRR-Tarif)",
+      "iceSparpreis": "ab 6,99 €",
+      "iceFlexpreis": "ab 23 €",
+      "auto": "ca. 12 € (40 km × 0,30 €/km)"
+    },
+    "tipps": [
+      {
+        "title": "Schnellste Pendlerstrecke Deutschlands",
+        "text": "Mit über 100 Direktverbindungen pro Tag ist Köln–Düsseldorf eine der am dichtesten getakteten Strecken im Land."
+      },
+      {
+        "title": "RE oder S-Bahn?",
+        "text": "Der RE braucht ca. 25 Minuten, die S-Bahn ca. 50 Minuten. Mit dem Deutschlandticket gelten beide."
+      },
+      {
+        "title": "Köln Messe/Deutz nutzen",
+        "text": "Wenn du in der rechtsrheinischen Kölner Innenstadt bist, steige lieber an Köln Messe/Deutz ein."
+      },
+      {
+        "title": "Tagesausflug-Kombination",
+        "text": "Beide Städte sind perfekt für einen Tagesausflug: Vormittags Kölner Dom, nachmittags Düsseldorfer Altstadt."
+      }
+    ],
+    "related": [
+      "dortmund-essen",
+      "frankfurt-mainz",
+      "hannover-bremen"
+    ]
+  },
+  {
+    "slug": "frankfurt-mainz",
+    "from": {
+      "name": "Frankfurt (Main) Hbf",
+      "city": "Frankfurt am Main",
+      "category": 1,
+      "lat": 50.1071,
+      "lon": 8.6636,
+      "amenities": {
+        "schliessfaecher": true,
+        "schliessfaecherPreis": "ab 4 € bis 7 €",
+        "wc": true,
+        "wcPreis": "1 €",
+        "wlan": true,
+        "wlanKosten": "kostenlos",
+        "barrierefrei": true,
+        "aufzuege": true,
+        "rolltreppe": true,
+        "reisezentrum": true,
+        "reisezentrumZeiten": "Mo–Fr 6:00–22:00, Sa–So 7:00–22:00",
+        "gastronomie": "Restaurants, Bäckereien, Supermärkte in der Empfangshalle und B-Ebene",
+        "parkAndRide": true,
+        "parkAndRideKapazitaet": "Parkhäuser in der Umgebung",
+        "fahrradstellplaetze": true,
+        "taxiStand": true,
+        "dbLounge": true
+      },
+      "attractions": [
+        {
+          "name": "Römerberg & Neue Altstadt",
+          "typ": "Historischer Platz",
+          "entfernungKm": 1.5,
+          "gehzeit": "18 Min.",
+          "anfahrt": "U4/U5 bis Dom/Römer",
+          "eintritt": "kostenlos",
+          "beschreibung": "Frankfurts historisches Herz mit rekonstruierten Fachwerkhaeusern"
+        },
+        {
+          "name": "Main Tower",
+          "typ": "Aussichtspunkt",
+          "entfernungKm": 1.0,
+          "gehzeit": "12 Min.",
+          "anfahrt": "Zu Fuß Richtung Bankenviertel",
+          "eintritt": "11 €",
+          "beschreibung": "200 Meter hoher Wolkenkratzer mit öffentlicher Aussichtsplattform"
+        },
+        {
+          "name": "Museumsufer",
+          "typ": "Museumsviertel",
+          "entfernungKm": 2.0,
+          "gehzeit": "22 Min.",
+          "anfahrt": "U1/U2 bis Schweizer Platz",
+          "eintritt": "ab 7 € je Museum",
+          "beschreibung": "Über 10 Museen am Südufer des Main, darunter das Städel Museum"
+        }
+      ]
+    },
+    "to": {
+      "name": "Mainz Hbf",
+      "city": "Mainz",
+      "category": 2,
+      "lat": 50.0014,
+      "lon": 8.2589,
+      "amenities": {
+        "schliessfaecher": true,
+        "schliessfaecherPreis": "ab 3 € bis 6 €",
+        "wc": true,
+        "wcPreis": "1 €",
+        "wlan": true,
+        "wlanKosten": "kostenlos",
+        "barrierefrei": true,
+        "aufzuege": true,
+        "rolltreppe": true,
+        "reisezentrum": true,
+        "reisezentrumZeiten": "Mo–Fr 6:30–20:00, Sa 8:00–18:00",
+        "gastronomie": "Bäckereien und Imbisse im Empfangsgebäude",
+        "parkAndRide": true,
+        "parkAndRideKapazitaet": "ca. 150 Plätze",
+        "fahrradstellplaetze": true,
+        "taxiStand": true,
+        "dbLounge": false
+      },
+      "attractions": [
+        {
+          "name": "Mainzer Dom",
+          "typ": "Kathedrale",
+          "entfernungKm": 1.0,
+          "gehzeit": "12 Min.",
+          "anfahrt": "Zu Fuß über Bahnhofstraße",
+          "eintritt": "kostenlos",
+          "beschreibung": "Einer der drei romanischen Kaiserdome am Rhein, über 1.000 Jahre alt"
+        },
+        {
+          "name": "Gutenberg-Museum",
+          "typ": "Museum",
+          "entfernungKm": 1.2,
+          "gehzeit": "15 Min.",
+          "anfahrt": "Zu Fuß zum Liebfrauenplatz",
+          "eintritt": "7 €",
+          "beschreibung": "Weltmuseum der Druckkunst mit zwei Original-Gutenberg-Bibeln"
+        },
+        {
+          "name": "Mainzer Altstadt",
+          "typ": "Altstadt / Gastronomie",
+          "entfernungKm": 1.0,
+          "gehzeit": "12 Min.",
+          "anfahrt": "Zu Fuß Richtung Dom",
+          "eintritt": "kostenlos",
+          "beschreibung": "Gemütliche Weinlokale und Fachwerkhaeuser in der Mainzer Altstadt"
+        },
+        {
+          "name": "Rheinufer & Theodor-Heuss-Brücke",
+          "typ": "Promenade",
+          "entfernungKm": 1.5,
+          "gehzeit": "18 Min.",
+          "anfahrt": "Zu Fuß",
+          "eintritt": "kostenlos",
+          "beschreibung": "Breite Rheinpromenade mit Blick auf die gegenüberliegende Skyline"
+        },
+        {
+          "name": "Landesmuseum Mainz",
+          "typ": "Museum",
+          "entfernungKm": 0.8,
+          "gehzeit": "10 Min.",
+          "anfahrt": "Zu Fuß",
+          "eintritt": "kostenlos (Dauerausstellung)",
+          "beschreibung": "Kunst und Kulturgeschichte von der Vorzeit bis zur Gegenwart"
+        }
+      ]
+    },
+    "trains": [
+      "S8",
+      "S9 (Express)",
+      "RE 4",
+      "RE 14"
+    ],
+    "reisezeit": "ca. 35–40 Min. (S-Bahn), ca. 28 Min. (RE)",
+    "reisezeitICE": "ca. 25 Min.",
+    "entfernungKm": 38,
+    "umstiege": 0,
+    "umstiegsort": "",
+    "taktung": "alle 10–15 Min., ca. 110 Züge/Tag",
+    "ersteFahrt": "ca. 00:02",
+    "letzteFahrt": "ca. 23:50",
+    "zwischenhalte": [
+      {
+        "name": "Frankfurt Stadion",
+        "fahrzeit": "6 Min."
+      },
+      {
+        "name": "Frankfurt Flughafen Regionalbf",
+        "fahrzeit": "12 Min."
+      },
+      {
+        "name": "Kelsterbach",
+        "fahrzeit": "16 Min."
+      },
+      {
+        "name": "Raunheim",
+        "fahrzeit": "19 Min."
+      },
+      {
+        "name": "Rüsselsheim",
+        "fahrzeit": "22 Min."
+      },
+      {
+        "name": "Mainz-Bischofsheim",
+        "fahrzeit": "28 Min."
+      },
+      {
+        "name": "Mainz Römisches Theater",
+        "fahrzeit": "35 Min."
+      }
+    ],
+    "kosten": {
+      "einzelticket": "ca. 11–14 € (RMV-Tarif)",
+      "iceSparpreis": "ab 6,99 €",
+      "iceFlexpreis": "ab 20 €",
+      "auto": "ca. 11 € (38 km × 0,30 €/km)"
+    },
+    "tipps": [
+      {
+        "title": "Durch den Flughafen fahren",
+        "text": "Die S8/S9 hält am Frankfurt Flughafen Regionalbahnhof – ideal, wenn du jemanden abholen willst. Das Deutschlandticket gilt."
+      },
+      {
+        "title": "S8 vs. S9",
+        "text": "Die S9 fährt als Express und ist ca. 5 Minuten schneller als die S8."
+      },
+      {
+        "title": "Weinstadt Mainz entdecken",
+        "text": "Mainz ist eine der deutschen Weinhauptstädte. In der Altstadt findest du gemütliche Weinstuben."
+      },
+      {
+        "title": "RE für Tempo",
+        "text": "Der RE 4 oder RE 14 braucht nur ca. 28 Minuten und hält nicht an jeder Station."
+      }
+    ],
+    "related": [
+      "koeln-duesseldorf",
+      "stuttgart-ulm",
+      "hannover-bremen"
+    ]
+  },
+  {
+    "slug": "stuttgart-ulm",
+    "from": {
+      "name": "Stuttgart Hbf",
+      "city": "Stuttgart",
+      "category": 1,
+      "lat": 48.7837,
+      "lon": 9.1816,
+      "amenities": {
+        "schliessfaecher": true,
+        "schliessfaecherPreis": "ab 4 € bis 7 €",
+        "wc": true,
+        "wcPreis": "1 €",
+        "wlan": true,
+        "wlanKosten": "kostenlos",
+        "barrierefrei": true,
+        "aufzuege": true,
+        "rolltreppe": true,
+        "reisezentrum": true,
+        "reisezentrumZeiten": "Mo–Fr 6:00–22:00, Sa–So 8:00–20:00",
+        "gastronomie": "Bäckereien, Cafés und Restaurants in der Arnulf-Klett-Passage",
+        "parkAndRide": true,
+        "parkAndRideKapazitaet": "Tiefgarage vorhanden",
+        "fahrradstellplaetze": true,
+        "taxiStand": true,
+        "dbLounge": true
+      },
+      "attractions": [
+        {
+          "name": "Mercedes-Benz Museum",
+          "typ": "Museum",
+          "entfernungKm": 5.0,
+          "gehzeit": "–",
+          "anfahrt": "S-Bahn S1 bis NeckarPark, 15 Min.",
+          "eintritt": "16 €",
+          "beschreibung": "Die komplette Geschichte des Automobils über 9 Ebenen"
+        },
+        {
+          "name": "Schlossplatz & Neues Schloss",
+          "typ": "Platz / Schloss",
+          "entfernungKm": 0.5,
+          "gehzeit": "6 Min.",
+          "anfahrt": "Zu Fuß",
+          "eintritt": "kostenlos",
+          "beschreibung": "Stuttgarts repräsentativster Platz mit dem barocken Neuen Schloss"
+        },
+        {
+          "name": "Staatsgalerie Stuttgart",
+          "typ": "Museum",
+          "entfernungKm": 0.8,
+          "gehzeit": "10 Min.",
+          "anfahrt": "U1/U2 bis Staatsgalerie",
+          "eintritt": "7 € (Mi kostenlos)",
+          "beschreibung": "Eines der wichtigsten Kunstmuseen Deutschlands"
+        }
+      ]
+    },
+    "to": {
+      "name": "Ulm Hbf",
+      "city": "Ulm",
+      "category": 2,
+      "lat": 48.3995,
+      "lon": 9.9822,
+      "amenities": {
+        "schliessfaecher": true,
+        "schliessfaecherPreis": "ab 3 € bis 6 €",
+        "wc": true,
+        "wcPreis": "1 €",
+        "wlan": true,
+        "wlanKosten": "kostenlos",
+        "barrierefrei": true,
+        "aufzuege": true,
+        "rolltreppe": false,
+        "reisezentrum": true,
+        "reisezentrumZeiten": "Mo–Fr 6:30–20:00, Sa 8:00–18:00",
+        "gastronomie": "Bäckerei und Imbiss im Bahnhof",
+        "parkAndRide": true,
+        "parkAndRideKapazitaet": "Parkhaus am Bahnhof",
+        "fahrradstellplaetze": true,
+        "taxiStand": true,
+        "dbLounge": false
+      },
+      "attractions": [
+        {
+          "name": "Ulmer Münster",
+          "typ": "Kathedrale",
+          "entfernungKm": 0.8,
+          "gehzeit": "10 Min.",
+          "anfahrt": "Zu Fuß",
+          "eintritt": "kostenlos (Turmbesteigung 5 €)",
+          "beschreibung": "Kirche mit dem höchsten Kirchturm der Welt (161,5 m) – 768 Stufen"
+        },
+        {
+          "name": "Fischerviertel",
+          "typ": "Altstadt",
+          "entfernungKm": 1.0,
+          "gehzeit": "12 Min.",
+          "anfahrt": "Zu Fuß Richtung Donau",
+          "eintritt": "kostenlos",
+          "beschreibung": "Malerisches Viertel mit Fachwerkhaeusern direkt an der Blau"
+        },
+        {
+          "name": "Stadtmauer & Donauufer",
+          "typ": "Historisches Bauwerk / Promenade",
+          "entfernungKm": 1.2,
+          "gehzeit": "15 Min.",
+          "anfahrt": "Zu Fuß",
+          "eintritt": "kostenlos",
+          "beschreibung": "Mittelalterliche Stadtmauer entlang der Donau mit dem Schiefen Haus"
+        },
+        {
+          "name": "Museum Ulm",
+          "typ": "Museum",
+          "entfernungKm": 0.8,
+          "gehzeit": "10 Min.",
+          "anfahrt": "Zu Fuß zum Marktplatz",
+          "eintritt": "8 €",
+          "beschreibung": "Kunst und Stadtgeschichte, inklusive der 40.000 Jahre alten Skulptur Löwenmensch"
+        },
+        {
+          "name": "Einstein-Gedenkstein",
+          "typ": "Gedenkstaette",
+          "entfernungKm": 0.7,
+          "gehzeit": "9 Min.",
+          "anfahrt": "Zu Fuß",
+          "eintritt": "kostenlos",
+          "beschreibung": "Albert Einstein wurde 1879 in Ulm geboren – ein Gedenkstein markiert den Ort"
+        }
+      ]
+    },
+    "trains": [
+      "RE 5 (Filstalstrecke)",
+      "RE 200 (Schnellfahrstrecke)",
+      "MEX 16"
+    ],
+    "reisezeit": "ca. 1:00–1:15 Std.",
+    "reisezeitICE": "ca. 30 Min. (über SFS)",
+    "entfernungKm": 73,
+    "umstiege": 0,
+    "umstiegsort": "",
+    "taktung": "stündlich (RE 5 + RE 200 + MEX 16)",
+    "ersteFahrt": "ca. 05:00",
+    "letzteFahrt": "ca. 23:00",
+    "zwischenhalte": [
+      {
+        "name": "Esslingen (Neckar)",
+        "fahrzeit": "12 Min."
+      },
+      {
+        "name": "Plochingen",
+        "fahrzeit": "20 Min."
+      },
+      {
+        "name": "Göppingen",
+        "fahrzeit": "35 Min."
+      },
+      {
+        "name": "Geislingen (Steige)",
+        "fahrzeit": "50 Min."
+      }
+    ],
+    "kosten": {
+      "einzelticket": "ca. 18–22 € (bwTarif)",
+      "iceSparpreis": "ab 12,90 €",
+      "iceFlexpreis": "ab 32 €",
+      "auto": "ca. 22 € (73 km × 0,30 €/km)"
+    },
+    "tipps": [
+      {
+        "title": "RE 200 – Deutschlands schnellster RE",
+        "text": "Der RE 200 fährt über die neue Schnellfahrstrecke Wendlingen–Ulm mit bis zu 200 km/h. Das Deutschlandticket gilt!"
+      },
+      {
+        "title": "Zwei Routen, unterschiedliche Erlebnisse",
+        "text": "Der RE 5 fährt durchs Filstal mit schönen Landschaftsblicken. Der RE 200 ist schneller, aber weniger Aussicht."
+      },
+      {
+        "title": "Ulmer Münster-Turm besteigen",
+        "text": "768 Stufen, 161 Meter – der höchste Kirchturm der Welt. An klaren Tagen siehst du bis zu den Alpen."
+      },
+      {
+        "title": "Merklingen – neuer Halt auf der SFS",
+        "text": "Der RE 200 hält in Merklingen – ein brandneuer Bahnhof auf der Schnellfahrstrecke, perfekt für Wanderungen."
+      }
+    ],
+    "related": [
+      "muenchen-nuernberg",
+      "frankfurt-mainz",
+      "koeln-duesseldorf"
+    ]
+  },
+  {
+    "slug": "hannover-bremen",
+    "from": {
+      "name": "Hannover Hbf",
+      "city": "Hannover",
+      "category": 1,
+      "lat": 52.3769,
+      "lon": 9.7413,
+      "amenities": {
+        "schliessfaecher": true,
+        "schliessfaecherPreis": "ab 4 € bis 7 €",
+        "wc": true,
+        "wcPreis": "1 €",
+        "wlan": true,
+        "wlanKosten": "kostenlos",
+        "barrierefrei": true,
+        "aufzuege": true,
+        "rolltreppe": true,
+        "reisezentrum": true,
+        "reisezentrumZeiten": "Mo–Fr 6:00–22:00, Sa–So 8:00–20:00",
+        "gastronomie": "Promenade mit Shops, Bäckereien und Restaurants",
+        "parkAndRide": true,
+        "parkAndRideKapazitaet": "Parkhäuser am Ernst-August-Platz",
+        "fahrradstellplaetze": true,
+        "taxiStand": true,
+        "dbLounge": true
+      },
+      "attractions": [
+        {
+          "name": "Herrenhäuser Gärten",
+          "typ": "Gartenanlage",
+          "entfernungKm": 4.5,
+          "gehzeit": "–",
+          "anfahrt": "Stadtbahn 4/5 bis Herrenhäuser Gärten, ca. 15 Min.",
+          "eintritt": "8 €",
+          "beschreibung": "Barocker Prachtgarten nach dem Vorbild von Versailles"
+        },
+        {
+          "name": "Neues Rathaus",
+          "typ": "Rathaus / Aussichtspunkt",
+          "entfernungKm": 1.5,
+          "gehzeit": "18 Min.",
+          "anfahrt": "Zu Fuß",
+          "eintritt": "kostenlos (Bogenaufzug 4 €)",
+          "beschreibung": "Wilhelminisches Prachtgebäude mit einzigartigem Bogenaufzug zur Kuppel"
+        },
+        {
+          "name": "Erlebnis-Zoo Hannover",
+          "typ": "Zoo",
+          "entfernungKm": 5.0,
+          "gehzeit": "–",
+          "anfahrt": "Stadtbahn 11 bis Zoo, ca. 20 Min.",
+          "eintritt": "29,90 €",
+          "beschreibung": "Einer der beliebtesten Zoos Deutschlands mit Themenwelten"
+        }
+      ]
+    },
+    "to": {
+      "name": "Bremen Hbf",
+      "city": "Bremen",
+      "category": 1,
+      "lat": 53.0831,
+      "lon": 8.8139,
+      "amenities": {
+        "schliessfaecher": true,
+        "schliessfaecherPreis": "ab 4 € bis 6 €",
+        "wc": true,
+        "wcPreis": "1 €",
+        "wlan": true,
+        "wlanKosten": "kostenlos",
+        "barrierefrei": true,
+        "aufzuege": true,
+        "rolltreppe": true,
+        "reisezentrum": true,
+        "reisezentrumZeiten": "Mo–Fr 6:30–21:00, Sa 8:00–18:00",
+        "gastronomie": "Bäckereien, Imbisse und Cafés",
+        "parkAndRide": true,
+        "parkAndRideKapazitaet": "Parkhaus vorhanden",
+        "fahrradstellplaetze": true,
+        "taxiStand": true,
+        "dbLounge": false
+      },
+      "attractions": [
+        {
+          "name": "Bremer Stadtmusikanten & Rathaus",
+          "typ": "Denkmal / Rathaus (UNESCO)",
+          "entfernungKm": 1.0,
+          "gehzeit": "12 Min.",
+          "anfahrt": "Zu Fuß zum Marktplatz",
+          "eintritt": "kostenlos (Rathausführung 7 €)",
+          "beschreibung": "Berühmte Bronzeskulptur neben dem UNESCO-Welterbe Rathaus"
+        },
+        {
+          "name": "Schnoorviertel",
+          "typ": "Altstadt",
+          "entfernungKm": 1.3,
+          "gehzeit": "16 Min.",
+          "anfahrt": "Zu Fuß",
+          "eintritt": "kostenlos",
+          "beschreibung": "Bremens ältestes Stadtviertel mit engen Gassen und Kunsthandwerk"
+        },
+        {
+          "name": "Böttcherstraße",
+          "typ": "Architektur / Museen",
+          "entfernungKm": 1.1,
+          "gehzeit": "14 Min.",
+          "anfahrt": "Zu Fuß",
+          "eintritt": "kostenlos (Museen ab 6 €)",
+          "beschreibung": "Expressionistische Backstein-Architektur aus den 1920ern mit Glockenspiel"
+        },
+        {
+          "name": "Universum Bremen",
+          "typ": "Science Center",
+          "entfernungKm": 5.0,
+          "gehzeit": "–",
+          "anfahrt": "Straßenbahn 6 bis Universität, ca. 15 Min.",
+          "eintritt": "18 €",
+          "beschreibung": "Interaktives Wissenschaftsmuseum in einem walfischförmigen Gebäude"
+        },
+        {
+          "name": "Schlachte-Weserpromenade",
+          "typ": "Promenade / Gastronomie",
+          "entfernungKm": 1.2,
+          "gehzeit": "15 Min.",
+          "anfahrt": "Zu Fuß",
+          "eintritt": "kostenlos",
+          "beschreibung": "Historische Uferpromenade an der Weser mit Restaurants und Biergärten"
+        }
+      ]
+    },
+    "trains": [
+      "RE 1 (Expresskreuz)",
+      "RE 8 (Expresskreuz)"
+    ],
+    "reisezeit": "ca. 1:20 Std.",
+    "reisezeitICE": "ca. 1:00 Std.",
+    "entfernungKm": 119,
+    "umstiege": 0,
+    "umstiegsort": "",
+    "taktung": "stündlich (RE 1 / RE 8)",
+    "ersteFahrt": "ca. 05:18",
+    "letzteFahrt": "ca. 23:20",
+    "zwischenhalte": [
+      {
+        "name": "Wunstorf",
+        "fahrzeit": "14 Min."
+      },
+      {
+        "name": "Nienburg (Weser)",
+        "fahrzeit": "32 Min."
+      },
+      {
+        "name": "Eystrup",
+        "fahrzeit": "42 Min."
+      },
+      {
+        "name": "Verden (Aller)",
+        "fahrzeit": "50 Min."
+      },
+      {
+        "name": "Achim",
+        "fahrzeit": "1:08 Std."
+      }
+    ],
+    "kosten": {
+      "einzelticket": "ca. 24–28 €",
+      "iceSparpreis": "ab 12,90 €",
+      "iceFlexpreis": "ab 39 €",
+      "auto": "ca. 36 € (119 km × 0,30 €/km)"
+    },
+    "tipps": [
+      {
+        "title": "Expresskreuz nutzen",
+        "text": "Die Linien RE 1 und RE 8 kreuzen sich in Bremen und bilden zusammen einen dichten Takt."
+      },
+      {
+        "title": "Schnoorviertel nicht verpassen",
+        "text": "Bremens ältestes Viertel mit winzigen Gassen und Kunsthandwerker-Shops. Nur 12 Minuten Fußweg vom Hbf."
+      },
+      {
+        "title": "Fahrradland Niedersachsen",
+        "text": "Im RE ist die Fahrradmitnahme mit dem Deutschlandticket in der Regel kostenlos."
+      }
+    ],
+    "related": [
+      "hamburg-luebeck",
+      "berlin-hamburg",
+      "dortmund-essen"
+    ]
+  },
+  {
+    "slug": "leipzig-dresden",
+    "from": {
+      "name": "Leipzig Hbf",
+      "city": "Leipzig",
+      "category": 1,
+      "lat": 51.3455,
+      "lon": 12.3815,
+      "amenities": {
+        "schliessfaecher": true,
+        "schliessfaecherPreis": "ab 4 € bis 7 €",
+        "wc": true,
+        "wcPreis": "1 €",
+        "wlan": true,
+        "wlanKosten": "kostenlos",
+        "barrierefrei": true,
+        "aufzuege": true,
+        "rolltreppe": true,
+        "reisezentrum": true,
+        "reisezentrumZeiten": "Mo–Fr 6:00–22:00, Sa–So 8:00–20:00",
+        "gastronomie": "Promenaden Hauptbahnhof – größtes Shopping-Center in einem Bahnhof Europas",
+        "parkAndRide": true,
+        "parkAndRideKapazitaet": "Tiefgarage vorhanden",
+        "fahrradstellplaetze": true,
+        "taxiStand": true,
+        "dbLounge": true
+      },
+      "attractions": [
+        {
+          "name": "Völkerschlachtdenkmal",
+          "typ": "Denkmal / Museum",
+          "entfernungKm": 4.5,
+          "gehzeit": "–",
+          "anfahrt": "Straßenbahn 15, ca. 15 Min.",
+          "eintritt": "10 €",
+          "beschreibung": "91 Meter hohes Denkmal zur Erinnerung an die Völkerschlacht 1813"
+        },
+        {
+          "name": "Thomaskirche & Bachmuseum",
+          "typ": "Kirche / Museum",
+          "entfernungKm": 1.0,
+          "gehzeit": "12 Min.",
+          "anfahrt": "Zu Fuß",
+          "eintritt": "Kirche kostenlos, Museum 10 €",
+          "beschreibung": "Wirkungsstätte von Johann Sebastian Bach mit dem Thomanerchor"
+        },
+        {
+          "name": "Nikolaikirche & Augustusplatz",
+          "typ": "Kirche / Platz",
+          "entfernungKm": 0.5,
+          "gehzeit": "6 Min.",
+          "anfahrt": "Zu Fuß",
+          "eintritt": "kostenlos",
+          "beschreibung": "Ausgangspunkt der Friedlichen Revolution 1989"
+        }
+      ]
+    },
+    "to": {
+      "name": "Dresden Hbf",
+      "city": "Dresden",
+      "category": 1,
+      "lat": 51.0399,
+      "lon": 13.7329,
+      "amenities": {
+        "schliessfaecher": true,
+        "schliessfaecherPreis": "ab 4 € bis 6 €",
+        "wc": true,
+        "wcPreis": "1 €",
+        "wlan": true,
+        "wlanKosten": "kostenlos",
+        "barrierefrei": true,
+        "aufzuege": true,
+        "rolltreppe": true,
+        "reisezentrum": true,
+        "reisezentrumZeiten": "Mo–Fr 6:00–21:00, Sa 8:00–18:00",
+        "gastronomie": "Bäckereien und Cafés im historischen Empfangsgebäude",
+        "parkAndRide": true,
+        "parkAndRideKapazitaet": "Parkhaus vorhanden",
+        "fahrradstellplaetze": true,
+        "taxiStand": true,
+        "dbLounge": false
+      },
+      "attractions": [
+        {
+          "name": "Frauenkirche",
+          "typ": "Kirche",
+          "entfernungKm": 1.5,
+          "gehzeit": "18 Min.",
+          "anfahrt": "Zu Fuß über Prager Straße",
+          "eintritt": "kostenlos (Kuppelaufstieg 8 €)",
+          "beschreibung": "Wiederaufgebaute barocke Kuppelkirche, Symbol der Versöhnung"
+        },
+        {
+          "name": "Zwinger & Semperoper",
+          "typ": "Schloss / Opernhaus",
+          "entfernungKm": 1.8,
+          "gehzeit": "22 Min.",
+          "anfahrt": "Straßenbahn 4/8/9 bis Theaterplatz",
+          "eintritt": "Innenhof kostenlos, Gemäldegalerie 14 €",
+          "beschreibung": "Barockes Meisterwerk mit der Gemäldegalerie Alte Meister und der Semperoper"
+        },
+        {
+          "name": "Brühlsche Terrasse",
+          "typ": "Promenade",
+          "entfernungKm": 1.7,
+          "gehzeit": "20 Min.",
+          "anfahrt": "Zu Fuß",
+          "eintritt": "kostenlos",
+          "beschreibung": "Der Balkon Europas – Panoramaterrasse über der Elbe"
+        },
+        {
+          "name": "Neustadt & Kunsthofpassage",
+          "typ": "Szeneviertel",
+          "entfernungKm": 2.5,
+          "gehzeit": "30 Min.",
+          "anfahrt": "Straßenbahn 3/7/8 bis Albertplatz",
+          "eintritt": "kostenlos",
+          "beschreibung": "Dresdens kreativstes Viertel mit Galerien und Cafés"
+        },
+        {
+          "name": "Grünes Gewölbe",
+          "typ": "Museum",
+          "entfernungKm": 1.8,
+          "gehzeit": "22 Min.",
+          "anfahrt": "Straßenbahn bis Theaterplatz",
+          "eintritt": "14 €",
+          "beschreibung": "Europas prächtigste Schatzkammer mit Juwelen und Kunstwerken"
+        }
+      ]
+    },
+    "trains": [
+      "RE 50 (Saxonia-Express)"
+    ],
+    "reisezeit": "ca. 1:35 Std.",
+    "reisezeitICE": "ca. 1:05 Std.",
+    "entfernungKm": 117,
+    "umstiege": 0,
+    "umstiegsort": "",
+    "taktung": "stündlich",
+    "ersteFahrt": "ca. 05:00",
+    "letzteFahrt": "ca. 23:14",
+    "zwischenhalte": [
+      {
+        "name": "Leipzig-Stötteritz",
+        "fahrzeit": "7 Min."
+      },
+      {
+        "name": "Wurzen",
+        "fahrzeit": "25 Min."
+      },
+      {
+        "name": "Oschatz",
+        "fahrzeit": "40 Min."
+      },
+      {
+        "name": "Riesa",
+        "fahrzeit": "55 Min."
+      },
+      {
+        "name": "Coswig (b Dresden)",
+        "fahrzeit": "1:10 Std."
+      },
+      {
+        "name": "Radebeul Ost",
+        "fahrzeit": "1:18 Std."
+      },
+      {
+        "name": "Dresden-Neustadt",
+        "fahrzeit": "1:28 Std."
+      }
+    ],
+    "kosten": {
+      "einzelticket": "ca. 25–30 €",
+      "iceSparpreis": "ab 17,90 €",
+      "iceFlexpreis": "ab 44 €",
+      "auto": "ca. 35 € (117 km × 0,30 €/km)"
+    },
+    "tipps": [
+      {
+        "title": "Saxonia-Express – direkt und bequem",
+        "text": "Der RE 50 fährt stündlich ohne Umstieg. Er ist die beliebteste Nahverkehrsverbindung Sachsens."
+      },
+      {
+        "title": "Radebeul – Weinstadt vor den Toren Dresdens",
+        "text": "Der RE 50 hält in Radebeul Ost. Von dort erreichst du die Sächsische Weinstraße und die historische Lößnitzgrundbahn."
+      },
+      {
+        "title": "Dresden-Neustadt statt Hbf",
+        "text": "Wenn dein Ziel die Dresdner Neustadt ist, steige schon in Dresden-Neustadt aus."
+      },
+      {
+        "title": "IC als schnelle Alternative",
+        "text": "Der IC nach Köln braucht nur ca. 1:05 Stunden. Das Deutschlandticket gilt hier aber nicht."
+      }
+    ],
+    "related": [
+      "berlin-dresden",
+      "berlin-hamburg",
+      "dortmund-essen"
+    ]
+  },
+  {
+    "slug": "dortmund-essen",
+    "from": {
+      "name": "Dortmund Hbf",
+      "city": "Dortmund",
+      "category": 1,
+      "lat": 51.5175,
+      "lon": 7.4592,
+      "amenities": {
+        "schliessfaecher": true,
+        "schliessfaecherPreis": "ab 4 € bis 6 €",
+        "wc": true,
+        "wcPreis": "1 €",
+        "wlan": true,
+        "wlanKosten": "kostenlos",
+        "barrierefrei": true,
+        "aufzuege": true,
+        "rolltreppe": true,
+        "reisezentrum": true,
+        "reisezentrumZeiten": "Mo–Fr 6:00–22:00, Sa–So 8:00–20:00",
+        "gastronomie": "Bäckereien, Fast Food und Kiosk",
+        "parkAndRide": true,
+        "parkAndRideKapazitaet": "Parkhaus vorhanden",
+        "fahrradstellplaetze": true,
+        "taxiStand": true,
+        "dbLounge": true
+      },
+      "attractions": [
+        {
+          "name": "Signal Iduna Park (BVB-Stadion)",
+          "typ": "Fußballstadion",
+          "entfernungKm": 3.0,
+          "gehzeit": "–",
+          "anfahrt": "U45/U46 bis Westfalenhallen, ca. 10 Min.",
+          "eintritt": "Stadionführung 15 €",
+          "beschreibung": "Heimat von Borussia Dortmund mit der legendären Gelben Wand – Deutschlands größtes Fußballstadion"
+        },
+        {
+          "name": "Dortmunder U",
+          "typ": "Kulturzentrum / Museum",
+          "entfernungKm": 0.5,
+          "gehzeit": "6 Min.",
+          "anfahrt": "Zu Fuß",
+          "eintritt": "ab 5 €",
+          "beschreibung": "Ehemaliges Brauereigebaeude als Kunst- und Kulturzentrum mit Dachterrasse"
+        },
+        {
+          "name": "Westfalenpark",
+          "typ": "Park",
+          "entfernungKm": 3.5,
+          "gehzeit": "–",
+          "anfahrt": "U45/U49 bis Westfalenpark",
+          "eintritt": "4 €",
+          "beschreibung": "70 Hektar großer Stadtpark mit dem Florianturm"
+        }
+      ]
+    },
+    "to": {
+      "name": "Essen Hbf",
+      "city": "Essen",
+      "category": 1,
+      "lat": 51.4512,
+      "lon": 7.0141,
+      "amenities": {
+        "schliessfaecher": true,
+        "schliessfaecherPreis": "ab 3 € bis 6 €",
+        "wc": true,
+        "wcPreis": "1 €",
+        "wlan": true,
+        "wlanKosten": "kostenlos",
+        "barrierefrei": true,
+        "aufzuege": true,
+        "rolltreppe": true,
+        "reisezentrum": true,
+        "reisezentrumZeiten": "Mo–Fr 6:00–21:00, Sa 8:00–18:00",
+        "gastronomie": "Bäckereien, Restaurants und Shops in der Einkaufspassage",
+        "parkAndRide": true,
+        "parkAndRideKapazitaet": "Parkhaus am Hbf",
+        "fahrradstellplaetze": true,
+        "taxiStand": true,
+        "dbLounge": false
+      },
+      "attractions": [
+        {
+          "name": "Zeche Zollverein (UNESCO-Welterbe)",
+          "typ": "Industriekultur / Museum",
+          "entfernungKm": 5.0,
+          "gehzeit": "–",
+          "anfahrt": "Straßenbahn 107 bis Zollverein, ca. 15 Min.",
+          "eintritt": "Gelände kostenlos, Ruhr Museum 10 €",
+          "beschreibung": "Ehemaliges Steinkohlebergwerk und architektonisches Meisterwerk"
+        },
+        {
+          "name": "Grugapark",
+          "typ": "Park / Botanischer Garten",
+          "entfernungKm": 3.5,
+          "gehzeit": "–",
+          "anfahrt": "U11 bis Messe/Gruga, ca. 10 Min.",
+          "eintritt": "6 €",
+          "beschreibung": "65 Hektar großer Stadtpark mit Botanischem Garten und Tiergehegen"
+        },
+        {
+          "name": "Baldeneysee",
+          "typ": "See / Naherholung",
+          "entfernungKm": 8.0,
+          "gehzeit": "–",
+          "anfahrt": "S6 bis Essen-Werden, dann 10 Min. zu Fuß",
+          "eintritt": "kostenlos",
+          "beschreibung": "Essens Naherholungsgebiet mit Rad- und Wanderwegen rund um den Ruhrstausee"
+        },
+        {
+          "name": "Museum Folkwang",
+          "typ": "Museum",
+          "entfernungKm": 1.5,
+          "gehzeit": "18 Min.",
+          "anfahrt": "U11 bis Rüttenscheid",
+          "eintritt": "kostenlos (Dauerausstellung)",
+          "beschreibung": "Eines der bedeutendsten Kunstmuseen Deutschlands"
+        },
+        {
+          "name": "Essener Münster",
+          "typ": "Kathedrale / Museum",
+          "entfernungKm": 0.5,
+          "gehzeit": "6 Min.",
+          "anfahrt": "Zu Fuß",
+          "eintritt": "kostenlos (Domschatz 5 €)",
+          "beschreibung": "Gotische Kathedrale mit der Goldenen Madonna – älteste vollplastische Marienfigur der Welt"
+        }
+      ]
+    },
+    "trains": [
+      "RE 1 (RRX, NationalExpress)",
+      "RE 6 (RRX)",
+      "RE 11 (RRX)",
+      "S 1"
+    ],
+    "reisezeit": "ca. 23 Min. (RE/RRX), ca. 35 Min. (S1)",
+    "reisezeitICE": "ca. 21 Min.",
+    "entfernungKm": 35,
+    "umstiege": 0,
+    "umstiegsort": "",
+    "taktung": "alle 5–10 Min. (RE + S-Bahn), ca. 120 Züge/Tag",
+    "ersteFahrt": "ca. 01:44",
+    "letzteFahrt": "ca. 23:56",
+    "zwischenhalte": [
+      {
+        "name": "Bochum Hbf",
+        "fahrzeit": "10 Min."
+      },
+      {
+        "name": "Wattenscheid",
+        "fahrzeit": "16 Min."
+      }
+    ],
+    "kosten": {
+      "einzelticket": "ca. 7–10 € (VRR-Tarif)",
+      "iceSparpreis": "ab 6,99 €",
+      "iceFlexpreis": "ab 18 €",
+      "auto": "ca. 11 € (35 km × 0,30 €/km)"
+    },
+    "tipps": [
+      {
+        "title": "RRX – Rhein-Ruhr-Express",
+        "text": "RE 1 und RE 6 fahren als RRX mit modernen Doppelstockzügen. Komfortabel, schnell."
+      },
+      {
+        "title": "Bochum als Zwischenstopp",
+        "text": "Bochum Hbf liegt genau zwischen Dortmund und Essen. Das Deutsche Bergbau-Museum ist nur 10 Gehminuten entfernt."
+      },
+      {
+        "title": "Zeche Zollverein besuchen",
+        "text": "Das UNESCO-Welterbe ist Essens Highlight. Straßenbahn 107 bringt dich in ca. 15 Minuten hin."
+      },
+      {
+        "title": "Bauarbeiten beachten",
+        "text": "Die Strecke Dortmund–Essen wird regelmäßig für RRX-Ausbauarbeiten gesperrt. Prüfe immer vorher den aktuellen Fahrplan."
+      }
+    ],
+    "related": [
+      "koeln-duesseldorf",
+      "hannover-bremen",
+      "frankfurt-mainz"
+    ]
+  },
+  {
+    "slug": "hamburg-luebeck",
+    "from": {
+      "name": "Hamburg Hbf",
+      "city": "Hamburg",
+      "category": 1,
+      "lat": 53.553,
+      "lon": 10.0069,
+      "amenities": {
+        "schliessfaecher": true,
+        "schliessfaecherPreis": "ab 4 € bis 7 €",
+        "wc": true,
+        "wcPreis": "1 €",
+        "wlan": true,
+        "wlanKosten": "kostenlos",
+        "barrierefrei": true,
+        "aufzuege": true,
+        "rolltreppe": true,
+        "reisezentrum": true,
+        "reisezentrumZeiten": "Mo–Fr 6:00–22:00, Sa–So 7:00–22:00",
+        "gastronomie": "Wandelhalle mit über 50 Geschäften und Restaurants",
+        "parkAndRide": false,
+        "parkAndRideKapazitaet": "",
+        "fahrradstellplaetze": true,
+        "taxiStand": true,
+        "dbLounge": true
+      },
+      "attractions": [
+        {
+          "name": "Elbphilharmonie",
+          "typ": "Konzerthaus",
+          "entfernungKm": 2.5,
+          "gehzeit": "30 Min.",
+          "anfahrt": "U3 bis Baumwall",
+          "eintritt": "Plaza kostenlos",
+          "beschreibung": "Hamburgs spektakuläres Wahrzeichen in der HafenCity"
+        },
+        {
+          "name": "Speicherstadt",
+          "typ": "UNESCO-Welterbe",
+          "entfernungKm": 2.0,
+          "gehzeit": "25 Min.",
+          "anfahrt": "U1 bis Meßberg",
+          "eintritt": "kostenlos",
+          "beschreibung": "Größter zusammenhängender Lagerhausdistrikt der Welt"
+        },
+        {
+          "name": "Rathaus & Jungfernstieg",
+          "typ": "Historisches Gebäude",
+          "entfernungKm": 1.5,
+          "gehzeit": "18 Min.",
+          "anfahrt": "U1/U2 bis Jungfernstieg",
+          "eintritt": "Rathausführung 5 €",
+          "beschreibung": "Prachtvolles Neorenaissance-Rathaus mit Alsterblick"
+        }
+      ]
+    },
+    "to": {
+      "name": "Lübeck Hbf",
+      "city": "Lübeck",
+      "category": 2,
+      "lat": 53.8687,
+      "lon": 10.6695,
+      "amenities": {
+        "schliessfaecher": true,
+        "schliessfaecherPreis": "ab 3 € bis 6 €",
+        "wc": true,
+        "wcPreis": "1 €",
+        "wlan": true,
+        "wlanKosten": "kostenlos",
+        "barrierefrei": true,
+        "aufzuege": true,
+        "rolltreppe": false,
+        "reisezentrum": true,
+        "reisezentrumZeiten": "Mo–Fr 6:30–20:00, Sa 8:00–16:00",
+        "gastronomie": "Bäckerei und Imbiss im Empfangsgebäude",
+        "parkAndRide": true,
+        "parkAndRideKapazitaet": "ca. 200 Plätze",
+        "fahrradstellplaetze": true,
+        "taxiStand": true,
+        "dbLounge": false
+      },
+      "attractions": [
+        {
+          "name": "Holstentor",
+          "typ": "Denkmal (UNESCO-Welterbe)",
+          "entfernungKm": 0.5,
+          "gehzeit": "6 Min.",
+          "anfahrt": "Zu Fuß Richtung Altstadt",
+          "eintritt": "Museum 8 €",
+          "beschreibung": "Lübecks berühmtestes Wahrzeichen aus dem 15. Jahrhundert"
+        },
+        {
+          "name": "Lübecker Altstadt (UNESCO-Welterbe)",
+          "typ": "Altstadt",
+          "entfernungKm": 0.8,
+          "gehzeit": "10 Min.",
+          "anfahrt": "Zu Fuß durch das Holstentor",
+          "eintritt": "kostenlos",
+          "beschreibung": "Mittelalterliche Altstadt mit Backsteingotik und Ganghöfen"
+        },
+        {
+          "name": "Niederegger Marzipan-Salon",
+          "typ": "Museum / Café",
+          "entfernungKm": 0.8,
+          "gehzeit": "10 Min.",
+          "anfahrt": "Zu Fuß",
+          "eintritt": "Marzipan-Museum kostenlos, Café ab 3 €",
+          "beschreibung": "Legendäre Marzipan-Manufaktur mit kostenlosem Museum"
+        },
+        {
+          "name": "Marienkirche",
+          "typ": "Kirche",
+          "entfernungKm": 0.9,
+          "gehzeit": "11 Min.",
+          "anfahrt": "Zu Fuß",
+          "eintritt": "kostenlos",
+          "beschreibung": "Drittgrößte Backsteinkirche Deutschlands"
+        },
+        {
+          "name": "Europäisches Hansemuseum",
+          "typ": "Museum",
+          "entfernungKm": 1.2,
+          "gehzeit": "15 Min.",
+          "anfahrt": "Zu Fuß durch die Altstadt",
+          "eintritt": "14 €",
+          "beschreibung": "Modernes Museum über die Geschichte der Hanse"
+        }
+      ]
+    },
+    "trains": [
+      "RE 8",
+      "RE 80",
+      "RB 81"
+    ],
+    "reisezeit": "ca. 43–46 Min. (RE), ca. 50 Min. (RB)",
+    "reisezeitICE": "ca. 39 Min. (IC)",
+    "entfernungKm": 67,
+    "umstiege": 0,
+    "umstiegsort": "",
+    "taktung": "alle 15–30 Min., ca. 45 Züge/Tag",
+    "ersteFahrt": "ca. 00:06",
+    "letzteFahrt": "ca. 23:42",
+    "zwischenhalte": [
+      {
+        "name": "Hamburg-Hasselbrook",
+        "fahrzeit": "6 Min. (nur RB)"
+      },
+      {
+        "name": "Hamburg-Tonndorf",
+        "fahrzeit": "10 Min. (nur RB)"
+      },
+      {
+        "name": "Hamburg-Rahlstedt",
+        "fahrzeit": "14 Min. (nur RB)"
+      },
+      {
+        "name": "Ahrensburg",
+        "fahrzeit": "20 Min."
+      },
+      {
+        "name": "Bad Oldesloe",
+        "fahrzeit": "30 Min."
+      },
+      {
+        "name": "Reinfeld (Holst)",
+        "fahrzeit": "36 Min."
+      },
+      {
+        "name": "Lübeck-Moisling",
+        "fahrzeit": "41 Min. (nur RB)"
+      }
+    ],
+    "kosten": {
+      "einzelticket": "ca. 14–17 € (SH-Tarif)",
+      "iceSparpreis": "ab 6,99 €",
+      "iceFlexpreis": "ab 24 €",
+      "auto": "ca. 20 € (67 km × 0,30 €/km)"
+    },
+    "tipps": [
+      {
+        "title": "Perfekter Tagesausflug",
+        "text": "Lübeck ist ideal als Tagesausflug von Hamburg: Unter 45 Minuten Fahrzeit, und die UNESCO-Altstadt ist in 6 Minuten zu Fuß vom Bahnhof."
+      },
+      {
+        "title": "RE 8 ist schneller als RB 81",
+        "text": "Der RE 8/RE 80 überspringt Zwischenhalte und braucht ca. 43 Minuten."
+      },
+      {
+        "title": "Weiter nach Travemünde",
+        "text": "Ab Sommer 2026 fährt der RE 80 an Wochenenden direkt bis Travemünde Strand."
+      },
+      {
+        "title": "Marzipan nicht vergessen",
+        "text": "Lübecker Marzipan ist weltberühmt. Niederegger hat ein kostenloses Museum und einen herrlichen Café-Salon."
+      }
+    ],
+    "related": [
+      "berlin-hamburg",
+      "hannover-bremen",
+      "leipzig-dresden"
+    ]
+  },
+  {
+    "slug": "berlin-dresden",
+    "from": {
+      "name": "Berlin Hbf",
+      "city": "Berlin",
+      "category": 1,
+      "lat": 52.5251,
+      "lon": 13.3694,
+      "amenities": {
+        "schliessfaecher": true,
+        "schliessfaecherPreis": "ab 4 € bis 7 €",
+        "wc": true,
+        "wcPreis": "1 €",
+        "wlan": true,
+        "wlanKosten": "kostenlos",
+        "barrierefrei": true,
+        "aufzuege": true,
+        "rolltreppe": true,
+        "reisezentrum": true,
+        "reisezentrumZeiten": "Mo–Fr 6:00–22:00, Sa–So 8:00–22:00",
+        "gastronomie": "Zahlreiche Shops und Restaurants auf drei Etagen",
+        "parkAndRide": true,
+        "parkAndRideKapazitaet": "ca. 300 Plätze",
+        "fahrradstellplaetze": true,
+        "taxiStand": true,
+        "dbLounge": true
+      },
+      "attractions": [
+        {
+          "name": "Brandenburger Tor",
+          "typ": "Denkmal",
+          "entfernungKm": 1.0,
+          "gehzeit": "12 Min.",
+          "anfahrt": "Zu Fuß",
+          "eintritt": "kostenlos",
+          "beschreibung": "Wahrzeichen Berlins und Symbol der deutschen Wiedervereinigung"
+        },
+        {
+          "name": "Museumsinsel",
+          "typ": "UNESCO-Welterbe",
+          "entfernungKm": 2.0,
+          "gehzeit": "25 Min.",
+          "anfahrt": "S5/S7 bis Hackescher Markt",
+          "eintritt": "ab 12 €",
+          "beschreibung": "Fünf weltberühmte Museen auf einer Spreeinsel"
+        },
+        {
+          "name": "East Side Gallery",
+          "typ": "Denkmal / Freilichtgalerie",
+          "entfernungKm": 4.0,
+          "gehzeit": "–",
+          "anfahrt": "S-Bahn bis Ostbahnhof, 5 Min. zu Fuß",
+          "eintritt": "kostenlos",
+          "beschreibung": "Längster erhaltener Mauerabschnitt mit Graffiti-Kunstwerken"
+        }
+      ]
+    },
+    "to": {
+      "name": "Dresden Hbf",
+      "city": "Dresden",
+      "category": 1,
+      "lat": 51.0399,
+      "lon": 13.7329,
+      "amenities": {
+        "schliessfaecher": true,
+        "schliessfaecherPreis": "ab 4 € bis 6 €",
+        "wc": true,
+        "wcPreis": "1 €",
+        "wlan": true,
+        "wlanKosten": "kostenlos",
+        "barrierefrei": true,
+        "aufzuege": true,
+        "rolltreppe": true,
+        "reisezentrum": true,
+        "reisezentrumZeiten": "Mo–Fr 6:00–21:00, Sa 8:00–18:00",
+        "gastronomie": "Bäckereien und Cafés im Bahnhof",
+        "parkAndRide": true,
+        "parkAndRideKapazitaet": "Parkhaus vorhanden",
+        "fahrradstellplaetze": true,
+        "taxiStand": true,
+        "dbLounge": false
+      },
+      "attractions": [
+        {
+          "name": "Frauenkirche",
+          "typ": "Kirche",
+          "entfernungKm": 1.5,
+          "gehzeit": "18 Min.",
+          "anfahrt": "Zu Fuß über Prager Straße",
+          "eintritt": "kostenlos (Kuppelaufstieg 8 €)",
+          "beschreibung": "Wiederaufgebaute barocke Kuppelkirche am Neumarkt"
+        },
+        {
+          "name": "Zwinger",
+          "typ": "Schloss / Museum",
+          "entfernungKm": 1.8,
+          "gehzeit": "22 Min.",
+          "anfahrt": "Straßenbahn 4/8/9 bis Theaterplatz",
+          "eintritt": "Innenhof kostenlos, Gemäldegalerie 14 €",
+          "beschreibung": "Barockes Meisterwerk mit Gemäldegalerie Alte Meister"
+        },
+        {
+          "name": "Brühlsche Terrasse",
+          "typ": "Promenade",
+          "entfernungKm": 1.7,
+          "gehzeit": "20 Min.",
+          "anfahrt": "Zu Fuß",
+          "eintritt": "kostenlos",
+          "beschreibung": "Der Balkon Europas mit Panoramablick über die Elbe"
+        },
+        {
+          "name": "Grünes Gewölbe",
+          "typ": "Museum",
+          "entfernungKm": 1.8,
+          "gehzeit": "22 Min.",
+          "anfahrt": "Straßenbahn bis Theaterplatz",
+          "eintritt": "14 €",
+          "beschreibung": "Europas prächtigste Schatzkammer"
+        },
+        {
+          "name": "Sächsische Schweiz (ab Dresden)",
+          "typ": "Nationalpark",
+          "entfernungKm": 35.0,
+          "gehzeit": "–",
+          "anfahrt": "S1 ab Dresden Hbf bis Bad Schandau (ca. 50 Min.)",
+          "eintritt": "kostenlos",
+          "beschreibung": "Atemberaubende Felslandschaft – die Basteibrücke erreichst du mit dem Deutschlandticket per S-Bahn"
+        }
+      ]
+    },
+    "trains": [
+      "RE 7 + RB 31 (Umstieg Senftenberg)",
+      "RE 18 + RE 15 (über Cottbus/Ruhland)"
+    ],
+    "reisezeit": "ca. 3:00–3:20 Std.",
+    "reisezeitICE": "ca. 1:39 Std.",
+    "entfernungKm": 165,
+    "umstiege": 1,
+    "umstiegsort": "Senftenberg (ca. 5 Min. Umstieg) oder Elsterwerda",
+    "taktung": "stündlich (mit Umstieg)",
+    "ersteFahrt": "ca. 05:30",
+    "letzteFahrt": "ca. 20:00",
+    "zwischenhalte": [
+      {
+        "name": "Berlin Südkreuz",
+        "fahrzeit": "8 Min."
+      },
+      {
+        "name": "Berlin-Schönefeld",
+        "fahrzeit": "20 Min."
+      },
+      {
+        "name": "Königs Wusterhausen",
+        "fahrzeit": "35 Min."
+      },
+      {
+        "name": "Lübben (Spreewald)",
+        "fahrzeit": "55 Min."
+      },
+      {
+        "name": "Lübbenau (Spreewald)",
+        "fahrzeit": "1:05 Std."
+      },
+      {
+        "name": "Calau",
+        "fahrzeit": "1:20 Std."
+      },
+      {
+        "name": "Senftenberg (Umstieg)",
+        "fahrzeit": "1:50 Std."
+      },
+      {
+        "name": "Ruhland",
+        "fahrzeit": "2:10 Std."
+      },
+      {
+        "name": "Elsterwerda",
+        "fahrzeit": "2:25 Std."
+      },
+      {
+        "name": "Coswig (b Dresden)",
+        "fahrzeit": "2:50 Std."
+      },
+      {
+        "name": "Dresden-Neustadt",
+        "fahrzeit": "3:10 Std."
+      }
+    ],
+    "kosten": {
+      "einzelticket": "ca. 35–45 €",
+      "iceSparpreis": "ab 17,90 €",
+      "iceFlexpreis": "ab 55 €",
+      "auto": "ca. 50 € (165 km × 0,30 €/km)"
+    },
+    "tipps": [
+      {
+        "title": "Umstieg in Senftenberg ist machbar",
+        "text": "Der Anschluss klappt in der Regel – ca. 5 Minuten auf demselben Bahnsteig. Bei Verspätungen wartet der Anschlusszug meist."
+      },
+      {
+        "title": "Spreewald als Zwischenstopp",
+        "text": "Der RE 7 fährt durch den Spreewald. Lübbenau und Lübben sind perfekt für Kahnfahrten und den Gurken-Radweg."
+      },
+      {
+        "title": "ICE ist deutlich schneller",
+        "text": "Der ICE braucht nur ca. 1:40 Stunden. Wenn du es eilig hast, lohnt sich ein Sparpreis ab 17,90 €."
+      },
+      {
+        "title": "Sächsische Schweiz weiterfahren",
+        "text": "Vom Dresden Hbf bringt dich die S1 in ca. 50 Minuten nach Bad Schandau – komplett mit dem Deutschlandticket."
+      },
+      {
+        "title": "Alternative Route über Cottbus",
+        "text": "Manche Verbindungen führen über Cottbus statt Senftenberg. Die Fahrzeit ist ähnlich."
+      }
+    ],
+    "related": [
+      "leipzig-dresden",
+      "berlin-hamburg",
+      "hannover-bremen"
+    ]
+  }
+]
