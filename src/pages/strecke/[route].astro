@@ -46,8 +46,8 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      "name": `Gibt es Schließfächer am ${route.to.name}?`,
-      "acceptedAnswer": { "@type": "Answer", "text": route.to.amenities.schliessfaecher ? `Ja, am ${route.to.name} gibt es Schließfächer (${route.to.amenities.schliessfaecherPreis}).` : `Nein, am ${route.to.name} sind derzeit keine Schließfächer verfügbar.` }
+      "name": `Gibt es Schließfächer am ${route.to.station}?`,
+      "acceptedAnswer": { "@type": "Answer", "text": route.to.amenities.schliessfaecher ? `Ja, am ${route.to.station} gibt es Schließfächer (${route.to.amenities.schliessfaecherPreis}).` : `Nein, am ${route.to.station} sind derzeit keine Schließfächer verfügbar.` }
     }
   ]
 };
@@ -196,7 +196,7 @@ function renderAmenityBadge(label: string, available: boolean, detail?: string) 
       </div>
 
       <p class="cta-link">
-        👉 <a href={`https://www.bahn.de/buchung/fahrplan/suche#sts=true&so=${encodeURIComponent(route.from.name)}&zo=${encodeURIComponent(route.to.name)}&kl=2&r=13:16:KLASSENLOS:1&soid=&zoid=`} target="_blank" rel="noopener noreferrer">Aktuelle Verbindungen auf bahn.de anzeigen</a>
+        👉 <a href={`https://www.bahn.de/buchung/fahrplan/suche#sts=true&so=${encodeURIComponent(route.from.station)}&zo=${encodeURIComponent(route.to.station)}&kl=2&r=13:16:KLASSENLOS:1&soid=&zoid=`} target="_blank" rel="noopener noreferrer">Aktuelle Verbindungen auf bahn.de anzeigen</a>
       </p>
     </section>
 
@@ -207,7 +207,7 @@ function renderAmenityBadge(label: string, available: boolean, detail?: string) 
         <div class="timeline-stop timeline-stop-start">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
-            <strong>{route.from.name}</strong>
+            <strong>{route.from.station}</strong>
             <span class="timeline-time">Abfahrt</span>
           </div>
         </div>
@@ -223,7 +223,7 @@ function renderAmenityBadge(label: string, available: boolean, detail?: string) 
         <div class="timeline-stop timeline-stop-end">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
-            <strong>{route.to.name}</strong>
+            <strong>{route.to.station}</strong>
             <span class="timeline-time">Ankunft nach {route.reisezeit}</span>
           </div>
         </div>
@@ -232,10 +232,10 @@ function renderAmenityBadge(label: string, available: boolean, detail?: string) 
 
     <!-- Origin Station Amenities -->
     <section id="bahnhof-start">
-      <h2>Abfahrtsbahnhof: {route.from.name}</h2>
+      <h2>Abfahrtsbahnhof: {route.from.station}</h2>
       <div class="station-card">
         <div class="station-meta">
-          <span class="badge">Kategorie {route.from.category}</span>
+          
           {route.from.amenities.barrierefrei && <span class="badge badge-blue">♿ Barrierefrei</span>}
           {route.from.amenities.dbLounge && <span class="badge">DB Lounge</span>}
         </div>
@@ -303,10 +303,10 @@ function renderAmenityBadge(label: string, available: boolean, detail?: string) 
 
     <!-- Destination Station Amenities -->
     <section id="bahnhof-ziel">
-      <h2>Zielbahnhof: {route.to.name}</h2>
+      <h2>Zielbahnhof: {route.to.station}</h2>
       <div class="station-card">
         <div class="station-meta">
-          <span class="badge">Kategorie {route.to.category}</span>
+          
           {route.to.amenities.barrierefrei && <span class="badge badge-blue">♿ Barrierefrei</span>}
           {route.to.amenities.dbLounge && <span class="badge">DB Lounge</span>}
         </div>
@@ -532,7 +532,7 @@ function renderAmenityBadge(label: string, available: boolean, detail?: string) 
         </details>
         <details>
           <summary>Muss ich umsteigen?</summary>
-          <p>{route.umstiege === 0 ? `Nein, es gibt Direktverbindungen ohne Umstieg von ${route.from.name} nach ${route.to.name}.` : `Ja, in der Regel steigst du ${route.umstiege}x um: ${route.umstiegsort}.`}</p>
+          <p>{route.umstiege === 0 ? `Nein, es gibt Direktverbindungen ohne Umstieg von ${route.from.station} nach ${route.to.station}.` : `Ja, in der Regel steigst du ${route.umstiege}x um: ${route.umstiegsort}.`}</p>
         </details>
         <details>
           <summary>Kann ich mit dem ICE von {route.from.city} nach {route.to.city} fahren?</summary>
@@ -543,12 +543,12 @@ function renderAmenityBadge(label: string, available: boolean, detail?: string) 
           <p>Ein Einzelticket im Nahverkehr kostet {route.kosten.einzelticket}. Mit dem Deutschlandticket (63 €/Monat) ist die Fahrt im Preis inbegriffen.</p>
         </details>
         <details>
-          <summary>Gibt es Schließfächer am {route.to.name}?</summary>
-          <p>{route.to.amenities.schliessfaecher ? `Ja, am ${route.to.name} gibt es Schließfächer. Preise: ${route.to.amenities.schliessfaecherPreis}.` : `Nein, am ${route.to.name} sind derzeit keine Schließfächer verfügbar.`}</p>
+          <summary>Gibt es Schließfächer am {route.to.station}?</summary>
+          <p>{route.to.amenities.schliessfaecher ? `Ja, am ${route.to.station} gibt es Schließfächer. Preise: ${route.to.amenities.schliessfaecherPreis}.` : `Nein, am ${route.to.station} sind derzeit keine Schließfächer verfügbar.`}</p>
         </details>
         <details>
-          <summary>Ist der {route.to.name} barrierefrei?</summary>
-          <p>{route.to.amenities.barrierefrei ? `Ja, der ${route.to.name} ist barrierefrei zugänglich. Aufzüge${route.to.amenities.rolltreppe ? ' und Rolltreppen sind' : ' sind'} vorhanden.` : `Der ${route.to.name} ist nur eingeschränkt barrierefrei.`}</p>
+          <summary>Ist der {route.to.station} barrierefrei?</summary>
+          <p>{route.to.amenities.barrierefrei ? `Ja, der ${route.to.station} ist barrierefrei zugänglich. Aufzüge${route.to.amenities.rolltreppe ? ' und Rolltreppen sind' : ' sind'} vorhanden.` : `Der ${route.to.station} ist nur eingeschränkt barrierefrei.`}</p>
         </details>
         <details>
           <summary>Wie oft fahren Züge von {route.from.city} nach {route.to.city}?</summary>
