@@ -35,7 +35,16 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
   <header class="site-header">
     <div class="container">
       <a class="logo" href="/">ticket-rechner<span class="tld">.de</span><span class="logo-badge">D-Ticket</span></a>
-      <nav class="main-nav" aria-label="Hauptnavigation">
+      <button
+        id="menu-toggle"
+        class="menu-toggle"
+        aria-expanded="false"
+        aria-controls="main-nav"
+        aria-label="Navigation öffnen"
+      >
+        <span class="menu-icon">☰</span>
+      </button>
+      <nav id="main-nav" class="main-nav" aria-label="Hauptnavigation">
         <a href="/#streckensuche">Strecken</a>
         <a href="/kuendigungsfrist-rechner">Kündigungsfrist</a>
         <a href="/lohnt-sich-rechner">Lohnt es sich?</a>
@@ -44,6 +53,40 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
       </nav>
     </div>
   </header>
+
+  <script is:inline>
+    (function() {
+      const toggle = document.getElementById('menu-toggle');
+      const nav = document.getElementById('main-nav');
+      if (!toggle || !nav) return;
+
+      function setMenuState(open) {
+        const isOpen = open !== undefined ? open : toggle.getAttribute('aria-expanded') !== 'true';
+        toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        toggle.setAttribute('aria-label', isOpen ? 'Navigation schließen' : 'Navigation öffnen');
+        const icon = toggle.querySelector('.menu-icon');
+        if (icon) icon.textContent = isOpen ? '✕' : '☰';
+        nav.classList.toggle('is-open', isOpen);
+      }
+
+      toggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        setMenuState();
+      });
+
+      nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', function() {
+          setMenuState(false);
+        });
+      });
+
+      document.addEventListener('click', function(e) {
+        if (!nav.contains(e.target) && !toggle.contains(e.target)) {
+          setMenuState(false);
+        }
+      });
+    })();
+  </script>
   <main>
     <slot />
   </main>
