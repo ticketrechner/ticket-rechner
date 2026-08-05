@@ -1,17 +1,19 @@
 # ticket-rechner.de
 
-Astro static site for Deutschlandticket calculators + content, deployed on Cloudflare Pages.
+Astro static site for Deutschlandticket calculators, 100+ Nahverkehr routes, and advice guides deployed on Cloudflare Workers / Pages.
 
-## Deploy
-1. Push this repo to GitHub as `ticket-rechner`.
-2. Cloudflare Dashboard → Pages → Create project → connect repo.
-3. Build command: `npm run build` — Output dir: `dist` — Framework preset: Astro.
-4. Custom domain: ticket-rechner.de (already on Cloudflare — one click).
+## Deployment Details
+- **Build command**: `npm run build`
+- **Output directory**: `dist`
+- **Framework preset**: Astro 4.16 static output
+- **Domain**: `https://ticket-rechner.de`
 
-## Roadmap
+## Features
 - [x] Homepage + Kündigungsfrist-Rechner
-- [ ] Lohnt-sich-Rechner (/lohnt-sich-rechner)
-- [ ] Kündigungsschreiben-Generator (/kuendigungsschreiben)
-- [ ] 20 launch articles under /ratgeber and /kuendigen/[anbieter]
-- [ ] Impressum + Datenschutz (placeholders)
-- [ ] GTFS route pages: /strecke/[slug] — 1,000 at launch+2wk, rest after GSC health check
+- [x] Lohnt-sich-Rechner (`/lohnt-sich-rechner`)
+- [x] Kündigungsschreiben-Generator (`/kuendigungsschreiben`)
+- [x] Ratgeber & Provider guides (`/ratgeber`, `/kuendigen/[anbieter]`)
+- [x] 100 German regional train routes (`/strecke/[route]`)
+- [x] Interactive `RouteFinder` widget with autocomplete & umlaut search
+- [x] Dynamic XML Sitemap (`/sitemap.xml`)
+- [x] Impressum + Datenschutz
