@@ -202,8 +202,20 @@ const schema = [
     <h3>Wie erreiche ich den {p.short}-Kundenservice?</h3>
     <p>Per E-Mail an {p.email} oder telefonisch unter {p.telefon}.</p>
 
+    <div style="background:var(--bg);padding:1rem;border-radius:10px;margin:1.5rem 0;">
+      <strong>Beliebte Verbindungen im Nahverkehr:</strong>
+      <p style="margin:0.4rem 0 0;font-size:0.92rem;">
+        {p.slug === 'hvv' && <span>Fährst du oft regional? Schau dir die Details zur <a href="/strecke/hamburg-luebeck">Strecke Hamburg → Lübeck</a> an.</span>}
+        {p.slug === 'rmv' && <span>Fährst du oft regional? Schau dir die Details zur <a href="/strecke/frankfurt-mainz">Strecke Frankfurt → Mainz</a> an.</span>}
+        {p.slug === 'mvv' && <span>Fährst du oft regional? Schau dir die Details zur <a href="/strecke/muenchen-nuernberg">Strecke München → Nürnberg</a> an.</span>}
+        {p.slug === 'bvg' && <span>Fährst du oft regional? Schau dir die Details zur <a href="/strecke/berlin-hamburg">Strecke Berlin → Hamburg</a> an.</span>}
+        {p.slug === 'db' && <span>Beliebte Strecken: <a href="/strecke/berlin-hamburg">Berlin → Hamburg</a> oder <a href="/strecke/koeln-duesseldorf">Köln → Düsseldorf</a>.</span>}
+      </p>
+    </div>
+
     <p style="margin-top:1.5rem">
-      <a href="/ratgeber/deutschlandticket-kuendigen">→ Zum großen Kündigungs-Ratgeber (alle Anbieter, alle Wege)</a>
+      👉 <a href="/ratgeber/deutschlandticket-kuendigen">Zum großen Kündigungs-Ratgeber (alle Anbieter & Fristen)</a><br/>
+      👉 <a href="/kuendigungsschreiben">Kündigungsschreiben-Generator nutzen</a>
     </p>
 
     <p style="color:var(--ink-soft);font-size:.9rem;margin-top:2.5rem">

@@ -179,6 +179,12 @@ function renderAmenityBadge(label: string, available: boolean, detail?: string) 
           <span class="comparison-badge badge-red">✗ Gilt nicht</span>
         </div>
       </div>
+      <p style="font-size:0.9rem;margin:0.5rem 0 1.2rem;color:var(--ink-soft);">
+        💡 <em>Vergleich & Ausnahmen: <a href="/ratgeber/deutschlandticket-ice">Gilt das Deutschlandticket im ICE?</a></em>
+        {route.slug.includes('basel') || route.slug.includes('flensburg') ? (
+          <span> · 🌍 <em><a href="/ratgeber/deutschlandticket-ausland">Gültigkeit im Ausland & Grenznähe</a></em></span>
+        ) : null}
+      </p>
 
       <div class="info-grid">
         <div class="info-item">
