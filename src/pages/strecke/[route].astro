@@ -510,7 +510,7 @@ function renderAmenityBadge(label: string, available: boolean, detail?: string) 
           if (!rel) return null;
           return (
             <a href={`/strecke/${rel.slug}`} class="related-route-card">
-              <strong>{rel.from.city} → {rel.to.city}</strong>
+              <strong>{rel.von.city} → {rel.nach.city}</strong>
               <span>{rel.trains[0]} · {rel.reisezeit}</span>
             </a>
           );
