@@ -7,7 +7,7 @@ import routes from '../data/routes.json';
 const SITE = 'https://ticket-rechner.de';
 const TODAY = '2026-08-05';
 
-// Auto-discover static page files in src/pages
+// Auto-discover static page files in src/pages/
 const rawPages = import.meta.glob('/src/pages/**/*.{astro,ts,js}', { eager: true });
 
 const staticUrls = new Set<string>();
@@ -60,7 +60,7 @@ ${allUrlPaths
       changefreq = 'monthly';
     } else if (urlPath === '/impressum' || urlPath === '/datenschutz') {
       priority = '0.3';
-      changefreq = 'monthly';
+      changefreq = 'yearly';
     }
 
     return `  <url>
