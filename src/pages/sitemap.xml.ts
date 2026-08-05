@@ -1,92 +1,78 @@
 /**
- * Manual sitemap + dynamic route pages from routes.json
- * UPDATE this file every time a page is added or removed.
- * Last updated: 2026-08-03
+ * Fully dynamic XML sitemap generator
+ * Auto-discovers static pages via import.meta.glob + dynamic route pages from routes.json
  */
 import routes from '../data/routes.json';
 
 const SITE = 'https://ticket-rechner.de';
+const TODAY = '2026-08-05';
 
-interface SitemapEntry {
-  url: string;
-  lastmod: string;
-  changefreq: 'daily' | 'weekly' | 'monthly';
-  priority: number;
-}
+// Auto-discover static page files in src/pages
+const rawPages = import.meta.glob('/src/pages/**/*.{astro,ts,js}', { eager: true });
 
-const pages: SitemapEntry[] = [
-  // Homepage + calculators
-  { url: '/',                              lastmod: '2026-07-20', changefreq: 'weekly',  priority: 1.0 },
-  { url: '/kuendigungsfrist-rechner',      lastmod: '2026-07-22', changefreq: 'weekly',  priority: 0.9 },
-  { url: '/lohnt-sich-rechner',            lastmod: '2026-07-22', changefreq: 'weekly',  priority: 0.9 },
-  { url: '/kuendigungsschreiben',          lastmod: '2026-07-22', changefreq: 'weekly',  priority: 0.9 },
-  // Ratgeber hub
-  { url: '/ratgeber',                      lastmod: '2026-07-27', changefreq: 'weekly',  priority: 0.8 },
-  // Ratgeber articles
-  { url: '/ratgeber/deutschlandticket-kuendigen',        lastmod: '2026-07-21', changefreq: 'monthly', priority: 0.8 },
-  { url: '/ratgeber/deutschlandticket-kaufen',           lastmod: '2026-07-27', changefreq: 'monthly', priority: 0.8 },
-  { url: '/ratgeber/deutschlandticket-steuer-absetzen',  lastmod: '2026-07-22', changefreq: 'monthly', priority: 0.7 },
-  { url: '/ratgeber/deutschlandticket-kosten',           lastmod: '2026-07-21', changefreq: 'monthly', priority: 0.7 },
-  { url: '/ratgeber/deutschlandticket-gueltigkeit',      lastmod: '2026-07-21', changefreq: 'monthly', priority: 0.7 },
-  { url: '/ratgeber/deutschlandticket-ausland',          lastmod: '2026-07-22', changefreq: 'monthly', priority: 0.7 },
-  { url: '/ratgeber/deutschlandticket-ice',              lastmod: '2026-07-22', changefreq: 'monthly', priority: 0.7 },
-  { url: '/ratgeber/deutschlandticket-studenten',        lastmod: '2026-07-22', changefreq: 'monthly', priority: 0.7 },
-  { url: '/ratgeber/deutschlandticket-jobticket',        lastmod: '2026-07-22', changefreq: 'monthly', priority: 0.7 },
-  { url: '/ratgeber/deutschlandticket-kinder',           lastmod: '2026-07-22', changefreq: 'monthly', priority: 0.6 },
-  { url: '/ratgeber/deutschlandticket-preiserhoehung',   lastmod: '2026-07-22', changefreq: 'monthly', priority: 0.6 },
-  { url: '/ratgeber/deutschlandticket-mitnahme',         lastmod: '2026-07-22', changefreq: 'monthly', priority: 0.6 },
-  { url: '/ratgeber/deutschlandticket-verloren',         lastmod: '2026-07-22', changefreq: 'monthly', priority: 0.6 },
-  { url: '/ratgeber/deutschlandticket-erste-klasse',     lastmod: '2026-07-21', changefreq: 'monthly', priority: 0.5 },
-  { url: '/ratgeber/deutschlandticket-pausieren',        lastmod: '2026-07-21', changefreq: 'monthly', priority: 0.5 },
-  // Problem Solving cluster
-  { url: '/ratgeber/deutschlandticket-gestohlen',              lastmod: '2026-07-27', changefreq: 'monthly', priority: 0.7 },
-  { url: '/ratgeber/deutschlandticket-ersatzkarte',            lastmod: '2026-07-27', changefreq: 'monthly', priority: 0.7 },
-  { url: '/ratgeber/deutschlandticket-gesperrt',               lastmod: '2026-07-27', changefreq: 'monthly', priority: 0.7 },
-  { url: '/ratgeber/deutschlandticket-app-funktioniert-nicht', lastmod: '2026-07-27', changefreq: 'monthly', priority: 0.7 },
-  { url: '/ratgeber/deutschlandticket-erstattung',             lastmod: '2026-07-27', changefreq: 'monthly', priority: 0.7 },
-  // Evergreen High Volume cluster
-  { url: '/ratgeber/deutschlandticket-verlaengern',            lastmod: '2026-07-27', changefreq: 'monthly', priority: 0.6 },
-  { url: '/ratgeber/deutschlandticket-kundenservice',          lastmod: '2026-07-27', changefreq: 'monthly', priority: 0.7 },
-  { url: '/ratgeber/deutschlandticket-schueler',               lastmod: '2026-07-27', changefreq: 'monthly', priority: 0.7 },
-  { url: '/ratgeber/deutschlandticket-vs-bahncard',            lastmod: '2026-07-27', changefreq: 'monthly', priority: 0.7 },
-  // Provider cancellation guides
-  { url: '/kuendigen/db',   lastmod: '2026-07-21', changefreq: 'monthly', priority: 0.7 },
-  { url: '/kuendigen/hvv',  lastmod: '2026-07-21', changefreq: 'monthly', priority: 0.6 },
-  { url: '/kuendigen/rmv',  lastmod: '2026-07-21', changefreq: 'monthly', priority: 0.6 },
-  { url: '/kuendigen/mvv',  lastmod: '2026-07-21', changefreq: 'monthly', priority: 0.6 },
-  { url: '/kuendigen/bvg',  lastmod: '2026-07-21', changefreq: 'monthly', priority: 0.6 },
-  // Trust pages
-  { url: '/ueber-uns',     lastmod: '2026-07-21', changefreq: 'monthly', priority: 0.4 },
-  { url: '/kontakt',       lastmod: '2026-07-21', changefreq: 'monthly', priority: 0.4 },
-  // Legal pages
-  { url: '/impressum',     lastmod: '2026-07-19', changefreq: 'monthly', priority: 0.3 },
-  { url: '/datenschutz',   lastmod: '2026-07-21', changefreq: 'monthly', priority: 0.3 },
-];
+const staticUrls = new Set<string>();
 
-// Dynamically add route pages from routes.json
-const routePages: SitemapEntry[] = (routes as any[]).map((route) => ({
-  url: `/strecke/${route.slug}`,
-  lastmod: '2026-08-03',
-  changefreq: 'monthly' as const,
-  priority: 0.7,
-}));
+Object.keys(rawPages).forEach((filepath) => {
+  let clean = filepath
+    .replace('/src/pages', '')
+    .replace(/\.(astro|ts|js)$/, '')
+    .replace(/\/index$/, '');
 
-const allPages = [...pages, ...routePages];
+  if (!clean) clean = '/';
+
+  // Ignore dynamic parameter routes [param] and sitemap itself
+  if (!clean.includes('[') && !clean.includes('sitemap.xml')) {
+    staticUrls.add(clean);
+  }
+});
+
+// Dynamic routes from routes.json
+const routeUrls = (routes as any[]).map((r) => `/strecke/${r.slug}`);
+
+// Provider cancellation guides
+const providerSlugs = ['db', 'hvv', 'rmv', 'mvv', 'bvg'];
+const providerUrls = providerSlugs.map((p) => `/kuendigen/${p}`);
+
+const allUrlPaths = Array.from(new Set([...staticUrls, ...providerUrls, ...routeUrls])).sort();
 
 export async function GET() {
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${allPages
-  .map(
-    (p) => `  <url>
-    <loc>${SITE}${p.url}</loc>
-    <lastmod>${p.lastmod}</lastmod>
-    <changefreq>${p.changefreq}</changefreq>
-    <priority>${p.priority.toFixed(1)}</priority>
-  </url>`
-  )
+${allUrlPaths
+  .map((urlPath) => {
+    let priority = '0.7';
+    let changefreq = 'monthly';
+
+    if (urlPath === '/') {
+      priority = '1.0';
+      changefreq = 'weekly';
+    } else if (urlPath.includes('-rechner') || urlPath === '/kuendigungsschreiben') {
+      priority = '0.9';
+      changefreq = 'weekly';
+    } else if (urlPath.startsWith('/ratgeber')) {
+      priority = '0.8';
+      changefreq = 'monthly';
+    } else if (urlPath.startsWith('/strecke')) {
+      priority = '0.7';
+      changefreq = 'monthly';
+    } else if (urlPath.startsWith('/kuendigen')) {
+      priority = '0.6';
+      changefreq = 'monthly';
+    } else if (urlPath === '/impressum' || urlPath === '/datenschutz') {
+      priority = '0.3';
+      changefreq = 'monthly';
+    }
+
+    return `  <url>
+    <loc>${SITE}${urlPath}</loc>
+    <lastmod>${TODAY}</lastmod>
+    <changefreq>${changefreq}</changefreq>
+    <priority>${priority}</priority>
+  </url>`;
+  })
   .join('\n')}
 </urlset>`;
+
   return new Response(xml, {
     headers: {
       'Content-Type': 'application/xml; charset=utf-8',

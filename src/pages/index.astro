@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import KuendigungsfristRechner from '../components/KuendigungsfristRechner.astro';
+import RouteFinder from '../components/RouteFinder.astro';
 const schema = [
   {
     "@context": "https://schema.org",
@@ -72,6 +73,10 @@ const schema = [
         „Nur D-Ticket-Verbindungen" aktivieren, um passende Verbindungen zu finden.
       </p>
     </section>
+
+    <div style="margin-top: 2.5rem;">
+      <RouteFinder />
+    </div>
 
     <h2>Beliebte Strecken mit dem Deutschlandticket</h2>
     <p style="color:var(--ink-soft);margin-top:0">Fahrzeit, Zwischenhalte, Bahnhof-Ausstattung und Sehenswürdigkeiten — alles auf einen Blick.</p>
