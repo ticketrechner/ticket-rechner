@@ -109,12 +109,45 @@ const schema = [
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": `Deutschlandticket bei ${p.name} kündigen 2026`,
+    "description": `Deutschlandticket bei ${p.short} kündigen: Frist ${p.frist}, Schritt-für-Schritt über ${p.app} oder Portal — plus Gratis-Kündigungsschreiben.`,
     "datePublished": "2026-07-19",
     "dateModified": "2026-07-21",
     "inLanguage": "de",
-    "author": { "@type": "Organization", "name": "Redaktion ticket-rechner.de" },
-    "publisher": { "@type": "Organization", "name": "ticket-rechner.de" },
+    "author": { "@type": "Person", "name": "Redaktion ticket-rechner.de" },
+    "publisher": { "@type": "Organization", "name": "ticket-rechner.de", "url": "https://ticket-rechner.de" },
     "mainEntityOfPage": `https://ticket-rechner.de/kuendigen/${p.slug}`
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://ticket-rechner.de/" },
+      { "@type": "ListItem", "position": 2, "name": "Kündigen", "item": "https://ticket-rechner.de/ratgeber/deutschlandticket-kuendigen" },
+      { "@type": "ListItem", "position": 3, "name": `${p.name} Kündigung`, "item": `https://ticket-rechner.de/kuendigen/${p.slug}` }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": `Deutschlandticket bei ${p.name} kündigen`,
+    "description": `Schritt-für-Schritt Anleitung zur Kündigung des Deutschlandtickets bei ${p.name}.`,
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": "Kündigungsweg wählen",
+        "text": `Kündige dein Ticket direkt in der ${p.app} oder im Abo-Portal von ${p.short}.`
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Kündigungsschritt ausführen",
+        "text": p.weg
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Bestätigung aufbewahren",
+        "text": "Speichere die Kündigungsbestätigung per E-Mail oder Screenshot als Nachweis."
+      }
+    ]
   },
   {
     "@context": "https://schema.org",

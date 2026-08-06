@@ -67,12 +67,14 @@ const articleSchema = {
   "@type": "Article",
   "headline": title,
   "description": description,
-  "author": { "@type": "Organization", "name": "Redaktion ticket-rechner.de" },
+  "author": { "@type": "Person", "name": "Redaktion ticket-rechner.de" },
   "publisher": { "@type": "Organization", "name": "ticket-rechner.de", "url": "https://ticket-rechner.de" },
   "datePublished": "2026-08-03",
   "dateModified": "2026-08-03",
   "mainEntityOfPage": canonical
 };
+
+const routeSchemas = [faqSchema, breadcrumbSchema, articleSchema];
 
 const reverseSlug = `${route.slug.split('-').reverse().join('-')}`;
 const reverseExists = routes.some(r => r.slug === reverseSlug);
@@ -87,11 +89,8 @@ function renderAmenityBadge(label: string, available: boolean, detail?: string) 
   title={title}
   description={description}
   canonical={canonical}
+  schema={routeSchemas}
 >
-  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
-  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
-  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
-
   <main class="route-page">
     <!-- Breadcrumb -->
     <nav class="breadcrumb" aria-label="Breadcrumb">

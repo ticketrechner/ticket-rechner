@@ -1,11 +1,20 @@
----
-import Base from '../layouts/Base.astro';
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://ticket-rechner.de/" },
+      { "@type": "ListItem", "position": 2, "name": "Kontakt", "item": "https://ticket-rechner.de/kontakt" }
+    ]
+  }
+];
 ---
 
 <Base
   title="Kontakt | ticket-rechner.de"
   description="Fragen, Korrekturen oder Feedback zu ticket-rechner.de? So erreichst du die Redaktion."
   canonical="https://ticket-rechner.de/kontakt"
+  schema={schema}
 >
   <div class="container" style="padding:2rem 0">
     <article style="max-width:44rem">

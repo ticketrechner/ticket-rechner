@@ -121,11 +121,21 @@ const articles = [
     title: 'Deutschlandticket kündigen 2026: Frist, Anleitung & Vorlage',
     teaser: 'Bis zum 10. des Monats kündigen — sonst kostet es 63 € extra. Alle Wege, Fristen und die Pause-Strategie.'
   }
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://ticket-rechner.de/" },
+      { "@type": "ListItem", "position": 2, "name": "Ratgeber", "item": "https://ticket-rechner.de/ratgeber" }
+    ]
+  }
 ];
 ---
 <Base
   title="Deutschlandticket Ratgeber 2026 | ticket-rechner.de"
   description="Alle Ratgeber rund ums Deutschlandticket: kaufen, kündigen, Erstattung, App-Probleme, Kundenservice, Steuer und mehr — aktuell für 2026."
+  schema={schema}
 >
   <div class="container--narrow" style="padding:2rem 0 1rem">
     <h1>Ratgeber</h1>

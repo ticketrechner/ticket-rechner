@@ -1,9 +1,18 @@
----
-import Base from '../layouts/Base.astro';
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://ticket-rechner.de/" },
+      { "@type": "ListItem", "position": 2, "name": "Impressum", "item": "https://ticket-rechner.de/impressum" }
+    ]
+  }
+];
 ---
 <Base
   title="Impressum | ticket-rechner.de"
   description="Impressum und Anbieterkennzeichnung von ticket-rechner.de."
+  schema={schema}
 >
   <div class="container--narrow" style="padding:2rem 0">
     <h1>Impressum</h1>
