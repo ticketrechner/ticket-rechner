@@ -1,135 +1,37 @@
 ---
 import Base from '../../layouts/Base.astro';
-
 const articles = [
-  {
-    slug: 'deutschlandticket-kaufen',
-    title: 'Deutschlandticket kaufen: Wo, wie & worauf du achten musst',
-    teaser: 'DB, deutschlandticket.de oder dein Verbund? Handyticket oder Chipkarte? Alle Kaufwege, Zahlungsmethoden und die 5 häufigsten Fehler.'
-  },
-  {
-    slug: 'deutschlandticket-steuer-absetzen',
-    title: 'Deutschlandticket von der Steuer absetzen 2026',
-    teaser: 'Pendlerpauschale oder Ticketkosten? Ab 10 km Arbeitsweg lohnt sich die Pauschale mehr. So trägst du es richtig ein — mit Rechenbeispielen.'
-  },
-  {
-    slug: 'deutschlandticket-ausland',
-    title: 'Deutschlandticket im Ausland: Wo gilt es über die Grenze?',
-    teaser: 'Grundsätzlich nein — aber es gibt Grenztarifpunkte und Sonderregelungen. Alle Ausnahmen für Österreich, Frankreich, Niederlande und mehr.'
-  },
-  {
-    slug: 'deutschlandticket-kinder',
-    title: 'Deutschlandticket für Kinder & Familien 2026',
-    teaser: 'Unter 6 kostenlos, darüber variieren die Regeln nach Bundesland. Berlin und Hamburg gratis, Bayern 29 € — der komplette Überblick.'
-  },
-  {
-    slug: 'deutschlandticket-schueler',
-    title: 'Deutschlandticket für Schüler 2026: Preise nach Bundesland',
-    teaser: 'Von kostenlos (Hamburg) bis 45 € (BW) — alle Ermäßigungen, Bestellwege und was Eltern wissen müssen.'
-  },
-  {
-    slug: 'deutschlandticket-verloren',
-    title: 'Deutschlandticket verloren oder Handy kaputt: Was tun?',
-    teaser: 'Handyticket: neues Gerät, App neu einrichten. Chipkarte: sperren, Ersatz beantragen. Was bei der Kontrolle ohne Ticket passiert.'
-  },
-  {
-    slug: 'deutschlandticket-gestohlen',
-    title: 'Deutschlandticket gestohlen: Sofort-Anleitung bei Diebstahl',
-    teaser: 'Polizeianzeige, Sperrung, Ersatz — die komplette Notfall-Checkliste für Chipkarte und Handy. So stoppst du Missbrauch.'
-  },
-  {
-    slug: 'deutschlandticket-ersatzkarte',
-    title: 'Deutschlandticket Ersatzkarte: Kosten, Anbieter & Anleitung',
-    teaser: 'Alle Anbieter, Gebühren (10–25 €), Lieferzeiten und wann der Wechsel aufs Handyticket die bessere Alternative ist.'
-  },
-  {
-    slug: 'deutschlandticket-gesperrt',
-    title: 'Deutschlandticket gesperrt: Gründe & Soforthilfe',
-    teaser: 'Die 7 häufigsten Sperrgründe — von Lastschrift-Problemen bis Betrugsverdacht — und wie du dein Ticket wieder freischaltest.'
-  },
-  {
-    slug: 'deutschlandticket-app-funktioniert-nicht',
-    title: 'Deutschlandticket App funktioniert nicht: Alle Lösungen',
-    teaser: 'Ticket nicht angezeigt, QR-Code fehlt, Login klappt nicht? Finde dein Problem im Schnellcheck und löse es in 2 Minuten.'
-  },
-  {
-    slug: 'deutschlandticket-erstattung',
-    title: 'Deutschlandticket Erstattung: Wann gibt es Geld zurück?',
-    teaser: 'Verspätung (1,50 € pro Fall), Krankheit, Doppelzahlung — wann du Anspruch hast und wann nicht. Alle Regeln auf einen Blick.'
-  },
-  {
-    slug: 'deutschlandticket-verlaengern',
-    title: 'Deutschlandticket verlängern: Musst du etwas tun?',
-    teaser: 'Automatische Verlängerung, Reaktivierung nach Kündigung und was bei Preiserhöhungen passiert — die Checkliste.'
-  },
-  {
-    slug: 'deutschlandticket-kundenservice',
-    title: 'Deutschlandticket Kundenservice: Alle Kontakte & Hotlines',
-    teaser: 'Telefonnummern, E-Mail, Kundenportale — die richtige Anlaufstelle für jedes Problem. Plus Beschwerdewege, wenn der Service nicht hilft.'
-  },
-  {
-    slug: 'deutschlandticket-vs-bahncard',
-    title: 'Deutschlandticket vs. BahnCard: Was lohnt sich für wen?',
-    teaser: 'Nahverkehr-Flatrate oder Fernverkehr-Rabatt? Der direkte Vergleich mit Preistabelle, Rechenbeispielen und Entscheidungshilfe.'
-  },
-  {
-    slug: 'deutschlandticket-jobticket',
-    title: 'Deutschlandticket als Jobticket: nur 44,10 € statt 63 €',
-    teaser: 'Arbeitgeber zahlt 25 %, dazu 5 % Rabatt — steuerfrei nach § 3 Nr. 15 EStG. So fragst du richtig nach.'
-  },
-  {
-    slug: 'deutschlandticket-studenten',
-    title: 'Deutschlandticket für Studenten: Das Semesterticket 2026',
-    teaser: '34,80 € im Sommersemester, 37,80 € ab WS 2026/27 — bundesweit gültig. Solidarmodell vs. Upgrade erklärt.'
-  },
-  {
-    slug: 'deutschlandticket-kosten',
-    title: 'Was kostet das Deutschlandticket 2026? Alle Preise & Varianten',
-    teaser: '63 € regulär, 44,10 € Jobticket, 37,80 € Semesterticket — plus Sozialticket-Überblick und Preisentwicklung.'
-  },
-  {
-    slug: 'deutschlandticket-preiserhoehung',
-    title: 'Deutschlandticket Preiserhöhung: von 58 auf 63 € — lohnt es sich noch?',
-    teaser: 'Warum der Preis stieg, wie es 2027 weitergeht (Preisindex!), und ob sich das Ticket bei deinem Fahrverhalten noch rechnet.'
-  },
-  {
-    slug: 'deutschlandticket-mitnahme',
-    title: 'Deutschlandticket Mitnahme: Fahrrad, Hund, Personen',
-    teaser: 'Fahrrad braucht Extra-Ticket, Hunde-Regeln sind regional, Personen mitnehmen geht nicht — alle Details.'
-  },
-  {
-    slug: 'deutschlandticket-erste-klasse',
-    title: 'Deutschlandticket 1. Klasse: geht das?',
-    teaser: 'Nein — nur 2. Klasse. Regionale Upgrades, was bei der Kontrolle passiert und welche Alternativen es gibt.'
-  },
-  {
-    slug: 'deutschlandticket-pausieren',
-    title: 'Deutschlandticket pausieren: geht das?',
-    teaser: 'Offizielle Pause? Nein. Aber Kündigen und Wiederkommen spart 63 € pro Monat — Schritt für Schritt erklärt.'
-  },
-  {
-    slug: 'deutschlandticket-ice',
-    title: 'Gilt das Deutschlandticket im ICE? Regeln & Ausnahmen 2026',
-    teaser: 'Grundsätzlich nein — aber es gibt offizielle Ausnahmestrecken und die Zugausfall-Regel. Und seit Dezember 2025 sind beliebte Ausnahmen weggefallen.'
-  },
-  {
-    slug: 'deutschlandticket-gueltigkeit',
-    title: 'Wo gilt das Deutschlandticket? Der komplette Überblick',
-    teaser: 'Welche Züge, Busse und Fähren enthalten sind, was nicht gilt (1. Klasse, FlixTrain, Ausland) — plus Fahrrad- und Hunde-Regeln.'
-  },
-  {
-    slug: 'deutschlandticket-kuendigen',
-    title: 'Deutschlandticket kündigen 2026: Frist, Anleitung & Vorlage',
-    teaser: 'Bis zum 10. des Monats kündigen — sonst kostet es 63 € extra. Alle Wege, Fristen und die Pause-Strategie.'
-  }
+  { slug: 'deutschlandticket-kaufen', title: 'Deutschlandticket kaufen: Wo, wie & worauf du achten musst', teaser: 'DB, deutschlandticket.de oder dein Verbund? Handyticket oder Chipkarte? Alle Kaufwege, Zahlungsmethoden und die 5 häufigsten Fehler.' },
+  { slug: 'deutschlandticket-steuer-absetzen', title: 'Deutschlandticket von der Steuer absetzen 2026', teaser: 'Pendlerpauschale oder Ticketkosten? Ab 10 km Arbeitsweg lohnt sich die Pauschale mehr. So trägst du es richtig ein.' },
+  { slug: 'deutschlandticket-ausland', title: 'Deutschlandticket im Ausland: Wo gilt es über die Grenze?', teaser: 'Grundsätzlich nein — aber es gibt Grenztarifpunkte und Sonderregelungen für Österreich, Frankreich, Niederlande und mehr.' },
+  { slug: 'deutschlandticket-kinder', title: 'Deutschlandticket für Kinder & Familien 2026', teaser: 'Unter 6 kostenlos, darüber variieren die Regeln nach Bundesland. Berlin und Hamburg gratis, Bayern 29 €.' },
+  { slug: 'deutschlandticket-schueler', title: 'Deutschlandticket für Schüler 2026: Preise nach Bundesland', teaser: 'Von kostenlos (Hamburg) bis 45 € (BW) — alle Ermäßigungen, Bestellwege und was Eltern wissen müssen.' },
+  { slug: 'deutschlandticket-verloren', title: 'Deutschlandticket verloren oder Handy kaputt: Was tun?', teaser: 'Handyticket: neues Gerät, App neu einrichten. Chipkarte: sperren, Ersatz beantragen.' },
+  { slug: 'deutschlandticket-gestohlen', title: 'Deutschlandticket gestohlen: Sofort-Anleitung bei Diebstahl', teaser: 'Polizeianzeige, Sperrung, Ersatz — die komplette Notfall-Checkliste für Chipkarte und Handy.' },
+  { slug: 'deutschlandticket-ersatzkarte', title: 'Deutschlandticket Ersatzkarte: Kosten, Anbieter & Anleitung', teaser: 'Alle Anbieter, Gebühren (10–25 €), Lieferzeiten und wann der Wechsel aufs Handyticket besser ist.' },
+  { slug: 'deutschlandticket-gesperrt', title: 'Deutschlandticket gesperrt: Gründe & Soforthilfe', teaser: 'Die 7 häufigsten Sperrgründe — von Lastschrift-Problemen bis Betrugsverdacht — und wie du es freischaltest.' },
+  { slug: 'deutschlandticket-app-funktioniert-nicht', title: 'Deutschlandticket App funktioniert nicht: Alle Lösungen', teaser: 'Ticket nicht angezeigt, QR-Code fehlt, Login klappt nicht? Finde dein Problem und löse es in 2 Minuten.' },
+  { slug: 'deutschlandticket-erstattung', title: 'Deutschlandticket Erstattung: Wann gibt es Geld zurück?', teaser: 'Verspätung (1,50 € pro Fall), Krankheit, Doppelzahlung — wann du Anspruch hast und wann nicht.' },
+  { slug: 'deutschlandticket-verlaengern', title: 'Deutschlandticket verlängern: Musst du etwas tun?', teaser: 'Automatische Verlängerung, Reaktivierung nach Kündigung und was bei Preiserhöhungen passiert.' },
+  { slug: 'deutschlandticket-kundenservice', title: 'Deutschlandticket Kundenservice: Alle Kontakte & Hotlines', teaser: 'Telefonnummern, E-Mail, Kundenportale — die richtige Anlaufstelle für jedes Problem.' },
+  { slug: 'deutschlandticket-vs-bahncard', title: 'Deutschlandticket vs. BahnCard: Was lohnt sich für wen?', teaser: 'Nahverkehr-Flatrate oder Fernverkehr-Rabatt? Der direkte Vergleich mit Preistabelle und Entscheidungshilfe.' },
+  { slug: 'deutschlandticket-jobticket', title: 'Deutschlandticket als Jobticket: nur 44,10 € statt 63 €', teaser: 'Arbeitgeber zahlt 25 %, dazu 5 % Rabatt — steuerfrei nach § 3 Nr. 15 EStG. So fragst du richtig nach.' },
+  { slug: 'deutschlandticket-studenten', title: 'Deutschlandticket für Studenten: Das Semesterticket 2026', teaser: '34,80 € im Sommersemester, 37,80 € ab WS 2026/27 — bundesweit gültig. Solidarmodell vs. Upgrade erklärt.' },
+  { slug: 'deutschlandticket-kosten', title: 'Was kostet das Deutschlandticket 2026? Alle Preise & Varianten', teaser: '63 € regulär, 44,10 € Jobticket, 37,80 € Semesterticket — plus Sozialticket und Preisentwicklung.' },
+  { slug: 'deutschlandticket-preiserhoehung', title: 'Deutschlandticket Preiserhöhung: von 58 auf 63 €', teaser: 'Warum der Preis stieg, wie es 2027 weitergeht, und ob sich das Ticket bei deinem Fahrverhalten noch rechnet.' },
+  { slug: 'deutschlandticket-mitnahme', title: 'Deutschlandticket Mitnahme: Fahrrad, Hund, Personen', teaser: 'Fahrrad braucht Extra-Ticket, Hunde-Regeln sind regional, Personen mitnehmen geht nicht — alle Details.' },
+  { slug: 'deutschlandticket-erste-klasse', title: 'Deutschlandticket 1. Klasse: geht das?', teaser: 'Nein — nur 2. Klasse. Regionale Upgrades, was bei der Kontrolle passiert und welche Alternativen es gibt.' },
+  { slug: 'deutschlandticket-pausieren', title: 'Deutschlandticket pausieren: geht das?', teaser: 'Offizielle Pause? Nein. Aber Kündigen und Wiederkommen spart 63 € pro Monat — Schritt für Schritt erklärt.' },
+  { slug: 'deutschlandticket-ice', title: 'Gilt das Deutschlandticket im ICE? Regeln & Ausnahmen 2026', teaser: 'Grundsätzlich nein — aber es gibt offizielle Ausnahmestrecken und die Zugausfall-Regel.' },
+  { slug: 'deutschlandticket-gueltigkeit', title: 'Wo gilt das Deutschlandticket? Der komplette Überblick', teaser: 'Welche Züge, Busse und Fähren enthalten sind, was nicht gilt — plus Fahrrad- und Hunde-Regeln.' },
+  { slug: 'deutschlandticket-kuendigen', title: 'Deutschlandticket kündigen 2026: Frist, Anleitung & Vorlage', teaser: 'Bis zum 10. des Monats kündigen — sonst kostet es 63 € extra. Alle Wege, Fristen und die Pause-Strategie.' }
 ];
-
 const schema = [
   {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://ticket-rechner.de/" },
+      { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://ticket-rechner.de" },
       { "@type": "ListItem", "position": 2, "name": "Ratgeber", "item": "https://ticket-rechner.de/ratgeber" }
     ]
   }
