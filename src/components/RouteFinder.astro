@@ -40,7 +40,7 @@ const popularRoutes = popularRouteSlugs.map(slug => {
 <div id="streckensuche" class="route-finder card">
   <div class="route-finder-header">
     <span class="route-finder-badge">🚆 Strecke finden</span>
-    <h2>Finde deine Verbindung mit dem Deutschlandticket — 100 Strecken, echte Daten.</h2>
+    <h2>Finde deine Verbindung mit dem Deutschlandticket — {routes.length} Strecken, echte Daten.</h2>
     <p>Gib Start- und Zielort ein, um Fahrzeit, Direktverbindungen und Umstiege zu sehen.</p>
   </div>
 
@@ -101,7 +101,7 @@ const popularRoutes = popularRouteSlugs.map(slug => {
       ))}
     </div>
     <div class="all-routes-link">
-      <a href="/ratgeber">Alle 100 Strecken anzeigen →</a>
+      <a href="/ratgeber">Alle {routes.length} Strecken anzeigen →</a>
     </div>
   </div>
 </div>
