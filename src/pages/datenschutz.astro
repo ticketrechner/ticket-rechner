@@ -1,6 +1,9 @@
 ---
 import Base from '../layouts/Base.astro';
 
+const title = 'Datenschutzerklärung | ticket-rechner.de';
+const description = 'Datenschutzerklärung von ticket-rechner.de gemäß DSGVO.';
+
 const schema = [
   {
     "@context": "https://schema.org",
@@ -12,9 +15,10 @@ const schema = [
   }
 ];
 ---
+
 <Base
-  title="Datenschutzerklärung | ticket-rechner.de"
-  description="Datenschutzerklärung von ticket-rechner.de gemäß DSGVO."
+  title={title}
+  description={description}
   schema={schema}
 >
   <div class="container--narrow" style="padding:2rem 0">

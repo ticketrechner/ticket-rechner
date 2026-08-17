@@ -1,6 +1,9 @@
 ---
 import Base from '../layouts/Base.astro';
 
+const title = 'Impressum | ticket-rechner.de';
+const description = 'Impressum und Anbieterkennzeichnung von ticket-rechner.de.';
+
 const schema = [
   {
     "@context": "https://schema.org",
@@ -12,9 +15,10 @@ const schema = [
   }
 ];
 ---
+
 <Base
-  title="Impressum | ticket-rechner.de"
-  description="Impressum und Anbieterkennzeichnung von ticket-rechner.de."
+  title={title}
+  description={description}
   schema={schema}
 >
   <div class="container--narrow" style="padding:2rem 0">

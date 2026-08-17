@@ -1,6 +1,9 @@
 ---
 import Base from '../layouts/Base.astro';
 
+const title = 'Kontakt | ticket-rechner.de';
+const description = 'Fragen, Korrekturen oder Feedback zu ticket-rechner.de? So erreichst du die Redaktion.';
+
 const schema = [
   {
     "@context": "https://schema.org",
@@ -14,9 +17,8 @@ const schema = [
 ---
 
 <Base
-  title="Kontakt | ticket-rechner.de"
-  description="Fragen, Korrekturen oder Feedback zu ticket-rechner.de? So erreichst du die Redaktion."
-  canonical="https://ticket-rechner.de/kontakt"
+  title={title}
+  description={description}
   schema={schema}
 >
   <div class="container" style="padding:2rem 0">

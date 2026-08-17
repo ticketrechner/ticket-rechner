@@ -1,6 +1,9 @@
 ---
 import Base from '../layouts/Base.astro';
 
+const title = 'Über uns | ticket-rechner.de';
+const description = 'Wer steckt hinter ticket-rechner.de? Ein unabhängiges Informationsportal rund ums Deutschlandticket — mit kostenlosen Rechnern und aktuellen Ratgebern.';
+
 const schema = [
   {
     "@context": "https://schema.org",
@@ -14,9 +17,8 @@ const schema = [
 ---
 
 <Base
-  title="Über uns | ticket-rechner.de"
-  description="Wer steckt hinter ticket-rechner.de? Ein unabhängiges Informationsportal rund ums Deutschlandticket — mit kostenlosen Rechnern und aktuellen Ratgebern."
-  canonical="https://ticket-rechner.de/ueber-uns"
+  title={title}
+  description={description}
   schema={schema}
 >
   <div class="container" style="padding:2rem 0">
