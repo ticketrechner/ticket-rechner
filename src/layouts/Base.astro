@@ -6,6 +6,7 @@ interface Props {
   description: string;
   schema?: object | object[];
 }
+const { title, description, schema } = Astro.props;
 const pathname = Astro.url.pathname.endsWith('/') && Astro.url.pathname !== '/' ? Astro.url.pathname.slice(0, -1) : Astro.url.pathname;
 const canonical = new URL(pathname, Astro.site);
 ---
