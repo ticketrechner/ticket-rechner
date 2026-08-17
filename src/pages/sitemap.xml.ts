@@ -1,81 +1,70 @@
-/**
- * Fully dynamic XML sitemap generator
- * Auto-discovers static pages via import.meta.glob + dynamic route pages from routes.json
- */
 import routes from '../data/routes.json';
 
 const SITE = 'https://ticket-rechner.de';
-const TODAY = '2026-08-05';
 
-// Auto-discover static page files in src/pages/
-const rawPages = import.meta.glob('/src/pages/**/*.{astro,ts,js}', { eager: true });
+const staticPages = [
+  { url: '/', changefreq: 'weekly', priority: 1.0 },
+  { url: '/kuendigungsfrist-rechner', changefreq: 'weekly', priority: 0.9 },
+  { url: '/lohnt-sich-rechner', changefreq: 'weekly', priority: 0.9 },
+  { url: '/kuendigungsschreiben', changefreq: 'weekly', priority: 0.9 },
+  { url: '/ratgeber', changefreq: 'weekly', priority: 0.8 },
+  { url: '/ratgeber/deutschlandticket-kuendigen', changefreq: 'monthly', priority: 0.8 },
+  { url: '/ratgeber/deutschlandticket-kaufen', changefreq: 'monthly', priority: 0.8 },
+  { url: '/ratgeber/deutschlandticket-verloren', changefreq: 'monthly', priority: 0.8 },
+  { url: '/ratgeber/deutschlandticket-gestohlen', changefreq: 'monthly', priority: 0.7 },
+  { url: '/ratgeber/deutschlandticket-ersatzkarte', changefreq: 'monthly', priority: 0.7 },
+  { url: '/ratgeber/deutschlandticket-gesperrt', changefreq: 'monthly', priority: 0.7 },
+  { url: '/ratgeber/deutschlandticket-app-funktioniert-nicht', changefreq: 'monthly', priority: 0.7 },
+  { url: '/ratgeber/deutschlandticket-erstattung', changefreq: 'monthly', priority: 0.7 },
+  { url: '/ratgeber/deutschlandticket-verlaengern', changefreq: 'monthly', priority: 0.6 },
+  { url: '/ratgeber/deutschlandticket-kundenservice', changefreq: 'monthly', priority: 0.7 },
+  { url: '/ratgeber/deutschlandticket-vs-bahncard', changefreq: 'monthly', priority: 0.7 },
+  { url: '/ratgeber/deutschlandticket-schueler', changefreq: 'monthly', priority: 0.7 },
+  { url: '/ratgeber/deutschlandticket-steuer-absetzen', changefreq: 'monthly', priority: 0.7 },
+  { url: '/ratgeber/deutschlandticket-kosten', changefreq: 'monthly', priority: 0.7 },
+  { url: '/ratgeber/deutschlandticket-gueltigkeit', changefreq: 'monthly', priority: 0.7 },
+  { url: '/ratgeber/deutschlandticket-ausland', changefreq: 'monthly', priority: 0.7 },
+  { url: '/ratgeber/deutschlandticket-ice', changefreq: 'monthly', priority: 0.7 },
+  { url: '/ratgeber/deutschlandticket-studenten', changefreq: 'monthly', priority: 0.7 },
+  { url: '/ratgeber/deutschlandticket-jobticket', changefreq: 'monthly', priority: 0.7 },
+  { url: '/ratgeber/deutschlandticket-kinder', changefreq: 'monthly', priority: 0.6 },
+  { url: '/ratgeber/deutschlandticket-preiserhoehung', changefreq: 'monthly', priority: 0.6 },
+  { url: '/ratgeber/deutschlandticket-mitnahme', changefreq: 'monthly', priority: 0.6 },
+  { url: '/ratgeber/deutschlandticket-erste-klasse', changefreq: 'monthly', priority: 0.5 },
+  { url: '/ratgeber/deutschlandticket-pausieren', changefreq: 'monthly', priority: 0.5 },
+  { url: '/kuendigen/db', changefreq: 'monthly', priority: 0.7 },
+  { url: '/kuendigen/hvv', changefreq: 'monthly', priority: 0.6 },
+  { url: '/kuendigen/rmv', changefreq: 'monthly', priority: 0.6 },
+  { url: '/kuendigen/mvv', changefreq: 'monthly', priority: 0.6 },
+  { url: '/kuendigen/bvg', changefreq: 'monthly', priority: 0.6 },
+  { url: '/ueber-uns', changefreq: 'monthly', priority: 0.4 },
+  { url: '/kontakt', changefreq: 'monthly', priority: 0.4 },
+  { url: '/impressum', changefreq: 'monthly', priority: 0.3 },
+  { url: '/datenschutz', changefreq: 'monthly', priority: 0.3 },
+];
 
-const staticUrls = new Set<string>();
+const today = new Date().toISOString().split('T')[0];
 
-Object.keys(rawPages).forEach((filepath) => {
-  let clean = filepath
-    .replace('/src/pages', '')
-    .replace(/\.(astro|ts|js)$/, '')
-    .replace(/\/index$/, '');
+const routePages = (routes as any[]).map((route) => ({
+  url: `/strecke/${route.slug}`,
+  changefreq: 'monthly',
+  priority: 0.7,
+}));
 
-  if (!clean) clean = '/';
-
-  // Ignore dynamic parameter routes [param] and sitemap itself
-  if (!clean.includes('[') && !clean.includes('sitemap.xml')) {
-    staticUrls.add(clean);
-  }
-});
-
-// Dynamic routes from routes.json
-const routeUrls = (routes as any[]).map((r) => `/strecke/${r.slug}`);
-
-// Provider cancellation guides
-const providerSlugs = ['db', 'hvv', 'rmv', 'mvv', 'bvg'];
-const providerUrls = providerSlugs.map((p) => `/kuendigen/${p}`);
-
-const allUrlPaths = Array.from(new Set([...staticUrls, ...providerUrls, ...routeUrls])).sort();
+const allPages = [...staticPages, ...routePages];
 
 export async function GET() {
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${allUrlPaths
-  .map((urlPath) => {
-    let priority = '0.7';
-    let changefreq = 'monthly';
-
-    if (urlPath === '/') {
-      priority = '1.0';
-      changefreq = 'weekly';
-    } else if (urlPath.includes('-rechner') || urlPath === '/kuendigungsschreiben') {
-      priority = '0.9';
-      changefreq = 'weekly';
-    } else if (urlPath.startsWith('/ratgeber')) {
-      priority = '0.8';
-      changefreq = 'monthly';
-    } else if (urlPath.startsWith('/strecke')) {
-      priority = '0.7';
-      changefreq = 'monthly';
-    } else if (urlPath.startsWith('/kuendigen')) {
-      priority = '0.6';
-      changefreq = 'monthly';
-    } else if (urlPath === '/impressum' || urlPath === '/datenschutz') {
-      priority = '0.3';
-      changefreq = 'yearly';
-    }
-
-    return `  <url>
-    <loc>${SITE}${urlPath}</loc>
-    <lastmod>${TODAY}</lastmod>
-    <changefreq>${changefreq}</changefreq>
-    <priority>${priority}</priority>
-  </url>`;
-  })
-  .join('\n')}
+${allPages.map((p) => `  <url>
+    <loc>${SITE}${p.url}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>${p.changefreq}</changefreq>
+    <priority>${p.priority.toFixed(1)}</priority>
+  </url>`).join('\n')}
 </urlset>`;
 
   return new Response(xml, {
-    headers: {
-      'Content-Type': 'application/xml; charset=utf-8',
-    },
+    headers: { 'Content-Type': 'application/xml; charset=utf-8' },
   });
 }
