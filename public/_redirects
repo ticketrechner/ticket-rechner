@@ -1,3 +1,0 @@
-# Cloudflare Pages 301 Redirects for Canonical Normalization
-http://ticket-rechner.de/* https://ticket-rechner.de/:splat 301
-https://www.ticket-rechner.de/* https://ticket-rechner.de/:splat 301
