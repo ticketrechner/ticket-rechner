@@ -6,10 +6,11 @@ interface Props {
   title: string;
   description: string;
   schema?: object | object[];
+  canonical?: string;
 }
-const { title, description, schema } = Astro.props;
-const pathname = Astro.url.pathname.endsWith('/') && Astro.url.pathname !== '/' ? Astro.url.pathname.slice(0, -1) : Astro.url.pathname;
-const canonical = new URL(pathname, Astro.site);
+const { title, description, schema, canonical: canonicalProp } = Astro.props;
+const path = Astro.url.pathname === '/' ? '/' : (Astro.url.pathname.endsWith('/') ? Astro.url.pathname : `${Astro.url.pathname}/`);
+const canonical = canonicalProp || new URL(path, Astro.site).href;
 ---
 <!doctype html>
 <html lang="de">
@@ -48,10 +49,10 @@ const canonical = new URL(pathname, Astro.site);
       </button>
       <nav id="main-nav" class="main-nav" aria-label="Hauptnavigation">
         <a href="/#streckensuche">Strecken</a>
-        <a href="/kuendigungsfrist-rechner">Kündigungsfrist</a>
-        <a href="/lohnt-sich-rechner">Lohnt es sich?</a>
-        <a href="/kuendigungsschreiben">Kündigungsschreiben</a>
-        <a href="/ratgeber">Ratgeber</a>
+        <a href="/kuendigungsfrist-rechner/">Kündigungsfrist</a>
+        <a href="/lohnt-sich-rechner/">Lohnt es sich?</a>
+        <a href="/kuendigungsschreiben/">Kündigungsschreiben</a>
+        <a href="/ratgeber/">Ratgeber</a>
       </nav>
     </div>
   </header>
@@ -96,10 +97,10 @@ const canonical = new URL(pathname, Astro.site);
     <div class="container">
       <span>© {new Date().getFullYear()} ticket-rechner.de — Unabhängiges Informationsportal. Keine offizielle Seite der Deutschen Bahn oder eines Verkehrsverbunds.</span>
       <span>
-        <a href="/ueber-uns">Über uns</a> ·
-        <a href="/kontakt">Kontakt</a> ·
-        <a href="/impressum">Impressum</a> ·
-        <a href="/datenschutz">Datenschutz</a>
+        <a href="/ueber-uns/">Über uns</a> ·
+        <a href="/kontakt/">Kontakt</a> ·
+        <a href="/impressum/">Impressum</a> ·
+        <a href="/datenschutz/">Datenschutz</a>
       </span>
     </div>
   </footer>

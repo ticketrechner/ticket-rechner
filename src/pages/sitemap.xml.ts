@@ -56,12 +56,15 @@ const allPages = [...staticPages, ...routePages];
 export async function GET() {
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${allPages.map((p) => `  <url>
-    <loc>${SITE}${p.url}</loc>
+${allPages.map((p) => {
+  const formattedUrl = p.url === '/' ? '/' : (p.url.endsWith('/') ? p.url : `${p.url}/`);
+  return `  <url>
+    <loc>${SITE}${formattedUrl}</loc>
     <lastmod>${today}</lastmod>
     <changefreq>${p.changefreq}</changefreq>
     <priority>${p.priority.toFixed(1)}</priority>
-  </url>`).join('\n')}
+  </url>`;
+}).join('\n')}
 </urlset>`;
 
   return new Response(xml, {
