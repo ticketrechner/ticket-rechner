@@ -1,0 +1,281 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://ticket-rechner.de" },
+      { "@type": "ListItem", "position": 2, "name": "Ratgeber", "item": "https://ticket-rechner.de/ratgeber" },
+      { "@type": "ListItem", "position": 3, "name": "Senioren & Rentner", "item": "https://ticket-rechner.de/ratgeber/deutschlandticket-senioren" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Deutschlandticket für Senioren & Rentner 2026: Alle Rabatte im Überblick",
+    "datePublished": "2026-10-04",
+    "dateModified": "2026-10-04",
+    "author": { "@type": "Organization", "name": "ticket-rechner.de", "url": "https://ticket-rechner.de" },
+    "publisher": { "@type": "Organization", "name": "ticket-rechner.de", "url": "https://ticket-rechner.de" },
+    "mainEntityOfPage": "https://ticket-rechner.de/ratgeber/deutschlandticket-senioren",
+    "inLanguage": "de"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Gibt es ein bundesweites Deutschlandticket für Senioren?", "acceptedAnswer": { "@type": "Answer", "text": "Nein. Die Bundesregierung bietet kein bundesweit einheitliches Senioren-Deutschlandticket an. Rabatte existieren ausschließlich auf Landes- oder Kommunalebene." } },
+      { "@type": "Question", "name": "Was kostet das Senioren-Deutschlandticket in Mecklenburg-Vorpommern?", "acceptedAnswer": { "@type": "Answer", "text": "In Mecklenburg-Vorpommern zahlen Senioren ab 65 Jahren 29 € pro Monat für das Deutschlandticket." } },
+      { "@type": "Question", "name": "Ab welchem Alter gilt der Seniorenrabatt beim Deutschlandticket?", "acceptedAnswer": { "@type": "Answer", "text": "Das Mindestalter hängt vom Bundesland ab. Meistens liegt es bei 65 Jahren, in einigen Verbünden bei 60 oder 63 Jahren." } },
+      { "@type": "Question", "name": "Welche Nachweise brauche ich für das Senioren-Deutschlandticket?", "acceptedAnswer": { "@type": "Answer", "text": "Du benötigst einen gültigen Personalausweis als Altersnachweis sowie in manchen Bundesländern einen Nachweis über den Erstwohnsitz." } },
+      { "@type": "Question", "name": "Können Rentner das Deutschlandticket von der Steuer absetzen?", "acceptedAnswer": { "@type": "Answer", "text": "Rentner mit steuerpflichtigem Einkommen können Fahrtkosten für medizinische Behandlungen als außergewöhnliche Belastungen geltend machen." } },
+      { "@type": "Question", "name": "Ist das Senioren-Deutschlandticket im gesamten Bundesgebiet gültig?", "acceptedAnswer": { "@type": "Answer", "text": "Ja. Auch rabattierte Senioren-Deutschlandtickets gelten im gesamten Nah- und Regionalverkehr in ganz Deutschland." } },
+      { "@type": "Question", "name": "Lohnt sich die BahnCard 50 Senioren mehr als das Deutschlandticket?", "acceptedAnswer": { "@type": "Answer", "text": "Für regelmäßige Fahrten im Nahverkehr ist das Deutschlandticket günstiger. Die BahnCard 50 lohnt sich vor allem bei vielen ICE-Fahrten." } },
+      { "@type": "Question", "name": "Kann ich als Senior mit Grundsicherung ein vergünstigtes Ticket erhalten?", "acceptedAnswer": { "@type": "Answer", "text": "Ja. Senioren mit Grundsicherung im Alter können in vielen Städten das vergünstigte Sozialticket nutzen." } },
+      { "@type": "Question", "name": "Gibt es beim Senioren-Deutschlandticket eine Mitnahmeregel für Enkelkinder?", "acceptedAnswer": { "@type": "Answer", "text": "Nein. Eine bundesweite Mitnahmeregelung gibt es nicht. Kinder unter 6 Jahren reisen jedoch grundsätzlich kostenlos mit." } },
+      { "@type": "Question", "name": "Wo beantrage ich das ermäßigte Deutschlandticket für Rentner?", "acceptedAnswer": { "@type": "Answer", "text": "Du beantragst das Ticket direkt beim regionalen Verkehrsverbund deines Bundeslandes oder der beteiligten Verkehrsgesellschaft." } },
+      { "@type": "Question", "name": "Kann ich das Senioren-Deutschlandticket auch als Chipkarte bestellen?", "acceptedAnswer": { "@type": "Answer", "text": "Ja. Die meisten Verkehrsbetriebe bieten das Ticket neben der Smartphone-App auch als physische Plastik-Chipkarte an." } },
+      { "@type": "Question", "name": "Wie sind die Kündigungsfristen für das Senioren-Deutschlandticket?", "acceptedAnswer": { "@type": "Answer", "text": "Es gelten dieselben Fristen wie beim regulären Ticket: Die Kündigung muss bis zum 10. des Monats beim Anbieter eingehen." } }
+    ]
+  }
+];
+---
+<Base
+  title="Deutschlandticket für Senioren 2026: Rabatte & Angebote"
+  description="Deutschlandticket für Senioren und Rentner 2026: Alle regionalen Rabatte, Preise nach Bundesland, Vergleich zur BahnCard und Spartipps."
+  schema={schema}
+>
+  <article class="container--narrow" style="padding:2rem 0 1rem">
+    <p style="color:var(--brand);font-weight:800;letter-spacing:.06em;text-transform:uppercase;font-size:.8rem;margin:0">
+      Ratgeber · Aktualisiert am 04.10.2026
+    </p>
+    <h1>Deutschlandticket für Senioren & Rentner 2026: Alle Rabatte im Überblick</h1>
+    <p style="color:var(--ink-soft)">
+      Ein bundesweit einheitliches Senioren-Deutschlandticket existiert bisher nicht. Etliche Bundesländer und Verkehrsverbünde bieten jedoch eigene, stark vergünstigte Abos für Rentner an. In diesem Ratgeber erfährst du, welche Rabatte in deinem Bundesland gelten, wie du das Ticket beantragst und ob sich das Deutschlandticket im Vergleich zur BahnCard für dich rechnet.
+    </p>
+
+    <div class="card" style="margin:1.5rem 0;background:var(--surface-alt, #faf5ff);padding:1.25rem;border-radius:12px">
+      <strong style="display:block;margin-bottom:.5rem;color:var(--brand)">Inhaltsübersicht</strong>
+      <ul style="margin:0;padding-left:1.2rem;font-size:.95rem">
+        <li><a href="#gibt-es-rabatt">Gibt es ein Senioren-Deutschlandticket?</a></li>
+        <li><a href="#bundeslaender">Regionale Senioren-Rabatte nach Bundesland</a></li>
+        <li><a href="#beantragung">So beantragst du das ermäßigte Deutschlandticket</a></li>
+        <li><a href="#vergleich-bahncard">Deutschlandticket vs. BahnCard für Senioren</a></li>
+        <li><a href="#grundsicherung">Kombination mit Grundsicherung im Alter</a></li>
+        <li><a href="#tipps">Tipps für Senioren im Nahverkehr</a></li>
+        <li><a href="#faq">Häufige Fragen (FAQ)</a></li>
+      </ul>
+    </div>
+
+    <h2 id="gibt-es-rabatt">Gibt es ein Senioren-Deutschlandticket?</h2>
+    <p>
+      Die Bundesregierung bietet kein einheitliches bundesweites Senioren-Deutschlandticket an. Das reguläre Abo kostet bundesweit <strong>63 € pro Monat</strong>. Mehrere Bundesländer bezuschussen das Ticket jedoch aus eigenen Haushaltsmitteln für ältere Mitbürger. 
+    </p>
+    <p>
+      Wichtig dabei: Auch ein regional bezuschusstes Senioren-Ticket gilt ohne Einschränkungen im gesamten Bundesgebiet. Du fährst damit in allen Bussen, Straßenbahnen, U-Bahnen, S-Bahnen sowie Regionalzügen (RE, RB) in ganz Deutschland.
+    </p>
+
+    <h2 id="bundeslaender">Regionale Senioren-Rabatte nach Bundesland</h2>
+    <p>
+      Die Preisunterschiede zwischen den Bundesländern sind erheblich. Die folgende Übersicht zeigt die aktuell bekannten Regelungen (Stand: Oktober 2026, Angaben ohne Gewähr):
+    </p>
+
+    <div class="card" style="overflow-x:auto;margin:1.5rem 0">
+      <table style="width:100%;border-collapse:collapse;font-size:.95rem">
+        <thead>
+          <tr style="border-bottom:2px solid var(--line);text-align:left">
+            <th style="padding:.5rem .75rem">Bundesland / Region</th>
+            <th style="padding:.5rem .75rem">Monatspreis</th>
+            <th style="padding:.5rem .75rem">Alter / Voraussetzung</th>
+            <th style="padding:.5rem .75rem">Beantragung / Anbieter</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem"><strong>Mecklenburg-Vorpommern</strong></td>
+            <td style="padding:.5rem .75rem">29,00 €</td>
+            <td style="padding:.5rem .75rem">Ab 65 Jahren + Erstwohnsitz in MV</td>
+            <td style="padding:.5rem .75rem">VMV / regionale Verkehrsgesellschaften</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem"><strong>Baden-Württemberg</strong></td>
+            <td style="padding:.5rem .75rem">36,50 € (D-Ticket JugendBW / Senioren)</td>
+            <td style="padding:.5rem .75rem">Regional teils ab 65 Jahren</td>
+            <td style="padding:.5rem .75rem">bwegt / VVS / KVV</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem"><strong>Hessen</strong></td>
+            <td style="padding:.5rem .75rem">39,00 € (Seniorenticket Hessen)</td>
+            <td style="padding:.5rem .75rem">Ab 65 Jahren + Wohnsitz Hessen</td>
+            <td style="padding:.5rem .75rem">RMV / NVV</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem"><strong>Berlin / Brandenburg</strong></td>
+            <td style="padding:.5rem .75rem">63,00 € (Teils VBB-Seniorenticket)</td>
+            <td style="padding:.5rem .75rem">Ab 65 Jahren (VBB Abo 52,00 € regional)</td>
+            <td style="padding:.5rem .75rem">BVG / VBB</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem"><strong>Thüringen</strong></td>
+            <td style="padding:.5rem .75rem">29,00 € (Kommunale Zuschüsse)</td>
+            <td style="padding:.5rem .75rem">Regional verschieden (Erfurt, Jena)</td>
+            <td style="padding:.5rem .75rem">VMT / EVAG</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem"><strong>Nordrhein-Westfalen</strong></td>
+            <td style="padding:.5rem .75rem">39,00 € (Sozial/Seniorentarif kommunal)</td>
+            <td style="padding:.5rem .75rem">Je nach Stadt/Verbund (VRR, VRS)</td>
+            <td style="padding:.5rem .75rem">KVB / Bogestra / Rheinbahn</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem"><strong>Bayern</strong></td>
+            <td style="padding:.5rem .75rem">63,00 € (Kein Landesrabatt)</td>
+            <td style="padding:.5rem .75rem">Kommunale Einzelförderung</td>
+            <td style="padding:.5rem .75rem">MVG / VAG Nürnberg</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem"><strong>Hamburg</strong></td>
+            <td style="padding:.5rem .75rem">63,00 € (Sozialrabatt bei Grundsicherung)</td>
+            <td style="padding:.5rem .75rem">Mit Hamburger Sozialkarte ab 19,00 €</td>
+            <td style="padding:.5rem .75rem">HVV / hvv.de</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem"><strong>Sachsen</strong></td>
+            <td style="padding:.5rem .75rem">63,00 € (Städtische Förderungen)</td>
+            <td style="padding:.5rem .75rem">Teils Rabatt über Dresden-Pass</td>
+            <td style="padding:.5rem .75rem">DVB / LVB Leipzig</td>
+          </tr>
+          <tr>
+            <td style="padding:.5rem .75rem"><strong>Saarland</strong></td>
+            <td style="padding:.5rem .75rem">39,00 € (Junge Leute & Senioren regional)</td>
+            <td style="padding:.5rem .75rem">Ab 65 Jahren</td>
+            <td style="padding:.5rem .75rem">saarVV</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="beantragung">So beantragst du das ermäßigte Deutschlandticket als Senior</h2>
+    <p>
+      Um den regionalen Seniorenrabatt zu erhalten, folgst du diesen vier Schritten:
+    </p>
+    <ol style="padding-left:1.2rem;line-height:1.6">
+      <li><strong>Anbieter auswählen:</strong> Wähle das Kundenportal deines lokalen Verkehrsverbunds (z. B. <strong>MVV</strong>, <strong>HVV</strong>, <strong>RMV</strong> oder <strong>VBB</strong>).</li>
+      <li><strong>Altersnachweis vorbereiten:</strong> Halte deinen <strong>Personalausweis</strong> oder deinen <strong>Reisepass</strong> als digitalen Scan oder Fotokopie bereit.</li>
+      <li><strong>Ausgabeform wählen:</strong> Entscheide dich bei der Bestellung zwischen der Smartphone-App des Anbieters oder einer gedruckten <strong>Chipkarte</strong> aus Plastik.</li>
+      <li><strong>Bestellung abschließen:</strong> Schließe das monatliche SEPA-Lastschriftmandat ab. Beachte den Bestellstichtag (meist bis zum 20. des Vormonats für die Zusendung einer Chipkarte).</li>
+    </ol>
+
+    <div class="card" style="background:#fff7ed;border-left:4px solid #f97316;padding:1rem;margin:1.5rem 0">
+      <strong style="color:#c2410c">Wichtiger Sicherheitshinweis:</strong>
+      Kaufe das Deutschlandticket niemals auf unvollständigen Drittanbieter-Websites oder Social-Media-Marktplätzen. Nutze ausschließlich die offiziellen Portale der Verkehrsverbünde oder der <strong>Deutschen Bahn (bahn.de)</strong>.
+    </div>
+
+    <h2 id="vergleich-bahncard">Deutschlandticket vs. BahnCard für Senioren: Was lohnt sich?</h2>
+    <p>
+      Viele Rentner stehen vor der Entscheidung zwischen dem Deutschlandticket und einer Senioren-BahnCard der Deutschen Bahn. Die Auswahl hängt vor allem vom bevorzugten Verkehrsmittel ab.
+    </p>
+
+    <div class="card" style="overflow-x:auto;margin:1.5rem 0">
+      <table style="width:100%;border-collapse:collapse;font-size:.95rem">
+        <thead>
+          <tr style="border-bottom:2px solid var(--line);text-align:left">
+            <th style="padding:.5rem .75rem">Kriterium</th>
+            <th style="padding:.5rem .75rem">Deutschlandticket</th>
+            <th style="padding:.5rem .75rem">Senioren BahnCard 25 / 50</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem"><strong>Monatlicher Preis</strong></td>
+            <td style="padding:.5rem .75rem">63,00 € (oder 29–39 € mit Rabatt)</td>
+            <td style="padding:.5rem .75rem">Ab ca. 38,90 € pro Jahr (BC 25)</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem"><strong>Gültigkeit ICE / IC</strong></td>
+            <td style="padding:.5rem .75rem">Nein (kein Fernverkehr)</td>
+            <td style="padding:.5rem .75rem">Ja (25 % oder 50 % Rabatt)</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem"><strong>Nahverkehr (Bus/Tram)</strong></td>
+            <td style="padding:.5rem .75rem">Inklusive (Flatrate)</td>
+            <td style="padding:.5rem .75rem">Keine Flatrate (nur City-Ticket)</td>
+          </tr>
+          <tr>
+            <td style="padding:.5rem .75rem"><strong>Ideal geeignet für</strong></td>
+            <td style="padding:.5rem .75rem">Alltagsfahrten, Regionale Ausflüge</td>
+            <td style="padding:.5rem .75rem">Lange Strecken mit dem ICE</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>
+      Lies hier unseren ausführlichen Vergleich: <a href="/ratgeber/deutschlandticket-vs-bahncard">Deutschlandticket vs. BahnCard</a>. Wenn du die monatlichen Kosten genauer analysieren willst, hilft dir unser Überblick zu den <a href="/ratgeber/deutschlandticket-kosten">Deutschlandticket-Kosten 2026</a>.
+    </p>
+
+    <h2 id="grundsicherung">Deutschlandticket mit Grundsicherung oder Bürgergeld kombinieren</h2>
+    <p>
+      Senioren, die im Alter Grundsicherung nach dem SGB XII beziehen, haben in zahlreichen Kommunen Anspruch auf ein stark reduziertes <strong>Sozialticket</strong>. In Städten wie Berlin, Hamburg oder Köln sinkt der Preis dadurch auf unter 20 € monatlich. Mehr Details zur Beantragung findest du in unserem Ratgeber zum <a href="/ratgeber/deutschlandticket-sozialticket">Deutschlandticket Sozialticket</a>.
+    </p>
+
+    <h2 id="tipps">Tipps für Senioren mit dem Deutschlandticket</h2>
+    <ul style="padding-left:1.2rem;line-height:1.6">
+      <li><strong>Sperrzeiten beachten:</strong> Manche Verbundtickets gelten erst ab 9:00 Uhr morgens. Prüfe die Bedingungen deines Anbieters.</li>
+      <li><strong>Chipkarte bevorzugen:</strong> Wenn du kein Smartphone nutzt, wähle bei der Bestellung die Plastik-Chipkarte.</li>
+      <li><strong>Sitzplatz im Fernverkehr separat buchen:</strong> Das Deutschlandticket enthält keine Sitzplatzreservierung.</li>
+      <li><strong>Ausweis immer mitführen:</strong> Das Ticket ist personengebunden. Zeige bei Kontrollen stets deinen Lichtbildausweis vor.</li>
+      <li><strong>Mitnahmeregeln für Enkel prüfen:</strong> Kinder unter 6 Jahren fahren bundesweit kostenlos mit. Ältere Enkel benötigen eigene Fahrkarten.</li>
+      <li><strong>Fahrradkarte buchen:</strong> Die Mitnahme von E-Bikes oder Fahrrädern erfordert meist ein zusätzliches Fahrradticket.</li>
+      <li><strong>Kündigungsfrist beachten:</strong> Wenn du das Abo nicht mehr benötigst, kündige bis zum 10. des Monats über unsere <a href="/ratgeber/deutschlandticket-kuendigen">Kündigungsanleitung</a>.</li>
+      <li><strong>Hotline nutzen:</strong> Bei Fragen zum Abo hilft der telefonische Kundenservice der Deutschen Bahn unter <strong>030 2970</strong>.</li>
+    </ul>
+
+    <h2 id="faq">Häufige Fragen (FAQ)</h2>
+    <h3>Gibt es ein bundesweites Deutschlandticket für Senioren?</h3>
+    <p>Nein. Die Bundesregierung bietet kein bundesweit einheitliches Senioren-Deutschlandticket an. Rabatte existieren ausschließlich auf Landes- oder Kommunalebene.</p>
+
+    <h3>Was kostet das Senioren-Deutschlandticket in Mecklenburg-Vorpommern?</h3>
+    <p>In Mecklenburg-Vorpommern zahlen Senioren ab 65 Jahren 29 € pro Monat für das Deutschlandticket.</p>
+
+    <h3>Ab welchem Alter gilt der Seniorenrabatt beim Deutschlandticket?</h3>
+    <p>Das Mindestalter hängt vom Bundesland ab. Meistens liegt es bei 65 Jahren, in einigen Verbünden bei 60 oder 63 Jahren.</p>
+
+    <h3>Welche Nachweise brauche ich für das Senioren-Deutschlandticket?</h3>
+    <p>Du benötigst einen gültigen Personalausweis als Altersnachweis sowie in manchen Bundesländern einen Nachweis über den Erstwohnsitz.</p>
+
+    <h3>Können Rentner das Deutschlandticket von der Steuer absetzen?</h3>
+    <p>Rentner mit steuerpflichtigem Einkommen können Fahrtkosten für medizinische Behandlungen als außergewöhnliche Belastungen geltend machen.</p>
+
+    <h3>Ist das Senioren-Deutschlandticket im gesamten Bundesgebiet gültig?</h3>
+    <p>Ja. Auch rabattierte Senioren-Deutschlandtickets gelten im gesamten Nah- und Regionalverkehr in ganz Deutschland.</p>
+
+    <h3>Lohnt sich die BahnCard 50 Senioren mehr als das Deutschlandticket?</h3>
+    <p>Für regelmäßige Fahrten im Nahverkehr ist das Deutschlandticket günstiger. Die BahnCard 50 lohnt sich vor allem bei vielen ICE-Fahrten.</p>
+
+    <h3>Kann ich als Senior mit Grundsicherung ein vergünstigtes Ticket erhalten?</h3>
+    <p>Ja. Senioren mit Grundsicherung im Alter können in vielen Städten das vergünstigte Sozialticket nutzen.</p>
+
+    <h3>Gibt es beim Senioren-Deutschlandticket eine Mitnahmeregel für Enkelkinder?</h3>
+    <p>Nein. Eine bundesweite Mitnahmeregelung gibt es nicht. Kinder unter 6 Jahren reisen jedoch grundsätzlich kostenlos mit.</p>
+
+    <h3>Wo beantrage ich das ermäßigte Deutschlandticket für Rentner?</h3>
+    <p>Du beantragst das Ticket direkt beim regionalen Verkehrsverbund deines Bundeslandes oder der beteiligten Verkehrsgesellschaft.</p>
+
+    <h3>Kann ich das Senioren-Deutschlandticket auch als Chipkarte bestellen?</h3>
+    <p>Ja. Die meisten Verkehrsbetriebe bieten das Ticket neben der Smartphone-App auch als physische Plastik-Chipkarte an.</p>
+
+    <h3>Wie sind die Kündigungsfristen für das Senioren-Deutschlandticket?</h3>
+    <p>Es gelten dieselben Fristen wie beim regulären Ticket: Die Kündigung muss bis zum 10. des Monats beim Anbieter eingehen.</p>
+
+    <h2 style="margin-top:2rem">Fazit und Empfehlung</h2>
+    <p>
+      Prüfe vor dem Kauf des Deutschlandtickets unbedingt die Förderprogramme deines Bundeslandes oder deiner Stadt. Senioren in Mecklenburg-Vorpommern, Hessen oder Baden-Württemberg sparen monatlich bis zu 34 € gegenüber dem Normalpreis. Wenn du dich vorab über den Kauf informieren möchtest, lies unsere Anleitung zum <a href="/ratgeber/deutschlandticket-kaufen">Deutschlandticket kaufen</a>.
+    </p>
+
+    <p style="color:var(--ink-soft);font-size:.9rem;margin-top:2.5rem">
+      Redaktion ticket-rechner.de · Quellen: Verkehrsministerien der Länder, Deutsche Bahn AG. Alle Angaben ohne Gewähr.
+    </p>
+  </article>
+</Base>

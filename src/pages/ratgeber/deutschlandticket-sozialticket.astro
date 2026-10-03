@@ -1,0 +1,240 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://ticket-rechner.de" },
+      { "@type": "ListItem", "position": 2, "name": "Ratgeber", "item": "https://ticket-rechner.de/ratgeber" },
+      { "@type": "ListItem", "position": 3, "name": "Sozialticket", "item": "https://ticket-rechner.de/ratgeber/deutschlandticket-sozialticket" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Deutschlandticket Sozialticket 2026: Preise, Anspruch & Antrag",
+    "datePublished": "2026-10-04",
+    "dateModified": "2026-10-04",
+    "author": { "@type": "Organization", "name": "ticket-rechner.de", "url": "https://ticket-rechner.de" },
+    "publisher": { "@type": "Organization", "name": "ticket-rechner.de", "url": "https://ticket-rechner.de" },
+    "mainEntityOfPage": "https://ticket-rechner.de/ratgeber/deutschlandticket-sozialticket",
+    "inLanguage": "de"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Gibt es ein bundesweites Deutschlandticket Sozialticket?", "acceptedAnswer": { "@type": "Answer", "text": "Nein. Ein bundesweit einheitliches Sozialticket existiert nicht. Ermäßigungen werden von einzelnen Bundesländern und Kommunen angeboten." } },
+      { "@type": "Question", "name": "Wer ist für das Deutschlandticket Sozialticket berechtigt?", "acceptedAnswer": { "@type": "Answer", "text": "Berechtigt sind Empfänger von Bürgergeld, Grundsicherung im Alter, Wohngeld sowie Leistungen nach dem Asylbewerberleistungsgesetz." } },
+      { "@type": "Question", "name": "Wie viel kostet das Sozialticket 2026?", "acceptedAnswer": { "@type": "Answer", "text": "Die Preise variieren stark: In Hessen und NRW kostet es meist 39 €, in Berlin 19 € und in Hessen für Bürgergeld-Empfänger teils 31 €." } },
+      { "@type": "Question", "name": "Welche Nachweise benötige ich für die Beantragung?", "acceptedAnswer": { "@type": "Answer", "text": "Du benötigst einen aktuellen Leistungsbescheid (z. B. Jobcenter-Bescheid) oder einen Berechtigungsnachweis (Kundenpass/Sozialpass)." } },
+      { "@type": "Question", "name": "Wo beantrage ich das ermäßigte Sozialticket?", "acceptedAnswer": { "@type": "Answer", "text": "Das Ticket beantragst du online oder im Kundencenter deines örtlichen Verkehrsverbunds unter Vorlage deines Berechtigungsnachweises." } },
+      { "@type": "Question", "name": "Gilt das Sozialticket im gesamten Bundesgebiet?", "acceptedAnswer": { "@type": "Answer", "text": "Ja. Das Deutschlandticket Sozialticket unterscheidet sich in der Gültigkeit nicht vom regulären Ticket und gilt bundesweit im Nahverkehr." } },
+      { "@type": "Question", "name": "Was passiert, wenn mein Leistungsanspruch mitten im Monat endet?", "acceptedAnswer": { "@type": "Answer", "text": "Ein bereits bezahltes Monats-Sozialticket bleibt bis zum Monatsende gültig. Für den Folgemonat musst du dem Anbieter einen neuen Nachweis vorlegen oder auf den regulären Preis wechseln." } },
+      { "@type": "Question", "name": "Kann ich das Sozialticket als Plastikkarte bestellen?", "acceptedAnswer": { "@type": "Answer", "text": "Ja. Nahezu alle Verkehrsverbünde bieten das Sozialticket wahlweise als Smartphone-Ticket oder als Chipkarte an." } },
+      { "@type": "Question", "name": "Wird der Fahrpreis vom Jobcenter direkt übernommen?", "acceptedAnswer": { "@type": "Answer", "text": "Nein. Die Kosten musst du selbst aus dem Regelbedarf bzw. aus der Auszahlung deines Leistungsbescheids begleichen." } },
+      { "@type": "Question", "name": "Gibt es beim Sozialticket Zusatzrabatte für Schüler und Kinder?", "acceptedAnswer": { "@type": "Answer", "text": "Viele Städte bieten für Kinder von Leistungsempfängern gesonderte Schülertickets an, die teils komplett kostenlos sind." } },
+      { "@type": "Question", "name": "Kann ich das Sozialticket monatlich kündigen?", "acceptedAnswer": { "@type": "Answer", "text": "Ja. Das Sozialticket ist ein monatlich kündbares Abonnement mit der Standard-Kündigungsfrist bis zum 10. des Monats." } },
+      { "@type": "Question", "name": "Ist das Sozialticket übertragbar an Familienmitglieder?", "acceptedAnswer": { "@type": "Answer", "text": "Nein. Das Ticket ist strikt personengebunden und gilt nur in Kombination mit deinem Lichtbildausweis." } }
+    ]
+  }
+];
+---
+<Base
+  title="Deutschlandticket Sozialticket 2026: Preise & Antrag"
+  description="Deutschlandticket Sozialticket 2026: Bürgergeld, Wohngeld & Grundsicherung. Alle Preise nach Bundesland, Nachweise und Schritt-für-Schritt-Antrag."
+  schema={schema}
+>
+  <article class="container--narrow" style="padding:2rem 0 1rem">
+    <p style="color:var(--brand);font-weight:800;letter-spacing:.06em;text-transform:uppercase;font-size:.8rem;margin:0">
+      Ratgeber · Aktualisiert am 04.10.2026
+    </p>
+    <h1>Deutschlandticket Sozialticket 2026: Preise, Anspruch & Antrag</h1>
+    <p style="color:var(--ink-soft)">
+      Empfänger von Sozialleistungen können das Deutschlandticket in zahlreichen Bundesländern und Städten deutlich günstiger erwerben. Statt der regulären 63 € pro Monat zahlen Bürgergeld- und Grundsicherungsbezieher je nach Region zwischen 19 € und 39 €. Hier erfährst du, wer anspruchsberechtigt ist, welche Dokumente du brauchst und wie du das Sozialticket beantragst.
+    </p>
+
+    <div class="card" style="margin:1.5rem 0;background:var(--surface-alt, #faf5ff);padding:1.25rem;border-radius:12px">
+      <strong style="display:block;margin-bottom:.5rem;color:var(--brand)">Inhaltsübersicht</strong>
+      <ul style="margin:0;padding-left:1.2rem;font-size:.95rem">
+        <li><a href="#was-ist-das">Was ist das Deutschlandticket Sozialticket?</a></li>
+        <li><a href="#anspruch">Wer hat Anspruch auf das Sozialticket?</a></li>
+        <li><a href="#preise">Sozialticket-Preise nach Stadt und Bundesland</a></li>
+        <li><a href="#antrag-schritte">So beantragst du das Sozialticket — Schritt für Schritt</a></li>
+        <li><a href="#dokumente">Welche Dokumente brauchst du?</a></li>
+        <li><a href="#kaufkanal">Sozialticket online oder vor Ort kaufen?</a></li>
+        <li><a href="#anspruchsverlust">Was passiert, wenn du den Anspruch verlierst?</a></li>
+        <li><a href="#tipps">Tipps zum Sozialticket</a></li>
+        <li><a href="#faq">Häufige Fragen (FAQ)</a></li>
+      </ul>
+    </div>
+
+    <h2 id="was-ist-das">Was ist das Deutschlandticket Sozialticket?</h2>
+    <p>
+      Das Deutschlandticket Sozialticket (auch als Sozialtarif oder ermäßigtes Deutschlandticket bezeichnet) ist eine regionale Variante des bundesweiten Nahverkehrstickets. Es bietet exakt denselben Leistungsumfang wie das Standard-Ticket für 63 €: unbegrenzte Fahrten im Nah- und Regionalverkehr in ganz Deutschland. 
+    </p>
+    <p>
+      Die Preisdifferenz übernimmt das jeweilige Bundesland oder die Kommune als Sozialleistung.
+    </p>
+
+    <h2 id="anspruch">Wer hat Anspruch auf das Sozialticket?</h2>
+    <p>
+      Die Berechtigung richtet sich nach dem Erhalt staatlicher Transferleistungen. Folgende Personengruppen haben in den teilnehmenden Regionen Anspruch:
+    </p>
+    <ul style="padding-left:1.2rem;line-height:1.6">
+      <li>Empfänger von <strong>Bürgergeld</strong> (SGB II)</li>
+      <li>Bezieher von <strong>Grundsicherung im Alter und bei Erwerbsminderung</strong> (SGB XII)</li>
+      <li>Empfänger von <strong>Wohngeld</strong> nach dem Wohngeldgesetz (WoGG)</li>
+      <li>Leistungsberechtigte nach dem <strong>Asylbewerberleistungsgesetz</strong> (AsylbLG)</li>
+      <li>In manchen Städten: Inhaber des örtlichen <strong>Sozialpasses</strong> oder <strong>Familienpasses</strong></li>
+    </ul>
+
+    <h2 id="preise">Sozialticket-Preise nach Stadt und Bundesland</h2>
+    <p>
+      Da kein einheitliches Bundesgesetz existiert, unterscheiden sich die Preise je nach Wohnort (Stand: Oktober 2026, Angaben ohne Gewähr):
+    </p>
+
+    <div class="card" style="overflow-x:auto;margin:1.5rem 0">
+      <table style="width:100%;border-collapse:collapse;font-size:.95rem">
+        <thead>
+          <tr style="border-bottom:2px solid var(--line);text-align:left">
+            <th style="padding:.5rem .75rem">Region / Stadt</th>
+            <th style="padding:.5rem .75rem">Monatspreis</th>
+            <th style="padding:.5rem .75rem">Berechtigte Gruppen</th>
+            <th style="padding:.5rem .75rem">Zuständiger Verbund</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem"><strong>Berlin</strong></td>
+            <td style="padding:.5rem .75rem">19,00 € (Sozialticket Berlin)</td>
+            <td style="padding:.5rem .75rem">Bürgergeld, Grundsicherung, Wohngeld</td>
+            <td style="padding:.5rem .75rem">BVG / S-Bahn Berlin</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem"><strong>Hessen</strong></td>
+            <td style="padding:.5rem .75rem">31,00 € (Hessenpass Mobil)</td>
+            <td style="padding:.5rem .75rem">Bürgergeld, Wohngeld, AsylbLG</td>
+            <td style="padding:.5rem .75rem">RMV / NVV / VRN</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem"><strong>Nordrhein-Westfalen</strong></td>
+            <td style="padding:.5rem .75rem">39,00 € (Deutschlandticket Sozial NRW)</td>
+            <td style="padding:.5rem .75rem">Bürgergeld, Grundsicherung, Wohngeld</td>
+            <td style="padding:.5rem .75rem">VRR / VRS / WestfalenTarif</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem"><strong>Hamburg</strong></td>
+            <td style="padding:.5rem .75rem">19,00 € (Sozialrabatt HVV)</td>
+            <td style="padding:.5rem .75rem">Empfänger von Sozialleistungen in HH</td>
+            <td style="padding:.5rem .75rem">HVV (hvv.de)</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem"><strong>Niedersachsen (z. B. Hannover)</strong></td>
+            <td style="padding:.5rem .75rem">30,40 € (Region-S-Karte)</td>
+            <td style="padding:.5rem .75rem">Leistungsbezieher Region Hannover</td>
+            <td style="padding:.5rem .75rem">ÜSTRA / GVH</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem"><strong>Bremen</strong></td>
+            <td style="padding:.5rem .75rem">39,00 € (Stadtticket D-Ticket)</td>
+            <td style="padding:.5rem .75rem">Inhaber des Bremer Stadtpasses</td>
+            <td style="padding:.5rem .75rem">BSAG / VBN</td>
+          </tr>
+          <tr>
+            <td style="padding:.5rem .75rem"><strong>Baden-Württemberg (z. B. Stuttgart)</strong></td>
+            <td style="padding:.5rem .75rem">39,00 € (Bonuscard-Ticket)</td>
+            <td style="padding:.5rem .75rem">Inhaber der Bonuscard + Kultur</td>
+            <td style="padding:.5rem .75rem">SSB / VVS</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="antrag-schritte">So beantragst du das Sozialticket — Schritt für Schritt</h2>
+    <ol style="padding-left:1.2rem;line-height:1.6">
+      <li><strong>Berechtigungsnachweis anfordern:</strong> Frage bei deinem Jobcenter, Sozialamt oder der Wohngeldbehörde nach der Kundenkarte, dem Hessenpass Mobil oder dem örtlichen Sozialpass.</li>
+      <li><strong>Verkehrsbetrieb auswählen:</strong> Gehe auf die Website des regionalen Verkehrsverbunds (z. B. <strong>bvg.de</strong>, <strong>hvv.de</strong> oder <strong>rmv.de</strong>).</li>
+      <li><strong>Nachweis hochladen:</strong> Gib deine persönliche Nachweis-Nummer ein oder lade den Bescheid im Bestellprozess hoch.</li>
+      <li><strong>Zahlung festlegen:</strong> Richte ein SEPA-Lastschriftmandat ein. Der vergünstigte Betrag wird monatlich abgebucht.</li>
+    </ol>
+
+    <h2 id="dokumente">Welche Dokumente brauchst du?</h2>
+    <ul style="padding-left:1.2rem;line-height:1.6">
+      <li>Aktueller <strong>Bewilligungsbescheid</strong> vom Jobcenter oder Sozialamt</li>
+      <li>Gültiger <strong>Personalausweis</strong> oder Reisepass</li>
+      <li>Spezieller <strong>Berechtigungsnachweis</strong> (z. B. Berechtigtenkarte Berlin, Hessenpass Mobil)</li>
+      <li>Gültige <strong>Bankverbindung (IBAN)</strong> für die monatliche Abbuchung</li>
+    </ul>
+
+    <h2 id="kaufkanal">Sozialticket online oder vor Ort kaufen?</h2>
+    <p>
+      Die Beantragung über das Kundenportal des Verkehrsverbunds ist der schnellste Weg. Wenn du keinen Internetzugang hast, gehe persönlich in ein Kundencenter deiner örtlichen Verkehrsgesellschaft. Nimm sämtliche Originaldokumente und deinen Ausweis mit.
+    </p>
+
+    <h2 id="anspruchsverlust">Was passiert, wenn du den Anspruch verlierst?</h2>
+    <p>
+      Sobald dein Leistungsbescheid abläuft oder du eine Arbeitsstelle antrittst, verfällt der Anspruch auf die Sozialermäßigung. Du musst dem Verkehrsbetrieb umgehend den Ablauf mitteilen. Dein Abonnement wird andernfalls automatisch auf den regulären Preis von 63 € umgestellt oder gekündigt.
+    </p>
+
+    <h2 id="tipps">Tipps zum Sozialticket</h2>
+    <ul style="padding-left:1.2rem;line-height:1.6">
+      <li><strong>Fristen für Nachweise beachten:</strong> Reiche Folgebescheide rechtzeitig vor Ablauf des alten Bescheids beim Verkehrsverbund ein.</li>
+      <li><strong>Jobticket prüfen:</strong> Falls du eine Arbeit aufnimmst, frage nach dem <a href="/ratgeber/deutschlandticket-jobticket">Deutschlandticket als Jobticket</a> für 44,10 €.</li>
+      <li><strong>Schülertickets für Kinder:</strong> Prüfe gesonderte Ermäßigungen in unserem Ratgeber zum <a href="/ratgeber/deutschlandticket-schueler">Deutschlandticket für Schüler</a>.</li>
+      <li><strong>Seniorenangebote vergleichen:</strong> Ältere Menschen finden Infos im Artikel <a href="/ratgeber/deutschlandticket-senioren">Deutschlandticket für Senioren</a>.</li>
+      <li><strong>Kontenabdeckung sichern:</strong> Achte darauf, dass dein Konto am Abbuchungstag gedeckt ist, um Rücklastschriftgebühren zu vermeiden.</li>
+      <li><strong>Chipkarte wählen:</strong> Bevorzuge eine Plastik-Chipkarte, falls dein Smartphone einen schwachen Akku hat.</li>
+      <li><strong>Kündigungsfrist beachten:</strong> Die Kündigung muss stets bis zum 10. des Monats vorliegen. Details stehen in unserer <a href="/ratgeber/deutschlandticket-kuendigen">Kündigungsanleitung</a>.</li>
+      <li><strong>Allgemeine Preise vergleichen:</strong> Alle Preiskategorien findest du in der Übersicht zu den <a href="/ratgeber/deutschlandticket-kosten">Deutschlandticket-Kosten</a>.</li>
+    </ul>
+
+    <h2 id="faq">Häufige Fragen (FAQ)</h2>
+    <h3>Gibt es ein bundesweites Deutschlandticket Sozialticket?</h3>
+    <p>Nein. Ein bundesweit einheitliches Sozialticket existiert nicht. Ermäßigungen werden von einzelnen Bundesländern und Kommunen angeboten.</p>
+
+    <h3>Wer ist für das Deutschlandticket Sozialticket berechtigt?</h3>
+    <p>Berechtigt sind Empfänger von Bürgergeld, Grundsicherung im Alter, Wohngeld sowie Leistungen nach dem Asylbewerberleistungsgesetz.</p>
+
+    <h3>Wie viel kostet das Sozialticket 2026?</h3>
+    <p>Die Preise variieren stark: In Hessen und NRW kostet es meist 39 €, in Berlin 19 € und in Hessen für Bürgergeld-Empfänger teils 31 €.</p>
+
+    <h3>Welche Nachweise benötige ich für die Beantragung?</h3>
+    <p>Du benötigst einen aktuellen Leistungsbescheid (z. B. Jobcenter-Bescheid) oder einen Berechtigungsnachweis (Kundenpass/Sozialpass).</p>
+
+    <h3>Wo beantrage ich das ermäßigte Sozialticket?</h3>
+    <p>Das Ticket beantragst du online oder im Kundencenter deines örtlichen Verkehrsverbunds unter Vorlage deines Berechtigungsnachweises.</p>
+
+    <h3>Gilt das Sozialticket im gesamten Bundesgebiet?</h3>
+    <p>Ja. Das Deutschlandticket Sozialticket unterscheidet sich in der Gültigkeit nicht vom regulären Ticket und gilt bundesweit im Nahverkehr.</p>
+
+    <h3>Was passiert, wenn mein Leistungsanspruch mitten im Monat endet?</h3>
+    <p>Ein bereits bezahltes Monats-Sozialticket bleibt bis zum Monatsende gültig. Für den Folgemonat musst du dem Anbieter einen neuen Nachweis vorlegen oder auf den regulären Preis wechseln.</p>
+
+    <h3>Kann ich das Sozialticket als Plastikkarte bestellen?</h3>
+    <p>Ja. Nahezu alle Verkehrsverbünde bieten das Sozialticket wahlweise als Smartphone-Ticket oder als Chipkarte an.</p>
+
+    <h3>Wird der Fahrpreis vom Jobcenter direkt übernommen?</h3>
+    <p>Nein. Die Kosten musst du selbst aus dem Regelbedarf bzw. aus der Auszahlung deines Leistungsbescheids begleichen.</p>
+
+    <h3>Gibt es beim Sozialticket Zusatzrabatte für Schüler und Kinder?</h3>
+    <p>Viele Städte bieten für Kinder von Leistungsempfängern gesonderte Schülertickets an, die teils komplett kostenlos sind.</p>
+
+    <h3>Kann ich das Sozialticket monatlich kündigen?</h3>
+    <p>Ja. Das Sozialticket ist ein monatlich kündbares Abonnement mit der Standard-Kündigungsfrist bis zum 10. des Monats.</p>
+
+    <h3>Ist das Sozialticket übertragbar an Familienmitglieder?</h3>
+    <p>Nein. Das Ticket ist strikt personengebunden und gilt nur in Kombination mit deinem Lichtbildausweis.</p>
+
+    <h2 style="margin-top:2rem">Fazit und Empfehlung</h2>
+    <p>
+      Das Deutschlandticket Sozialticket entlastet Leistungsbezieher spürbar. Informiere dich bei deinem zuständigen Amt nach deinem persönlichen Berechtigungsnachweis. Wenn du das Ticket beantragst, beachte alle Details zum regulären Kauf im Ratgeber <a href="/ratgeber/deutschlandticket-kaufen">Deutschlandticket kaufen</a>.
+    </p>
+
+    <p style="color:var(--ink-soft);font-size:.9rem;margin-top:2.5rem">
+      Redaktion ticket-rechner.de · Quellen: Jobcenter, Bundesagentur für Arbeit, Landesverkehrsministerien. Alle Angaben ohne Gewähr.
+    </p>
+  </article>
+</Base>

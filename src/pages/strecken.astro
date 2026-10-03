@@ -1,0 +1,41 @@
+---
+import Base from '../layouts/Base.astro';
+import RouteFinder from '../components/RouteFinder.astro';
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://ticket-rechner.de/" },
+      { "@type": "ListItem", "position": 2, "name": "Strecken", "item": "https://ticket-rechner.de/strecken" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Deutschlandticket Streckensuche",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Web",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+    "url": "https://ticket-rechner.de/strecken"
+  }
+];
+---
+
+<Base
+  title="Deutschlandticket Strecken: Alle Nahverkehr-Verbindungen auf einen Blick"
+  description="Finde deine Verbindung mit dem Deutschlandticket. Fahrzeit, Direktverbindungen, Umstiege und Bahnhof-Infos — für alle Nahverkehrsstrecken in Deutschland."
+  schema={schema}
+>
+  <div class="container" style="padding:2rem 0 0">
+    <h1>Deutschlandticket Strecken</h1>
+    <p style="color:var(--ink-soft);max-width:44rem;margin-top:0">
+      Finde deine Nahverkehr-Verbindung mit dem Deutschlandticket. Gib Start- und Zielort ein,
+      um Fahrzeit, Direktverbindungen und Umstiege zu sehen.
+    </p>
+  </div>
+  <div class="container" style="padding:1rem 0 2rem">
+    <RouteFinder />
+  </div>
+</Base>

@@ -1,0 +1,199 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://ticket-rechner.de" },
+      { "@type": "ListItem", "position": 2, "name": "Ratgeber", "item": "https://ticket-rechner.de/ratgeber" },
+      { "@type": "ListItem", "position": 3, "name": "Übertragbarkeit", "item": "https://ticket-rechner.de/ratgeber/deutschlandticket-uebertragbar" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Ist das Deutschlandticket übertragbar? Alle Regeln zur Weitergabe",
+    "datePublished": "2026-10-04",
+    "dateModified": "2026-10-04",
+    "author": { "@type": "Organization", "name": "ticket-rechner.de", "url": "https://ticket-rechner.de" },
+    "publisher": { "@type": "Organization", "name": "ticket-rechner.de", "url": "https://ticket-rechner.de" },
+    "mainEntityOfPage": "https://ticket-rechner.de/ratgeber/deutschlandticket-uebertragbar",
+    "inLanguage": "de"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Ist das Deutschlandticket an andere Personen übertragbar?", "acceptedAnswer": { "@type": "Answer", "text": "Nein. Das Deutschlandticket ist strikt personengebunden und darf unter keinen Umständen an Freunde oder Familienmitglieder weitergegeben werden." } },
+      { "@type": "Question", "name": "Was passiert, wenn jemand anderes mein Ticket benutzt?", "acceptedAnswer": { "@type": "Answer", "text": "Die Person muss ein Erhöhtes Beförderungsentgelt von 60 € zahlen. Zudem drohen die Fristlose Kündigung des Abos und eine Strafanzeige wegen Erschleichung von Leistungen." } },
+      { "@type": "Question", "name": "Kann ich den Namen auf meinem Deutschlandticket ändern lassen?", "acceptedAnswer": { "@type": "Answer", "text": "Nein. Eine Übertragung auf eine andere Person ist ausgeschlossen. Eine Namensänderung ist nur bei rechtlicher Namensänderung (z. B. nach einer Hochzeit) zulässig." } },
+      { "@type": "Question", "name": "Darf mein Ehepartner oder Kind mit meinem Ticket fahren?", "acceptedAnswer": { "@type": "Answer", "text": "Nein. Auch Familienangehörige dürfen das Ticket nicht nutzen. Jede Person benötigt eine eigene Fahrkarte." } },
+      { "@type": "Question", "name": "Werden bei Ticketkontrollen immer Ausweise kontrolliert?", "acceptedAnswer": { "@type": "Answer", "text": "Ja. Das Kontrollpersonal vergleicht den Namen auf dem Ticket mit deinem amtlichen Lichtbildausweis." } },
+      { "@type": "Question", "name": "Gibt es sonstige übertragbare Monatstickets im Nahverkehr?", "acceptedAnswer": { "@type": "Answer", "text": "Einige regionale Verkehrsverbünde bieten übertragbare Monatskarten an. Diese sind jedoch meist deutlich teurer und gelten nur regional." } },
+      { "@type": "Question", "name": "Darf ich mein Handy mit dem Ticket meiner Frau ausleihen?", "acceptedAnswer": { "@type": "Answer", "text": "Nein. Das Vorzeigen eines fremden Digital-Tickets gilt bei einer Kontrolle als Schwarzfahren ohne gültigen Fahrschein." } },
+      { "@type": "Question", "name": "Kann man Kinder unter 6 Jahren auf dem Ticket mitnehmen?", "acceptedAnswer": { "@type": "Answer", "text": "Kinder unter 6 Jahren reisen im gesamten Nahverkehr kostenlos mit. Sie benötigen kein eigenes Deutschlandticket." } },
+      { "@type": "Question", "name": "Kann ich das Abo stornieren und für mein Kind neu abschließen?", "acceptedAnswer": { "@type": "Answer", "text": "Ja. Du kannst dein Abo bis zum 10. des Monats kündigen und ein neues Abo auf den Namen deines Kindes bestellen." } },
+      { "@type": "Question", "name": "Reicht ein Foto des Personalausweises auf dem Smartphone?", "acceptedAnswer": { "@type": "Answer", "text": "Nein. Kontrolleure akzeptieren in der Regel nur amtliche Ausweisdokumente im Original (Personalausweis, Reisepass, Führerschein)." } }
+    ]
+  }
+];
+---
+<Base
+  title="Deutschlandticket übertragbar? Alle Weitergabe-Regeln 2026"
+  description="Ist das Deutschlandticket übertragbar? Alle Regeln zur Weitergabe an Freunde oder Familie, Strafen bei Weitergabe und Ausweiskontrollen."
+  schema={schema}
+>
+  <article class="container--narrow" style="padding:2rem 0 1rem">
+    <p style="color:var(--brand);font-weight:800;letter-spacing:.06em;text-transform:uppercase;font-size:.8rem;margin:0">
+      Ratgeber · Aktualisiert am 04.10.2026
+    </p>
+    <h1>Ist das Deutschlandticket übertragbar? Alle Regeln zur Weitergabe</h1>
+    <p style="color:var(--ink-soft)">
+      Nein, das Deutschlandticket ist nicht übertragbar. Es handelt sich um eine persönliche, personengebundene Fahrkarte. Du darfst das Ticket weder an Freunde noch an Familienmitglieder verleihen oder weitergeben. In diesem Artikel erfährst du, wie Kontrollen ablaufen, welche Strafen drohen und welche Alternativen für Familien existieren.
+    </p>
+
+    <div class="card" style="margin:1.5rem 0;background:var(--surface-alt, #faf5ff);padding:1.25rem;border-radius:12px">
+      <strong style="display:block;margin-bottom:.5rem;color:var(--brand)">Inhaltsübersicht</strong>
+      <ul style="margin:0;padding-left:1.2rem;font-size:.95rem">
+        <li><a href="#warum-nicht">Warum ist das Deutschlandticket nicht übertragbar?</a></li>
+        <li><a href="#strafen">Was passiert, wenn eine andere Person dein Ticket nutzt?</a></li>
+        <li><a href="#kontrolle">Kontrolle: Wie wird die Identität geprüft?</a></li>
+        <li><a href="#namensaenderung">Name ändern oder Ticket umschreiben — geht das?</a></li>
+        <li><a href="#familie">Kann mein Partner oder Kind mein Ticket mitbenutzen?</a></li>
+        <li><a href="#alternativen">Alternativen: Zweites Ticket für Familienmitglieder</a></li>
+        <li><a href="#tipps">Tipps zur Ticketnutzung</a></li>
+        <li><a href="#faq">Häufige Fragen (FAQ)</a></li>
+      </ul>
+    </div>
+
+    <h2 id="warum-nicht">Warum ist das Deutschlandticket nicht übertragbar?</h2>
+    <p>
+      Das Deutschlandticket wird mit Steuergeldern von Bund und Ländern stark subventioniert. Der günstige Festpreis von <strong>63 € pro Monat</strong> gilt daher ausschließlich für eine namentlich registrierte Einzelperson. Eine Weitergabe würde zu Einnahmeausfällen bei den Verkehrsunternehmen führen und widerspricht den Tarifbestimmungen.
+    </p>
+
+    <h2 id="strafen">Was passiert, wenn eine andere Person dein Ticket nutzt?</h2>
+    <p>
+      Die Weitergabe eines Deutschlandtickets gilt tariflich und rechtlich als Fahren ohne gültigen Fahrschein. Das hat für beide Beteiligten Konsequenzen:
+    </p>
+
+    <div class="card" style="background:#fff7ed;border-left:4px solid #f97316;padding:1rem;margin:1.5rem 0">
+      <strong style="color:#c2410c">Strafen und Rechtsfolgen bei unberechtigter Weitergabe:</strong>
+      <ul style="margin:.5rem 0 0;padding-left:1.2rem">
+        <li><strong>Erhöhtes Beförderungsentgelt (EBE):</strong> Die fahrende Person zahlt sofort <strong>60 € Strafe</strong>.</li>
+        <li><strong>Ticket-Einzug:</strong> Die Chipkarte wird vom Kontrollpersonal unverzüglich beschlagnahmt oder das digitale Ticket in der App gesperrt.</li>
+        <li><strong>Fristlose Kündigung:</strong> Der Verkehrsbetrieb kündigt deinen Abo-Vertrag wegen Vertragsbruchs.</li>
+        <li><strong>Strafanzeige:</strong> In Wiederholungsfällen stellt das Verkehrsunternehmen Strafanzeige wegen Erschleichung von Leistungen (§ 265a StGB).</li>
+      </ul>
+    </div>
+
+    <h2 id="kontrolle">Kontrolle: Wie wird die Identität geprüft?</h2>
+    <p>
+      Das Kontrollpersonal im Zug und Bus prüft zwei Elemente bei jeder Ticketkontrolle:
+    </p>
+    <ul style="padding-left:1.2rem;line-height:1.6">
+      <li><strong>Fahrschein:</strong> Der Barcode auf der <strong>Chipkarte</strong> oder das Display-Ticket in der <strong>Smartphone-App</strong> (z. B. DB Navigator).</li>
+      <li><strong>Lichtbildausweis:</strong> Ein amtliches Dokument wie <strong>Personalausweis</strong>, <strong>Reisepass</strong> oder <strong>Führerschein</strong> im Original.</li>
+    </ul>
+
+    <h2 id="namensaenderung">Name ändern oder Ticket umschreiben — geht das?</h2>
+    <p>
+      Ein bestehendes Abo kann nicht auf eine andere Person umgeschrieben werden. Namensänderungen sind nur gestattet, wenn sich dein eigener Name rechtlich geändert hat (z. B. nach einer Eheschließung). In diesem Fall reichst du eine Kopie der Heiratsurkunde beim Kundenservice deines Verkehrsbetriebs ein.
+    </p>
+
+    <h2 id="familie">Kann mein Partner oder Kind mein Ticket mitbenutzen?</h2>
+    <p>
+      Nein. Auch nahe Familienangehörige benötigen ein eigenes Ticket. Ausnahmen gelten lediglich für Kleinkinder:
+    </p>
+    <p>
+      Kinder <strong>unter 6 Jahren</strong> fahren im gesamten Nahverkehr kostenlos mit und benötigen kein eigenes Ticket. Weitere Details zu Altersgrenzen findest du in unserem Ratgeber <a href="/ratgeber/deutschlandticket-kinder">Deutschlandticket für Kinder</a> sowie zur <a href="/ratgeber/deutschlandticket-mitnahme">Deutschlandticket Mitnahme von Personen und Fahrrädern</a>.
+    </p>
+
+    <h2 id="alternativen">Alternativen: Zweites Ticket für Familienmitglieder</h2>
+    <p>
+      Wenn weitere Familienmitglieder regelmäßig mit dem ÖPNV fahren, stehen verschiedene Optionen zur Verfügung:
+    </p>
+
+    <div class="card" style="overflow-x:auto;margin:1.5rem 0">
+      <table style="width:100%;border-collapse:collapse;font-size:.95rem">
+        <thead>
+          <tr style="border-bottom:2px solid var(--line);text-align:left">
+            <th style="padding:.5rem .75rem">Zielgruppe</th>
+            <th style="padding:.5rem .75rem">Option</th>
+            <th style="padding:.5rem .75rem">Preis / Vorteil</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem"><strong>Schüler & Jugendliche</strong></td>
+            <td style="padding:.5rem .75rem">Vergünstigtes Schülerticket</td>
+            <td style="padding:.5rem .75rem">Je nach Bundesland 0 € bis 36,50 €</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem"><strong>Arbeitnehmer / Partner</strong></td>
+            <td style="padding:.5rem .75rem">Deutschlandticket als Jobticket</td>
+            <td style="padding:.5rem .75rem">Max. 44,10 € über den Arbeitgeber</td>
+          </tr>
+          <tr>
+            <td style="padding:.5rem .75rem"><strong>Studierende</strong></td>
+            <td style="padding:.5rem .75rem">Semesterticket D-Ticket</td>
+            <td style="padding:.5rem .75rem">34,80 € bis 37,80 € im Semesterbeitrag</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="tipps">Tipps zur Ticketnutzung</h2>
+    <ul style="padding-left:1.2rem;line-height:1.6">
+      <li><strong>Ausweis immer dabeihaben:</strong> Trage deinen Personalausweis stets bei deinen Fahrten im Geldbeutel.</li>
+      <li><strong>Keine Screenshots teilen:</strong> Weitergegebene Screenshots des QR-Codes führen bei der Kontrolle zur Sperrung.</li>
+      <li><strong>Keine Handys verleihen:</strong> Verleihe dein Smartphone nicht mitsamt aktiver Ticket-App an Dritte.</li>
+      <li><strong>Verluste sofort melden:</strong> Bei Verlust der Chipkarte informiere den Anbieter gemäß unserem Artikel <a href="/ratgeber/deutschlandticket-verloren">Deutschlandticket verloren</a>.</li>
+      <li><strong>Gültigkeit prüfen:</strong> Alle Regeln zum Geltungsbereich stehen im Ratgeber zur <a href="/ratgeber/deutschlandticket-gueltigkeit">Gültigkeit des Deutschlandtickets</a>.</li>
+      <li><strong>Ticket rechtzeitig buchen:</strong> Schließe für jedes Familienmitglied ein eigenes Abo ab. Details zum Kauf findest du unter <a href="/ratgeber/deutschlandticket-kaufen">Deutschlandticket kaufen</a>.</li>
+      <li><strong>Abo rechtzeitig stoppen:</strong> Benötigt ein Familienmitglied das Ticket nicht mehr, kündige bis zum 10. des Monats.</li>
+      <li><strong>Seniorenangebote nutzen:</strong> Ältere Angehörige profitieren teils von Sonderpreisen laut <a href="/ratgeber/deutschlandticket-senioren">Deutschlandticket für Senioren</a>.</li>
+    </ul>
+
+    <h2 id="faq">Häufige Fragen (FAQ)</h2>
+    <h3>Ist das Deutschlandticket an andere Personen übertragbar?</h3>
+    <p>Nein. Das Deutschlandticket ist strikt personengebunden und darf unter keinen Umständen an Freunde oder Familienmitglieder weitergegeben werden.</p>
+
+    <h3>Was passiert, wenn jemand anderes mein Ticket benutzt?</h3>
+    <p>Die Person muss ein Erhöhtes Beförderungsentgelt von 60 € zahlen. Zudem drohen die Fristlose Kündigung des Abos und eine Strafanzeige wegen Erschleichung von Leistungen.</p>
+
+    <h3>Kann ich den Namen auf meinem Deutschlandticket ändern lassen?</h3>
+    <p>Nein. Eine Übertragung auf eine andere Person ist ausgeschlossen. Eine Namensänderung ist nur bei rechtlicher Namensänderung (z. B. nach einer Hochzeit) zulässig.</p>
+
+    <h3>Darf mein Ehepartner oder Kind mit meinem Ticket fahren?</h3>
+    <p>Nein. Auch Familienangehörige dürfen das Ticket nicht nutzen. Jede Person benötigt eine eigene Fahrkarte.</p>
+
+    <h3>Werden bei Ticketkontrollen immer Ausweise kontrolliert?</h3>
+    <p>Ja. Das Kontrollpersonal vergleicht den Namen auf dem Ticket mit deinem amtlichen Lichtbildausweis.</p>
+
+    <h3>Gibt es sonstige übertragbare Monatstickets im Nahverkehr?</h3>
+    <p>Einige regionale Verkehrsverbünde bieten übertragbare Monatskarten an. Diese sind jedoch meist deutlich teurer und gelten nur regional.</p>
+
+    <h3>Darf ich mein Handy mit dem Ticket meiner Frau ausleihen?</h3>
+    <p>Nein. Das Vorzeigen eines fremden Digital-Tickets gilt bei einer Kontrolle als Schwarzfahren ohne gültigen Fahrschein.</p>
+
+    <h3>Kann man Kinder unter 6 Jahren auf dem Ticket mitnehmen?</h3>
+    <p>Kinder unter 6 Jahren reisen im gesamten Nahverkehr kostenlos mit. Sie benötigen kein eigenes Deutschlandticket.</p>
+
+    <h3>Kann ich das Abo stornieren und für mein Kind neu abschließen?</h3>
+    <p>Ja. Du kannst dein Abo bis zum 10. des Monats kündigen und ein neues Abo auf den Namen deines Kindes bestellen.</p>
+
+    <h3>Reicht ein Foto des Personalausweises auf dem Smartphone?</h3>
+    <p>Nein. Kontrolleure akzeptieren in der Regel nur amtliche Ausweisdokumente im Original (Personalausweis, Reisepass, Führerschein).</p>
+
+    <h2 style="margin-top:2rem">Fazit und Empfehlung</h2>
+    <p>
+      Gehe bei der Ticketnutzung kein Risiko ein. Die unberechtigte Weitergabe führt zu hohen Strafen und zum Verlust des Abos. Bestelle für Familienmitglieder ein eigenes Ticket. Bei Fragen zur Kündigung nutze unsere Anleitung zum <a href="/ratgeber/deutschlandticket-kuendigen">Deutschlandticket kündigen</a>.
+    </p>
+
+    <p style="color:var(--ink-soft);font-size:.9rem;margin-top:2.5rem">
+      Redaktion ticket-rechner.de · Quellen: Tarifbestimmungen der Deutschen Bahn AG und der Verkehrsverbünde. Alle Angaben ohne Gewähr.
+    </p>
+  </article>
+</Base>

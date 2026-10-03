@@ -1,0 +1,250 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://ticket-rechner.de" },
+      { "@type": "ListItem", "position": 2, "name": "Ratgeber", "item": "https://ticket-rechner.de/ratgeber" },
+      { "@type": "ListItem", "position": 3, "name": "Fähren, Nachtzug & Sonderverkehr", "item": "https://ticket-rechner.de/ratgeber/deutschlandticket-faehre-nachtzug" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Deutschlandticket auf Fähren, im Nachtzug & Sonderverkehr 2026",
+    "datePublished": "2026-10-04",
+    "dateModified": "2026-10-04",
+    "author": { "@type": "Organization", "name": "ticket-rechner.de", "url": "https://ticket-rechner.de" },
+    "publisher": { "@type": "Organization", "name": "ticket-rechner.de", "url": "https://ticket-rechner.de" },
+    "mainEntityOfPage": "https://ticket-rechner.de/ratgeber/deutschlandticket-faehre-nachtzug",
+    "inLanguage": "de"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Gilt das Deutschlandticket auf Hafen- und Flussfähren?", "acceptedAnswer": { "@type": "Answer", "text": "Ja. Auf ÖPNV-integrierten Fähren (z. B. HADAG-Fähren in Hamburg, BVG-Fähren in Berlin, Fördefähren in Kiel) gilt das Deutschlandticket ohne Aufpreis." } },
+      { "@type": "Question", "name": "Kann ich mit dem Deutschlandticket in ÖBB Nightjet Nachtzügen fahren?", "acceptedAnswer": { "@type": "Answer", "text": "Nein. Fernverkehrs-Nachtzüge wie der ÖBB Nightjet oder EuroNight sind von der Nutzung mit dem Deutschlandticket ausgeschlossen." } },
+      { "@type": "Question", "name": "Gilt das Deutschlandticket in nächtlichen Regionalzügen?", "acceptedAnswer": { "@type": "Answer", "text": "Ja. Sämtliche Nachtzüge des Nahverkehrs (RE, RB, S-Bahn) sind im Deutschlandticket vollständig enthalten." } },
+      { "@type": "Question", "name": "Ist FlixTrain oder FlixBus im Deutschlandticket enthalten?", "acceptedAnswer": { "@type": "Answer", "text": "Nein. FlixTrain und FlixBus sind private Fernverkehrsanbieter und gehören nicht zum öffentlichen Personennahverkehr." } },
+      { "@type": "Question", "name": "Gilt das Deutschlandticket auf der Autofähre Konstanz-Meersburg?", "acceptedAnswer": { "@type": "Answer", "text": "Nein. Die Bodensee-Autofähre Konstanz-Meersburg gehört nicht zum ÖPNV-Tarif und erfordert ein separates Ticket." } },
+      { "@type": "Question", "name": "Kann man Seilbahnen oder Bergbahnen mit dem Deutschlandticket nutzen?", "acceptedAnswer": { "@type": "Answer", "text": "Integrierte städtische Seilbahnen (z. B. Seilbahn Koblenz, Zahnradbahn Stuttgart) sind enthalten. Touristische Bergbahnen in den Alpen sind meist ausgeschlossen." } },
+      { "@type": "Question", "name": "Gilt das Deutschlandticket auf Schmalspurbahnen wie der Harzer Schmalspurbahn?", "acceptedAnswer": { "@type": "Answer", "text": "Auf manchen Schmalspurbahnen gilt das Ticket mit einem Dampfzuschlag (z. B. Fichtelbergbahn, Molli). Auf der Brockenstrecke der HSB gilt es nicht." } },
+      { "@type": "Question", "name": "Sind Nachtbusse in Großstädten mit dem Deutschlandticket nutzbar?", "acceptedAnswer": { "@type": "Answer", "text": "Ja. Reguläre Nachtbuslinien im städtischen Nahverkehr sind ohne Zusatzkosten enthalten." } },
+      { "@type": "Question", "name": "Benötige ich auf Fähren ein extra Fahrradticket?", "acceptedAnswer": { "@type": "Answer", "text": "Das hängt vom Verkehrsverbund ab. Auf den HADAG-Fähren in Hamburg ist die Fahrradmitnahme kostenlos, in Kiel kostenpflichtig." } },
+      { "@type": "Question", "name": "Gilt das Deutschlandticket auf Fähren zu den Nordseeinseln?", "acceptedAnswer": { "@type": "Answer", "text": "Auf den meisten Inselfähren (z. B. nach Norderney, Juist, Sylt-Fähre) gilt das Ticket nicht. Ausnahmen bilden einzelne Inselbahnen mit Nahverkehrsstatus." } }
+    ]
+  }
+];
+---
+<Base
+  title="Deutschlandticket Fähren, Nachtzug & Sonderverkehr 2026"
+  description="Gilt das Deutschlandticket auf Fähren, im Nachtzug, FlixTrain oder Seilbahnen? Alle Regeln zu Schiffen, Sonderverkehr & Nachtbussen im Überblick."
+  schema={schema}
+>
+  <article class="container--narrow" style="padding:2rem 0 1rem">
+    <p style="color:var(--brand);font-weight:800;letter-spacing:.06em;text-transform:uppercase;font-size:.8rem;margin:0">
+      Ratgeber · Aktualisiert am 04.10.2026
+    </p>
+    <h1>Deutschlandticket auf Fähren, im Nachtzug & Sonderverkehr 2026</h1>
+    <p style="color:var(--ink-soft)">
+      Grundsätzlich gilt das Deutschlandticket im gesamten öffentlichen Personennahverkehr (ÖPNV). Doch wie sieht es auf Wasserwegen, in Nachtzügen, bei Seilbahnen oder Fernbussen aus? In diesem Ratgeber erfährst du im Detail, welche Fähren, Nachtverbindungen und Sonderverkehrsmittel inklusive sind und wo du ein Zusatzticket buchen musst.
+    </p>
+
+    <div class="card" style="margin:1.5rem 0;background:var(--surface-alt, #faf5ff);padding:1.25rem;border-radius:12px">
+      <strong style="display:block;margin-bottom:.5rem;color:var(--brand)">Inhaltsübersicht</strong>
+      <ul style="margin:0;padding-left:1.2rem;font-size:.95rem">
+        <li><a href="#faehren">Gilt das Deutschlandticket auf Fähren?</a></li>
+        <li><a href="#nachtzug">Deutschlandticket im Nachtzug und Nachtbus</a></li>
+        <li><a href="#flixtrain">FlixTrain und FlixBus: Nicht inklusive</a></li>
+        <li><a href="#sonderverkehr">Sonderverkehr: Historische Bahnen & Schmalspurbahnen</a></li>
+        <li><a href="#seilbahnen">Seilbahnen und Bergbahnen</a></li>
+        <li><a href="#uebersicht">Übersicht: Was gilt, was nicht?</a></li>
+        <li><a href="#tipps">Tipps für Reisen mit Sonderverkehrsmitteln</a></li>
+        <li><a href="#faq">Häufige Fragen (FAQ)</a></li>
+      </ul>
+    </div>
+
+    <h2 id="faehren">Gilt das Deutschlandticket auf Fähren?</h2>
+    <p>
+      Das Deutschlandticket gilt auf allen Fähren, die Teil des regulären öffentlichen Nahverkehrs sind. Touristische Schifffahrten und Inselfähren sind hingegen meist ausgeschlossen:
+    </p>
+
+    <div class="card" style="overflow-x:auto;margin:1.5rem 0">
+      <table style="width:100%;border-collapse:collapse;font-size:.95rem">
+        <thead>
+          <tr style="border-bottom:2px solid var(--line);text-align:left">
+            <th style="padding:.5rem .75rem">Fährverbindung / Gewässer</th>
+            <th style="padding:.5rem .75rem">Region / Verbund</th>
+            <th style="padding:.5rem .75rem">Gültig?</th>
+            <th style="padding:.5rem .75rem">Hinweis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem"><strong>HADAG-Hafenfähren Hamburg</strong></td>
+            <td style="padding:.5rem .75rem">Hamburg (HVV)</td>
+            <td style="padding:.5rem .75rem">Ja ✅</td>
+            <td style="padding:.5rem .75rem">Inklusive Linie 62 nach Finkenwerder</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem"><strong>BVG-Fähren Berlin (F10 - F24)</strong></td>
+            <td style="padding:.5rem .75rem">Berlin (VBB)</td>
+            <td style="padding:.5rem .75rem">Ja ✅</td>
+            <td style="padding:.5rem .75rem">Inklusive Wannsee-Fähre (F10)</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem"><strong>Kieler Fördefähren (SFK)</strong></td>
+            <td style="padding:.5rem .75rem">Kiel (VRK)</td>
+            <td style="padding:.5rem .75rem">Ja ✅</td>
+            <td style="padding:.5rem .75rem">Gilt auf allen Linien der SFK</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem"><strong>Rheinfähren (z. B. Köln, Bonn)</strong></td>
+            <td style="padding:.5rem .75rem">NRW (VRS)</td>
+            <td style="padding:.5rem .75rem">Teilweise ⚠️</td>
+            <td style="padding:.5rem .75rem">Nur ÖPNV-Fähren, keine Privaten</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem"><strong>Bodensee Autofähre Konstanz-Meersburg</strong></td>
+            <td style="padding:.5rem .75rem">Baden-Württemberg</td>
+            <td style="padding:.5rem .75rem">Nein ❌</td>
+            <td style="padding:.5rem .75rem">Privattarif der Stadtwerke Konstanz</td>
+          </tr>
+          <tr>
+            <td style="padding:.5rem .75rem"><strong>Nordsee-Inselfähren (Norderney, Sylt)</strong></td>
+            <td style="padding:.5rem .75rem">Niedersachsen / SH</td>
+            <td style="padding:.5rem .75rem">Nein ❌</td>
+            <td style="padding:.5rem .75rem">Eigenständige Fährgesellschaften</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="nachtzug">Deutschlandticket im Nachtzug und Nachtbus</h2>
+    <p>
+      Bei Nachtverbindungen unterscheidet der Tarif strikt zwischen Nahverkehr und Fernverkehr:
+    </p>
+    <ul style="padding-left:1.2rem;line-height:1.6">
+      <li><strong>Regionalzüge im Nachtverkehr (RE, RB, S-Bahn):</strong> Vollständig im Deutschlandticket enthalten. Auch durchgehende Nacht-S-Bahnen am Wochenende sind abgedeckt.</li>
+      <li><strong>ÖBB Nightjet & EuroNight:</strong> <strong>Nicht enthalten!</strong> Diese Züge zählen zum Fernverkehr.</li>
+      <li><strong>Nachtbusse in Städten:</strong> Städtische Nachtbuslinien sind ohne Zusatzgebühr nutzbar (ausgenommen einzelne private Discobusse mit Sonderzuschlag).</li>
+    </ul>
+
+    <h2 id="flixtrain">FlixTrain und FlixBus: Nicht inklusive</h2>
+    <p>
+      Die Züge von <strong>FlixTrain</strong> sowie die Fernbusse von <strong>FlixBus</strong> sind private Fernverkehrsangebote. Das Deutschlandticket wird in diesen Fahrmitteln <strong>nicht akzeptiert</strong>. Gleiches gilt für Fernverkehrszüge der Deutschen Bahn (ICE, IC, EC). Einzelne Ausnahmen im Fernverkehr beschreiben wir im Ratgeber <a href="/ratgeber/deutschlandticket-ice">Gilt das Deutschlandticket im ICE?</a>.
+    </p>
+
+    <h2 id="sonderverkehr">Sonderverkehr: Historische Bahnen & Schmalspurbahnen</h2>
+    <p>
+      Bei nostalgischen Schmalspurbahnen unterscheidet sich die Anerkennung je nach Betreiber:
+    </p>
+    <ul style="padding-left:1.2rem;line-height:1.6">
+      <li><strong>Dampfeisenbahn Molli (Bad Doberan):</strong> Das Deutschlandticket wird anerkannt, erfordert jedoch einen Historik-Zuschlag.</li>
+      <li><strong>Fichtelbergbahn & Lößnitzgrundbahn:</strong> Anerkannt mit Historik-Zuschlag (ca. 8 €).</li>
+      <li><strong>Harzer Schmalspurbahnen (HSB):</strong> Auf der Brockenstrecke <strong>nicht gültig</strong>. Auf dem restlichen Netz der HSB gilt es teils als Streckenfahrschein.</li>
+    </ul>
+
+    <h2 id="seilbahnen">Seilbahnen und Bergbahnen</h2>
+    <p>
+      Urban genutzte Seilbahnen sind im Ticket enthalten. Dazu zählen etwa die <strong>Zahnradbahn Stuttgart</strong> ("Zacke"), die <strong>Standseilbahn Dresden</strong> sowie die <strong>Seilbahn Koblenz</strong> (im Rahmen des lokalen ÖPNV-Tarifs). Reine Ausflugs-Seilbahnen in den Alpen (z. B. Zugspitzbahn) sind ausgeschlossen.
+    </p>
+
+    <h2 id="uebersicht">Übersicht: Was gilt, was nicht?</h2>
+
+    <div class="card" style="overflow-x:auto;margin:1.5rem 0">
+      <table style="width:100%;border-collapse:collapse;font-size:.95rem">
+        <thead>
+          <tr style="border-bottom:2px solid var(--line);text-align:left">
+            <th style="padding:.5rem .75rem">Verkehrsmittel</th>
+            <th style="padding:.5rem .75rem">Inklusive?</th>
+            <th style="padding:.5rem .75rem">Typische Beispiele</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem"><strong>Stadt- & Hafenfähren</strong></td>
+            <td style="padding:.5rem .75rem">Ja ✅</td>
+            <td style="padding:.5rem .75rem">HADAG Hamburg, BVG Berlin, SFK Kiel</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem"><strong>Nacht-Regionalzüge</strong></td>
+            <td style="padding:.5rem .75rem">Ja ✅</td>
+            <td style="padding:.5rem .75rem">RE- und RB-Nachtlinien am Wochenende</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem"><strong>ÖBB Nightjet / EuroNight</strong></td>
+            <td style="padding:.5rem .75rem">Nein ❌</td>
+            <td style="padding:.5rem .75rem">Nachtreisezüge im Fernverkehr</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--line)">
+            <td style="padding:.5rem .75rem"><strong>FlixTrain / FlixBus</strong></td>
+            <td style="padding:.5rem .75rem">Nein ❌</td>
+            <td style="padding:.5rem .75rem">Grüne Fernzüge und Fernbusse</td>
+          </tr>
+          <tr>
+            <td style="padding:.5rem .75rem"><strong>Städtische Seilbahnen</strong></td>
+            <td style="padding:.5rem .75rem">Ja ✅</td>
+            <td style="padding:.5rem .75rem">Stuttgart Zahnradbahn, Koblenz Seilbahn</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="tipps">Tipps für Reisen mit Sonderverkehrsmitteln</h2>
+    <ul style="padding-left:1.2rem;line-height:1.6">
+      <li><strong>Fahrradmitnahme prüfen:</strong> Auf Fähren gelten oft eigene Fahrradregeln (siehe <a href="/ratgeber/deutschlandticket-mitnahme">Deutschlandticket Mitnahme</a>).</li>
+      <li><strong>Auslandsstrecken beachten:</strong> Wohin du über die Grenze fahren kannst, zeigt der Ratgeber <a href="/ratgeber/deutschlandticket-ausland">Deutschlandticket im Ausland</a>.</li>
+      <li><strong>Allgemeine Regeln nachschlagen:</strong> Einen Gesamtüberblick bietet unser Artikel <a href="/ratgeber/deutschlandticket-gueltigkeit">Geltungsbereich des Deutschlandtickets</a>.</li>
+      <li><strong>Tarifbestimmungen vor Ort lesen:</strong> Prüfe vor der Fahrt mit Historikbahnen die Zuschlagspflicht.</li>
+      <li><strong>Kosten vergleichen:</strong> Alle Ticketpreise findest du unter <a href="/ratgeber/deutschlandticket-kosten">Was kostet das Deutschlandticket?</a>.</li>
+      <li><strong>Abo rechtzeitig kündigen:</strong> Zum Stornieren kündige bis zum 10. des Monats mit der <a href="/ratgeber/deutschlandticket-kuendigen">Kündigungsanleitung</a>.</li>
+      <li><strong>Kaufwege nutzen:</strong> Bestelltipps gibt es unter <a href="/ratgeber/deutschlandticket-kaufen">Deutschlandticket kaufen</a>.</li>
+      <li><strong>Ausweis mitführen:</strong> Auch auf Fähren musst du dich ausweisen können.</li>
+    </ul>
+
+    <h2 id="faq">Häufige Fragen (FAQ)</h2>
+    <h3>Gilt das Deutschlandticket auf Hafen- und Flussfähren?</h3>
+    <p>Ja. Auf ÖPNV-integrierten Fähren (z. B. HADAG-Fähren in Hamburg, BVG-Fähren in Berlin, Fördefähren in Kiel) gilt das Deutschlandticket ohne Aufpreis.</p>
+
+    <h3>Kann ich mit dem Deutschlandticket in ÖBB Nightjet Nachtzügen fahren?</h3>
+    <p>Nein. Fernverkehrs-Nachtzüge wie der ÖBB Nightjet oder EuroNight sind von der Nutzung mit dem Deutschlandticket ausgeschlossen.</p>
+
+    <h3>Gilt das Deutschlandticket in nächtlichen Regionalzügen?</h3>
+    <p>Ja. Sämtliche Nachtzüge des Nahverkehrs (RE, RB, S-Bahn) sind im Deutschlandticket vollständig enthalten.</p>
+
+    <h3>Ist FlixTrain oder FlixBus im Deutschlandticket enthalten?</h3>
+    <p>Nein. FlixTrain und FlixBus sind private Fernverkehrsanbieter und gehören nicht zum öffentlichen Personennahverkehr.</p>
+
+    <h3>Gilt das Deutschlandticket auf der Autofähre Konstanz-Meersburg?</h3>
+    <p>Nein. Die Bodensee-Autofähre Konstanz-Meersburg gehört nicht zum ÖPNV-Tarif und erfordert ein separates Ticket.</p>
+
+    <h3>Kann man Seilbahnen oder Bergbahnen mit dem Deutschlandticket nutzen?</h3>
+    <p>Integrierte städtische Seilbahnen (z. B. Seilbahn Koblenz, Zahnradbahn Stuttgart) sind enthalten. Touristische Bergbahnen in den Alpen sind meist ausgeschlossen.</p>
+
+    <h3>Gilt das Deutschlandticket auf Schmalspurbahnen wie der Harzer Schmalspurbahn?</h3>
+    <p>Auf manchen Schmalspurbahnen gilt das Ticket mit einem Dampfzuschlag (z. B. Fichtelbergbahn, Molli). Auf der Brockenstrecke der HSB gilt es nicht.</p>
+
+    <h3>Sind Nachtbusse in Großstädten mit dem Deutschlandticket nutzbar?</h3>
+    <p>Ja. Reguläre Nachtbuslinien im städtischen Nahverkehr sind ohne Zusatzkosten enthalten.</p>
+
+    <h3>Benötige ich auf Fähren ein extra Fahrradticket?</h3>
+    <p>Das hängt vom Verkehrsverbund ab. Auf den HADAG-Fähren in Hamburg ist die Fahrradmitnahme kostenlos, in Kiel kostenpflichtig.</p>
+
+    <h3>Gilt das Deutschlandticket auf Fähren zu den Nordseeinseln?</h3>
+    <p>Auf den meisten Inselfähren (z. B. nach Norderney, Juist, Sylt-Fähre) gilt das Ticket nicht. Ausnahmen bilden einzelne Inselbahnen mit Nahverkehrsstatus.</p>
+
+    <h2 style="margin-top:2rem">Fazit und Empfehlung</h2>
+    <p>
+      Nutze das Deutschlandticket bedenkenlos auf städtischen Fluss- und Hafenfähren sowie in allen Regionalzügen der Nachtstunden. Weiche für Fernstrecken nicht auf FlixTrain aus, sondern nutze durchgehende RE- und RB-Verbindungen. Wenn du wissen willst, ob sich das Ticket für dich rechnet, teste den <a href="/lohnt-sich-rechner">Lohnt-sich-Rechner</a>.
+    </p>
+
+    <p style="color:var(--ink-soft);font-size:.9rem;margin-top:2.5rem">
+      Redaktion ticket-rechner.de · Quellen: HADAG, BVG, DB Regio AG. Alle Angaben ohne Gewähr.
+    </p>
+  </article>
+</Base>

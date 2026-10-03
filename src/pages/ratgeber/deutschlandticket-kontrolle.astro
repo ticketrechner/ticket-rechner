@@ -1,0 +1,174 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://ticket-rechner.de" },
+      { "@type": "ListItem", "position": 2, "name": "Ratgeber", "item": "https://ticket-rechner.de/ratgeber" },
+      { "@type": "ListItem", "position": 3, "name": "Ticketkontrolle", "item": "https://ticket-rechner.de/ratgeber/deutschlandticket-kontrolle" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Deutschlandticket Kontrolle 2026: Was passiert ohne Ticket?",
+    "datePublished": "2026-10-04",
+    "dateModified": "2026-10-04",
+    "author": { "@type": "Organization", "name": "ticket-rechner.de", "url": "https://ticket-rechner.de" },
+    "publisher": { "@type": "Organization", "name": "ticket-rechner.de", "url": "https://ticket-rechner.de" },
+    "mainEntityOfPage": "https://ticket-rechner.de/ratgeber/deutschlandticket-kontrolle",
+    "inLanguage": "de"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Was muss ich bei einer Deutschlandticket-Kontrolle vorzeigen?", "acceptedAnswer": { "@type": "Answer", "text": "Du musst den QR-Code in deiner App oder deine Chipkarte zusammen mit einem amtlichen Lichtbildausweis (Personalausweis, Pass, Führerschein) vorzeigen." } },
+      { "@type": "Question", "name": "Wie hoch ist die Strafe, wenn ich mein Deutschlandticket vergessen habe?", "acceptedAnswer": { "@type": "Answer", "text": "Du erhältst zunächst eine Zahlungsaufforderung über 60 € (Erhöhtes Beförderungsentgelt). Zeigst du dein Ticket innerhalb von 14 Tagen vor, sinkt der Betrag auf eine Bearbeitungsgebühr von 7 € bis 10 €." } },
+      { "@type": "Question", "name": "Was passiert, wenn der Handy-Akku bei der Kontrolle leer ist?", "acceptedAnswer": { "@type": "Answer", "text": "Der Kontrolleur stellt eine Fahrpreisnacherhebung aus. Du musst das gültige Abo innerhalb der 14-Tage-Frist im Kundencenter nachweisen." } },
+      { "@type": "Question", "name": "Wo kann ich mein vergessenes Deutschlandticket nachreichen?", "acceptedAnswer": { "@type": "Answer", "text": "Du reichst das Ticket im Kundenportal des ausstellenden Verkehrsunternehmens online ein oder gehst in deren Kundencenter." } },
+      { "@type": "Question", "name": "Reicht ein Screenshot des Deutschlandticket QR-Codes?", "acceptedAnswer": { "@type": "Answer", "text": "Nein. Screenshots werden bei Ticketkontrollen grundsätzlich nicht anerkannt, da sie sich kopieren lassen. Das Ticket muss direkt in der App aufgerufen werden." } },
+      { "@type": "Question", "name": "Welche Ausweise werden bei der Kontrolle akzeptiert?", "acceptedAnswer": { "@type": "Answer", "text": "Akzeptiert werden Personalausweis, Reisepass sowie der EU-Führerschein. Schülerausweise gelten bei Kindern und Jugendlichen." } },
+      { "@type": "Question", "name": "Ist versehentliches Vergessen bereits Schwarzfahren?", "acceptedAnswer": { "@type": "Answer", "text": "Nein. Wer ein gültiges Abonnement besitzt, fährt nicht schwarz. Es liegt lediglich eine Verletzung der Mitführungspflicht vor." } },
+      { "@type": "Question", "name": "Was droht bei der Nutzung gefälschter Deutschlandtickets?", "acceptedAnswer": { "@type": "Answer", "text": "Bei gefälschten Tickets drohen Strafanzeigen wegen Urkundenfälschung und Betrugs, die Einziehung des Geräts und hohe Geldstrafen." } },
+      { "@type": "Question", "name": "Kann ich die Bearbeitungsgebühr von 7 € umgehen?", "acceptedAnswer": { "@type": "Answer", "text": "Nein. Die Bearbeitungsgebühr von 7 € bis 10 € ist für den Verwaltungsaufwand der Nacherhebung gesetzlich vorgesehen." } },
+      { "@type": "Question", "name": "Wie lange habe ich Zeit, um mein Ticket nachzuzeigen?", "acceptedAnswer": { "@type": "Answer", "text": "Die Frist beträgt exakt 14 Kalendertage ab dem Tag der Kontrolle." } },
+      { "@type": "Question", "name": "Was tun, wenn die App bei der Kontrolle abstürzt?", "acceptedAnswer": { "@type": "Answer", "text": "Starte die App neu oder bitte den Kontrolleur um einen Moment. Gelingt der Aufruf nicht, bitte um die Ausstellung einer Fahrpreisnacherhebung." } },
+      { "@type": "Question", "name": "Muss ich bei Fahrpreisnacherhebung sofort im Zug zahlen?", "acceptedAnswer": { "@type": "Answer", "text": "Nein. Du musst im Zug niemals bar oder mit Karte zahlen. Du erhältst einen Beleg mit Überweisungsdaten und Frist." } }
+    ]
+  }
+];
+---
+<Base
+  title="Deutschlandticket Kontrolle 2026: Strafe & Vergessen"
+  description="Deutschlandticket Kontrolle 2026: Was tun bei vergessenem Ticket oder leerem Akku? 60 € Strafe umgehen, Nacherhebung & Nachweis-Fristen."
+  schema={schema}
+>
+  <article class="container--narrow" style="padding:2rem 0 1rem">
+    <p style="color:var(--brand);font-weight:800;letter-spacing:.06em;text-transform:uppercase;font-size:.8rem;margin:0">
+      Ratgeber · Aktualisiert am 04.10.2026
+    </p>
+    <h1>Deutschlandticket Kontrolle 2026: Was passiert ohne Ticket?</h1>
+    <p style="color:var(--ink-soft)">
+      Bei einer Fahrkartenkontrolle musst du dein Deutschlandticket sowie einen Lichtbildausweis vorzeigen. Hast du dein Ticket vergessen oder ist der Smartphone-Akku leer, stellt das Kontrollpersonal eine Zahlungsaufforderung über 60 € aus. Die gute Nachricht: Wenn du ein gültiges Abo hast, kannst du den Betrag auf 7 € reduzieren.
+    </p>
+
+    <div class="card" style="margin:1.5rem 0;background:var(--surface-alt, #faf5ff);padding:1.25rem;border-radius:12px">
+      <strong style="display:block;margin-bottom:.5rem;color:var(--brand)">Inhaltsübersicht</strong>
+      <ul style="margin:0;padding-left:1.2rem;font-size:.95rem">
+        <li><a href="#was-vorzeigen">Was musst du bei einer Kontrolle vorzeigen?</a></li>
+        <li><a href="#ticket-vergessen">Deutschlandticket vergessen: Was passiert?</a></li>
+        <li><a href="#handy-leer">Handy leer oder App funktioniert nicht bei der Kontrolle</a></li>
+        <li><a href="#nacherhebung">Kann man die 60 € zurückbekommen? (Nacherhebung)</a></li>
+        <li><a href="#schwarzfahren">Schwarzfahren mit dem Deutschlandticket — rechtliche Folgen</a></li>
+        <li><a href="#gefaelscht">Gefälschte Deutschlandtickets: Was droht?</a></li>
+        <li><a href="#tipps">Tipps für die Kontrolle</a></li>
+        <li><a href="#faq">Häufige Fragen (FAQ)</a></li>
+      </ul>
+    </div>
+
+    <h2 id="was-vorzeigen">Was musst du bei einer Kontrolle vorzeigen?</h2>
+    <p>
+      Bei einer Ticketprüfung im Zug, der S-Bahn oder im Bus verlangt das Prüfpersonal stets zwei Dokumente:
+    </p>
+    <ul style="padding-left:1.2rem;line-height:1.6">
+      <li><strong>Fahrschein:</strong> Den dynamischen <strong>QR-Code</strong> in deiner Ticket-App (z. B. DB Navigator, HVV Switch, BVG Fahrinfo) oder deine physische <strong>Chipkarte</strong>.</li>
+      <li><strong>Lichtbildausweis:</strong> Deinen originalen <strong>Personalausweis</strong>, <strong>Reisepass</strong> oder einen Plastik-<strong>Führerschein</strong>.</li>
+    </ul>
+
+    <h2 id="ticket-vergessen">Deutschlandticket vergessen: Was passiert?</h2>
+    <p>
+      Kannst du dein Ticket im Moment der Kontrolle nicht vorzeigen, stellt der Kontrolleur ein sogenanntes <strong>Erhöhtes Beförderungsentgelt (EBE)</strong> über <strong>60 €</strong> aus. Du erhältst einen Papierbeleg mit einer Vorgangsnummer. 
+    </p>
+
+    <h2 id="handy-leer">Handy leer oder App funktioniert nicht bei der Kontrolle</h2>
+    <p>
+      Ist dein Smartphone-Akku leer oder lädt die App aufgrund von Netzproblemen den QR-Code nicht, giltst du im Moment der Überprüfung als Fahrgast ohne gültigen Fahrschein. 
+    </p>
+    <p>
+      Bleibe ruhig und lass dir die Fahrpreisnacherhebung ausstellen. Befolge im Anschluss unsere Hilfestellungen aus dem Artikel <a href="/ratgeber/deutschlandticket-app-funktioniert-nicht">Deutschlandticket App funktioniert nicht</a>.
+    </p>
+
+    <h2 id="nacherhebung">Kann man die 60 € zurückbekommen? (Nacherhebung)</h2>
+    <p>
+      Ja. Wenn du zum Zeitpunkt der Kontrolle bereits Inhaber eines gültigen Abos warst, musst du die 60 € nicht zahlen. 
+    </p>
+    <ol style="padding-left:1.2rem;line-height:1.6">
+      <li><strong>Frist einhalten:</strong> Du hast exakt <strong>14 Kalendertage</strong> Zeit ab Kontrolltag.</li>
+      <li><strong>Nachweis einreichen:</strong> Öffne das Online-Portal des ausstellenden Verkehrsunternehmens (z. B. db-nacherhebung.de) oder gehe in ein Kundencenter.</li>
+      <li><strong>Abo-Nummer angeben:</strong> Übermittle den Beleg der Fahrpreisnacherhebung und deinen Abo-Nachweis.</li>
+      <li><strong>Bearbeitungsgebühr zahlen:</strong> Nach erfolgreicher Prüfung wird die Forderung von 60 € auf eine Bearbeitungsgebühr von <strong>7 € bis 10 €</strong> reduziert.</li>
+    </ol>
+
+    <h2 id="schwarzfahren">Schwarzfahren mit dem Deutschlandticket — rechtliche Folgen</h2>
+    <p>
+      Wer wissentlich ohne Abo oder mit dem Ticket einer fremden Person fährt, begeht Schwarzfahren. Wer dreimal innerhalb eines Jahres ohne gültiges Ticket angetroffen wird, riskiert eine Strafanzeige wegen Erschleichung von Leistungen nach § 265a StGB sowie ein Hausverbot für Höfe und Züge der Bahngesellschaft. Lies dazu auch den Ratgeber <a href="/ratgeber/deutschlandticket-uebertragbar">Ist das Deutschlandticket übertragbar?</a>.
+    </p>
+
+    <h2 id="gefaelscht">Gefälschte Deutschlandtickets: Was droht?</h2>
+    <p>
+      In sozialen Netzwerken angebotene "Billig-Tickets" oder manipulierte Screenshots sind gefälscht. Das Kontrollpersonal scannt den Sicherheits-Token des Barcodes ab. Bei gefälschten Tickets droht die sofortige Hinzuziehung der Bundespolizei, eine Strafanzeige wegen Urkundenfälschung und der Einzug des Smartphones.
+    </p>
+
+    <h2 id="tipps">Tipps für die Kontrolle</h2>
+    <ul style="padding-left:1.2rem;line-height:1.6">
+      <li><strong>Wallet-Funktion nutzen:</strong> Speichere das Ticket in der Apple Wallet oder Google Wallet für Offline-Zugriff.</li>
+      <li><strong>Ausweis griffbereit halten:</strong> Bewahre den Personalausweis zusammen mit dem Smartphone oder der Chipkarte auf.</li>
+      <li><strong>Powerbank mitführen:</strong> Lade dein Smartphone auf längeren Regionalzug-Reisen vorausschauend auf.</li>
+      <li><strong>Chipkarte als Backup:</strong> Wenn dein Akku oft leer ist, steige auf die Plastik-Chipkarte um.</li>
+      <li><strong>Sperrung vermeiden:</strong> Achte auf gedeckte Konten, um Sperrungen zu vermeiden (siehe <a href="/ratgeber/deutschlandticket-gesperrt">Deutschlandticket gesperrt</a>).</li>
+      <li><strong>Ticketverlust sofort melden:</strong> Gehe bei Verlust vor wie in <a href="/ratgeber/deutschlandticket-verloren">Deutschlandticket verloren</a> beschrieben.</li>
+      <li><strong>Gültigkeit im Blick behalten:</strong> Alle erlaubten Verkehrsmittel findest du unter <a href="/ratgeber/deutschlandticket-gueltigkeit">Geltungsbereich des Deutschlandtickets</a>.</li>
+      <li><strong>Kündigungsfristen beachten:</strong> Zum Beenden des Abos kündige rechtzeitig nach unserer <a href="/ratgeber/deutschlandticket-kuendigen">Kündigungsanleitung</a>.</li>
+    </ul>
+
+    <h2 id="faq">Häufige Fragen (FAQ)</h2>
+    <h3>Was muss ich bei einer Deutschlandticket-Kontrolle vorzeigen?</h3>
+    <p>Du musst den QR-Code in deiner App oder deine Chipkarte zusammen mit einem amtlichen Lichtbildausweis (Personalausweis, Pass, Führerschein) vorzeigen.</p>
+
+    <h3>Wie hoch ist die Strafe, wenn ich mein Deutschlandticket vergessen habe?</h3>
+    <p>Du erhältst zunächst eine Zahlungsaufforderung über 60 € (Erhöhtes Beförderungsentgelt). Zeigst du dein Ticket innerhalb von 14 Tagen vor, sinkt der Betrag auf eine Bearbeitungsgebühr von 7 € bis 10 €.</p>
+
+    <h3>Was passiert, wenn der Handy-Akku bei der Kontrolle leer ist?</h3>
+    <p>Der Kontrolleur stellt eine Fahrpreisnacherhebung aus. Du musst das gültige Abo innerhalb der 14-Tage-Frist im Kundencenter nachweisen.</p>
+
+    <h3>Wo kann ich mein vergessenes Deutschlandticket nachreichen?</h3>
+    <p>Du reichst das Ticket im Kundenportal des ausstellenden Verkehrsunternehmens online ein oder gehst in deren Kundencenter.</p>
+
+    <h3>Reicht ein Screenshot des Deutschlandticket QR-Codes?</h3>
+    <p>Nein. Screenshots werden bei Ticketkontrollen grundsätzlich nicht anerkannt, da sie sich kopieren lassen. Das Ticket muss direkt in der App aufgerufen werden.</p>
+
+    <h3>Welche Ausweise werden bei der Kontrolle akzeptiert?</h3>
+    <p>Akzeptiert werden Personalausweis, Reisepass sowie der EU-Führerschein. Schülerausweise gelten bei Kindern und Jugendlichen.</p>
+
+    <h3>Ist versehentliches Vergessen bereits Schwarzfahren?</h3>
+    <p>Nein. Wer ein gültiges Abonnement besitzt, fährt nicht schwarz. Es liegt lediglich eine Verletzung der Mitführungspflicht vor.</p>
+
+    <h3>Was droht bei der Nutzung gefälschter Deutschlandtickets?</h3>
+    <p>Bei gefälschten Tickets drohen Strafanzeigen wegen Urkundenfälschung und Betrugs, die Einziehung des Geräts und hohe Geldstrafen.</p>
+
+    <h3>Kann ich die Bearbeitungsgebühr von 7 € umgehen?</h3>
+    <p>Nein. Die Bearbeitungsgebühr von 7 € bis 10 € ist für den Verwaltungsaufwand der Nacherhebung gesetzlich vorgesehen.</p>
+
+    <h3>Wie lange habe ich Zeit, um mein Ticket nachzuzeigen?</h3>
+    <p>Die Frist beträgt exakt 14 Kalendertage ab dem Tag der Kontrolle.</p>
+
+    <h3>Was tun, wenn die App bei der Kontrolle abstürzt?</h3>
+    <p>Starte die App neu oder bitte den Kontrolleur um einen Moment. Gelingt der Aufruf nicht, bitte um die Ausstellung einer Fahrpreisnacherhebung.</p>
+
+    <h3>Muss ich bei Fahrpreisnacherhebung sofort im Zug zahlen?</h3>
+    <p>Nein. Du musst im Zug niemals bar oder mit Karte zahlen. Du erhältst einen Beleg mit Überweisungsdaten und Frist.</p>
+
+    <h2 style="margin-top:2rem">Fazit und Empfehlung</h2>
+    <p>
+      Falls du dein Ticket bei einer Kontrolle nicht zur Hand hast, bewahre Ruhe. Lass dir den Nacherhebungsbeleg aushändigen und übermittle deinen Abo-Nachweis innerhalb von 14 Tagen online. Dadurch reduziert sich die Forderung auf wenige Euro.
+    </p>
+
+    <p style="color:var(--ink-soft);font-size:.9rem;margin-top:2.5rem">
+      Redaktion ticket-rechner.de · Quellen: EBE-Bestimmungen der Verkehrsverbünde, Eisenbahn-Verkehrsordnung (EVO). Alle Angaben ohne Gewähr.
+    </p>
+  </article>
+</Base>
