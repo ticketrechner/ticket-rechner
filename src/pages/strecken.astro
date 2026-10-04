@@ -1,6 +1,13 @@
 ---
 import Base from '../layouts/Base.astro';
 import RouteFinder from '../components/RouteFinder.astro';
+import routes from '../data/routes.json';
+import keepRoutes from '../data/keep-routes.json';
+const keepSet = new Set(keepRoutes as string[]);
+const keepRouteObjs = (routes as any[]).filter(r => keepSet.has(r.slug));
+const byFrom = new Map<string, any[]>();
+keepRouteObjs.forEach(r => { const k=r.von.city; if(!byFrom.has(k)) byFrom.set(k, []); byFrom.get(k)!.push(r); });
+const hubCities = Array.from(byFrom.entries()).sort((a,b)=>a[0].localeCompare(b[0],'de'));
 
 const schema = [
   {
@@ -37,5 +44,22 @@ const schema = [
   </div>
   <div class="container" style="padding:1rem 0 2rem">
     <RouteFinder />
+  </div>
+  <div class="container" style="padding:0 0 3rem">
+    <h2>Beliebte Deutschlandticket-Strecken im Überblick</h2>
+    <p style="color:var(--ink-soft);max-width:44rem">
+      Direktverbindungen und kurze Regionalstrecken, auf denen sich das Deutschlandticket besonders lohnt —
+      mit Fahrzeit, Zwischenhalten und Bahnhof-Infos.
+    </p>
+    {hubCities.map(([city, list]) => (
+      <section>
+        <h3>Ab {city}</h3>
+        <ul>
+          {list.sort((a:any,b:any)=>a.nach.city.localeCompare(b.nach.city,'de')).map((r:any) => (
+            <li><a href={`/strecke/${r.slug}/`}>{r.von.city} → {r.nach.city}</a> · {r.trains[0]} · {r.reisezeit}</li>
+          ))}
+        </ul>
+      </section>
+    ))}
   </div>
 </Base>

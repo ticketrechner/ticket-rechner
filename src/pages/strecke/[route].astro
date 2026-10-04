@@ -1,6 +1,8 @@
 ---
 import Base from '../../layouts/Base.astro';
 import routes from '../../data/routes.json';
+import keepRoutes from '../../data/keep-routes.json';
+const keepSet = new Set(keepRoutes as string[]);
 
 export function getStaticPaths() {
   return routes.map((route) => ({
@@ -10,6 +12,16 @@ export function getStaticPaths() {
 }
 
 const { route } = Astro.props;
+const isKeepRoute = keepSet.has(route.slug);
+const _seen = new Set([route.slug]);
+const relatedRoutes: typeof routes = [];
+const _pushRel = (r: (typeof routes)[number] | undefined) => {
+  if (r && keepSet.has(r.slug) && !_seen.has(r.slug)) { _seen.add(r.slug); relatedRoutes.push(r); }
+};
+route.related.forEach(s => _pushRel(routes.find(r => r.slug === s)));
+routes.filter(r => r.von.city === route.von.city).forEach(_pushRel);
+routes.filter(r => r.nach.city === route.nach.city).forEach(_pushRel);
+const relatedKeepRoutes = relatedRoutes.slice(0, 8);
 
 const title = `Mit dem Deutschlandticket von ${route.von.city} nach ${route.nach.city} – Verbindung, Fahrzeit & Tipps 2026`;
 const description = `${route.von.city} → ${route.nach.city} mit dem Deutschlandticket: ${route.trains[0]} in ${route.reisezeit}. Zwischenhalte, Bahnhof-Ausstattung, Sehenswürdigkeiten & Kosten-Vergleich.`;
@@ -57,7 +69,7 @@ const breadcrumbSchema = {
   "@type": "BreadcrumbList",
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://ticket-rechner.de/" },
-    { "@type": "ListItem", "position": 2, "name": "Strecken", "item": "https://ticket-rechner.de/strecke/" },
+    { "@type": "ListItem", "position": 2, "name": "Strecken", "item": "https://ticket-rechner.de/strecken/" },
     { "@type": "ListItem", "position": 3, "name": `${route.von.city} → ${route.nach.city}`, "item": canonical }
   ]
 };
@@ -76,8 +88,9 @@ const articleSchema = {
 
 const routeSchemas = [faqSchema, breadcrumbSchema, articleSchema];
 
-const reverseSlug = `${route.slug.split('-').reverse().join('-')}`;
-const reverseExists = routes.some(r => r.slug === reverseSlug);
+const reverseRoute = routes.find(r => r.von.city === route.nach.city && r.nach.city === route.von.city);
+const reverseSlug = reverseRoute?.slug ?? '';
+const reverseExists = Boolean(reverseRoute);
 
 function renderAmenityBadge(label: string, available: boolean, detail?: string) {
   if (!available) return '';
@@ -90,12 +103,13 @@ function renderAmenityBadge(label: string, available: boolean, detail?: string) 
   description={description}
   canonical={canonical}
   schema={routeSchemas}
+  googleRobots={isKeepRoute ? undefined : 'noindex,follow'}
 >
   <main class="route-page">
     <!-- Breadcrumb -->
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <a href="/">Startseite</a> ›
-      <span>Strecken</span> ›
+      <a href="/strecken/">Strecken</a> ›
       <span>{route.von.city} → {route.nach.city}</span>
     </nav>
 
@@ -510,9 +524,7 @@ function renderAmenityBadge(label: string, available: boolean, detail?: string) 
     <section id="aehnliche-strecken">
       <h2>Ähnliche Strecken</h2>
       <div class="related-routes">
-        {route.related.map((relSlug) => {
-          const rel = routes.find(r => r.slug === relSlug);
-          if (!rel) return null;
+        {relatedKeepRoutes.map((rel) => {
           return (
             <a href={`/strecke/${rel.slug}/`} class="related-route-card">
               <strong>{rel.von.city} → {rel.nach.city}</strong>
