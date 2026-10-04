@@ -7,8 +7,9 @@ interface Props {
   description: string;
   schema?: object | object[];
   canonical?: string;
+  googleRobots?: string;
 }
-const { title, description, schema, canonical: canonicalProp } = Astro.props;
+const { title, description, schema, canonical: canonicalProp, googleRobots } = Astro.props;
 const path = Astro.url.pathname === '/' ? '/' : (Astro.url.pathname.endsWith('/') ? Astro.url.pathname : `${Astro.url.pathname}/`);
 const canonical = canonicalProp || new URL(path, Astro.site).href;
 ---
@@ -19,6 +20,7 @@ const canonical = canonicalProp || new URL(path, Astro.site).href;
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{title}</title>
   <meta name="description" content={description} />
+  {googleRobots && <meta name="googlebot" content={googleRobots} />}
   <link rel="canonical" href={canonical} />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
@@ -48,7 +50,7 @@ const canonical = canonicalProp || new URL(path, Astro.site).href;
         <span class="menu-icon">☰</span>
       </button>
       <nav id="main-nav" class="main-nav" aria-label="Hauptnavigation">
-        <a href="/strecken">Strecken</a>
+        <a href="/strecken/">Strecken</a>
         <a href="/kuendigungsfrist-rechner/">Kündigungsfrist</a>
         <a href="/lohnt-sich-rechner/">Lohnt es sich?</a>
         <a href="/kuendigungsschreiben/">Kündigungsschreiben</a>

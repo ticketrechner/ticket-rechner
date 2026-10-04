@@ -10,6 +10,18 @@ routes.forEach(r => {
 
 const cities = Array.from(cityMap.values()).sort((a, b) => a.city.localeCompare(b.city, 'de'));
 
+// Slim payload for the client script: only fields the finder actually uses.
+// Previously the full routes.json (5 MB, incl. attractions/amenities) was inlined
+// into /strecken/, producing a ~3.4 MB HTML page.
+const slimRoutes = routes.map(r => ({
+  slug: r.slug,
+  von: { city: r.von.city },
+  nach: { city: r.nach.city },
+  trains: [r.trains?.[0] ?? 'RE'],
+  reisezeit: r.reisezeit,
+  umstiege: r.umstiege,
+}));
+
 // Specified 6 popular routes
 const popularRouteSlugs = [
   'berlin-hamburg',
@@ -89,7 +101,7 @@ const popularRoutes = popularRouteSlugs.map(slug => {
     <h3>Beliebte Strecken</h3>
     <div class="popular-routes-grid">
       {popularRoutes.map(pr => (
-        <a href={`/strecke/${pr.slug}`} class="popular-route-card">
+        <a href={`/strecke/${pr.slug}/`} class="popular-route-card">
           <div class="popular-card-top">
             <strong>{pr.von} → {pr.nach}</strong>
             <span class={`badge ${pr.badge === 'Direkt' ? 'badge-green' : 'badge-amber'}`}>{pr.badge}</span>
@@ -103,7 +115,7 @@ const popularRoutes = popularRouteSlugs.map(slug => {
   </div>
 </div>
 
-<script is:inline define:vars={{ routesData: routes, citiesData: cities }}>
+<script is:inline define:vars={{ routesData: slimRoutes, citiesData: cities }}>
   (function() {
     const vonInput = document.getElementById('route-von');
     const nachInput = document.getElementById('route-nach');
@@ -298,7 +310,7 @@ const popularRoutes = popularRouteSlugs.map(slug => {
     form.addEventListener('submit', function(e) {
       e.preventDefault();
       if (activeRouteMatch) {
-        window.location.href = `/strecke/${activeRouteMatch.slug}`;
+        window.location.href = `/strecke/${activeRouteMatch.slug}/`;
       }
     });
   })();

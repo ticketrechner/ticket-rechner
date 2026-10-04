@@ -1,4 +1,6 @@
 import routes from '../data/routes.json';
+import keepRoutes from '../data/keep-routes.json';
+const keepSet = new Set(keepRoutes as string[]);
 
 const SITE = 'https://ticket-rechner.de';
 
@@ -54,10 +56,13 @@ const staticPages = [
 
 const today = new Date().toISOString().split('T')[0];
 
+// All routes stay in the sitemap (programmatic scale strategy + Bing safety).
+// Priority tiering signals importance without excluding any URL:
+// KEEP-tier routes (real demand / direct short routes) get 0.7, the rest 0.5.
 const routePages = (routes as any[]).map((route) => ({
   url: `/strecke/${route.slug}`,
   changefreq: 'monthly',
-  priority: 0.7,
+  priority: keepSet.has(route.slug) ? 0.7 : 0.5,
 }));
 
 const allPages = [...staticPages, ...routePages];
