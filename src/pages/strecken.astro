@@ -6,8 +6,10 @@ import keepRoutes from '../data/keep-routes.json';
 const keepSet = new Set(keepRoutes as string[]);
 const keepRouteObjs = (routes as any[]).filter(r => keepSet.has(r.slug));
 const byFrom = new Map<string, any[]>();
-keepRouteObjs.forEach(r => { const k=r.von.city; if(!byFrom.has(k)) byFrom.set(k, []); byFrom.get(k)!.push(r); });
+(routes as any[]).forEach(r => { const k=r.von.city; if(!byFrom.has(k)) byFrom.set(k, []); byFrom.get(k)!.push(r); });
 const hubCities = Array.from(byFrom.entries()).sort((a,b)=>a[0].localeCompare(b[0],'de'));
+const keepByFrom = new Map<string, any[]>();
+keepRouteObjs.forEach(r => { const k=r.von.city; if(!keepByFrom.has(k)) keepByFrom.set(k, []); keepByFrom.get(k)!.push(r); });
 
 const schema = [
   {
@@ -51,6 +53,18 @@ const schema = [
       Direktverbindungen und kurze Regionalstrecken, auf denen sich das Deutschlandticket besonders lohnt —
       mit Fahrzeit, Zwischenhalten und Bahnhof-Infos.
     </p>
+    {Array.from(keepByFrom.entries()).sort((a,b)=>a[0].localeCompare(b[0],'de')).map(([city, list]) => (
+      <section>
+        <h3>Ab {city}</h3>
+        <ul>
+          {list.sort((a:any,b:any)=>a.nach.city.localeCompare(b.nach.city,'de')).map((r:any) => (
+            <li><a href={`/strecke/${r.slug}/`}>{r.von.city} → {r.nach.city}</a> · {r.trains[0]} · {r.reisezeit}</li>
+          ))}
+        </ul>
+      </section>
+    ))}
+    <h2>Alle Strecken A–Z</h2>
+    <p style="color:var(--ink-soft);max-width:44rem">Alle Verbindungen mit Deutschlandticket-Geltung, nach Abfahrtsort sortiert.</p>
     {hubCities.map(([city, list]) => (
       <section>
         <h3>Ab {city}</h3>

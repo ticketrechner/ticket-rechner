@@ -21,6 +21,15 @@ const _pushRel = (r: (typeof routes)[number] | undefined) => {
 route.related.forEach(s => _pushRel(routes.find(r => r.slug === s)));
 routes.filter(r => r.von.city === route.von.city).forEach(_pushRel);
 routes.filter(r => r.nach.city === route.nach.city).forEach(_pushRel);
+// Fill remaining slots with non-keep neighbours so every route page is
+// reachable by internal links too (scale-ready crawl architecture).
+const _seenAll = new Set(relatedRoutes.map(r => r.slug));
+const _pushAny = (r: (typeof routes)[number] | undefined) => {
+  if (r && !_seenAll.has(r.slug) && r.slug !== route.slug) { _seenAll.add(r.slug); relatedRoutes.push(r); }
+};
+route.related.forEach(s => _pushAny(routes.find(r => r.slug === s)));
+routes.filter(r => r.von.city === route.von.city).forEach(_pushAny);
+routes.filter(r => r.nach.city === route.nach.city).forEach(_pushAny);
 const relatedKeepRoutes = relatedRoutes.slice(0, 8);
 
 const title = `Mit dem Deutschlandticket von ${route.von.city} nach ${route.nach.city} – Verbindung, Fahrzeit & Tipps 2026`;
@@ -103,7 +112,6 @@ function renderAmenityBadge(label: string, available: boolean, detail?: string) 
   description={description}
   canonical={canonical}
   schema={routeSchemas}
-  googleRobots={isKeepRoute ? undefined : 'noindex,follow'}
 >
   <main class="route-page">
     <!-- Breadcrumb -->
