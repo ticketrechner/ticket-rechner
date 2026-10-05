@@ -336,7 +336,9 @@
                                      ]
                  },
         "trains":  [
-                       "RE 1 (München-Nürnberg-Express)"
+                       "RE 1 (DB Regio)",
+                       "RE 16 (DB Regio)",
+                       "RB 16 (DB Regio)"
                    ],
         "reisezeit":  "ca. 1:45 Std.",
         "reisezeitICE":  "ca. 1:00 Std.",
@@ -519,9 +521,9 @@
                                      ]
                  },
         "trains":  [
-                       "RE 1 (RRX)",
-                       "RE 5",
-                       "RE 6 (RRX)"
+                       "RE 1 (National Express)",
+                       "RE 6 (National Express)",
+                       "RE 5 (National Express)"
                    ],
         "reisezeit":  "ca. 25–30 Min.",
         "reisezeitICE":  "ca. 21 Min.",
@@ -704,10 +706,9 @@
                                      ]
                  },
         "trains":  [
-                       "S8",
-                       "S9 (Express)",
-                       "RE 4",
-                       "RE 14"
+                       "RE 3 (vlexx)",
+                       "RE 14 (SÜWEX)",
+                       "RE 2 (SÜWEX)"
                    ],
         "reisezeit":  "ca. 35–40 Min. (S-Bahn), ca. 28 Min. (RE)",
         "reisezeitICE":  "ca. 25 Min.",
@@ -898,9 +899,8 @@
                                      ]
                  },
         "trains":  [
-                       "RE 5 (Filstalstrecke)",
-                       "RE 200 (Schnellfahrstrecke)",
-                       "MEX 16"
+                       "RE 5 (DB Regio)",
+                       "MEX 16 (Arverio Baden-Württemberg)"
                    ],
         "reisezeit":  "ca. 1:00–1:15 Std.",
         "reisezeitICE":  "ca. 30 Min. (über SFS)",
@@ -1083,8 +1083,8 @@
                                      ]
                  },
         "trains":  [
-                       "RE 1 (Expresskreuz)",
-                       "RE 8 (Expresskreuz)"
+                       "RE 8 (DB Regio)",
+                       "RE 1 (DB Regio)"
                    ],
         "reisezeit":  "ca. 1:20 Std.",
         "reisezeitICE":  "ca. 1:00 Std.",
@@ -1271,7 +1271,7 @@
                                      ]
                  },
         "trains":  [
-                       "RE 50 (Saxonia-Express)"
+                       "RE 50 (DB Regio)"
                    ],
         "reisezeit":  "ca. 1:35 Std.",
         "reisezeitICE":  "ca. 1:05 Std.",
@@ -1466,10 +1466,9 @@
                                      ]
                  },
         "trains":  [
-                       "RE 1 (RRX, NationalExpress)",
-                       "RE 6 (RRX)",
-                       "RE 11 (RRX)",
-                       "S 1"
+                       "RE 11 (National Express)",
+                       "RE 1 (National Express)",
+                       "S 1 (DB Regio)"
                    ],
         "reisezeit":  "ca. 23 Min. (RE/RRX), ca. 35 Min. (S1)",
         "reisezeitICE":  "ca. 21 Min.",
@@ -1644,9 +1643,8 @@
                                      ]
                  },
         "trains":  [
-                       "RE 8",
-                       "RE 80",
-                       "RB 81"
+                       "RE 8 (DB Regio)",
+                       "RE 80 (DB Regio)"
                    ],
         "reisezeit":  "ca. 43–46 Min. (RE), ca. 50 Min. (RB)",
         "reisezeitICE":  "ca. 39 Min. (IC)",
@@ -2029,10 +2027,8 @@
                                      ]
                  },
         "trains":  [
-                       "S7",
-                       "RE 1",
-                       "RB 21"
-                   ],
+                "S 7 (S-Bahn Berlin)"
+          ],
         "reisezeit":  "ca. 25–27 Min. (RE), ca. 40 Min. (S7)",
         "reisezeitICE":  "ca. 17 Min.",
         "entfernungKm":  25,
@@ -2384,7 +2380,7 @@
                                      ]
                  },
         "trains":  [
-                       "RE 5"
+                       "RE 5 (DB Regio)"
                    ],
         "reisezeit":  "ca. 2:50 Std.",
         "reisezeitICE":  "ca. 2:00 Std. (IC)",
@@ -2766,7 +2762,7 @@
                                      ]
                  },
         "trains":  [
-                       "RE 2"
+                       "RE 20 (DB Regio)"
                    ],
         "reisezeit":  "ca. 1:45 Std.",
         "reisezeitICE":  "ca. 1:20 Std. (IC)",
@@ -2957,8 +2953,8 @@
                                      ]
                  },
         "trains":  [
-                       "RE 5 (via Neustrelitz)",
-                       "RE 3 (via Pasewalk)"
+                       "RE 5 (DB Regio)",
+                       "RE 3 (DB Regio)"
                    ],
         "reisezeit":  "ca. 3:00–3:20 Std.",
         "reisezeitICE":  "ca. 2:25 Std. (IC)",
@@ -3332,8 +3328,8 @@
                                      ]
                  },
         "trains":  [
-                       "RE 4 (erixx)",
-                       "RE 5 (erixx)"
+                       "RE 4 (metronom)",
+                       "RB 41 (metronom)"
                    ],
         "reisezeit":  "ca. 1:05–1:10 Std.",
         "reisezeitICE":  "ca. 55 Min.",
@@ -3516,8 +3512,8 @@
                                      ]
                  },
         "trains":  [
-                       "RE 7 (DB Regio SH)",
-                       "RE 70 (DB Regio SH)"
+                       "RE 7 (DB Regio)",
+                       "RE 70 (DB Regio)"
                    ],
         "reisezeit":  "ca. 1:15–1:20 Std.",
         "reisezeitICE":  "ca. 1:05 Std. (IC)",
@@ -3678,8 +3674,8 @@
                                      ]
                  },
         "trains":  [
-                       "metronom RE 3",
-                       "metronom RE 31"
+                       "RE 3 (metronom)",
+                       "RB 31 (metronom)"
                    ],
         "reisezeit":  "ca. 2:20–2:30 Std.",
         "reisezeitICE":  "ca. 1:20 Std. (ICE)",
@@ -3870,7 +3866,7 @@
                                      ]
                  },
         "trains":  [
-                       "RE 1 (ODEG)"
+                       "RE 1 (DB Regio)"
                    ],
         "reisezeit":  "ca. 1:10–1:15 Std.",
         "reisezeitICE":  "ca. 50 Min. (IC)",
@@ -4045,7 +4041,7 @@
                                      ]
                  },
         "trains":  [
-                       "RE 1 (ODEG, via Schwerin)"
+                       "RE 1 (DB Regio)"
                    ],
         "reisezeit":  "ca. 2:20–2:30 Std.",
         "reisezeitICE":  "ca. 1:45 Std. (ICE)",
@@ -4232,9 +4228,9 @@
                                      ]
                  },
         "trains":  [
-                       "RE 7 (BRB)",
-                       "RE 9 (BRB)",
-                       "RB 65 (BRB)"
+                       "RE 9 (Arverio Bayern)",
+                       "RE 80 (Arverio Bayern)",
+                       "RB 87 (Arverio Bayern)"
                    ],
         "reisezeit":  "ca. 35–45 Min. (RE), ca. 55 Min. (RB)",
         "reisezeitICE":  "ca. 29 Min. (ICE)",
@@ -4413,8 +4409,9 @@
                                      ]
                  },
         "trains":  [
-                       "RE 22 (agilis)",
-                       "RE 1 (München-Nürnberg-Express)"
+                       "RE 2 (DB Regio)",
+                       "RE 25 (alex)",
+                       "RE 23 (alex)"
                    ],
         "reisezeit":  "ca. 1:25–1:35 Std.",
         "reisezeitICE":  "ca. 1:10 Std.",
@@ -4597,9 +4594,10 @@
                                      ]
                  },
         "trains":  [
-                       "Meridian RE",
-                       "RB (BRB)"
-                   ],
+                "RE 5 (BRB)",
+                "RB 54 (BRB)",
+                "RB 58 (BRB)"
+          ],
         "reisezeit":  "ca. 45–55 Min.",
         "reisezeitICE":  "ca. 30 Min.",
         "entfernungKm":  63,
@@ -4781,8 +4779,10 @@
                                      ]
                  },
         "trains":  [
-                       "RB 6 (DB Regio)"
-                   ],
+                "RE 61 (DB Regio)",
+                "RB 6 (DB Regio)",
+                "RB 60 (DB Regio)"
+          ],
         "reisezeit":  "ca. 1:20–1:30 Std.",
         "reisezeitICE":  "ca. 1:12 Std.",
         "entfernungKm":  89,
@@ -4968,8 +4968,8 @@
                                      ]
                  },
         "trains":  [
-                       "RE 1 (München-Nürnberg-Express)",
-                       "RB 16"
+                       "RE 1 (DB Regio)",
+                       "RB 16 (DB Regio)"
                    ],
         "reisezeit":  "ca. 45–50 Min. (RE), ca. 1:10 Std. (RB)",
         "reisezeitICE":  "ca. 30 Min. (ICE)",
@@ -5148,9 +5148,9 @@
                                      ]
                  },
         "trains":  [
-                       "RE 5 (RRX)",
-                       "RB 26",
-                       "RB 48"
+                       "RE 5 (National Express)",
+                       "RB 26 (MittelrheinBahn)",
+                       "RB 48 (National Express)"
                    ],
         "reisezeit":  "ca. 22–30 Min.",
         "reisezeitICE":  "ca. 18 Min. (ICE)",
@@ -5333,8 +5333,9 @@
                                      ]
                  },
         "trains":  [
-                       "RE 1 (RRX)",
-                       "RE 9"
+                       "RE 1 (National Express)",
+                       "RE 9 (DB Regio)",
+                       "S 19 (DB Regio)"
                    ],
         "reisezeit":  "ca. 50–55 Min.",
         "reisezeitICE":  "ca. 34 Min. (ICE)",
@@ -5521,8 +5522,8 @@
                                      ]
                  },
         "trains":  [
-                       "RE 5 (RRX)",
-                       "RB 26"
+                       "RE 5 (National Express)",
+                       "RB 26 (MittelrheinBahn)"
                    ],
         "reisezeit":  "ca. 1:15–1:25 Std.",
         "reisezeitICE":  "ca. 55 Min. (IC)",
@@ -5691,7 +5692,8 @@
                                      ]
                  },
         "trains":  [
-                       "RE 1 (RRX, NationalExpress)"
+                       "RE 1 (National Express)",
+                       "RE 6 (National Express)"
                    ],
         "reisezeit":  "ca. 1:15–1:25 Std.",
         "reisezeitICE":  "ca. 1:05 Std. (ICE)",
@@ -5886,8 +5888,8 @@
                                      ]
                  },
         "trains":  [
-                       "RE 4",
-                       "S 8"
+                       "RE 7 (National Express)",
+                       "RB 48 (National Express)"
                    ],
         "reisezeit":  "ca. 30–40 Min. (RE), ca. 55 Min. (S-Bahn)",
         "reisezeitICE":  "ca. 25 Min. (ICE via Solingen)",
@@ -6066,10 +6068,9 @@
                                      ]
                  },
         "trains":  [
-                       "RE 60",
-                       "RE 70",
-                       "S3",
-                       "S4"
+                       "RE 60 (DB Regio)",
+                       "RB 68 (DB Regio)",
+                       "RB 82 (VIAS)"
                    ],
         "reisezeit":  "ca. 18–25 Min. (RE), ca. 30 Min. (S-Bahn)",
         "reisezeitICE":  "ca. 14 Min. (ICE)",
@@ -6244,11 +6245,9 @@
                                      ]
                  },
         "trains":  [
-                       "S1",
-                       "S8",
-                       "S9",
-                       "RE 10",
-                       "RB 10"
+                       "RB 10 (VIAS)",
+                       "S 8 (DB Regio)",
+                       "S 1 (DB Regio)"
                    ],
         "reisezeit":  "ca. 35–40 Min. (S-Bahn), ca. 30 Min. (RB)",
         "reisezeitICE":  "ca. 20 Min. (ICE)",
@@ -6431,8 +6430,7 @@
                                      ]
                  },
         "trains":  [
-                       "RE 60",
-                       "RE 70"
+                       "RB 68 (DB Regio)"
                    ],
         "reisezeit":  "ca. 50–55 Min.",
         "reisezeitICE":  "ca. 37 Min. (ICE)",
@@ -6611,8 +6609,8 @@
                                      ]
                  },
         "trains":  [
-                       "RE 50",
-                       "RE 54"
+                       "RE 54 (DB Regio)",
+                       "RE 55 (DB Regio)"
                    ],
         "reisezeit":  "ca. 1:25–1:35 Std.",
         "reisezeitICE":  "ca. 1:05 Std. (ICE)",
@@ -6791,7 +6789,8 @@
                                      ]
                  },
         "trains":  [
-                       "RE 30 (HLB)"
+                       "RE 30 (DB Regio)",
+                       "RE 98 (Hessische Landesbahn)"
                    ],
         "reisezeit":  "ca. 2:20–2:30 Std.",
         "reisezeitICE":  "ca. 1:25 Std. (ICE)",
@@ -6982,9 +6981,9 @@
                                      ]
                  },
         "trains":  [
-                       "RE 60",
-                       "RE 70",
-                       "S-Bahn via Biblis"
+                       "RE 70 (DB Regio)",
+                       "RE 60 (DB Regio)",
+                       "RE 14 (SÜWEX)"
                    ],
         "reisezeit":  "ca. 40–45 Min.",
         "reisezeitICE":  "ca. 30 Min. (ICE)",
@@ -7163,8 +7162,7 @@
                                      ]
                  },
         "trains":  [
-                       "RE 2 (vlexx)",
-                       "RE 99 (vlexx)"
+                       "RE 2 (SÜWEX)"
                    ],
         "reisezeit":  "ca. 1:25–1:35 Std.",
         "reisezeitICE":  "ca. 1:05 Std. (IC)",
@@ -7351,9 +7349,8 @@
                                      ]
                  },
         "trains":  [
-                       "RE 17a",
-                       "IRE 1",
-                       "MEX 17"
+                       "RE 1 (Arverio)",
+                       "MEX 17 (DB Regio)"
                    ],
         "reisezeit":  "ca. 50–60 Min.",
         "reisezeitICE":  "ca. 35 Min. (ICE)",
@@ -7536,9 +7533,9 @@
                                      ]
                  },
         "trains":  [
-                       "RE 14",
-                       "RB 63",
-                       "MEX 14"
+                       "MEX 18 (DB Regio)",
+                       "MEX 12 (DB Regio)",
+                       "RE 6a (DB Regio)"
                    ],
         "reisezeit":  "ca. 45–55 Min.",
         "reisezeitICE":  "ca. 40 Min.",
@@ -7725,8 +7722,9 @@
                                      ]
                  },
         "trains":  [
-                       "RE 1 (Franken-Express)",
-                       "S4 (S-Bahn)"
+                       "MEX 18 (DB Regio)",
+                       "RE 8 (Arverio)",
+                       "MEX 12 (DB Regio)"
                    ],
         "reisezeit":  "ca. 45–55 Min. (RE), ca. 1:10 Std. (S4)",
         "reisezeitICE":  "ca. 35 Min.",
@@ -7905,10 +7903,9 @@
                                      ]
                  },
         "trains":  [
-                       "RE 1 (RRX)",
-                       "RE 6 (RRX)",
-                       "RE 11",
-                       "S1"
+                       "RE 19 (VIAS)",
+                       "RE 5 (National Express)",
+                       "S 1 (DB Regio)"
                    ],
         "reisezeit":  "ca. 11–13 Min. (RE), ca. 20 Min. (S1)",
         "reisezeitICE":  "ca. 10 Min.",
@@ -8079,9 +8076,9 @@
                                      ]
                  },
         "trains":  [
-                       "S8",
-                       "RE 4",
-                       "S 68"
+                       "RE 13 (eurobahn)",
+                       "RE 4 (National Express)",
+                       "S 8 (DB Regio)"
                    ],
         "reisezeit":  "ca. 25–30 Min. (S8), ca. 20 Min. (RE)",
         "reisezeitICE":  "ca. 15 Min.",
@@ -8256,10 +8253,9 @@
                                      ]
                  },
         "trains":  [
-                       "RE 1 (RRX)",
-                       "RE 6 (RRX)",
-                       "RE 11 (RRX)",
-                       "S6"
+                       "RE 1 (National Express)",
+                       "S 6 (DB Regio)",
+                       "S 1 (DB Regio)"
                    ],
         "reisezeit":  "ca. 22–25 Min. (RE), ca. 35 Min. (S6)",
         "reisezeitICE":  "ca. 18 Min.",
@@ -8434,8 +8430,8 @@
                                      ]
                  },
         "trains":  [
-                       "RE 1 (Eurobahn)"
-                   ],
+                "RB 50 (eurobahn)"
+          ],
         "reisezeit":  "ca. 1:25–1:35 Std.",
         "reisezeitICE":  "ca. 1:15 Std. (IC)",
         "entfernungKm":  100,
@@ -8617,7 +8613,7 @@
                                      ]
                  },
         "trains":  [
-                       "RE 6 (RRX)"
+                       "RE 6 (National Express)"
                    ],
         "reisezeit":  "ca. 1:05–1:15 Std.",
         "reisezeitICE":  "ca. 50 Min. (ICE)",
@@ -8796,8 +8792,9 @@
                                      ]
                  },
         "trains":  [
-                       "RE 2 (WestfalenBahn)"
-                   ],
+                "RE 2 (DB Regio)",
+                "RB 66 (eurobahn)"
+          ],
         "reisezeit":  "ca. 32–38 Min.",
         "reisezeitICE":  "ca. 30 Min.",
         "entfernungKm":  52,
@@ -8967,8 +8964,8 @@
                                      ]
                  },
         "trains":  [
-                       "RE 30 (erixx)",
-                       "RB 44 (Enno)"
+                       "RE 60 (WestfalenBahn)",
+                       "RE 70 (WestfalenBahn)"
                    ],
         "reisezeit":  "ca. 33–40 Min.",
         "reisezeitICE":  "ca. 28 Min. (ICE)",
@@ -9143,8 +9140,7 @@
                                      ]
                  },
         "trains":  [
-                       "RE 2 (Metronom)",
-                       "RE 9"
+                       "RE 2 (DB Regio)"
                    ],
         "reisezeit":  "ca. 55–1:05 Std.",
         "reisezeitICE":  "ca. 32 Min. (ICE)",
@@ -9331,7 +9327,7 @@
                                      ]
                  },
         "trains":  [
-                       "RE 30 (erixx)"
+                       "RE 30 (enno)"
                    ],
         "reisezeit":  "ca. 28–35 Min.",
         "reisezeitICE":  "ca. 25 Min. (ICE)",
@@ -9506,8 +9502,9 @@
                                      ]
                  },
         "trains":  [
-                       "S3 (S-Bahn Hannover)",
-                       "RE 4"
+                       "RE 10 (erixx)",
+                       "S 4 (S-Bahn Hannover)",
+                       "S 3 (S-Bahn Hannover)"
                    ],
         "reisezeit":  "ca. 25–30 Min.",
         "reisezeitICE":  "ca. 20 Min.",
@@ -9664,7 +9661,6 @@
                                      ]
                  },
         "trains":  [
-                       "RE 6 (RRX)",
                        "RE 70 (WestfalenBahn)"
                    ],
         "reisezeit":  "ca. 55–1:05 Std.",
@@ -9852,9 +9848,10 @@
                                      ]
                  },
         "trains":  [
-                       "RE 1 (NordWestBahn)",
-                       "RB 58 (NordWestBahn)"
-                   ],
+                "RE 1 (DB Regio)",
+                "RS 3 (NordWestBahn)",
+                "RS 30 (NordWestBahn)"
+          ],
         "reisezeit":  "ca. 28–35 Min.",
         "reisezeitICE":  "ca. 25 Min.",
         "entfernungKm":  46,
@@ -10028,8 +10025,9 @@
                                      ]
                  },
         "trains":  [
-                       "RE 8 (NordWestBahn)",
-                       "RB 33"
+                       "RE 8 (DB Regio)",
+                       "RE 9 (DB Regio)",
+                       "RS 2 (NordWestBahn)"
                    ],
         "reisezeit":  "ca. 35–45 Min.",
         "reisezeitICE":  "ca. 35 Min.",
@@ -10204,9 +10202,7 @@
                                      ]
                  },
         "trains":  [
-                       "S5 (S-Bahn Mitteldeutschland)",
-                       "S5X",
-                       "RE 16"
+                       "S 5 (DB Regio)"
                    ],
         "reisezeit":  "ca. 22–30 Min.",
         "reisezeitICE":  "ca. 15 Min. (ICE)",
@@ -10569,7 +10565,7 @@
                                      ]
                  },
         "trains":  [
-                       "RE 6 (Mitteldeutsche Regiobahn)"
+                       "RE 6 (Regiobahn)"
                    ],
         "reisezeit":  "ca. 1:05–1:15 Std.",
         "reisezeitICE":  "ca. 55 Min.",
@@ -10935,10 +10931,10 @@
                                      ]
                  },
         "trains":  [
-                       "RE 1",
-                       "ICE",
-                       "RB 20"
-                   ],
+                "RE 3 (DB Regio)",
+                "RE 1 (DB Regio)",
+                "RE 16 (Abellio)"
+          ],
         "reisezeit":  "ca. 12–15 Min.",
         "reisezeitICE":  "ca. 7 Min. (ICE)",
         "entfernungKm":  23,
@@ -11108,9 +11104,9 @@
                                      ]
                  },
         "trains":  [
-                       "RE 1",
-                       "RB 20",
-                       "S-Bahn Thüringen"
+                       "RE 1 (DB Regio)",
+                       "RE 16 (Abellio)",
+                       "RB 20 (Abellio)"
                    ],
         "reisezeit":  "ca. 13–18 Min.",
         "reisezeitICE":  "ca. 10 Min. (ICE)",
@@ -11281,7 +11277,9 @@
                                      ]
                  },
         "trains":  [
-                       "RE 1"
+                       "RE 16 (Abellio)",
+                       "RE 1 (DB Regio)",
+                       "RB 20 (Abellio)"
                    ],
         "reisezeit":  "ca. 22–28 Min.",
         "reisezeitICE":  "ca. 18 Min. (ICE)",
@@ -11460,7 +11458,8 @@
                                      ]
                  },
         "trains":  [
-                       "RE 20 (Abellio)"
+                       "RE 30 (DB Regio)",
+                       "RB 47 (DB Regio)"
                    ],
         "reisezeit":  "ca. 55–1:05 Std.",
         "reisezeitICE":  "ca. 45 Min.",
@@ -11639,7 +11638,7 @@
                                      ]
                  },
         "trains":  [
-                       "RE 1 (erixx)"
+                       "RB 40 (DB Regio)"
                    ],
         "reisezeit":  "ca. 45–55 Min.",
         "reisezeitICE":  "ca. 35 Min.",
@@ -11814,8 +11813,8 @@
                                      ]
                  },
         "trains":  [
-                       "RE 8 (DB Regio SH)",
-                       "RB 84"
+                       "RE 83 (erixx)",
+                       "RB 84 (erixx)"
                    ],
         "reisezeit":  "ca. 1:15–1:25 Std.",
         "reisezeitICE":  "ca. 1:10 Std.",
@@ -11998,9 +11997,8 @@
                                      ]
                  },
         "trains":  [
-                       "RE 7 (DB Regio SH)",
-                       "RE 72"
-                   ],
+                "RE 7 (DB Regio)"
+          ],
         "reisezeit":  "ca. 1:50–2:10 Std.",
         "reisezeitICE":  "ca. 1:40 Std. (IC)",
         "entfernungKm":  155,
@@ -12186,7 +12184,7 @@
                                      ]
                  },
         "trains":  [
-                       "RE 9"
+                       "RE 9 (ODEG)"
                    ],
         "reisezeit":  "ca. 55–1:05 Std.",
         "reisezeitICE":  "ca. 45 Min. (IC)",
@@ -12365,7 +12363,7 @@
                                      ]
                  },
         "trains":  [
-                       "RE 1 (ODEG)"
+                       "RE 1 (DB Regio)"
                    ],
         "reisezeit":  "ca. 55–1:05 Std.",
         "reisezeitICE":  "ca. 45 Min. (IC)",
@@ -12548,9 +12546,8 @@
                                      ]
                  },
         "trains":  [
-                       "RE 7 (DB Regio BW)",
-                       "RE 2"
-                   ],
+                "RE 7 (DB Regio)"
+          ],
         "reisezeit":  "ca. 55–1:05 Std.",
         "reisezeitICE":  "ca. 40 Min. (ICE)",
         "entfernungKm":  130,
@@ -12740,8 +12737,9 @@
                                      ]
                  },
         "trains":  [
-                       "S-Bahn Rhein-Neckar S1/S2/S3",
-                       "RB 68"
+                       "RE 10a (DB Regio)",
+                       "RE 10b (DB Regio)",
+                       "S 3 (DB Regio)"
                    ],
         "reisezeit":  "ca. 10–15 Min.",
         "reisezeitICE":  "ca. 8 Min. (ICE)",
@@ -12912,8 +12910,9 @@
                                      ]
                  },
         "trains":  [
-                       "RE 6 (DB Regio)",
-                       "S-Bahn S3/S4"
+                       "S 9 (DB Regio)",
+                       "S 3 (DB Regio)",
+                       "S 6 (DB Regio)"
                    ],
         "reisezeit":  "ca. 30–40 Min.",
         "reisezeitICE":  "ca. 22 Min. (ICE)",
@@ -13092,8 +13091,9 @@
                                      ]
                  },
         "trains":  [
-                       "RE 7 (SBB/DB)"
-                   ],
+                "RE 7 (DB Regio)",
+                "RB 27 (DB Regio)"
+          ],
         "reisezeit":  "ca. 42–50 Min.",
         "reisezeitICE":  "ca. 35 Min. (ICE)",
         "entfernungKm":  65,
@@ -13271,8 +13271,9 @@
                                      ]
                  },
         "trains":  [
-                       "S-Bahn S5",
-                       "RE/RB"
+                       "RE 73 (DB Regio)",
+                       "S 3 (DB Regio)",
+                       "S 2 (DB Regio)"
                    ],
         "reisezeit":  "ca. 25–30 Min.",
         "reisezeitICE":  "ca. 18 Min. (ICE)",
@@ -13443,9 +13444,9 @@
                                      ]
                  },
         "trains":  [
-                       "S8 (RMV)",
-                       "S9",
-                       "RB 10"
+                       "RB 75 (Hessische Landesbahn)",
+                       "RB 10 (VIAS)",
+                       "S 8 (DB Regio)"
                    ],
         "reisezeit":  "ca. 10–15 Min.",
         "reisezeitICE":  "ca. 8 Min.",
@@ -13616,8 +13617,8 @@
                                      ]
                  },
         "trains":  [
-                       "RE 2 (vlexx)",
-                       "RB 26"
+                       "RE 2 (SÜWEX)",
+                       "RB 26 (MittelrheinBahn)"
                    ],
         "reisezeit":  "ca. 55–1:05 Std.",
         "reisezeitICE":  "ca. 40 Min. (IC)",
@@ -13804,7 +13805,7 @@
                                      ]
                  },
         "trains":  [
-                       "RE 1 (vlexx)"
+                       "RE 1 (SÜWEX)"
                    ],
         "reisezeit":  "ca. 1:25–1:35 Std.",
         "reisezeitICE":  "ca. 1:10 Std. (ICE)",
@@ -13987,7 +13988,8 @@
                                      ]
                  },
         "trains":  [
-                       "RE 2 (DB Regio)"
+                       "RE 10 (DB Regio)",
+                       "RE 20 (DB Regio)"
                    ],
         "reisezeit":  "ca. 55–1:05 Std.",
         "reisezeitICE":  "ca. 55 Min. (ICE)",
@@ -14170,8 +14172,9 @@
                                      ]
                  },
         "trains":  [
-                       "RE 1 (agilis)",
-                       "RB"
+                       "RE 40 (DB Regio)",
+                       "RE 22 (agilis)",
+                       "RE 50 (agilis)"
                    ],
         "reisezeit":  "ca. 55–1:05 Std.",
         "reisezeitICE":  "ca. 48 Min. (ICE)",
@@ -14350,9 +14353,10 @@
                                      ]
                  },
         "trains":  [
-                       "RE 1",
-                       "S-Bahn S1 (VGN)"
-                   ],
+                "RE 14 (DB Regio)",
+                "RE 19 (DB Regio)",
+                "S 1 (DB Regio)"
+          ],
         "reisezeit":  "ca. 40–50 Min.",
         "reisezeitICE":  "ca. 35 Min. (ICE)",
         "entfernungKm":  63,
@@ -14530,7 +14534,7 @@
                                      ]
                  },
         "trains":  [
-                       "RE 7 (BRB)"
+                       "RE 9 (Arverio Bayern)"
                    ],
         "reisezeit":  "ca. 40–50 Min.",
         "reisezeitICE":  "ca. 28 Min. (ICE)",
@@ -14713,9 +14717,10 @@
                                      ]
                  },
         "trains":  [
-                       "RE 30 (HLB)",
-                       "RE 98 (HLB)"
-                   ],
+                "RE 30 (DB Regio)",
+                "RE 98 (Hessische Landesbahn)",
+                "RB 41 (Hessische Landesbahn)"
+          ],
         "reisezeit":  "ca. 55–1:05 Std.",
         "reisezeitICE":  "ca. 40 Min. (IC)",
         "entfernungKm":  70,
@@ -15065,8 +15070,9 @@
                                      ]
                  },
         "trains":  [
-                       "RE 5 (RRX)",
-                       "RB 26"
+                       "RE 5 (National Express)",
+                       "RB 26 (MittelrheinBahn)",
+                       "RB 27 (DB Regio)"
                    ],
         "reisezeit":  "ca. 45–55 Min.",
         "reisezeitICE":  "ca. 35 Min. (IC)",
@@ -15249,8 +15255,8 @@
                                      ]
                  },
         "trains":  [
-                       "S9",
-                       "S8"
+                       "RE 49 (DB Regio)",
+                       "S 9 (DB Regio)"
                    ],
         "reisezeit":  "ca. 22–28 Min.",
         "reisezeitICE":  "ca. 20 Min.",
@@ -15429,7 +15435,9 @@
                                      ]
                  },
         "trains":  [
-                       "RE 4 (NationalExpress)"
+                       "RE 1 (National Express)",
+                       "RE 4 (National Express)",
+                       "RB 33 (DB Regio)"
                    ],
         "reisezeit":  "ca. 1:15–1:25 Std.",
         "reisezeitICE":  "ca. 55 Min. (ICE)",
@@ -15796,8 +15804,10 @@
                                      ]
                  },
         "trains":  [
-                       "RE 7 (DB Regio BW)"
-                   ],
+                "RE 7 (DB Regio)",
+                "RE 2 (DB Regio)",
+                "RB 26 (DB Regio)"
+          ],
         "reisezeit":  "ca. 35–45 Min.",
         "reisezeitICE":  "ca. 30 Min.",
         "entfernungKm":  60,
@@ -15975,8 +15985,10 @@
                                      ]
                  },
         "trains":  [
-                       "RE 1 (DB Regio)"
-                   ],
+                "RE 20 (DB Regio)",
+                "RE 54 (DB Regio)",
+                "RB 53 (DB Regio)"
+          ],
         "reisezeit":  "ca. 48–55 Min.",
         "reisezeitICE":  "ca. 40 Min. (ICE)",
         "entfernungKm":  95,
@@ -16150,8 +16162,7 @@
                                      ]
                  },
         "trains":  [
-                       "RE 11 (Eurobahn)",
-                       "RB 84"
+                       "RE 11 (National Express)"
                    ],
         "reisezeit":  "ca. 1:05–1:15 Std.",
         "reisezeitICE":  "ca. 50 Min. (IC)",
@@ -16330,7 +16341,8 @@
                                      ]
                  },
         "trains":  [
-                       "metronom RE 3"
+                       "RE 3 (metronom)",
+                       "RB 31 (metronom)"
                    ],
         "reisezeit":  "ca. 28–35 Min.",
         "reisezeitICE":  "ca. 25 Min. (ICE)",
@@ -16671,8 +16683,7 @@
                                      ]
                  },
         "trains":  [
-                       "metronom RE 3",
-                       "metronom RE 31"
+                       "RE 3 (metronom)"
                    ],
         "reisezeit":  "ca. 2:20–2:30 Std.",
         "reisezeitICE":  "ca. 1:20 Std. (ICE)",
@@ -16863,8 +16874,8 @@
                                      ]
                  },
         "trains":  [
-                       "RE 9 (NordWestBahn)",
-                       "RB 58"
+                       "RE 9 (DB Regio)",
+                       "RB 58 (NordWestBahn)"
                    ],
         "reisezeit":  "ca. 1:00–1:10 Std.",
         "reisezeitICE":  "ca. 45 Min. (IC)",
@@ -17043,8 +17054,7 @@
                                      ]
                  },
         "trains":  [
-                       "RE 30 (erixx)",
-                       "Enno"
+                       "RE 50 (enno)"
                    ],
         "reisezeit":  "ca. 22–28 Min.",
         "reisezeitICE":  "ca. 18 Min.",
@@ -17385,10 +17395,9 @@
                                      ]
                  },
         "trains":  [
-                       "RE 1 (RRX)",
-                       "RE 6 (RRX)",
-                       "RE 11",
-                       "S1"
+                       "RE 1 (National Express)",
+                       "RB 33 (DB Regio)",
+                       "S 1 (DB Regio)"
                    ],
         "reisezeit":  "ca. 11–15 Min. (RE), ca. 20 Min. (S1)",
         "reisezeitICE":  "ca. 10 Min.",
@@ -17559,7 +17568,7 @@
                                      ]
                  },
         "trains":  [
-                       "RE 5 + RE 2 (via Koblenz)"
+                       "RB 26 (MittelrheinBahn)"
                    ],
         "reisezeit":  "ca. 1:50–2:10 Std.",
         "reisezeitICE":  "ca. 55 Min. (ICE)",
@@ -17746,8 +17755,9 @@
                                      ]
                  },
         "trains":  [
-                       "RE 22 (agilis)",
-                       "RB (BRB)"
+                       "RE 2 (DB Regio)",
+                       "RE 3 (DB Regio)",
+                       "RE 25 (alex)"
                    ],
         "reisezeit":  "ca. 50–55 Min.",
         "reisezeitICE":  "ca. 40 Min. (ICE)",
@@ -17922,8 +17932,9 @@
                                      ]
                  },
         "trains":  [
-                       "RE 1 (RRX)",
-                       "S1"
+                       "RE 11 (National Express)",
+                       "RE 1 (National Express)",
+                       "S 1 (DB Regio)"
                    ],
         "reisezeit":  "ca. 10–12 Min. (RE), ca. 18 Min. (S1)",
         "reisezeitICE":  "ca. 9 Min.",
@@ -18094,9 +18105,10 @@
                                      ]
                  },
         "trains":  [
-                       "S4 (S-Bahn Hannover)",
-                       "RE 30 (erixx)"
-                   ],
+                "RE 2 (DB Regio)",
+                "RE 3 (metronom)",
+                "S 7 (S-Bahn Hannover)"
+          ],
         "reisezeit":  "ca. 18–25 Min.",
         "reisezeitICE":  "ca. 15 Min. (ICE)",
         "entfernungKm":  38,
@@ -26543,7 +26555,7 @@
         }
       ]
     },
-    "trains": ["RE 1", "RE 5"],
+    "trains": ["RE 8 (ODEG)"],
     "reisezeit": "ca. 3:36 Std.",
     "reisezeitICE": "ca. 1:30 Std.",
     "entfernungKm": 230,
@@ -27883,7 +27895,7 @@
         }
       ]
     },
-    "trains": ["RE 1", "RE 5"],
+    "trains": ["RE 3 (DB Regio)"],
     "reisezeit": "ca. 2:18 Std.",
     "reisezeitICE": "54 Min.",
     "entfernungKm": 139,
@@ -28285,7 +28297,7 @@
         }
       ]
     },
-    "trains": ["RE 1", "RE 5"],
+    "trains": ["RE 3 (DB Regio)"],
     "reisezeit": "ca. 3:30 Std.",
     "reisezeitICE": "ca. 1:30 Std.",
     "entfernungKm": 223,
@@ -28419,7 +28431,7 @@
         }
       ]
     },
-    "trains": ["RE 1", "RE 5"],
+    "trains": ["RE 8 (ODEG)"],
     "reisezeit": "ca. 4:00 Std.",
     "reisezeitICE": "ca. 1:42 Std.",
     "entfernungKm": 254,
@@ -32171,7 +32183,7 @@
         }
       ]
     },
-    "trains": ["RE 1", "RE 5"],
+    "trains": ["RE 5 (DB Regio)"],
     "reisezeit": "ca. 2:06 Std.",
     "reisezeitICE": "48 Min.",
     "entfernungKm": 122,
@@ -32305,7 +32317,7 @@
         }
       ]
     },
-    "trains": ["RE 1", "RE 5"],
+    "trains": ["RE 5 (DB Regio)"],
     "reisezeit": "ca. 2:30 Std.",
     "reisezeitICE": "ca. 1:00 Std.",
     "entfernungKm": 148,
@@ -45303,7 +45315,7 @@
         }
       ]
     },
-    "trains": ["RE 1", "RE 5"],
+    "trains": ["RE 3 (metronom)", "RB 31 (metronom)"],
     "reisezeit": "ca. 2:12 Std.",
     "reisezeitICE": "54 Min.",
     "entfernungKm": 132,
@@ -45437,7 +45449,7 @@
         }
       ]
     },
-    "trains": ["RE 1"],
+    "trains": ["RE 3 (metronom)","RB 31 (metronom)"],
     "reisezeit": "48 Min.",
     "reisezeitICE": "24 Min.",
     "entfernungKm": 55,
@@ -45571,7 +45583,7 @@
         }
       ]
     },
-    "trains": ["RE 1"],
+    "trains": ["RE 3 (metronom)", "RB 31 (metronom)"],
     "reisezeit": "ca. 1:24 Std.",
     "reisezeitICE": "36 Min.",
     "entfernungKm": 96,
@@ -48251,7 +48263,7 @@
         }
       ]
     },
-    "trains": ["RE 1"],
+    "trains": ["RE 5 (DB Regio)"],
     "reisezeit": "ca. 1:42 Std.",
     "reisezeitICE": "48 Min.",
     "entfernungKm": 119,
@@ -48385,7 +48397,7 @@
         }
       ]
     },
-    "trains": ["RE 1"],
+    "trains": ["RE 5 (DB Regio)"],
     "reisezeit": "36 Min.",
     "reisezeitICE": "18 Min.",
     "entfernungKm": 45,
@@ -54683,7 +54695,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (München-Nürnberg-Express)", "RE 16"],
+    "trains": ["RE 9 (Arverio Bayern)"],
     "reisezeit": "ca. 2:36 Std.",
     "reisezeitICE": "ca. 1:00 Std.",
     "entfernungKm": 154,
@@ -58435,7 +58447,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (München-Nürnberg-Express)", "RE 16"],
+    "trains": ["RE 80 (Arverio Bayern)"],
     "reisezeit": "ca. 4:24 Std.",
     "reisezeitICE": "ca. 1:54 Std.",
     "entfernungKm": 281,
@@ -60177,7 +60189,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (München-Nürnberg-Express)", "RE 16"],
+    "trains": ["RE 70 (DB Regio)"],
     "reisezeit": "ca. 2:12 Std.",
     "reisezeitICE": "54 Min.",
     "entfernungKm": 133,
@@ -64331,7 +64343,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (RRX)"],
+    "trains": ["RE 1 (National Express)", "RE 6 (National Express)"],
     "reisezeit": "ca. 1:00 Std.",
     "reisezeitICE": "30 Min.",
     "entfernungKm": 72,
@@ -65135,7 +65147,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (RRX)"],
+    "trains": ["RE 5 (National Express)", "RE 1 (National Express)", "RE 6 (National Express)"],
     "reisezeit": "ca. 1:00 Std.",
     "reisezeitICE": "30 Min.",
     "entfernungKm": 71,
@@ -65269,7 +65281,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (RRX)"],
+    "trains": ["RE 1 (National Express)", "RE 6 (National Express)"],
     "reisezeit": "ca. 1:06 Std.",
     "reisezeitICE": "30 Min.",
     "entfernungKm": 80,
@@ -65403,7 +65415,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (RRX)", "RE 6 (RRX)"],
+    "trains": ["RE 6 (National Express)"],
     "reisezeit": "ca. 3:18 Std.",
     "reisezeitICE": "ca. 1:24 Std.",
     "entfernungKm": 208,
@@ -65537,7 +65549,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (RRX)", "RE 6 (RRX)"],
+    "trains": ["RE 7 (National Express)"],
     "reisezeit": "ca. 2:36 Std.",
     "reisezeitICE": "ca. 1:00 Std.",
     "entfernungKm": 156,
@@ -66207,7 +66219,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (RRX)"],
+    "trains": ["RE 1 (National Express)", "RE 6 (National Express)"],
     "reisezeit": "ca. 1:12 Std.",
     "reisezeitICE": "30 Min.",
     "entfernungKm": 81,
@@ -66341,7 +66353,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (RRX)"],
+    "trains": ["RE 8 (DB Regio)", "RB 27 (DB Regio)"],
     "reisezeit": "48 Min.",
     "reisezeitICE": "24 Min.",
     "entfernungKm": 58,
@@ -67279,7 +67291,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (RRX)"],
+    "trains": ["RE 7 (National Express)"],
     "reisezeit": "54 Min.",
     "reisezeitICE": "24 Min.",
     "entfernungKm": 65,
@@ -67681,7 +67693,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (RRX)"],
+    "trains": ["RE 5 (National Express)", "RE 6 (National Express)"],
     "reisezeit": "ca. 1:06 Std.",
     "reisezeitICE": "30 Min.",
     "entfernungKm": 76,
@@ -68083,7 +68095,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (RRX)"],
+    "trains": ["RE 7 (National Express)"],
     "reisezeit": "ca. 1:06 Std.",
     "reisezeitICE": "30 Min.",
     "entfernungKm": 75,
@@ -68485,7 +68497,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (RRX)", "RE 6 (RRX)"],
+    "trains": ["RE 1 (National Express)", "RE 6 (National Express)", "RE 7 (National Express)"],
     "reisezeit": "ca. 2:12 Std.",
     "reisezeitICE": "54 Min.",
     "entfernungKm": 129,
@@ -68753,7 +68765,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (RRX)"],
+    "trains": ["RE 1 (National Express)", "RE 6 (National Express)"],
     "reisezeit": "ca. 1:00 Std.",
     "reisezeitICE": "30 Min.",
     "entfernungKm": 70,
@@ -69155,7 +69167,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (RRX)"],
+    "trains": ["RE 1 (National Express)", "RE 5 (National Express)"],
     "reisezeit": "18 Min.",
     "reisezeitICE": "12 Min.",
     "entfernungKm": 15,
@@ -69557,7 +69569,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (RRX)"],
+    "trains": ["RE 7 (National Express)", "RB 48 (National Express)"],
     "reisezeit": "24 Min.",
     "reisezeitICE": "12 Min.",
     "entfernungKm": 31,
@@ -69825,7 +69837,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (RRX)"],
+    "trains": ["RE 1 (National Express)", "RE 6 (National Express)"],
     "reisezeit": "ca. 1:18 Std.",
     "reisezeitICE": "36 Min.",
     "entfernungKm": 88,
@@ -70093,7 +70105,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (RRX)"],
+    "trains": ["RE 6 (National Express)", "RE 7 (National Express)", "S 11 (DB Regio)"],
     "reisezeit": "36 Min.",
     "reisezeitICE": "18 Min.",
     "entfernungKm": 44,
@@ -71835,7 +71847,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (RRX)"],
+    "trains": ["S 11 (DB Regio)"],
     "reisezeit": "18 Min.",
     "reisezeitICE": "12 Min.",
     "entfernungKm": 17,
@@ -72371,7 +72383,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (RRX)", "RE 6 (RRX)"],
+    "trains": ["RE 22 (DB Regio)"],
     "reisezeit": "ca. 2:48 Std.",
     "reisezeitICE": "ca. 1:06 Std.",
     "entfernungKm": 171,
@@ -72639,7 +72651,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (RRX)"],
+    "trains": ["RE 9 (DB Regio)"],
     "reisezeit": "ca. 1:24 Std.",
     "reisezeitICE": "36 Min.",
     "entfernungKm": 95,
@@ -72907,7 +72919,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (RRX)", "RE 6 (RRX)"],
+    "trains": ["RE 6 (National Express)"],
     "reisezeit": "ca. 3:00 Std.",
     "reisezeitICE": "ca. 1:12 Std.",
     "entfernungKm": 186,
@@ -73711,7 +73723,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (RRX)"],
+    "trains": ["RE 1 (National Express)", "RE 9 (DB Regio)", "S 19 (DB Regio)"],
     "reisezeit": "42 Min.",
     "reisezeitICE": "18 Min.",
     "entfernungKm": 47,
@@ -74381,7 +74393,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (RRX)", "RE 6 (RRX)"],
+    "trains": ["RE 6 (National Express)"],
     "reisezeit": "ca. 4:00 Std.",
     "reisezeitICE": "ca. 1:42 Std.",
     "entfernungKm": 259,
@@ -86441,7 +86453,7 @@
         }
       ]
     },
-    "trains": ["RE 1"],
+    "trains": ["RE 4 (SÜWEX)","RE 14 (SÜWEX)"],
     "reisezeit": "ca. 1:18 Std.",
     "reisezeitICE": "36 Min.",
     "entfernungKm": 92,
@@ -87915,7 +87927,7 @@
         }
       ]
     },
-    "trains": ["RE 1"],
+    "trains": ["RE 50 (DB Regio)","RE 55 (DB Regio)","RB 51 (DB Regio)"],
     "reisezeit": "18 Min.",
     "reisezeitICE": "12 Min.",
     "entfernungKm": 15,
@@ -90997,7 +91009,7 @@
         }
       ]
     },
-    "trains": ["RE 1"],
+    "trains": ["RE 50 (DB Regio)","RE 85 (VIAS)","S 9 (DB Regio)"],
     "reisezeit": "18 Min.",
     "reisezeitICE": "12 Min.",
     "entfernungKm": 24,
@@ -93275,7 +93287,7 @@
         }
       ]
     },
-    "trains": ["RE 1"],
+    "trains": ["RE 54 (DB Regio)","RE 55 (DB Regio)","RB 58 (Hessische Landesbahn)"],
     "reisezeit": "42 Min.",
     "reisezeitICE": "18 Min.",
     "entfernungKm": 47,
@@ -93409,7 +93421,7 @@
         }
       ]
     },
-    "trains": ["RE 1"],
+    "trains": ["RE 50 (DB Regio)","RB 51 (DB Regio)"],
     "reisezeit": "ca. 1:36 Std.",
     "reisezeitICE": "42 Min.",
     "entfernungKm": 112,
@@ -93543,7 +93555,7 @@
         }
       ]
     },
-    "trains": ["RE 1"],
+    "trains": ["RE 98 (Hessische Landesbahn)","RE 30 (DB Regio)","RB 41 (Hessische Landesbahn)"],
     "reisezeit": "ca. 1:30 Std.",
     "reisezeitICE": "42 Min.",
     "entfernungKm": 102,
@@ -95017,7 +95029,7 @@
         }
       ]
     },
-    "trains": ["RE 1"],
+    "trains": ["RE 4 (SÜWEX)"],
     "reisezeit": "ca. 1:36 Std.",
     "reisezeitICE": "48 Min.",
     "entfernungKm": 113,
@@ -95151,7 +95163,7 @@
         }
       ]
     },
-    "trains": ["RE 1"],
+    "trains": ["RE 14 (SÜWEX)","RE 4 (SÜWEX)"],
     "reisezeit": "ca. 1:00 Std.",
     "reisezeitICE": "30 Min.",
     "entfernungKm": 73,
@@ -95553,7 +95565,7 @@
         }
       ]
     },
-    "trains": ["RE 1"],
+    "trains": ["RE 3 (vlexx)","RB 33 (vlexx)"],
     "reisezeit": "ca. 1:12 Std.",
     "reisezeitICE": "30 Min.",
     "entfernungKm": 82,
@@ -100243,7 +100255,7 @@
         }
       ]
     },
-    "trains": ["MEX 18", "RE 90"],
+    "trains": ["RE 90 (Arverio)"],
     "reisezeit": "ca. 3:12 Std.",
     "reisezeitICE": "ca. 1:18 Std.",
     "entfernungKm": 201,
@@ -106005,7 +106017,7 @@
         }
       ]
     },
-    "trains": ["MEX 18"],
+    "trains": ["RE 1 (Arverio)", "MEX 17 (DB Regio)"],
     "reisezeit": "42 Min.",
     "reisezeitICE": "18 Min.",
     "entfernungKm": 47,
@@ -106541,7 +106553,7 @@
         }
       ]
     },
-    "trains": ["MEX 18"],
+    "trains": ["MEX 18 (DB Regio)", "MEX 12 (DB Regio)", "RE 6a (DB Regio)"],
     "reisezeit": "36 Min.",
     "reisezeitICE": "18 Min.",
     "entfernungKm": 41,
@@ -108551,7 +108563,7 @@
         }
       ]
     },
-    "trains": ["MEX 18"],
+    "trains": ["MEX 18 (DB Regio)", "MEX 16 (Arverio Baden-Württemberg)", "S 1 (DB Regio)"],
     "reisezeit": "18 Min.",
     "reisezeitICE": "12 Min.",
     "entfernungKm": 15,
@@ -109355,7 +109367,7 @@
         }
       ]
     },
-    "trains": ["MEX 18", "RE 90"],
+    "trains": ["RE 8 (Arverio)"],
     "reisezeit": "ca. 2:36 Std.",
     "reisezeitICE": "ca. 1:06 Std.",
     "entfernungKm": 161,
@@ -109891,7 +109903,7 @@
         }
       ]
     },
-    "trains": ["MEX 18", "RE 90"],
+    "trains": ["RE 4 (DB Regio)"],
     "reisezeit": "ca. 2:36 Std.",
     "reisezeitICE": "ca. 1:06 Std.",
     "entfernungKm": 160,
@@ -111767,7 +111779,7 @@
         }
       ]
     },
-    "trains": ["MEX 18", "RE 90"],
+    "trains": ["RE 5 (DB Regio)"],
     "reisezeit": "ca. 2:42 Std.",
     "reisezeitICE": "ca. 1:06 Std.",
     "entfernungKm": 163,
@@ -112169,7 +112181,7 @@
         }
       ]
     },
-    "trains": ["MEX 18"],
+    "trains": ["RE 1 (Arverio)", "MEX 17 (DB Regio)"],
     "reisezeit": "ca. 1:00 Std.",
     "reisezeitICE": "30 Min.",
     "entfernungKm": 73,
@@ -115385,7 +115397,7 @@
         }
       ]
     },
-    "trains": ["MEX 18", "RE 90"],
+    "trains": ["RE 4 (DB Regio)"],
     "reisezeit": "ca. 2:30 Std.",
     "reisezeitICE": "ca. 1:00 Std.",
     "entfernungKm": 149,
@@ -115921,7 +115933,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (RRX)"],
+    "trains": ["RE 1 (National Express)", "RE 6 (National Express)", "RE 5 (National Express)"],
     "reisezeit": "36 Min.",
     "reisezeitICE": "18 Min.",
     "entfernungKm": 42,
@@ -116323,7 +116335,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (RRX)"],
+    "trains": ["RE 1 (National Express)", "RE 6 (National Express)", "RE 3 (eurobahn)"],
     "reisezeit": "ca. 1:00 Std.",
     "reisezeitICE": "30 Min.",
     "entfernungKm": 73,
@@ -117127,7 +117139,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (RRX)"],
+    "trains": ["RE 1 (National Express)", "RE 6 (National Express)", "S 1 (DB Regio)"],
     "reisezeit": "48 Min.",
     "reisezeitICE": "24 Min.",
     "entfernungKm": 53,
@@ -117261,7 +117273,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (RRX)", "RE 6 (RRX)"],
+    "trains": ["RE 6 (National Express)"],
     "reisezeit": "ca. 3:06 Std.",
     "reisezeitICE": "ca. 1:18 Std.",
     "entfernungKm": 192,
@@ -117395,7 +117407,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (RRX)"],
+    "trains": ["RE 5 (National Express)"],
     "reisezeit": "ca. 1:06 Std.",
     "reisezeitICE": "30 Min.",
     "entfernungKm": 75,
@@ -117529,7 +117541,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (RRX)", "RE 6 (RRX)"],
+    "trains": ["RE 2 (DB Regio)"],
     "reisezeit": "ca. 2:12 Std.",
     "reisezeitICE": "54 Min.",
     "entfernungKm": 129,
@@ -118199,7 +118211,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (RRX)"],
+    "trains": ["RE 1 (National Express)", "RE 6 (National Express)", "RE 2 (DB Regio)"],
     "reisezeit": "42 Min.",
     "reisezeitICE": "18 Min.",
     "entfernungKm": 49,
@@ -118333,7 +118345,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (RRX)"],
+    "trains": ["RE 4 (National Express)", "RE 13 (eurobahn)", "S 8 (DB Regio)"],
     "reisezeit": "24 Min.",
     "reisezeitICE": "12 Min.",
     "entfernungKm": 31,
@@ -118869,7 +118881,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (RRX)"],
+    "trains": ["RE 1 (National Express)", "RE 4 (National Express)"],
     "reisezeit": "ca. 1:18 Std.",
     "reisezeitICE": "36 Min.",
     "entfernungKm": 90,
@@ -119405,7 +119417,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (RRX)"],
+    "trains": ["RE 10 (RheinRuhrBahn)"],
     "reisezeit": "24 Min.",
     "reisezeitICE": "12 Min.",
     "entfernungKm": 25,
@@ -119941,7 +119953,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (RRX)"],
+    "trains": ["RE 19 (VIAS)", "RE 5 (National Express)", "RE 6 (National Express)"],
     "reisezeit": "30 Min.",
     "reisezeitICE": "12 Min.",
     "entfernungKm": 37,
@@ -120343,7 +120355,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (RRX)"],
+    "trains": ["RE 13 (eurobahn)", "RE 4 (National Express)", "S 8 (DB Regio)"],
     "reisezeit": "54 Min.",
     "reisezeitICE": "24 Min.",
     "entfernungKm": 63,
@@ -120745,7 +120757,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (RRX)"],
+    "trains": ["RE 1 (National Express)", "RE 13 (eurobahn)", "RE 6 (National Express)"],
     "reisezeit": "ca. 1:36 Std.",
     "reisezeitICE": "42 Min.",
     "entfernungKm": 111,
@@ -121013,7 +121025,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (RRX)"],
+    "trains": ["RE 1 (National Express)", "RE 2 (DB Regio)", "S 1 (DB Regio)"],
     "reisezeit": "24 Min.",
     "reisezeitICE": "12 Min.",
     "entfernungKm": 31,
@@ -121281,7 +121293,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (RRX)", "RE 6 (RRX)"],
+    "trains": ["RE 2 (DB Regio)"],
     "reisezeit": "ca. 3:00 Std.",
     "reisezeitICE": "ca. 1:12 Std.",
     "entfernungKm": 187,
@@ -121415,7 +121427,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (RRX)"],
+    "trains": ["RE 1 (National Express)", "RE 5 (National Express)"],
     "reisezeit": "30 Min.",
     "reisezeitICE": "12 Min.",
     "entfernungKm": 32,
@@ -121817,7 +121829,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (RRX)"],
+    "trains": ["RE 47 (Regiobahn)", "S 1 (DB Regio)"],
     "reisezeit": "18 Min.",
     "reisezeitICE": "12 Min.",
     "entfernungKm": 20,
@@ -122085,7 +122097,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (RRX)"],
+    "trains": ["RE 1 (National Express)", "RE 6 (National Express)", "RE 3 (eurobahn)"],
     "reisezeit": "48 Min.",
     "reisezeitICE": "24 Min.",
     "entfernungKm": 59,
@@ -122219,7 +122231,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (RRX)", "RE 6 (RRX)"],
+    "trains": ["RE 11 (National Express)"],
     "reisezeit": "ca. 3:00 Std.",
     "reisezeitICE": "ca. 1:12 Std.",
     "entfernungKm": 187,
@@ -122353,7 +122365,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (RRX)"],
+    "trains": ["S 11 (DB Regio)", "S 8 (DB Regio)"],
     "reisezeit": "18 Min.",
     "reisezeitICE": "12 Min.",
     "entfernungKm": 15,
@@ -123827,7 +123839,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (RRX)", "RE 6 (RRX)"],
+    "trains": ["RE 5 (National Express)"],
     "reisezeit": "ca. 2:24 Std.",
     "reisezeitICE": "ca. 1:00 Std.",
     "entfernungKm": 143,
@@ -124095,7 +124107,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (RRX)"],
+    "trains": ["RE 2 (DB Regio)"],
     "reisezeit": "ca. 1:00 Std.",
     "reisezeitICE": "24 Min.",
     "entfernungKm": 67,
@@ -124229,7 +124241,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (RRX)"],
+    "trains": ["S 11 (DB Regio)"],
     "reisezeit": "36 Min.",
     "reisezeitICE": "18 Min.",
     "entfernungKm": 44,
@@ -124497,7 +124509,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (RRX)"],
+    "trains": ["RE 47 (Regiobahn)"],
     "reisezeit": "30 Min.",
     "reisezeitICE": "12 Min.",
     "entfernungKm": 37,
@@ -125301,7 +125313,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (RRX)", "RE 6 (RRX)"],
+    "trains": ["RE 6 (National Express)"],
     "reisezeit": "ca. 2:48 Std.",
     "reisezeitICE": "ca. 1:06 Std.",
     "entfernungKm": 171,
@@ -125569,7 +125581,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (RRX)"],
+    "trains": ["RE 4 (National Express)"],
     "reisezeit": "48 Min.",
     "reisezeitICE": "24 Min.",
     "entfernungKm": 57,
@@ -126105,7 +126117,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (RRX)"],
+    "trains": ["RE 1 (National Express)"],
     "reisezeit": "54 Min.",
     "reisezeitICE": "24 Min.",
     "entfernungKm": 65,
@@ -126641,7 +126653,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (RRX)"],
+    "trains": ["S 6 (DB Regio)"],
     "reisezeit": "18 Min.",
     "reisezeitICE": "12 Min.",
     "entfernungKm": 15,
@@ -126775,7 +126787,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (RRX)", "RE 6 (RRX)"],
+    "trains": ["RE 6 (National Express)"],
     "reisezeit": "ca. 3:48 Std.",
     "reisezeitICE": "ca. 1:36 Std.",
     "entfernungKm": 242,
@@ -133743,7 +133755,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (RRX)"],
+    "trains": ["RE 1 (National Express)", "RE 6 (National Express)"],
     "reisezeit": "ca. 1:18 Std.",
     "reisezeitICE": "36 Min.",
     "entfernungKm": 93,
@@ -134145,7 +134157,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (RRX)"],
+    "trains": ["RE 1 (National Express)", "RE 6 (National Express)", "RE 4 (National Express)"],
     "reisezeit": "ca. 1:00 Std.",
     "reisezeitICE": "30 Min.",
     "entfernungKm": 73,
@@ -134949,7 +134961,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (RRX)"],
+    "trains": ["RE 1 (National Express)", "RE 6 (National Express)", "RE 3 (eurobahn)"],
     "reisezeit": "54 Min.",
     "reisezeitICE": "24 Min.",
     "entfernungKm": 62,
@@ -135083,7 +135095,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (RRX)"],
+    "trains": ["RE 4 (National Express)"],
     "reisezeit": "42 Min.",
     "reisezeitICE": "18 Min.",
     "entfernungKm": 46,
@@ -135887,7 +135899,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (RRX)"],
+    "trains": ["RE 3 (eurobahn)", "RE 1 (National Express)", "RE 6 (National Express)"],
     "reisezeit": "30 Min.",
     "reisezeitICE": "12 Min.",
     "entfernungKm": 32,
@@ -136021,7 +136033,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (RRX)"],
+    "trains": ["RE 4 (National Express)"],
     "reisezeit": "ca. 1:24 Std.",
     "reisezeitICE": "42 Min.",
     "entfernungKm": 101,
@@ -136557,7 +136569,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (RRX)", "RE 6 (RRX)"],
+    "trains": ["RE 1 (National Express)", "RE 4 (National Express)"],
     "reisezeit": "ca. 2:42 Std.",
     "reisezeitICE": "ca. 1:06 Std.",
     "entfernungKm": 162,
@@ -137629,7 +137641,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (RRX)"],
+    "trains": ["RE 6 (National Express)", "RE 3 (eurobahn)", "RE 11 (National Express)"],
     "reisezeit": "48 Min.",
     "reisezeitICE": "24 Min.",
     "entfernungKm": 54,
@@ -137897,7 +137909,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (RRX)", "RE 6 (RRX)"],
+    "trains": ["RE 11 (National Express)"],
     "reisezeit": "ca. 3:00 Std.",
     "reisezeitICE": "ca. 1:12 Std.",
     "entfernungKm": 183,
@@ -138031,7 +138043,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (RRX)"],
+    "trains": ["RE 4 (National Express)", "RB 52 (DB Regio)", "S 5 (DB Regio)"],
     "reisezeit": "18 Min.",
     "reisezeitICE": "12 Min.",
     "entfernungKm": 22,
@@ -138433,7 +138445,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (RRX)"],
+    "trains": ["RE 1 (National Express)", "RE 11 (National Express)", "RE 6 (National Express)"],
     "reisezeit": "36 Min.",
     "reisezeitICE": "18 Min.",
     "entfernungKm": 39,
@@ -138701,7 +138713,7 @@
         }
       ]
     },
-    "trains": ["RE 1 (RRX)"],
+    "trains": ["RE 1 (National Express)", "RE 6 (National Express)", "S 1 (DB Regio)"],
     "reisezeit": "42 Min.",
     "reisezeitICE": "18 Min.",
     "entfernungKm": 52,
