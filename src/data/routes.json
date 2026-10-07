@@ -2026,9 +2026,7 @@
                                          }
                                      ]
                  },
-        "trains":  [
-                "S 7 (S-Bahn Berlin)"
-          ],
+        "trains": ["S7", "RE 1", "RB 21"],
         "reisezeit":  "ca. 25–27 Min. (RE), ca. 40 Min. (S7)",
         "reisezeitICE":  "ca. 17 Min.",
         "entfernungKm":  25,
